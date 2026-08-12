@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breathing Rate & RPE in Climbing — Adam Ondra vs Štěpán Stráník Data | Pranaclimb</title>
+  <meta name="description" content="How breathing rate and RPE work together in climbing — real-world data from Adam Ondra vs Štěpán Stráník, W′bal thresholds, and practical training applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink:#ff00ff; --lime:#AAFF00; --blue:#89CFF0;
+      --white:#ffffff; --off:#f5f5f2; --ink:#4a4a4a;
+      --mid:#555555; --border:#e0e0d8;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Outfit',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.12em;color:var(--ink);text-decoration:none;}
+    .nav-logo span{color:var(--pink);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--mid);transition:color 0.2s;}
+    .nav-links a:hover{color:var(--pink);}
+    .nav-cta{background:var(--pink);color:var(--white);padding:0.55rem 1.4rem;border-radius:2px;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+    .nav-cta:hover{background:#cc00cc;}
+
+    /* ARTICLE HERO */
+    .article-hero{padding:9rem 4rem 4rem;background:var(--off);border-bottom:1.5px solid var(--border);}
+    .article-hero-inner{max-width:860px;margin:0 auto;}
+    .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);text-decoration:none;margin-bottom:2rem;transition:color 0.2s;}
+    .back-link:hover{color:var(--pink);}
+    .article-cats{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;}
+    .cat-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:2px;}
+    .cat-tag.pink{background:var(--pink);color:var(--white);}
+    .cat-tag.blue{background:var(--white);color:var(--ink);}
+    .cat-tag.lime{background:var(--lime);color:var(--ink);}
+    .article-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:0.95;letter-spacing:0.02em;color:var(--ink);margin-bottom:1.2rem;}
+    .article-hero h1 span{color:var(--pink);}
+    .article-lead{font-family:'Lora',serif;font-size:1.1rem;line-height:1.8;color:var(--mid);margin-bottom:2rem;}
+    .article-meta{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid var(--border);}
+    .meta-author{display:flex;align-items:center;gap:0.8rem;}
+    .meta-author img{width:42px;height:42px;border-radius:50%;object-fit:cover;}
+    .meta-author-name{font-size:0.85rem;font-weight:600;color:var(--ink);}
+    .meta-author-title{font-size:0.72rem;color:var(--mid);}
+    .meta-date{font-size:0.78rem;color:var(--mid);}
+
+    /* ARTICLE BODY */
+    .article-wrap{max-width:860px;margin:0 auto;padding:4rem;display:grid;grid-template-columns:1fr 220px;gap:4rem;align-items:start;}
+    .article-body h2{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.03em;color:var(--ink);margin:3rem 0 1rem;}
+    .article-body h3{font-size:1rem;font-weight:700;color:var(--ink);margin:2rem 0 0.8rem;letter-spacing:0.02em;}
+    .article-body p{font-family:'Lora',serif;font-size:0.97rem;line-height:1.95;color:var(--mid);margin-bottom:1.2rem;}
+    .article-body strong{color:var(--ink);font-weight:600;}
+    .article-body a{color:var(--pink);font-weight:600;text-decoration:none;}
+    .article-body a:hover{text-decoration:underline;}
+
+    /* PULL QUOTE */
+    .pull-quote{background:var(--pink);padding:2rem 2.5rem;margin:2.5rem 0;border-radius:2px;}
+    .pull-quote blockquote{font-family:'Lora',serif;font-size:1.1rem;font-style:italic;line-height:1.7;color:var(--white);margin-bottom:0.8rem;}
+    .pull-quote cite{font-style:normal;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime);font-family:'Outfit',sans-serif;}
+
+    /* HIGHLIGHT BOX */
+    .hl{background:var(--off);border-left:3px solid var(--lime);padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;line-height:1.7;color:var(--mid);font-family:'Outfit',sans-serif;}
+    .hl.pink{border-left-color:var(--pink);}
+    .hl.blue{background:rgba(137,207,240,0.12);border-left-color:var(--blue);}
+    .hl strong{color:var(--ink);}
+
+    /* DATA TABLE */
+    .data-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:1.5rem 0;font-family:'Outfit',sans-serif;}
+    .data-table th{background:var(--white);color:var(--ink);padding:0.8rem 1rem;text-align:left;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;}
+    .data-table td{padding:0.9rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);line-height:1.5;vertical-align:top;}
+    .data-table tr:nth-child(even) td{background:var(--off);}
+    .data-table td strong{color:var(--ink);}
+    .data-table .row-adam td{background:rgba(170,255,0,0.12);}
+    .data-table .row-stepan td{background:rgba(255,0,255,0.06);}
+
+    /* COMPARISON CARDS */
+    .comparison{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--border);border:1.5px solid var(--border);margin:1.5rem 0;font-family:'Outfit',sans-serif;}
+    .comp-card{background:var(--white);padding:1.8rem;}
+    .comp-card.good{background:rgba(170,255,0,0.1);}
+    .comp-card.high{background:rgba(255,0,255,0.05);}
+    .comp-card h4{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;}
+    .comp-card.good h4{color:var(--ink);}
+    .comp-card.high h4{color:var(--pink);}
+    .comp-stat{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border);font-size:0.85rem;color:var(--mid);}
+    .comp-stat:last-child{border-bottom:none;}
+    .comp-stat strong{color:var(--ink);}
+
+    /* THRESHOLD TABLE */
+    .threshold-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1.5px solid var(--border);margin:1.5rem 0;font-family:'Outfit',sans-serif;}
+    .threshold-item{background:var(--white);padding:1.2rem;text-align:center;}
+    .threshold-item.cp{background:rgba(137,207,240,0.2);}
+    .threshold-item.rcp{background:rgba(255,0,255,0.08);}
+    .threshold-item.max{background:rgba(255,0,255,0.15);}
+    .t-val{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;line-height:1;margin-bottom:0.3rem;}
+    .t-val.pink{color:var(--pink);}
+    .t-val.blue{color:var(--blue);}
+    .t-label{font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);}
+
+    /* ARTICLE IMAGE */
+    .article-img{margin:2rem 0;border-radius:2px;overflow:hidden;}
+    .article-img img{width:100%;display:block;}
+    .article-img figcaption{font-size:0.75rem;color:var(--mid);padding:0.7rem 1rem;background:var(--off);font-family:'Outfit',sans-serif;font-style:italic;}
+
+    /* SIDEBAR */
+    .article-sidebar{position:sticky;top:6rem;align-self:start;}
+    .sidebar-card{background:var(--off);border:1.5px solid var(--border);padding:1.5rem;margin-bottom:1.2rem;}
+    .sidebar-card h4{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem;}
+    .sidebar-card ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+    .sidebar-card li{font-size:0.82rem;color:var(--mid);padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .sidebar-card li:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-card a{color:var(--pink);text-decoration:none;font-weight:600;font-size:0.82rem;}
+    .sidebar-card a:hover{text-decoration:underline;}
+    .sidebar-cta{background:var(--pink);padding:1.5rem;color:var(--white);}
+    .sidebar-cta h4{font-size:0.9rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;}
+    .sidebar-cta p{font-size:0.8rem;color:rgba(255,255,255,0.85);line-height:1.6;margin-bottom:1rem;}
+    .sidebar-cta a{display:block;background:var(--lime);color:var(--ink);text-align:center;padding:0.7rem;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;}
+
+    /* REFERENCES */
+    .references{background:var(--off);padding:2rem;margin:3rem 0;font-family:'Outfit',sans-serif;}
+    .references h3{font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem;}
+    .references ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:0.5rem;}
+    .references li{font-size:0.78rem;color:var(--mid);line-height:1.6;}
+
+    /* RELATED POSTS */
+    .related{padding:4rem;background:var(--off);border-top:1.5px solid var(--border);}
+    .related-inner{max-width:860px;margin:0 auto;}
+    .related h3{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--ink);margin-bottom:2rem;}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);}
+    .related-card{background:var(--white);padding:1.8rem;text-decoration:none;color:inherit;transition:background 0.2s;}
+    .related-card:hover{background:var(--off);}
+    .related-card .cat{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--pink);margin-bottom:0.5rem;}
+    .related-card h4{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--ink);line-height:1.1;margin-bottom:0.6rem;}
+    .related-card p{font-size:0.82rem;color:var(--mid);line-height:1.6;}
+
+    /* NEWSLETTER */
+    .subscribe-strip{background:var(--white);padding:4rem;}
+    .subscribe-inner{max-width:600px;margin:0 auto;text-align:center;}
+    .subscribe-inner h3{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--ink);margin-bottom:0.5rem;}
+    .subscribe-inner p{font-size:0.9rem;color:var(--mid);line-height:1.7;margin-bottom:2rem;}
+    .kit-wrapper .formkit-input{font-family:'Outfit',sans-serif!important;font-size:0.9rem!important;padding:0.8rem 1rem!important;border:2px solid rgba(0,0,0,0.15)!important;border-radius:2px!important;}
+    .kit-wrapper .formkit-submit{background-color:#89CFF0!important;font-family:'Outfit',sans-serif!important;font-weight:600!important;letter-spacing:0.12em!important;text-transform:uppercase!important;border-radius:2px!important;border:1.5px solid rgba(255,255,255,0.8)!important;margin-top:0.6rem!important;}
+    .kit-wrapper .formkit-powered-by-convertkit-container{justify-content:center;}
+
+    /* FOOTER */
+    footer{background:var(--white);color: var(--ink);padding:4rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;}
+    .footer-brand .nav-logo{color:var(--white);display:block;margin-bottom:1rem;}
+    .footer-brand p{font-size:1rem;line-height:1.7;color:rgba(255,255,255,0.85);max-width:260px;}
+    .footer-col h4{font-size:0.8rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.2rem;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
+    .footer-col a{font-size:1rem;color:rgba(255,255,255,0.85);text-decoration:none;transition:color 0.2s;}
+    .footer-col a:hover{color:var(--white);}
+    .footer-col.trading a{font-weight:600;background:rgba(255,255,255,0.2);padding:0.6rem 1rem;border-radius:2px;display:inline-block;}
+    .footer-bottom{background:var(--white);padding:1.2rem 4rem;display:flex;justify-content:space-between;align-items:center;}
+    .footer-bottom p{font-size:0.75rem;color:rgba(0,0,0,0.5);}
+    .footer-bottom a{color:rgba(0,0,0,0.5);text-decoration:none;}
+    .footer-bottom a:hover{color:var(--pink);}
+
+    @media(max-width:900px){
+      nav{padding:1rem 1.5rem;} .nav-links{display:none;}
+      .article-hero{padding:6rem 1.5rem 2.5rem;}
+      .article-wrap{grid-template-columns:1fr;padding:2.5rem 1.5rem;gap:2rem;}
+      .article-sidebar{display:none;}
+      .comparison,.threshold-row{grid-template-columns:1fr;}
+      .related-grid{grid-template-columns:1fr;}
+      .related,.subscribe-strip{padding:3rem 1.5rem;}
+      footer{grid-template-columns:1fr;padding:3rem 1.5rem;}
+      .footer-bottom{padding:1rem 1.5rem;flex-direction:column;gap:0.5rem;text-align:center;}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Breathing Rate, Effort and Perceived Exertion in Climbing",
+    "description": "How breathing rate and RPE work together in climbing — real-world data from Adam Ondra and Štěpán Stráník analysed through the Pranaclimb framework.",
+    "datePublished": "2025-01-01",
+    "author": {
+      "@type": "Person",
+      "name": "Annie Anderson",
+      "url": "https://www.pranaclimb.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pranaclimb",
+      "url": "https://www.pranaclimb.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.pranaclimb.com/images/Pranaclimb_APP_ICON.jpg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.pranaclimb.com/blog/breathing-rate-rpe"
+    }
+  }
+  </script>
+  <link rel="canonical" href="https://www.pranaclimb.com/blog/breathing-rate-rpe" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+  <ul class="nav-links">
+    <li><a href="methodology.html">Method</a></li>
+    <li><a href="rba.html">RBA</a></li>
+    <li><a href="index.html#coaching">Coaching</a></li>
+    <li><a href="book.html">Book</a></li>
+    <li><a href="blog.html" style="color:var(--pink);">Blog</a></li>
+    <li><a href="index.html#annie">Annie</a></li>
+    <li><a href="gallery.html">Photos & Videos</a></li>
+  </ul>
+  <a href="rba.html" class="nav-cta">Book Your RBA</a>
+</nav>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <a href="blog.html" class="back-link">← Back to Journal</a>
+    <div class="article-cats">
+      <span class="cat-tag pink">Breathing Science</span>
+      <span class="cat-tag blue">Performance</span>
+      <span class="cat-tag lime">Elite Analysis</span>
+    </div>
+    <h1>Breathing Rate, Effort &<br><span>Perceived Exertion</span> in Climbing</h1>
+    <p class="article-lead">Respiratory frequency (fR) is emerging as the most valuable non-invasive indicator of effort in climbing — more sensitive than heart rate, VO₂, or lactate. Here's what the science says, and what real-world data from Adam Ondra reveals.</p>
+    <div class="article-meta">
+      <div class="meta-author">
+        <img src="images/breathing-rate-climbing-performance-annie-anderson-bouldering.jpg" alt="Annie Anderson" />
+        <div>
+          <div class="meta-author-name">Annie Anderson</div>
+          <div class="meta-author-title">Researcher · Breathwork Specialist · Climber</div>
+        </div>
+      </div>
+      <span class="meta-date">Originally Sept 2021 · Updated July 2025</span>
+      <span class="meta-date" style="color:var(--pink);font-weight:600;">8 min read</span>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE BODY + SIDEBAR -->
+<div style="max-width:1100px;margin:0 auto;">
+<div class="article-wrap">
+  <article class="article-body">
+
+    <figure class="article-img">
+      <img src="images/pranaclimb-breathing-coach-annie-anderson-bouldering-cornwall.jpg" alt="Annie bouldering in Cornwall — breathing and effort in climbing" />
+      <figcaption>Controlled breathing under physical load → expansion of the thorax → composure and control. Cornwall, 2006.</figcaption>
+    </figure>
+
+    <h2>🧠 Rate of Perceived Exertion & Breathing Rate</h2>
+    <p>Respiratory frequency (fR) — also known as breathing rate (BR) — is <strong>strongly associated with perceived exertion (RPE)</strong> across various exercise modalities. For climbers, this relationship may be even more pronounced due to the physical and psychological complexity of the sport.</p>
+
+    <p>Perceived exertion is your subjective sense of effort, fatigue, or discomfort during movement. If you've ever used Strava, tracked a training session, or simply asked yourself "how hard am I working right now?" — you've already used RPE.</p>
+
+    <div class="hl">
+      <strong>🧭 Pranaclimb Threshold Reference:</strong><br>
+      CP (Critical Power) ≈ 45 BPM / ~80–85% BRmax / RPE 8<br>
+      RCP (Respiratory Compensation Point) ≈ 55 BPM / ~95–100% BRmax / RPE 9–10<br>
+      BRmax for elite climbers estimated ~60–65 BPM during max effort
+    </div>
+
+    <div class="threshold-row">
+      <div class="threshold-item cp">
+        <div class="t-val blue">~45 BPM</div>
+        <div class="t-label">⛰️ Critical Power (CP)</div>
+      </div>
+      <div class="threshold-item rcp">
+        <div class="t-val pink">&gt;55 BPM</div>
+        <div class="t-label">🔥 RCP Threshold</div>
+      </div>
+      <div class="threshold-item max">
+        <div class="t-val pink">60–65 BPM</div>
+        <div class="t-label">Elite BRmax</div>
+      </div>
+    </div>
+
+    <h2>🔬 What the Science Says</h2>
+
+    <div class="pull-quote">
+      <blockquote>"Respiratory frequency (fR) is emerging as a valuable measurement for training monitoring... more information can be gained from fR than from heart rate, VO₂, or lactate. It is strongly associated with perceived exertion across many exercise types and conditions."</blockquote>
+      <cite>— Nicolò et al., 2017</cite>
+    </div>
+
+    <p>In a separate study, Nicolò et al. (2016) found that <strong>fR — but not HR or VO₂ — tracks RPE over time</strong> regardless of exercise duration. This makes breathing rate uniquely valuable for real-time effort monitoring in climbing, where sessions vary enormously in duration and intensity.</p>
+
+    <p>In short: <strong>how fast you breathe may be the best non-invasive indicator of physical and mental effort</strong> in climbing.</p>
+
+    <h2>🧗 Real-World Case Study: Adam Ondra vs. Štěpán Stráník</h2>
+
+    <p>A fascinating case study compared Adam Ondra and Štěpán Stráník climbing the <strong>same 8b route</strong> using Hexoskin biofeedback (BR, VE, HR). Pranaclimb estimated tidal volume (TV) to reveal the full respiratory story.</p>
+
+    <div class="pull-quote" style="background:var(--off);">
+      <blockquote style="color:var(--ink);">"The route was relatively easy for Adam (9c climber), but for most Czech climbers — including Štěpán — it represents near-max difficulty."</blockquote>
+      <cite style="color:var(--pink);">— Boček et al., 2018</cite>
+    </div>
+
+    <p style="font-size:0.82rem;color:var(--mid);font-family:'Outfit',sans-serif;font-style:italic;">Note: Hexoskin doesn't account for the nuances of breathing in climbing — grunts, breath holds, sighs, screams — which Pranaclimb's framework addresses through expressive breathing corrections.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Climber</th>
+          <th>BR (BPM)</th>
+          <th>VE (L/min)</th>
+          <th>Est. TV (L)</th>
+          <th>Zone</th>
+          <th>Interpretation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-adam">
+          <td><strong>Adam Ondra</strong></td>
+          <td><strong>14</strong></td>
+          <td>35.03</td>
+          <td>≈ 2.5</td>
+          <td>Below CP</td>
+          <td>Deep, relaxed, efficient. Very low internal load.</td>
+        </tr>
+        <tr class="row-stepan">
+          <td><strong>Štěpán Stráník</strong></td>
+          <td><strong>36</strong></td>
+          <td>67.97</td>
+          <td>≈ 1.9</td>
+          <td>Near CP</td>
+          <td>Compensatory breathing. Moderate-to-high effort. Approaching threshold.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>What the Numbers Mean</h3>
+
+    <div class="comparison">
+      <div class="comp-card good">
+        <h4>✅ Adam Ondra — Below CP</h4>
+        <div class="comp-stat"><span>Breathing Rate</span><strong>14 BPM</strong></div>
+        <div class="comp-stat"><span>Tidal Volume</span><strong>~2.5 L</strong></div>
+        <div class="comp-stat"><span>Mental State</span><strong>Calm, composed</strong></div>
+        <div class="comp-stat"><span>W′bal</span><strong>Conserved</strong></div>
+        <div class="comp-stat"><span>RPE</span><strong>Low</strong></div>
+      </div>
+      <div class="comp-card high">
+        <h4>⚠️ Štěpán Stráník — Near CP</h4>
+        <div class="comp-stat"><span>Breathing Rate</span><strong>36 BPM</strong></div>
+        <div class="comp-stat"><span>Tidal Volume</span><strong>~1.9 L</strong></div>
+        <div class="comp-stat"><span>Mental State</span><strong>Effort / stress</strong></div>
+        <div class="comp-stat"><span>W′bal</span><strong>Depleting</strong></div>
+        <div class="comp-stat"><span>RPE</span><strong>Moderate-High</strong></div>
+      </div>
+    </div>
+
+    <h2>🫁 Tidal Volume, VE & Respiratory Fitness</h2>
+
+    <p><strong>Tidal Volume (TV)</strong> is the amount of air moved in or out with each breath. Well-trained athletes maintain ventilation by increasing TV before increasing breathing rate. Near RCP, TV plateaus while BR spikes — meaning more energy is wasted on breathing itself.</p>
+
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.7rem;margin:1rem 0;font-family:'Outfit',sans-serif;">
+      <li style="display:flex;gap:0.7rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--lime);flex-shrink:0;font-size:1rem;">✓</span><span>Adam's high TV and low BR = aerobic efficiency and deep diaphragmatic breathing</span></li>
+      <li style="display:flex;gap:0.7rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--pink);flex-shrink:0;font-size:1rem;">✗</span><span>Štěpán's lower TV and high BR = compensatory breathing under fatigue</span></li>
+      <li style="display:flex;gap:0.7rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--blue);flex-shrink:0;font-size:1rem;">→</span><span>Rapid breathing increases dead-space ventilation — wasted energy not contributing to gas exchange</span></li>
+    </ul>
+
+    <div class="hl blue">
+      <strong>"Well-trained athletes maintain ventilation by increasing tidal volume, with only a small rise in BR."</strong><br>
+      — McArdle et al., 2014
+    </div>
+
+    <h2>🧘 Mental State & Breath Control</h2>
+
+    <p>Adam's relaxed BR doesn't just reflect fitness — it reflects <strong>low psychological arousal</strong>. A calm, composed mental state is both a cause and a consequence of efficient breathing.</p>
+
+    <p>Štěpán's elevated BR may reflect not only physical effort but also <strong>psychological stress</strong>, anticipation, or inadequate recovery breathing between moves. This is where Pranaclimb's framework becomes most valuable — identifying whether elevated BR is a <em>fitness limiter</em> or a <em>regulation limiter</em>.</p>
+
+    <p><strong>Breath awareness supports emotional regulation, precision, and pacing</strong> — all critical factors in climbing performance.</p>
+
+    <h2>📊 Why It Matters For You</h2>
+
+    <p>This real-world data clearly shows that breathing rate is a <strong>powerful indicator of effort and stress in climbing</strong>. It may be the most accurate non-invasive signal of both physical and mental load on the wall.</p>
+
+    <div class="hl pink">
+      <strong>Pranaclimb Integration:</strong><br>
+      BR + RPE reveals your effort zone, fatigue level, and recovery status in real-time. Track before, during, and after climbing to optimise preparation, execution, and recovery.
+    </div>
+
+    <h3>Practical Applications</h3>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.7rem;margin:1rem 0;font-family:'Outfit',sans-serif;">
+      <li style="display:flex;gap:0.7rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--pink);flex-shrink:0;">🫁</span>Use RPE + BR tracking to estimate effort level and energy system stress in real time</li>
+      <li style="display:flex;gap:0.7rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--pink);flex-shrink:0;">⏱️</span>Adjust pacing and rest intervals based on BR return to baseline</li>
+      <li style="display:flex;gap:0.7rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--pink);flex-shrink:0;">⛰️</span>Estimate CP and W′bal in the field — no lab required</li>
+      <li style="display:flex;gap:0.7rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--pink);flex-shrink:0;">💨</span>Train TV expansion with loaded breathwork, nasal drills, and CO₂ tolerance work</li>
+      <li style="display:flex;gap:0.7rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--pink);flex-shrink:0;">📊</span>Monitor BR before, during, and after climbing for focus, efficiency, and recovery</li>
+    </ul>
+
+    <div class="pull-quote">
+      <blockquote>"Train like an elite. Breathe like an elite."</blockquote>
+      <cite>— Pranaclimb</cite>
+    </div>
+
+    <div class="references">
+      <h3>References</h3>
+      <ol>
+        <li>Nicolò A, Massaroni C, Passfield L. (2017) Respiratory Frequency During Exercise: The Neglected Physiological Measure.</li>
+        <li>Nicolò A, Marcora SM, Sacchetti M. (2016) Respiratory frequency is strongly associated with perceived exertion.</li>
+        <li>Boček J, et al. (2018) Adam Ondra hung with sensors. What makes him the world's best climber?</li>
+        <li>Peake JM, Kerr G, Sullivan JP. (2018) A Critical Review of Wearables for Monitoring Stress and Recovery.</li>
+        <li>McArdle WD, Katch FI, Katch VL. (2014) Exercise Physiology.</li>
+        <li>Sheel AW. (2004) Physiology of Sport Rock Climbing.</li>
+        <li>Baláš J, et al. (2014) Relationship Between Climbing Ability and Physiological Responses to Rock Climbing.</li>
+      </ol>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="article-sidebar">
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul>
+        <li>RPE & Breathing Rate</li>
+        <li>What the Science Says</li>
+        <li>Ondra vs. Stráník</li>
+        <li>Tidal Volume & TV</li>
+        <li>Mental State & Breath</li>
+        <li>Practical Applications</li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h4>Related Reading</h4>
+      <ul>
+        <li><a href="methodology.html">Methodology Q&A</a></li>
+        <li><a href="elite-analysis.html">Elite Analysis</a></li>
+        <li><a href="rba.html">Book an RBA</a></li>
+        <li><a href="blog-co2-tolerance.html">CO₂ Tolerance Tests</a></li>
+        <li><a href="blog-micro-breath-holds.html">Micro-Breath Holds</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-cta">
+      <h4>Get Your BR Profile</h4>
+      <p>Book a Remote Breathing Assessment and discover your personal CP, RCP, and W′bal thresholds.</p>
+      <a href="rba.html">Book Your RBA →</a>
+    </div>
+  </aside>
+
+</div>
+</div>
+
+<!-- RELATED POSTS -->
+<div class="related">
+  <div class="related-inner">
+    <h3>More From the Journal</h3>
+    <div class="related-grid">
+      <a href="blog-fear-to-commitment.html" class="related-card">
+        <div class="cat">Emotion & Mind</div>
+        <h4>From Fear to Commitment</h4>
+        <p>How emotion regulation shapes breathing, posture, and performance on the wall.</p>
+      </a>
+      <a href="blog-co2-tolerance.html" class="related-card">
+        <div class="cat">CO₂ & Physiology</div>
+        <h4>CO₂ Tolerance Tests Compared</h4>
+        <p>MBT vs BOLT vs Huberman — which test is right for your climbing?</p>
+      </a>
+      <a href="blog-micro-breath-holds.html" class="related-card">
+        <div class="cat">Breathing Science</div>
+        <h4>Micro-Breath Holding</h4>
+        <p>One breath hold can cost you 2–3 natural breaths. Here's why it matters.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- SUBSCRIBE -->
+<div class="subscribe-strip">
+  <div class="subscribe-inner">
+    <h3>Subscribe to the Journal</h3>
+    <p>Breathing science, climbing insights, and early access to <em>Pranaclimb: Love, Breathe, Climb</em> — the book. Free first chapter when you subscribe.</p>
+    <div class="kit-wrapper">
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form action="https://app.kit.com/forms/9354489/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9354489" data-uid="3d6cc9da4e" data-format="inline" data-version="5" min-width="400 500 600 700 800">
+        <div data-style="clean">
+          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+          <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+            <div class="formkit-field">
+              <input class="formkit-input" name="email_address" placeholder="Your email address" required="" type="email" style="color:#3a3a3a;border-color:#e3e3e3;border-radius:2px;">
+            </div>
+            <button data-element="submit" class="formkit-submit" style="color:#3a3a3a;background-color:#89CFF0;border-radius:2px;font-weight:600;border:1.5px solid rgba(255,255,255,0.8);">
+              <div class="formkit-spinner"><div></div><div></div><div></div></div>
+              <span>Subscribe</span>
+            </button>
+          </div>
+          <div class="formkit-powered-by-convertkit-container">
+            <a href="https://kit.com" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:var(--ink)">PRANA<span style="color:var(--pink)">CLIMB</span></a>
+    <p style="margin-top:0.8rem; font-size:0.88rem; line-height:1.7; color:var(--mid);">With love and the ocean 🌊<br>Annie Anderson — Pranaclimb | OceanDips</p>
+    <div style="display:flex; gap:0.8rem; margin-top:1.2rem;">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--mid)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="var(--mid)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 15v7H9V8z" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:annie@pranaclimb.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--mid);">annie@pranaclimb.com</p>
+    <p style="font-size:0.75rem; margin-top:0.3rem; color:var(--mid);">07875 170 847</p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pages</h4>
+    <ul style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="rba.html">Assessment</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="app.html">The App</a></li>
+      <li><a href="annie.html">About Annie</a></li>
+      <li><a href="gallery.html">Photos</a></li>
+      <li><a href="mailto:annie@pranaclimb.com">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pranaclimb Ltd</h4>
+    <p style="font-size:0.78rem; line-height:1.8; color:var(--mid);">
+      Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.<br><br>
+      Annie is a qualified <strong style="color:var(--ink);">SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong style="color:var(--ink);">Registered Yoga Teacher RYT 200</strong> (2012).<br><br>
+      Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong style="color:var(--ink);">Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).<br><br>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" style="color:var(--pink); font-weight:600; text-decoration:none;">Connect on LinkedIn &rarr;</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Trading As</h4>
+    <ul>
+      <li><a href="https://www.pranaclimb.com">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com" target="_blank">🌊 OceanDips</a></li>
+    </ul>
+    <p style="font-size:0.78rem; color:var(--mid); margin-top:0.8rem; line-height:1.8;"><strong style="color:var(--ink);">Pranaclimb Ltd</strong><br>Company No. 16626114<br>13 Upton Towans, Hayle<br>Cornwall TR27 5BJ</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div style="display:flex; flex-direction:column; gap:0.3rem;">
+    <p>&copy; 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p style="font-size:0.7rem; color:rgba(0,0,0,0.4);">pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  </div>
+  <div style="display:flex; gap:1.5rem; flex-shrink:0; margin-left:2rem;">
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Statcounter -->
+<script type="text/javascript">
+var sc_project=11925361; 
+var sc_invisible=1; 
+var sc_security="14a77c6b"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11925361/0/14a77c6b/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter -->
+</body>
+</html>

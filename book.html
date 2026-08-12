@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love, Breathe, Climb — The Breathwork Guide for Climbers | Pranaclimb</title>
+  <meta name="description" content="Love, Breathe, Climb by Annie Anderson — the science-based breathwork guide for rock climbers. Pre-register and get a free first chapter. CP, W'bal, CO2 tolerance and breathwork protocols." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink:#ff00ff; --lime:#AAFF00; --blue:#89CFF0;
+      --white:#ffffff; --off:#f5f5f2; --ink:#4a4a4a;
+      --mid:#555555; --border:#e0e0d8;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Outfit',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.12em;color:var(--ink);text-decoration:none;}
+    .nav-logo span{color:var(--pink);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--mid);transition:color 0.2s;}
+    .nav-links a:hover{color:var(--pink);}
+    .nav-cta{background:var(--pink);color:var(--white);padding:0.55rem 1.4rem;border-radius:2px;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+    .nav-cta:hover{background:#cc00cc;}
+
+    /* HERO */
+    .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:72px;}
+    .hero-left{background:var(--white);display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem;}
+    .hero-label{font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem;}
+    .hero-left h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,6vw,5.5rem);line-height:0.9;letter-spacing:0.02em;color:var(--ink);margin-bottom:0.5rem;}
+    .hero-left h1 .sub{font-size:clamp(1.8rem,3vw,2.5rem);color:var(--mid);display:block;}
+    .hero-left h1 .pink{color:var(--pink);}
+    .hero-author{font-size:0.85rem;font-weight:600;letter-spacing:0.12em;color:var(--mid);margin-bottom:2rem;text-transform:uppercase;}
+    .hero-desc{font-size:1rem;line-height:1.8;color:var(--mid);max-width:440px;margin-bottom:2rem;}
+    .hero-themes{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+    .theme-tag{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 0.8rem;border-radius:2px;}
+    .theme-tag.pink{background:var(--pink);color:var(--white);}
+    .theme-tag.lime{background:var(--lime);color:var(--ink);}
+    .theme-tag.blue{background:var(--white);color:var(--ink);}
+    .theme-tag.off{background:var(--off);color:var(--ink);border:1.5px solid var(--border);}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+    .btn-primary{display:inline-block;background:var(--pink);color:var(--white);padding:0.85rem 2rem;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background 0.2s;}
+    .btn-primary:hover{background:#cc00cc;}
+    .btn-secondary{display:inline-block;border:2px solid var(--ink);color:var(--ink);padding:0.85rem 2rem;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all 0.2s;}
+    .btn-secondary:hover{background:var(--ink);color:var(--white);}
+    .hero-right{background:var(--white);display:flex;align-items:center;justify-content:center;padding:4rem;position:relative;}
+    .hero-right img{max-width:320px;width:100%;box-shadow:20px 30px 60px rgba(0,0,0,0.2);transform:rotate(-2deg);border-radius:2px;}
+    .coming-badge{position:absolute;bottom:3rem;right:3rem;background:var(--lime);padding:0.7rem 1.2rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink);border-radius:2px;}
+
+    /* CHAPTER 1 TEASER */
+    .chapter-hero{background:var(--white);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+    .chapter-label{font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem;}
+    .chapter-hero h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,5vw,4.5rem);line-height:0.95;color:var(--ink);margin-bottom:1rem;}
+    .chapter-hero h2 span{color:var(--pink);}
+    .chapter-insight{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1rem;padding:1rem;background:rgba(255,255,255,0.05);border-left:3px solid var(--lime);}
+    .chapter-insight-icon{font-size:1.2rem;flex-shrink:0;}
+    .chapter-insight p{font-size:0.88rem;color:rgba(255,255,255,0.8);line-height:1.6;margin:0;}
+    .chapter-insight strong{color:var(--pink);}
+
+    /* QUOTES STRIP */
+    .quotes-strip{background:var(--pink);padding:5rem 4rem;overflow:hidden;}
+    .quotes-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.5rem);color:var(--white);margin-bottom:3rem;text-align:center;}
+    .quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(255,255,255,0.2);border:1.5px solid rgba(255,255,255,0.2);}
+    .quote-card{background:rgba(255,255,255,0.1);padding:2.5rem 2rem;}
+    .quote-card blockquote{font-family:'Lora',serif;font-size:0.95rem;font-style:italic;line-height:1.8;color:var(--white);margin-bottom:1rem;}
+    .quote-attr{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--pink);}
+
+    /* KEY TAKEAWAYS */
+    .takeaways{background:var(--white);padding:7rem 4rem;}
+    .section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--pink);margin-bottom:0.5rem;}
+    .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--ink);line-height:1;margin-bottom:0.5rem;}
+    .divider{width:48px;height:3px;background:var(--lime);margin:0.8rem 0 2.5rem;}
+    .takeaways-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);}
+    .takeaway-card{background:var(--white);padding:2rem;}
+    .takeaway-card:hover{background:var(--white);}
+    .takeaway-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--lime);line-height:1;margin-bottom:0.5rem;}
+    .takeaway-card h3{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink);margin-bottom:0.5rem;}
+    .takeaway-card p{font-size:0.87rem;line-height:1.7;color:var(--mid);}
+
+    /* CHAPTER EXCERPT */
+    .excerpt{background:var(--white);padding:7rem 4rem;}
+    .excerpt-wrap{max-width:720px;margin:0 auto;}
+    .excerpt-wrap p{font-family:'Lora',serif;font-size:1rem;line-height:1.95;color:var(--mid);margin-bottom:1.5rem;}
+    .excerpt-wrap p.lead{font-size:1.15rem;color:var(--ink);font-weight:400;}
+    .excerpt-wrap blockquote{border-left:3px solid var(--pink);padding:1rem 1.5rem;margin:2rem 0;font-style:italic;color:var(--ink);font-size:1rem;line-height:1.8;}
+    .excerpt-wrap blockquote cite{font-style:normal;font-size:0.75rem;color:var(--mid);display:block;margin-top:0.4rem;font-family:'Outfit',sans-serif;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;}
+    .excerpt-fade{position:relative;overflow:hidden;max-height:600px;}
+    .excerpt-fade::after{content:'';position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to bottom,transparent,var(--white));}
+
+    /* FREE CHAPTER SIGNUP */
+    .signup-section{background:var(--white);padding:7rem 4rem;}
+    .signup-wrap{max-width:700px;margin:0 auto;text-align:center;}
+    .signup-wrap h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);color:var(--ink);line-height:0.95;margin-bottom:1rem;}
+    .signup-wrap h2 span{color:var(--pink);}
+    .signup-wrap p{font-size:1rem;color:var(--mid);line-height:1.8;margin-bottom:0.8rem;}
+    .kit-wrapper .formkit-input{font-family:'Outfit',sans-serif!important;font-size:0.95rem!important;padding:0.9rem 1.2rem!important;border:2px solid rgba(0,0,0,0.15)!important;border-radius:2px!important;}
+    .kit-wrapper .formkit-submit{background-color:var(--pink)!important;font-family:'Outfit',sans-serif!important;font-weight:700!important;letter-spacing:0.15em!important;text-transform:uppercase!important;border-radius:2px!important;border:1.5px solid rgba(255,255,255,0.8)!important;margin-top:0.8rem!important;}
+    .kit-wrapper .formkit-powered-by-convertkit-container{justify-content:center;}
+
+    /* ABOUT ANNIE */
+    .about-section{background:var(--white);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+    .about-img{position:relative;}
+    .about-img img{width:100%;display:block;filter:grayscale(10%);}
+    .about-content .section-label{margin-bottom:0.5rem;}
+    .about-content p{font-size:0.92rem;line-height:1.85;color:var(--mid);margin-bottom:1rem;}
+    .about-content strong{color:var(--ink);}
+    .credentials{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.5rem;}
+    .credential{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;border:1.5px solid var(--border);color:var(--mid);padding:0.35rem 0.8rem;border-radius:2px;}
+
+    /* FOOTER */
+    footer{background:var(--white);color: var(--ink);padding:4rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;}
+    .footer-brand .nav-logo{color:var(--white);display:block;margin-bottom:1rem;}
+    .footer-brand p{font-size:1rem;line-height:1.7;color:rgba(255,255,255,0.85);max-width:260px;}
+    .footer-col h4{font-size:0.8rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.2rem;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
+    .footer-col a{font-size:1rem;color:rgba(255,255,255,0.85);text-decoration:none;transition:color 0.2s;}
+    .footer-col a:hover{color:var(--white);}
+    .footer-col.trading a{font-weight:600;background:rgba(255,255,255,0.2);padding:0.6rem 1rem;border-radius:2px;display:inline-block;}
+    .footer-bottom{background:var(--white);padding:1.2rem 4rem;display:flex;justify-content:space-between;align-items:center;}
+    .footer-bottom p{font-size:0.75rem;color:rgba(0,0,0,0.5);}
+    .footer-bottom a{color:rgba(0,0,0,0.5);text-decoration:none;}
+    .footer-bottom a:hover{color:var(--pink);}
+
+    @media(max-width:900px){
+      nav{padding:1rem 1.5rem;} .nav-links{display:none;}
+      .hero,.chapter-hero,.about-section{grid-template-columns:1fr;}
+      .hero{min-height:auto;padding-top:72px;}
+      .hero-left,.hero-right{padding:3rem 1.5rem;}
+      .takeaways,.excerpt,.signup-section,.quotes-strip{padding:4rem 1.5rem;}
+      .quotes-grid{grid-template-columns:1fr;}
+      .takeaways-grid{grid-template-columns:1fr;}
+      footer{grid-template-columns:1fr;padding:3rem 1.5rem;}
+      .footer-bottom{padding:1rem 1.5rem;flex-direction:column;gap:0.5rem;text-align:center;}
+    }
+  </style>
+  <link rel="canonical" href="https://www.pranaclimb.com/book" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+  <ul class="nav-links">
+    <li><a href="methodology.html">Method</a></li>
+    <li><a href="rba.html">RBA</a></li>
+    <li><a href="index.html#coaching">Coaching</a></li>
+    <li><a href="index.html#app">App</a></li>
+    <li><a href="book.html" style="color:var(--pink);">Book</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#annie">Annie</a></li>
+    <li><a href="gallery.html">Photos & Videos</a></li>
+  </ul>
+  <a href="#signup" class="nav-cta">Free Chapter</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-label">Pranaclimb · Love, Breathe, Climb</div>
+    <h1>PRANACLIMB<br>
+      <span class="sub">LOVE,</span>
+      <span class="sub">BREATHE,</span>
+      <span class="sub pink">CLIMB</span>
+    </h1>
+    <div class="hero-author">By Annie Anderson</div>
+    <p class="hero-desc">A science-based guide to breathwork, endurance, and mindful performance. Learn how breathing transforms climbing — from the science of W′bal to the flow states of elite climbers.</p>
+    <div class="hero-themes">
+      <span class="theme-tag pink">Love</span>
+      <span class="theme-tag lime">Breathe</span>
+      <span class="theme-tag blue">Climb</span>
+      <span class="theme-tag off">Elite Insights</span>
+      <span class="theme-tag off">Breathing Science</span>
+      <span class="theme-tag off">Flow States</span>
+    </div>
+    <div class="hero-btns">
+      <a href="book.html" class="btn-primary">Read More &rarr;</a>
+      <a href="pranaclimb-chapter-I.html?view=full" target="_blank" class="btn-secondary">Chapter I &mdash; Free &rarr;</a>
+    </div>
+
+    <div style="margin-top:2rem; padding-top:2rem; border-top:1px solid rgba(0,0,0,0.1);">
+      <p style="font-size:0.82rem; font-weight:600; color:var(--mid); margin-bottom:0.8rem; letter-spacing:0.05em;">Get a free PDF copy — subscribe below:</p>
+      <style>
+        .book-hero-kit .formkit-input{font-family:'Outfit',sans-serif !important;font-size:0.88rem !important;padding:0.75rem 1rem !important;border:1.5px solid var(--border) !important;border-radius:2px !important;}
+        .book-hero-kit .formkit-submit{background-color:#ff00ff !important;font-family:'Outfit',sans-serif !important;font-weight:600 !important;letter-spacing:0.12em !important;text-transform:uppercase !important;border-radius:2px !important;border:none !important;margin-top:0.6rem !important;}
+        .book-hero-kit .formkit-powered-by-convertkit-container{justify-content:flex-start;}
+        .book-hero-kit .formkit-powered-by-convertkit{font-size:0.6rem !important;opacity:0.4;}
+      </style>
+      <div class="book-hero-kit">
+        <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+        <form action="https://app.kit.com/forms/9354489/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9354489" data-uid="3d6cc9da4e" data-format="inline" data-version="5">
+          <div data-style="clean">
+            <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+            <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+              <div class="formkit-field">
+                <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Your email address" required="" type="email" style="color:#3a3a3a;border-radius:2px;font-weight:400;">
+              </div>
+              <button data-element="submit" class="formkit-submit" style="color:#fff;background-color:#ff00ff;border-radius:2px;font-weight:600;">
+                <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                <span>Send me the PDF</span>
+              </button>
+            </div>
+            <div class="formkit-powered-by-convertkit-container">
+              <a href="https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <p style="font-size:0.75rem; color:var(--mid); margin-top:0.6rem; line-height:1.6;">📧 Please remember to confirm your subscription in the email you receive.</p>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="images/pranaclimb-love-breathe-climb-book-annie-anderson.jpg" alt="Pranaclimb: Love, Breathe, Climb by Annie Anderson" />
+    <div class="coming-badge">Coming 2026</div>
+  </div>
+</div>
+
+<!-- CHAPTER 1 TEASER -->
+<div class="chapter-hero">
+  <div>
+    <div class="chapter-label">Chapter I</div>
+    <h2>LOVE,<br>BREATHE,<br><span>CLIMB</span></h2>
+    <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:2rem;">The opening chapter explores love as the foundation of climbing performance — not just a feeling, but a drive. A force that regulates breath, sustains effort, and powers flow.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#signup" style="display:inline-block;border:1.5px solid rgba(255,255,255,0.4);color:var(--white);padding:0.8rem 1.8rem;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;">Get Free Chapter</a>
+    </div>
+  </div>
+  <div>
+    <div class="chapter-insight">
+      <div class="chapter-insight-icon">🔬</div>
+      <p><strong>Love as a motivation system</strong> — psychobiology reveals love is not an emotion but a drive that sustains effort and commitment over years.</p>
+    </div>
+    <div class="chapter-insight">
+      <div class="chapter-insight-icon">🧠</div>
+      <p><strong>Love is a conscious choice</strong> — directed intentionally toward a goal, a project, a line. What you focus on shapes your performance.</p>
+    </div>
+    <div class="chapter-insight">
+      <div class="chapter-insight-icon">⚡</div>
+      <p><strong>Love is the addiction</strong> — dopamine, reward, resilience, and the willingness to return again and again despite failure.</p>
+    </div>
+    <div class="chapter-insight">
+      <div class="chapter-insight-icon">🫁</div>
+      <p><strong>Elite Insights</strong> — Ondra, Garnbret, Caldwell, Hazelnutt, Woods, Emmett — what drives the world's best climbers.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTES STRIP -->
+<div class="quotes-strip">
+  <div class="quotes-title">Elite Climbers on Love & Climbing</div>
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <blockquote>"I just want to climb. I'm in love with climbing and I just enjoy what I'm doing."</blockquote>
+      <div class="quote-attr">Janja Garnbret</div>
+    </div>
+    <div class="quote-card">
+      <blockquote>"On the wall it's like I come alive; this place changes me. It always has. I take a deep breath and turn to the sheer face rising above."</blockquote>
+      <div class="quote-attr">Tommy Caldwell</div>
+    </div>
+    <div class="quote-card">
+      <blockquote>"I love being out there and feeling the air below my feet. How it feels to be so fit and flow up those routes — it's addictive."</blockquote>
+      <div class="quote-attr">Adam Ondra</div>
+    </div>
+    <div class="quote-card">
+      <blockquote>"Even if it seems like there's no way you'll ever do it, that can change within a single session. The impossible becomes possible."</blockquote>
+      <div class="quote-attr">Anna Hazelnutt</div>
+    </div>
+    <div class="quote-card">
+      <blockquote>"Pure zone state was entered. My breathing was on point. My flow was on point. My body didn't hurt. Nothing felt hard."</blockquote>
+      <div class="quote-attr">Daniel Woods</div>
+    </div>
+    <div class="quote-card">
+      <blockquote>"Climbing, I believe, is simply about love, and this kind of love grows."</blockquote>
+      <div class="quote-attr">Steph Davis</div>
+    </div>
+  </div>
+</div>
+
+<!-- KEY TAKEAWAYS -->
+<section class="takeaways">
+  <div class="section-label">Inside Chapter I</div>
+  <div class="section-title">Key Takeaways</div>
+  <div class="divider"></div>
+  <div class="takeaways-grid">
+    <div class="takeaway-card">
+      <div class="takeaway-num">01</div>
+      <h3>Love is the Foundation</h3>
+      <p>Love is not just a feeling — it is a drive. It fuels motivation, sustains effort, and gives meaning to the climb. Psychobiology confirms: love is a motivation system.</p>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">02</div>
+      <h3>Intention Directs Performance</h3>
+      <p>Your mental state is powerful when directed outward — toward a goal, a movement, a line. What you focus on shapes your experience and your outcome.</p>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">03</div>
+      <h3>Dopamine Drives Persistence</h3>
+      <p>Enjoyment, reward, and belief fuel motivation. This is why climbers return again and again — despite failure, effort, and years. Love is the addiction.</p>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">04</div>
+      <h3>Breath is the Bridge</h3>
+      <p>Breathing connects mind and body. It regulates emotion, sharpens attention, and supports efficient movement under pressure. Train it, and everything changes.</p>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">05</div>
+      <h3>Flow is the Optimal State</h3>
+      <p>Flow emerges when love, focus, and breathing align. Effortless. Immersive. Intrinsically rewarding. Breathing becomes quiet, efficient, and perfectly matched to effort.</p>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">06</div>
+      <h3>You Can Train This</h3>
+      <p>Love, breathing, attention, and emotional regulation are trainable skills. This is the foundation of the Pranaclimb Methodology.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXCERPT -->
+<section class="excerpt" id="excerpt">
+  <div style="text-align:center;margin-bottom:3rem;">
+    <div class="section-label" style="text-align:center;">Chapter I · Opening</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--ink);">Read the Opening</h2>
+    <div style="width:48px;height:3px;background:var(--lime);margin:0.8rem auto 0;"></div>
+  </div>
+  <div class="excerpt-wrap">
+    <div class="excerpt-fade">
+      <p class="lead">Climbing is physically, mentally, and emotionally demanding — and that's exactly why climbers love, live, and breathe it.</p>
+      <p>Breath is not just a background process in climbing — it reflects effort, emotion, and intention in every moment on the rock.</p>
+      <p>Wolfgang Güllich embodied the spirit of progression and creativity, blending vision, strength, and innovation to elevate climbing into a new dimension of movement and possibility. He highlighted how climbing is more than just a sport — it's a way of life:</p>
+      <blockquote>"You don't go for coffee after climbing; rather, going out for coffee is part climbing."<cite>— Wolfgang Güllich</cite></blockquote>
+      <p>An inner fire burns bright in a climber who loves climbing: passion, power, intensity, flowing energy, and high motivation — come and go. These shifts in energy are not just emotional — they are physiological, often mirrored in changes in breathing rhythm and depth.</p>
+      <blockquote>"Climbing, I believe, is simply about love, and this kind of love grows."<cite>— Steph Davis</cite></blockquote>
+      <p>A love of climbing involves freedom, adventure, and exploration; curiosity, courage, high energy, efficient movement, and peak flow states of consciousness. It also involves discomfort — pushing through with grit, hardiness, and resilience — and tolerating pain. In these moments, breathing often becomes strained or irregular — yet learning to stay with the breath can stabilise both body and mind.</p>
+      <p>Climbing outdoors lifts one's spirit — we are deeply connected to nature through our breath. Each breath becomes an exchange between body and environment, linking internal state with the external world. Breathwork helps regulate energy flow through the body, expanding resilience and enabling faster adaptation.</p>
+      <blockquote>"On the wall it's like I come alive; this place changes me. It always has. I take a deep breath and turn to the sheer face rising above."<cite>— Tommy Caldwell</cite></blockquote>
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <p style="font-size:0.9rem;color:var(--mid);margin-bottom:1.5rem;font-style:italic;">Want to read the full chapter? Sign up below and get it free.</p>
+    </div>
+
+    <!-- EMBEDDED FLIPBOOK -->
+    <div style="margin-top:3rem; border:1.5px solid var(--border); border-radius:4px; overflow:hidden; background:var(--white);">
+      <div style="padding:1rem 1.5rem; background:var(--white); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between;">
+        <p style="font-size:0.75rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--pink);">Chapter I — Interactive Flipbook</p>
+        <a href="pranaclimb-chapter-I.html?view=full" target="_blank" style="font-size:0.72rem; font-weight:600; color:var(--mid); text-decoration:none; letter-spacing:0.08em; text-transform:uppercase;">Open Full Screen ↗</a>
+      </div>
+      <iframe src="pranaclimb-chapter-I.html?view=full" 
+        style="width:100%; height:600px; border:none; display:block;"
+        title="Pranaclimb Chapter I Flipbook"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FREE CHAPTER SIGNUP -->
+<section class="signup-section" id="signup">
+  <div class="signup-wrap">
+    <div class="section-label" style="text-align:center;margin-bottom:0.5rem;">Free Download</div>
+    <h2>GET THE <span>FIRST CHAPTER</span><br>FREE</h2>
+    <div style="width:48px;height:3px;background:var(--pink);margin:1rem auto 1.5rem;"></div>
+    <p>Subscribe to the Pranaclimb blog and receive <strong>Chapter I: Love, Breathe, Climb</strong> — the opening chapter of Annie's upcoming book — straight to your inbox.</p>
+    <p style="font-size:0.88rem;margin-bottom:2rem;">Breathing science, elite insights, love as a motivation system, and the foundation of everything Pranaclimb stands for.</p>
+
+    <style>
+      .kit-wrapper .formkit-input{font-family:'Outfit',sans-serif!important;font-size:0.95rem!important;padding:0.9rem 1.2rem!important;border:2px solid rgba(0,0,0,0.15)!important;border-radius:2px!important;}
+      .kit-wrapper .formkit-submit{background-color:#89CFF0!important;font-family:'Outfit',sans-serif!important;font-weight:600!important;letter-spacing:0.15em!important;text-transform:uppercase!important;border-radius:2px!important;border:1.5px solid rgba(255,255,255,0.8)!important;margin-top:0.8rem!important;}
+      .kit-wrapper .formkit-powered-by-convertkit-container{justify-content:center;}
+    </style>
+
+    <div class="kit-wrapper">
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form action="https://app.kit.com/forms/9354489/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9354489" data-uid="3d6cc9da4e" data-format="inline" data-version="5" min-width="400 500 600 700 800">
+        <div data-style="clean">
+          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+          <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+            <div class="formkit-field">
+              <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Your email address" required="" type="email" style="color:#3a3a3a;border-color:#e3e3e3;border-radius:2px;font-weight:400;">
+            </div>
+            <button data-element="submit" class="formkit-submit" style="color:#3a3a3a;background-color:#89CFF0;border-radius:2px;font-weight:600;border:1.5px solid rgba(255,255,255,0.8);">
+              <div class="formkit-spinner"><div></div><div></div><div></div></div>
+              <span>🫁 Send Me the Free Chapter</span>
+            </button>
+          </div>
+          <div class="formkit-powered-by-convertkit-container">
+            <a href="https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <p style="font-size:0.75rem;color:var(--mid);margin-top:1rem;">No spam. Just breathwork science, climbing insights, and early access to the book.</p>
+  </div>
+</section>
+
+<!-- ABOUT ANNIE -->
+<section class="about-section">
+  <div class="about-img">
+    <img src="images/pranaclimb-breathing-coach-annie-anderson-bouldering-cornwall.jpg" alt="Annie Anderson bouldering" />
+  </div>
+  <div class="about-content">
+    <div class="section-label">The Author</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--ink);line-height:1;margin-bottom:0.5rem;">Annie Anderson</h2>
+    <div style="width:48px;height:3px;background:var(--lime);margin:0.8rem 0 1.5rem;"></div>
+    <p>Annie Anderson is a climber, yoga teacher, and breathwork coach with over <strong>30 years of experience</strong> in climbing and yoga, and more than a decade of independent respiratory research.</p>
+    <p>She is the creator of the <strong>Pranaclimb Methodology</strong> — a breath-led performance system integrating breathing rate, critical power (CP), W′bal modelling, and nervous system regulation for climbers.</p>
+    <p>Her book <strong>Pranaclimb: Love, Breathe, Climb</strong> combines science, breathwork, and elite insights, offering unique practices for climbers. Published research on <a href="https://www.researchgate.net/publication/393491795" target="_blank" style="color:var(--pink);font-weight:700;text-decoration:none;">ResearchGate</a> and <a href="https://sportrxiv.org/index.php/server/preprint/view/578" target="_blank" style="color:var(--pink);font-weight:700;text-decoration:none;">SportRxiv</a>.</p>
+    <div class="credentials">
+      <span class="credential">30+ Years Climbing</span>
+      <span class="credential">Breathwork Specialist</span>
+      <span class="credential">Yoga Teacher RYT 200</span>
+      <span class="credential">Researcher</span>
+      <span class="credential">Stage 4 Cancer Survivor</span>
+      <span class="credential">Cold Water Coach</span>
+    </div>
+    <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="index.html#annie" style="display:inline-block;background:var(--pink);color:var(--white);padding:0.8rem 1.8rem;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;">About Annie</a>
+      <a href="rba.html" style="display:inline-block;border:2px solid var(--ink);color:var(--ink);padding:0.8rem 1.8rem;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;">Book Your RBA</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:var(--ink)">PRANA<span style="color:var(--pink)">CLIMB</span></a>
+    <p style="margin-top:0.8rem; font-size:0.88rem; line-height:1.7; color:var(--mid);">With love and the ocean 🌊<br>Annie Anderson — Pranaclimb | OceanDips</p>
+    <div style="display:flex; gap:0.8rem; margin-top:1.2rem;">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--mid)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="var(--mid)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 15v7H9V8z" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:annie@pranaclimb.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--mid);">annie@pranaclimb.com</p>
+    <p style="font-size:0.75rem; margin-top:0.3rem; color:var(--mid);">07875 170 847</p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pages</h4>
+    <ul style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="rba.html">Assessment</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="app.html">The App</a></li>
+      <li><a href="annie.html">About Annie</a></li>
+      <li><a href="gallery.html">Photos</a></li>
+      <li><a href="mailto:annie@pranaclimb.com">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pranaclimb Ltd</h4>
+    <p style="font-size:0.78rem; line-height:1.8; color:var(--mid);">
+      Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.<br><br>
+      Annie is a qualified <strong style="color:var(--ink);">SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong style="color:var(--ink);">Registered Yoga Teacher RYT 200</strong> (2012).<br><br>
+      Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong style="color:var(--ink);">Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).<br><br>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" style="color:var(--pink); font-weight:600; text-decoration:none;">Connect on LinkedIn &rarr;</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Trading As</h4>
+    <ul>
+      <li><a href="https://www.pranaclimb.com">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com" target="_blank">🌊 OceanDips</a></li>
+    </ul>
+    <p style="font-size:0.78rem; color:var(--mid); margin-top:0.8rem; line-height:1.8;"><strong style="color:var(--ink);">Pranaclimb Ltd</strong><br>Company No. 16626114<br>13 Upton Towans, Hayle<br>Cornwall TR27 5BJ</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div style="display:flex; flex-direction:column; gap:0.3rem;">
+    <p>&copy; 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p style="font-size:0.7rem; color:rgba(0,0,0,0.4);">pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  </div>
+  <div style="display:flex; gap:1.5rem; flex-shrink:0; margin-left:2rem;">
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Statcounter -->
+<script type="text/javascript">
+var sc_project=11925361; 
+var sc_invisible=1; 
+var sc_security="14a77c6b"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11925361/0/14a77c6b/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter -->
+</body>
+</html>

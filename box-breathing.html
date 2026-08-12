@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Breathing Timer — Pranaclimb</title>
+<meta name="description" content="Free guided Box Breathing timer — 4:4:4:4 equal-phase breathing to reset your nervous system and recover faster on the wall. Built by Pranaclimb.">
+<link rel="canonical" href="https://www.pranaclimb.com/box-breathing">
+<meta property="og:title" content="Box Breathing Timer — Pranaclimb">
+<meta property="og:description" content="Free guided Box Breathing timer — 4:4:4:4 equal-phase breathing to reset your nervous system and recover faster.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.pranaclimb.com/box-breathing">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Box Breathing Technique",
+  "description": "Equal-phase breathing technique (inhale, hold, exhale, hold) used to reset the nervous system and restore energy reserves between climbing efforts.",
+  "step": [
+    {"@type": "HowToStep", "name": "Inhale", "text": "Breathe in steadily through the nose for a count of 4."},
+    {"@type": "HowToStep", "name": "Hold full", "text": "Hold the breath, full and still, for a count of 4."},
+    {"@type": "HowToStep", "name": "Exhale", "text": "Release slowly and steadily for a count of 4."},
+    {"@type": "HowToStep", "name": "Hold empty", "text": "Hold with lungs empty for a count of 4, then repeat."}
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --pink:#ff00ff; --lime:#AAFF00; --blue:#89CFF0; --ink:#3a3a3a; --mid:#666; --off:#f5f5f2; --border:#e0e0d8; --white:#fff; }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Outfit',sans-serif; color:var(--ink); background:var(--white); }
+  nav { position:sticky; top:0; z-index:100; background:var(--white); border-bottom:2px solid var(--lime); padding:0.8rem 2rem; display:flex; align-items:center; justify-content:space-between; }
+  .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.1em; color:var(--ink); text-decoration:none; }
+  .nav-logo span { color:var(--lime); }
+  .nav-tagline { font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); text-decoration:none; transition:color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--pink); }
+  .hero { background:var(--off); border-bottom:3px solid var(--lime); padding:4rem 2rem 3rem; }
+  .hero-inner { max-width:900px; margin:0 auto; }
+  .hero-eyebrow { font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); margin-bottom:0.5rem; }
+  .hero-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.8rem,7vw,5rem); letter-spacing:0.06em; color:var(--ink); line-height:1; margin-bottom:0.8rem; }
+  .hero-title span { color:var(--blue); }
+  .hero-sub { font-size:1rem; font-weight:300; color:var(--mid); max-width:580px; line-height:1.75; margin-bottom:1.5rem; }
+  .hero-pills { display:flex; gap:8px; flex-wrap:wrap; }
+  .pill { font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:5px 14px; border-radius:2px; }
+  .pill-lime { background:var(--lime); color:var(--ink); }
+  .pill-pink { background:var(--pink); color:var(--white); }
+  .pill-blue { background:var(--blue); color:var(--ink); }
+  .pill-off { background:var(--white); color:var(--ink); border:1px solid var(--border); }
+  .page-grid { max-width:900px; margin:0 auto; padding:3rem 2rem; display:grid; grid-template-columns:1fr 380px; gap:3rem; align-items:start; }
+  @media(max-width:780px) { .page-grid { grid-template-columns:1fr; padding:2rem 1.2rem; } }
+  .content-block { margin-bottom:2.5rem; }
+  .block-eyebrow { font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--pink); margin-bottom:0.4rem; }
+  .block-title { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.06em; color:var(--ink); margin-bottom:0.6rem; }
+  .lime-bar { height:3px; background:var(--lime); width:40px; border-radius:2px; margin-bottom:1rem; }
+  .body-text { font-size:0.88rem; font-weight:300; color:var(--mid); line-height:1.8; margin-bottom:0.8rem; }
+  .body-text strong { font-weight:600; color:var(--ink); }
+  .steps { list-style:none; counter-reset:steps; }
+  .steps li { counter-increment:steps; display:flex; gap:1rem; align-items:flex-start; margin-bottom:1rem; font-size:0.88rem; font-weight:300; color:var(--mid); line-height:1.7; }
+  .steps li::before { content:counter(steps); font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:0.04em; color:var(--blue); min-width:28px; line-height:1.1; }
+  .steps li strong { font-weight:600; color:var(--ink); display:block; margin-bottom:2px; }
+  .cue-card { background:var(--off); border-left:3px solid var(--blue); border-radius:0 2px 2px 0; padding:1rem 1.2rem; margin-bottom:0.8rem; }
+  .cue-card-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--blue); margin-bottom:0.3rem; }
+  .cue-card-text { font-size:0.85rem; font-style:italic; color:var(--ink); }
+  .research-box { background:var(--off); border:1px solid var(--border); border-top:3px solid var(--lime); border-radius:2px; padding:1.2rem 1.4rem; margin-bottom:0.8rem; }
+  .research-box-tag { font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--mid); margin-bottom:0.4rem; }
+  .research-box-title { font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:0.06em; color:var(--ink); margin-bottom:0.5rem; }
+  .research-box-text { font-size:0.8rem; font-weight:300; color:var(--mid); line-height:1.7; }
+  .research-stat { display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:0.08em; background:var(--blue); color:var(--ink); padding:3px 10px; border-radius:2px; margin-top:0.6rem; }
+  .zone-badge { display:inline-flex; align-items:center; gap:8px; background:var(--off); border:1px solid var(--border); border-radius:2px; padding:0.6rem 1rem; margin-bottom:0.6rem; font-size:0.82rem; width:100%; }
+  .zone-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+  .timer-sticky { position:sticky; top:80px; }
+  .timer-card { background:var(--white); border:1px solid var(--border); border-radius:2px; padding:1.8rem; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+  .t-logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.1em; color:var(--ink); }
+  .t-logo span { color:var(--lime); }
+  .t-tagline { font-size:0.6rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--pink); }
+  .t-lbar { height:2px; background:var(--lime); margin:0.5rem 0 1rem; }
+  .t-title { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.06em; margin-bottom:0.2rem; }
+  .t-sub { font-size:0.75rem; font-weight:300; color:var(--mid); margin-bottom:1.2rem; }
+  .t-row { display:flex; align-items:center; gap:0.8rem; margin-bottom:0.7rem; }
+  .t-label { font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); min-width:120px; }
+  .t-val { font-size:0.9rem; font-weight:600; min-width:28px; text-align:right; }
+  input[type=range] { flex:1; accent-color:var(--pink); }
+  .t-card-inner { background:var(--off); border:1px solid var(--border); border-radius:2px; padding:1rem 1.1rem; margin-bottom:0.8rem; }
+  .t-btn { width:100%; padding:0.8rem; background:var(--pink); color:var(--white); border:none; border-radius:2px; font-family:'Outfit',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:background 0.15s; margin-bottom:0.4rem; }
+  .t-btn:hover { background:#cc00cc; }
+  .timer-view { display:none; text-align:center; }
+  .t-round-tag { display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink); background:var(--lime); padding:3px 10px; border-radius:2px; margin-bottom:0.8rem; }
+  .t-phase-lbl { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.06em; margin-bottom:0.2rem; }
+  .t-phase-desc { font-size:0.75rem; font-weight:300; color:var(--mid); margin-bottom:1rem; min-height:16px; }
+  .box-svg-wrap { width:150px; height:150px; margin:0 auto 1rem; }
+  .t-dots { display:flex; gap:6px; justify-content:center; margin-bottom:1rem; }
+  .tdot { width:6px; height:6px; border-radius:50%; background:var(--border); transition:background 0.3s; }
+  .tdot.done { background:var(--blue); }
+  .tdot.active { background:var(--pink); }
+  .t-ctrls { display:flex; gap:6px; justify-content:center; margin-top:0.6rem; }
+  .t-ctrl { padding:0.5rem 1rem; border:1.5px solid var(--border); border-radius:2px; background:transparent; font-family:'Outfit',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:all 0.15s; }
+  .t-ctrl:hover { border-color:var(--ink); }
+  .t-ctrl.pink { background:var(--pink); color:var(--white); border-color:var(--pink); }
+  .t-ctrl.pink:hover { background:#cc00cc; }
+  .complete-view { display:none; text-align:center; padding:1rem 0; }
+  .complete-done { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:0.08em; color:var(--lime); }
+  .complete-title { font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:0.06em; margin-bottom:0.4rem; }
+  .complete-text { font-size:0.8rem; font-weight:300; color:var(--mid); margin-bottom:1.2rem; }
+  footer { background:var(--off); color:var(--mid); padding:2.5rem 2rem; text-align:center; border-top:3px solid var(--lime); }
+  .footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.1em; color:var(--ink); }
+  .footer-logo span { color:var(--lime); }
+  .footer-tagline { font-size:0.62rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); margin-bottom:0.6rem; }
+  .page-nav-strip { background:var(--white); border-top:1px solid var(--border); padding:1.5rem 2rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+  .page-nav-link { font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); text-decoration:none; padding:0.5rem 1.2rem; border:1.5px solid var(--border); border-radius:2px; transition:all 0.15s; }
+  .page-nav-link:hover { color:var(--pink); border-color:var(--pink); }
+  .page-nav-link.current { background:var(--lime); color:var(--ink); border-color:var(--lime); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <a href="breathing.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+    <p class="nav-tagline">Love · Breathe · Climb</p>
+  </div>
+  <ul class="nav-links">
+    <li><a href="breathing.html">Toolbox</a></li>
+    <li><a href="wim-hof.html">Wim Hof</a></li>
+    <li><a href="box-breathing.html" class="active">Box Breathing</a></li>
+    <li><a href="cyclic-sighing.html">Cyclic Sighing</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Breathing Toolbox · Recovery</p>
+    <h1 class="hero-title">Box <span>Breathing</span></h1>
+    <p class="hero-sub">Equal-phase breathing — inhale, hold, exhale, hold — each for the same count. The simplest and most powerful tool for resetting your nervous system between efforts and restoring W′bal at rest holds.</p>
+    <div class="hero-pills">
+      <span class="pill pill-blue">Recovery</span>
+      <span class="pill pill-lime">At Rest Holds</span>
+      <span class="pill pill-off">4:4:4:4</span>
+      <span class="pill pill-pink">CP Zone</span>
+    </div>
+  </div>
+</section>
+
+<div class="page-grid">
+  <div>
+    <div class="content-block">
+      <p class="block-eyebrow">How it works</p>
+      <h2 class="block-title">The Method</h2>
+      <div class="lime-bar"></div>
+      <p class="body-text">Box breathing — also called <strong>4:4:4:4 breathing</strong> — divides each breath cycle into four equal phases: inhale, hold full, exhale, hold empty. The equal duration of each phase creates a balanced, symmetrical breath cycle that powerfully activates the parasympathetic nervous system.</p>
+      <p class="body-text">Used by Navy SEALs, athletes, and coaches worldwide, box breathing is the go-to tool for <strong>calming under pressure</strong>. For climbers, it's ideal at rest holds, between redpoint burns, or any time you need to bring heart rate down and restore your W′ reserve.</p>
+    </div>
+
+    <div class="content-block">
+      <p class="block-eyebrow">Step by step</p>
+      <h2 class="block-title">How To Practice</h2>
+      <div class="lime-bar"></div>
+      <ol class="steps">
+        <li><strong>Find your rest position</strong>Seated on a ledge, hanging in a rest hold, or lying down. Relax your shoulders and jaw completely.</li>
+        <li><strong>Inhale — 4 counts</strong>Breathe in steadily and evenly through the nose. Feel the belly and ribs expand. Keep it smooth — no gasping.</li>
+        <li><strong>Hold full — 4 counts</strong>Hold with the lungs full. Stay relaxed — don't tense the throat or chest. Let the breath sit quietly.</li>
+        <li><strong>Exhale — 4 counts</strong>Release slowly and evenly through the nose or slightly parted lips. Empty completely by the end of count 4.</li>
+        <li><strong>Hold empty — 4 counts</strong>Hold with the lungs empty. Stay calm — this is where the parasympathetic response deepens. Then repeat.</li>
+        <li><strong>Continue for 6–12 rounds</strong>As you settle in, you can extend each phase to 5 or 6 counts. Let the timer guide you.</li>
+      </ol>
+    </div>
+
+    <div class="content-block">
+      <p class="block-eyebrow">Pranaclimb Coaching</p>
+      <h2 class="block-title">Coaching Cues</h2>
+      <div class="lime-bar"></div>
+      <div class="cue-card">
+        <p class="cue-card-label">Inhale</p>
+        <p class="cue-card-text">"Breathe into your belly first — slow and even, all the way up."</p>
+      </div>
+      <div class="cue-card">
+        <p class="cue-card-label">Hold Full</p>
+        <p class="cue-card-text">"Hold it gently — full and still, no tension."</p>
+      </div>
+      <div class="cue-card">
+        <p class="cue-card-label">Exhale</p>
+        <p class="cue-card-text">"Release it all — slow and steady, let go completely."</p>
+      </div>
+      <div class="cue-card">
+        <p class="cue-card-label">Hold Empty</p>
+        <p class="cue-card-text">"Empty and calm — this is where recovery happens."</p>
+      </div>
+      <div class="cue-card">
+        <p class="cue-card-label">General</p>
+        <p class="cue-card-text">"Inhale control, exhale calm."</p>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <p class="block-eyebrow">Zone Mapping</p>
+      <h2 class="block-title">When To Use It</h2>
+      <div class="lime-bar"></div>
+      <div class="zone-badge"><span class="zone-dot" style="background:var(--lime)"></span><span><strong>At rest holds on the wall</strong> — especially on long routes with shake-out positions</span></div>
+      <div class="zone-badge"><span class="zone-dot" style="background:var(--blue)"></span><span><strong>Between redpoint attempts</strong> — 5–10 minutes of box breathing to restore W′bal</span></div>
+      <div class="zone-badge"><span class="zone-dot" style="background:var(--pink)"></span><span><strong>Pre-climb nervous system reset</strong> — calm anxiety and sharpen focus before tying in</span></div>
+      <div class="zone-badge"><span class="zone-dot" style="background:var(--border)"></span><span><strong>BR Zone:</strong> 15–25 BPM · Dominant PNS activation · W′bal restoration</span></div>
+    </div>
+
+    <div class="content-block">
+      <p class="block-eyebrow">Research Spotlight</p>
+      <h2 class="block-title">The Science</h2>
+      <div class="lime-bar"></div>
+      <div class="research-box">
+        <p class="research-box-tag">Breathwork · Mood · Arousal</p>
+        <p class="research-box-title">Box Breathing vs Mindfulness Meditation</p>
+        <p class="research-box-text">In a randomised controlled trial comparing daily 5-minute breathwork practices against mindfulness meditation over one month, box breathing (equal duration inhale, hold, exhale, hold) produced significant improvements in mood and reduction in physiological arousal — including respiratory rate, heart rate, and heart rate variability. All breathwork conditions outperformed meditation for physiological outcomes.</p>
+        <span class="research-stat">Balban et al., 2023 — Huberman Lab / Cell Reports Medicine</span>
+      </div>
+      <div class="research-box">
+        <p class="research-box-tag">W′bal · Recovery · PNS</p>
+        <p class="research-box-title">Box Breathing in the Pranaclimb Framework</p>
+        <p class="research-box-text">Within the Pranaclimb zone model, box breathing sits firmly in the recovery zone (BR 15–25 BPM). Its symmetrical phase structure provides consistent CO₂ management, keeps ventilation smooth and controlled, and activates the parasympathetic nervous system to accelerate HRR₆₀ and W′ recharge between efforts.</p>
+        <span class="research-stat">Pranaclimb Workbook V17</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMER -->
+  <div class="timer-sticky">
+    <div class="timer-card">
+      <div class="t-logo">PRANA<span>CLIMB</span></div>
+      <p class="t-tagline">Love · Breathe · Climb</p>
+      <div class="t-lbar"></div>
+      <p class="t-title">Box Breathing Timer</p>
+      <p class="t-sub">4:4:4:4 · Equal phases · Nervous system reset</p>
+
+      <div id="box-setup">
+        <div class="t-card-inner">
+          <div class="t-row"><span class="t-label">Phase (seconds)</span><input type="range" min="3" max="8" value="4" id="box-phase" step="1" oninput="document.getElementById('box-pv').textContent=this.value"><span class="t-val" id="box-pv">4</span></div>
+          <div class="t-row"><span class="t-label">Rounds</span><input type="range" min="3" max="12" value="6" id="box-rounds" step="1" oninput="document.getElementById('box-rv').textContent=this.value"><span class="t-val" id="box-rv">6</span></div>
+        </div>
+        <button class="t-btn" onclick="boxStart()">Begin Session →</button>
+      </div>
+
+      <div id="box-timer" class="timer-view">
+        <p class="t-round-tag" id="box-rtag">Round 1</p>
+        <div class="box-svg-wrap">
+          <svg viewBox="0 0 150 150" width="150" height="150">
+            <rect x="15" y="15" width="120" height="120" rx="4" fill="none" stroke="#e0e0d8" stroke-width="4"/>
+            <rect x="15" y="15" width="120" height="120" rx="4" fill="none" stroke="#ff00ff" stroke-width="4" stroke-dasharray="480" stroke-dashoffset="480" id="box-arc" style="transition:stroke-dashoffset 0.1s linear"/>
+            <text x="75" y="68" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="30" fill="#3a3a3a" id="box-num">4</text>
+            <text x="75" y="90" text-anchor="middle" font-family="Outfit,sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#666" id="box-plbl">INHALE</text>
+          </svg>
+        </div>
+        <p class="t-phase-desc" id="box-desc">Breathe in steadily through the nose</p>
+        <div class="t-dots" id="box-dots"></div>
+        <div class="t-ctrls">
+          <button class="t-ctrl" onclick="boxStop()">✕ Stop</button>
+          <button class="t-ctrl pink" id="box-pbtn" onclick="boxPause()">⏸ Pause</button>
+        </div>
+      </div>
+
+      <div id="box-complete" class="complete-view">
+        <p class="complete-done">DONE</p>
+        <p class="complete-title">Session Complete</p>
+        <p class="complete-text" id="box-ctext"></p>
+        <button class="t-btn" onclick="boxReset()" style="max-width:200px;margin:0 auto;display:block;">Start Again →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-nav-strip">
+  <a href="breathing.html" class="page-nav-link">← Toolbox</a>
+  <a href="wim-hof.html" class="page-nav-link">← Wim Hof</a>
+  <a href="box-breathing.html" class="page-nav-link current">Box Breathing</a>
+  <a href="cyclic-sighing.html" class="page-nav-link">Cyclic Sighing →</a>
+</div>
+
+<footer>
+  <div class="footer-logo">PRANA<span>CLIMB</span></div>
+  <p class="footer-tagline">Love · Breathe · Climb</p>
+  <p style="font-size:0.72rem;font-weight:300;">© 2025 Pranaclimb Ltd · annie@pranaclimb.com</p>
+  <p style="font-size:0.68rem;margin-top:0.4rem;color:#999;">Insured via Insure4Sport / Aviva through Pranaclimb Ltd</p>
+</footer>
+
+<script>
+let bPhase=4,bRounds=6,bCurrent=0,bPhaseIdx=0;
+let bPaused=false,bStopped=false,bTimer=null;
+const bNames=['Inhale','Hold','Exhale','Hold'];
+const bDescs=['Breathe in steadily through the nose','Hold — full and still','Release slowly and steadily','Hold — empty and calm'];
+const BC=480;
+
+function boxBuildDots(){const d=document.getElementById('box-dots');d.innerHTML='';for(let i=0;i<bRounds;i++){const dot=document.createElement('div');dot.className='tdot';dot.id='bd'+i;d.appendChild(dot);}}
+function boxUpdateDots(){for(let i=0;i<bRounds;i++){const e=document.getElementById('bd'+i);e.className=i<bCurrent-1?'tdot done':i===bCurrent-1?'tdot active':'tdot';}}
+
+function boxStart(){
+  bPhase=parseInt(document.getElementById('box-phase').value);
+  bRounds=parseInt(document.getElementById('box-rounds').value);
+  bCurrent=0;bPhaseIdx=0;bPaused=false;bStopped=false;
+  document.getElementById('box-setup').style.display='none';
+  document.getElementById('box-timer').style.display='block';
+  boxBuildDots();boxNextPhase();
+}
+function boxNextPhase(){
+  if(bStopped)return;
+  if(bPhaseIdx===0){bCurrent++;if(bCurrent>bRounds){boxComplete();return;}boxUpdateDots();document.getElementById('box-rtag').textContent='Round '+bCurrent+' of '+bRounds;}
+  boxRunPhase();
+}
+function boxRunPhase(){
+  if(bStopped)return;
+  const arc=document.getElementById('box-arc'),num=document.getElementById('box-num'),plbl=document.getElementById('box-plbl'),desc=document.getElementById('box-desc');
+  num.textContent=bPhase;plbl.textContent=bNames[bPhaseIdx];desc.textContent=bDescs[bPhaseIdx];
+  arc.style.strokeDashoffset=BC;
+  let s=bPhase,tot=bPhase;
+  function tick(){if(bStopped)return;if(bPaused){bTimer=setTimeout(tick,200);return;}num.textContent=s;arc.style.strokeDashoffset=BC-(BC*(tot-s)/tot);if(s<=0){bPhaseIdx=(bPhaseIdx+1)%4;boxNextPhase();return;}s--;bTimer=setTimeout(tick,1000);}
+  setTimeout(()=>{arc.style.strokeDashoffset=BC;tick();},50);
+}
+function boxPause(){bPaused=!bPaused;document.getElementById('box-pbtn').textContent=bPaused?'▶ Resume':'⏸ Pause';}
+function boxStop(){bStopped=true;clearTimeout(bTimer);boxReset();}
+function boxReset(){
+  bStopped=true;clearTimeout(bTimer);bPhaseIdx=0;
+  document.getElementById('box-setup').style.display='block';
+  document.getElementById('box-timer').style.display='none';
+  document.getElementById('box-complete').style.display='none';
+  document.getElementById('box-pbtn').textContent='⏸ Pause';
+  bPaused=false;bStopped=false;
+}
+function boxComplete(){
+  document.getElementById('box-timer').style.display='none';
+  document.getElementById('box-complete').style.display='block';
+  document.getElementById('box-ctext').textContent=bRounds+' rounds complete. Nervous system reset.';
+}
+</script>
+</body>
+</html>

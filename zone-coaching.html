@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zone Coaching — Pranaclimb</title>
+<meta name="description" content="The Pranaclimb breathing zone system for climbing coaches and climbers — breath cues, BR/RPE scoring, and elite case studies for every performance zone.">
+<link rel="canonical" href="https://www.pranaclimb.com/zone-coaching">
+<meta property="og:title" content="Zone Coaching — Pranaclimb">
+<meta property="og:description" content="The Pranaclimb breathing zone system — breath cues and scoring for every climbing performance zone.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.pranaclimb.com/zone-coaching">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --pink:#ff00ff; --lime:#AAFF00; --blue:#89CFF0; --ink:#3a3a3a; --mid:#666; --off:#f5f5f2; --border:#e0e0d8; --white:#fff;
+          --z1:#89CFF0; --z2:#AAFF00; --z3:#ffb347; --z4:#ff5577; }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Outfit',sans-serif; color:var(--ink); background:var(--white); }
+
+  nav { position:sticky; top:0; z-index:100; background:var(--white); border-bottom:2px solid var(--lime); padding:0.8rem 2rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; }
+  .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.1em; color:var(--ink); text-decoration:none; }
+  .nav-logo span { color:var(--lime); }
+  .nav-tagline { font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); }
+  .nav-links { display:flex; gap:1.3rem; list-style:none; flex-wrap:wrap; }
+  .nav-links a { font-size:0.74rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); text-decoration:none; transition:color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--pink); }
+
+  .hero { background:var(--off); border-bottom:3px solid var(--lime); padding:3.5rem 2rem 2.5rem; }
+  .hero-inner { max-width:980px; margin:0 auto; }
+  .hero-eyebrow { font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); margin-bottom:0.5rem; }
+  .hero-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.4rem,6vw,4rem); letter-spacing:0.06em; color:var(--ink); line-height:1; margin-bottom:0.8rem; }
+  .hero-title span { color:var(--pink); }
+  .hero-sub { font-size:0.92rem; font-weight:300; color:var(--mid); max-width:640px; line-height:1.75; margin-bottom:1.3rem; }
+
+  /* TOGGLE */
+  .toggle-wrap { display:inline-flex; background:var(--white); border:2px solid var(--ink); border-radius:30px; padding:4px; gap:4px; }
+  .toggle-btn { font-size:0.78rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:8px 20px; border-radius:24px; border:none; background:transparent; cursor:pointer; color:var(--mid); transition:all 0.2s; }
+  .toggle-btn.active { background:var(--pink); color:var(--white); }
+
+  /* QUOTE */
+  .quote-strip { background:var(--off); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:1.5rem 2rem; text-align:center; }
+  .quote-strip p { color:var(--ink); font-size:0.95rem; font-style:italic; max-width:700px; margin:0 auto; line-height:1.7; }
+  .quote-strip cite { display:block; color:var(--pink); font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-top:0.6rem; font-style:normal; }
+
+  .main { max-width:980px; margin:0 auto; padding:2.5rem 2rem 1rem; }
+
+  /* ZONE NAV PILLS */
+  .zone-pills { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:2.5rem; position:sticky; top:60px; background:var(--white); padding:0.8rem 0; z-index:80; border-bottom:1px solid var(--border); }
+  .zone-pill { font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:7px 16px; border-radius:20px; border:2px solid var(--border); background:var(--white); cursor:pointer; transition:all 0.15s; color:var(--mid); }
+  .zone-pill[data-zone="1"]:hover, .zone-pill[data-zone="1"].active { background:var(--z1); border-color:var(--z1); color:var(--ink); }
+  .zone-pill[data-zone="2"]:hover, .zone-pill[data-zone="2"].active { background:var(--z2); border-color:var(--z2); color:var(--ink); }
+  .zone-pill[data-zone="3"]:hover, .zone-pill[data-zone="3"].active { background:var(--z3); border-color:var(--z3); color:var(--ink); }
+  .zone-pill[data-zone="4"]:hover, .zone-pill[data-zone="4"].active { background:var(--z4); border-color:var(--z4); color:var(--white); }
+
+  /* ZONE CARD */
+  .zone-card { border:1px solid var(--border); border-radius:4px; margin-bottom:2.5rem; overflow:hidden; scroll-margin-top:140px; }
+  .zone-header { padding:1.5rem 1.8rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+  .zone-header.z1 { background:linear-gradient(135deg,#89CFF0,#a8dcf5); }
+  .zone-header.z2 { background:linear-gradient(135deg,#AAFF00,#c4ff4d); }
+  .zone-header.z3 { background:linear-gradient(135deg,#ffb347,#ffc670); }
+  .zone-header.z4 { background:linear-gradient(135deg,#ff5577,#ff7a93); }
+  .zone-num { font-family:'Bebas Neue',sans-serif; font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink); opacity:0.7; }
+  .zone-header.z4 .zone-num { color:var(--white); opacity:0.85; }
+  .zone-title { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; color:var(--ink); line-height:1.05; }
+  .zone-header.z4 .zone-title { color:var(--white); }
+  .zone-goal { font-size:0.82rem; font-weight:500; color:var(--ink); margin-top:0.3rem; }
+  .zone-header.z4 .zone-goal { color:var(--white); }
+  .zone-metrics { display:flex; gap:8px; flex-wrap:wrap; }
+  .metric-chip { background:rgba(255,255,255,0.55); border-radius:3px; padding:5px 10px; font-size:0.68rem; font-weight:700; color:var(--ink); }
+  .zone-header.z4 .metric-chip { background:rgba(255,255,255,0.2); color:var(--white); }
+
+  .zone-body { padding:1.8rem; }
+
+  /* SCORING TABLE (coach mode) */
+  .score-table { width:100%; border-collapse:collapse; margin-bottom:1.6rem; font-size:0.78rem; }
+  .score-table th { text-align:left; font-size:0.65rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--mid); padding:0.5rem 0.7rem; border-bottom:2px solid var(--border); }
+  .score-table td { padding:0.6rem 0.7rem; border-bottom:1px solid var(--border); color:var(--ink); font-weight:300; }
+  .score-table td:first-child { font-weight:600; }
+
+  /* CUE CARDS GRID */
+  .cues-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:0.9rem; }
+  .cue-card { background:var(--off); border:1px solid var(--border); border-radius:3px; padding:1rem 1.1rem; transition:border-color 0.15s; }
+  .cue-card:hover { border-color:var(--pink); }
+  .cue-icon-name { display:flex; align-items:center; gap:8px; margin-bottom:0.5rem; }
+  .cue-icon { font-size:1.3rem; }
+  .cue-name { font-family:'Bebas Neue',sans-serif; font-size:1.05rem; letter-spacing:0.04em; color:var(--ink); }
+  .cue-how { font-size:0.78rem; font-weight:300; color:var(--mid); line-height:1.6; margin-bottom:0.5rem; }
+  .cue-coach-extra { font-size:0.72rem; font-weight:300; color:#888; line-height:1.6; border-top:1px dashed var(--border); padding-top:0.5rem; margin-top:0.5rem; display:none; }
+  .coach-mode .cue-coach-extra { display:block; }
+  .cue-quote { font-size:0.78rem; font-style:italic; color:var(--pink); font-weight:500; margin-top:0.5rem; }
+
+  /* RED LIMITER BOX */
+  .limiter-box { background:#fff4f4; border-left:3px solid var(--z4); border-radius:0 3px 3px 0; padding:0.9rem 1.2rem; margin-top:1.2rem; font-size:0.8rem; color:var(--ink); display:none; }
+  .coach-mode .limiter-box { display:block; }
+  .limiter-label { font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--z4); margin-bottom:0.3rem; }
+
+  /* LANGUAGE OF BREATH */
+  .lang-section { background:var(--off); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:3rem 2rem; }
+  .lang-inner { max-width:980px; margin:0 auto; }
+  .lang-table { width:100%; border-collapse:collapse; background:var(--white); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+  .lang-table th { background:var(--lime); color:var(--ink); text-align:left; font-size:0.68rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.7rem 1rem; }
+  .lang-table td { padding:0.8rem 1rem; border-bottom:1px solid var(--border); font-size:0.82rem; color:var(--ink); font-weight:300; }
+  .lang-table td:first-child { font-style:italic; font-weight:500; }
+  .lang-table tr:last-child td { border-bottom:none; }
+
+  /* CASE STUDIES */
+  .cases-section { padding:3rem 2rem; max-width:980px; margin:0 auto; }
+  .case-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.2rem; margin-top:1.5rem; }
+  .case-card { background:var(--white); border:1px solid var(--border); border-top:3px solid var(--pink); border-radius:3px; padding:1.3rem 1.4rem; }
+  .case-climber { font-family:'Bebas Neue',sans-serif; font-size:1.15rem; letter-spacing:0.04em; color:var(--ink); }
+  .case-route { font-size:0.75rem; font-weight:600; color:var(--pink); margin-bottom:0.7rem; }
+  .case-row { font-size:0.78rem; font-weight:300; color:var(--mid); line-height:1.7; margin-bottom:0.3rem; }
+  .case-row strong { color:var(--ink); font-weight:600; }
+
+  footer { background:var(--off); padding:2.5rem 2rem; text-align:center; border-top:3px solid var(--lime); }
+  .footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.1em; color:var(--ink); }
+  .footer-logo span { color:var(--lime); }
+  .footer-tagline { font-size:0.62rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); margin-bottom:0.6rem; }
+  .page-nav-strip { background:var(--white); border-top:1px solid var(--border); padding:1.5rem 2rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+  .page-nav-link { font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); text-decoration:none; padding:0.5rem 1.1rem; border:1.5px solid var(--border); border-radius:2px; transition:all 0.15s; }
+  .page-nav-link:hover { color:var(--pink); border-color:var(--pink); }
+  .page-nav-link.current { background:var(--lime); color:var(--ink); border-color:var(--lime); }
+
+  .climber-only { display:none; }
+  body.climber-mode .climber-only { display:block; }
+  body.climber-mode .coach-only { display:none; }
+
+  @media(max-width:600px){ nav{padding:0.8rem 1rem;} .main{padding:2rem 1.2rem 1rem;} .zone-pills{top:54px;} .score-table{font-size:0.7rem;} }
+</style>
+</head>
+<body class="coach-mode">
+
+<nav>
+  <div>
+    <a href="breathing.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+    <p class="nav-tagline">Love · Breathe · Climb</p>
+  </div>
+  <ul class="nav-links">
+    <li><a href="breathing.html">Toolbox</a></li>
+    <li><a href="breathwork-practices.html">Practices</a></li>
+    <li><a href="zone-coaching.html" class="active">Zone Coaching</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">From The Pranaclimb Coaching Protocol</p>
+    <h1 class="hero-title">Zone <span>Coaching</span></h1>
+    <p class="hero-sub">Breathe to stay in the right zone — and move with intention. The complete language of breath: four performance zones, the cues that live in each, and the science behind every one.</p>
+    <div class="toggle-wrap">
+      <button class="toggle-btn active" id="btn-coach" onclick="setMode('coach')">🧭 Coach View</button>
+      <button class="toggle-btn" id="btn-climber" onclick="setMode('climber')">🧗 Climber View</button>
+    </div>
+  </div>
+</section>
+
+<div class="quote-strip">
+  <p>"Breath has patterns. Patterns create behaviour. Breath is a behaviour. Behaviour represents the person. Breath reveals the person."</p>
+  <cite>The Pranaclimb Coaching Protocol</cite>
+</div>
+
+<div class="main">
+  <div class="zone-pills">
+    <button class="zone-pill active" data-zone="1" onclick="scrollToZone(1)">🔻 Zone 1 · Recovery</button>
+    <button class="zone-pill" data-zone="2" onclick="scrollToZone(2)">🟡 Zone 2 · CP</button>
+    <button class="zone-pill" data-zone="3" onclick="scrollToZone(3)">🔺 Zone 3 · RCP/Crux</button>
+    <button class="zone-pill" data-zone="4" onclick="scrollToZone(4)">🌀 Zone 4 · Between Attempts</button>
+  </div>
+
+  <!-- ZONE 1 -->
+  <div class="zone-card" id="zone-1">
+    <div class="zone-header z1">
+      <div>
+        <p class="zone-num">Zone 1 of 4</p>
+        <h2 class="zone-title">🔻 Low Intensity / Rest (≤ CP)</h2>
+        <p class="zone-goal">Recharge the battery — keep BR low, nervous system calm</p>
+      </div>
+      <div class="zone-metrics">
+        <span class="metric-chip">BR ≤ 35–40 BPM</span>
+        <span class="metric-chip">RPE ≤ 6–7</span>
+        <span class="metric-chip">HRR₆₀ ≥ 20 BPM drop</span>
+      </div>
+    </div>
+    <div class="zone-body">
+      <table class="score-table coach-only">
+        <thead><tr><th>Marker</th><th>Value</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td>Breathing Rate</td><td>≤ 35 BPM</td><td>Slow, steady nasal flow — calm, controlled rhythm</td></tr>
+          <tr><td>Tidal Volume</td><td>Deep nasal-diaphragmatic</td><td>Minimal upper-chest lift</td></tr>
+          <tr><td>HRR₆₀</td><td>≥ 20 BPM drop</td><td>Full parasympathetic reset</td></tr>
+          <tr><td>W′bal</td><td>&lt; 60% depletion</td><td>Aerobic reserve intact</td></tr>
+          <tr><td>RPE</td><td>6–7 / 10</td><td>Easy rhythm, control, calm focus</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cues-grid">
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🪶</span><span class="cue-name">Feather Breath</span></div>
+          <p class="cue-how">Soft, silent nasal inhale — imagine lifting a feather without disturbing it. Smooth, long exhale.</p>
+          <p class="cue-coach-extra">↓ fR, ↑ efficiency. Nasal NO supports perfusion. Stabilises BR in low–mid 30s.</p>
+          <p class="cue-quote">"Breathe like silk — soft, seamless, flowing."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🌊</span><span class="cue-name">Tide Rhythm</span></div>
+          <p class="cue-how">4s nasal inhale, 6s nasal exhale — match your breath to the rise and fall of waves.</p>
+          <p class="cue-coach-extra">Longer exhale ↑ vagal tone, optimises O₂ delivery, naturally reduces hidden breath-holds.</p>
+          <p class="cue-quote">"Ride the tide — in and out, steady as the sea."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🔄</span><span class="cue-name">Nasal Circuit</span></div>
+          <p class="cue-how">Continuous nasal breathing, no breaks between breaths (~10–16 BPM).</p>
+          <p class="cue-coach-extra">Keeps CO₂ tolerance high, encourages diaphragmatic expansion. Diagnostic: can't stay nasal here → efficiency or anxiety issue.</p>
+          <p class="cue-quote">"Close the circuit — nose in, nose out."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🪞</span><span class="cue-name">Mirror Breath</span></div>
+          <p class="cue-how">Imagine fogging and clearing a mirror with every exhale — slow, controlled, intentional.</p>
+          <p class="cue-coach-extra">Builds exhale control awareness; stabilises VT without fR spikes. Reduces unconscious breath-holds before movement.</p>
+          <p class="cue-quote">"Mirror what you see — breathe with it."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🌱</span><span class="cue-name">Grounding Breath</span></div>
+          <p class="cue-how">Slow, steady exhale paired with foot pressure awareness, feeling contact with the rock or ground.</p>
+          <p class="cue-coach-extra">Re-centres attention on contact points, activates baroreceptors for calm, lowers HR.</p>
+          <p class="cue-quote">"Root into the rock — breathe through your base."</p>
+        </div>
+      </div>
+
+      <div class="limiter-box">
+        <p class="limiter-label">Red Limiter Pathway</p>
+        <p>Resting BR ≥ 18? Do 5 min Feather + Tide Rhythm before climbing, then keep Nasal Circuit on easy ground.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZONE 2 -->
+  <div class="zone-card" id="zone-2">
+    <div class="zone-header z2">
+      <div>
+        <p class="zone-num">Zone 2 of 4</p>
+        <h2 class="zone-title">🟡 Moderate Intensity / Near CP</h2>
+        <p class="zone-goal">Hold composure on the edge of sustainability</p>
+      </div>
+      <div class="zone-metrics">
+        <span class="metric-chip">BR ~40–48 BPM</span>
+        <span class="metric-chip">RPE 7–8</span>
+        <span class="metric-chip">W′bal ≤ 70% depletion</span>
+      </div>
+    </div>
+    <div class="zone-body">
+      <table class="score-table coach-only">
+        <thead><tr><th>Marker</th><th>Value</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td>Breathing Rate</td><td>40–45 BPM</td><td>Efficient diaphragmatic control, sustainable at RPE 8</td></tr>
+          <tr><td>Tidal Volume</td><td>Strong diaphragmatic</td><td>Even 360° expansion</td></tr>
+          <tr><td>W′bal</td><td>≤ 70% depletion</td><td>Effective pacing and recovery</td></tr>
+          <tr><td>RPE</td><td>≈ 8 / 10</td><td>Effort and breathing synchronised</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cues-grid">
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🎯</span><span class="cue-name">Anchor Breath</span></div>
+          <p class="cue-how">1–3 deliberate deep breaths to reset rhythm before entering a crux or after a shake.</p>
+          <p class="cue-coach-extra">↓ cognitive noise, ↑ VT for a few moves. Resets CO₂ drive, recentres pacing.</p>
+          <p class="cue-quote">"Anchor your breath — steady, reliable, unshaken."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🧭</span><span class="cue-name">Breath Compass</span></div>
+          <p class="cue-how">Diaphragm down, ribs wide — breath spreading 360° around the lower torso (north-south, east-west).</p>
+          <p class="cue-coach-extra">Maximises tidal volume under strain, increases postural stability without Valsalva.</p>
+          <p class="cue-quote">"Let your breath be your compass."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🧱</span><span class="cue-name">Stacked Bricks</span></div>
+          <p class="cue-how">Layered rib expansion: low ribs → mid ribs → upper chest, as if stacking bricks evenly around the torso.</p>
+          <p class="cue-coach-extra">Increases tidal volume without increasing BR. Prevents involuntary shallow inhalations and micro breath-holds.</p>
+          <p class="cue-quote">"Stack each breath like a brick — solid and even."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🎼</span><span class="cue-name">Metronome Breathing</span></div>
+          <p class="cue-how">Inhale/exhale in sync with hand and foot placements (e.g. 2 moves/inhale, 3 moves/exhale).</p>
+          <p class="cue-coach-extra">Locomotor–respiratory coupling. Reduces decision noise, extends time at CP without tipping over.</p>
+          <p class="cue-quote">"Tick, tock — keep the breath on time."</p>
+        </div>
+      </div>
+
+      <p style="font-size:0.78rem;font-weight:300;color:var(--mid);margin-top:1.2rem;background:var(--off);padding:0.8rem 1rem;border-radius:3px;"><strong style="font-weight:600;color:var(--ink);">Depth cue:</strong> "Breathe in and make yourself as big as possible. Exhale and make yourself as small as possible." Pairs perfectly with Breath Compass and Stacked Bricks.</p>
+
+      <div class="limiter-box">
+        <p class="limiter-label">Red Limiter Pathway</p>
+        <p>BR spikes early near CP? Use Metronome Breathing + Stacked Bricks to hold VT without overbreathing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZONE 3 -->
+  <div class="zone-card" id="zone-3">
+    <div class="zone-header z3">
+      <div>
+        <p class="zone-num">Zone 3 of 4</p>
+        <h2 class="zone-title">🔺 High Intensity / Above CP & RCP — Crux & Redline</h2>
+        <p class="zone-goal">Execute — then recover immediately</p>
+      </div>
+      <div class="zone-metrics">
+        <span class="metric-chip">BR &gt; 50–55 BPM</span>
+        <span class="metric-chip">RPE 9–10</span>
+        <span class="metric-chip">W′bal 70–85%+ depletion</span>
+      </div>
+    </div>
+    <div class="zone-body">
+      <table class="score-table coach-only">
+        <thead><tr><th>Marker</th><th>Value</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td>Breathing Rate</td><td>&gt; 55 BPM (≈60+)</td><td>Chaotic or expressive breathing (grunts, screams, holds); high neural drive</td></tr>
+          <tr><td>Tidal Volume</td><td>Mixed / shallow chest</td><td>Tension rising, erratic chest breathing</td></tr>
+          <tr><td>W′bal</td><td>70–85%+ depletion</td><td>Incomplete recovery between climbs</td></tr>
+          <tr><td>RPE</td><td>9–10 / 10</td><td>Noticeable strain → desperation if unmanaged</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cues-grid">
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">💥</span><span class="cue-name">Diaphragmatic Pop / Core Snap</span></div>
+          <p class="cue-how">Short, forceful diaphragmatic exhale ("huh!" or "sshh!") from the belly, then move.</p>
+          <p class="cue-coach-extra">↑ Intra-abdominal pressure → better power transfer, core stability. Replaces chaotic upper-chest panting.</p>
+          <p class="cue-quote">"Snap the breath — power from the core."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🥷</span><span class="cue-name">Silent Ninja Inhale</span></div>
+          <p class="cue-how">Keep inhale completely silent while exhaling softly and in control.</p>
+          <p class="cue-coach-extra">Reduces arousal, prevents panic breathing, maintains stealth on delicate or balance-dependent moves.</p>
+          <p class="cue-quote">"Quiet in, controlled out."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🗣️</span><span class="cue-name">Power Exhale</span></div>
+          <p class="cue-how">Firm exhale through pursed lips during a move — vocalised (grunt/scream) if it comes naturally.</p>
+          <p class="cue-coach-extra">Increases CO₂ clearance, narrows mental focus, boosts force output. +5 BPM adjustment per scream.</p>
+          <p class="cue-quote">"Exhale power, don't bottle it up."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🧨</span><span class="cue-name">Punctuated Breath</span></div>
+          <p class="cue-how">Quick boxer-style inhale/exhale bursts for 10–20 seconds during sustained high output.</p>
+          <p class="cue-coach-extra">Keeps VE high without slipping into uncontrolled hyperventilation.</p>
+          <p class="cue-quote">"Punch out the breath — one move, one exhale."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🛡️</span><span class="cue-name">Shield Breath</span></div>
+          <p class="cue-how">70–80% inhale → 0.3–0.5s hold → short pursed-lip exhale while braced.</p>
+          <p class="cue-coach-extra">Combines core stability with controlled CO₂ clearance — avoids a full Valsalva for sketchy or high-force moments.</p>
+          <p class="cue-quote">"Build your shield with the breath — strong, unbreakable."</p>
+        </div>
+      </div>
+
+      <div class="limiter-box">
+        <p class="limiter-label">Scream-Density Override</p>
+        <p>≥ 7 screams/min or &gt;15s combined expressive load → RCP forced, +20% W′bal depletion multiplier, diaphragm fatigue risk. 1–3 screams can enhance VO₂/focus; high density drains fast. One scream per crux, max.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZONE 4 -->
+  <div class="zone-card" id="zone-4">
+    <div class="zone-header z4">
+      <div>
+        <p class="zone-num">Zone 4 of 4</p>
+        <h2 class="zone-title">🌀 Recovery / Between Attempts</h2>
+        <p class="zone-goal">Restore W′bal, downshift the nervous system</p>
+      </div>
+      <div class="zone-metrics">
+        <span class="metric-chip">HRR₆₀ ≥ 18–20 BPM drop</span>
+        <span class="metric-chip">BR returning &lt; 45</span>
+      </div>
+    </div>
+    <div class="zone-body">
+      <table class="score-table coach-only">
+        <thead><tr><th>HRR₆₀ Drop</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>≥ 25 BPM</td><td>Strong recovery</td><td>Exhale Dump + HRR Reset (maintain)</td></tr>
+          <tr><td>15–25 BPM</td><td>Moderate</td><td>Emphasise HRR Reset + Grounding Breath</td></tr>
+          <tr><td>&lt; 15–18 BPM</td><td>Limiter flagged</td><td>Prioritise recovery block: Exhale Dump, Puffafish, Rowing Breath</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cues-grid">
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🌬️</span><span class="cue-name">Exhale Dump</span></div>
+          <p class="cue-how">Long, releasing sigh — let the shoulders drop. Full, unhurried exhale, "ahhh".</p>
+          <p class="cue-coach-extra">↓ sympathetic drive, speeds HR drop, clears residual CO₂ and tension. Best immediately after clipping or sending.</p>
+          <p class="cue-quote">"Dump it out, start fresh."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🕰️</span><span class="cue-name">HRR Reset</span></div>
+          <p class="cue-how">Slow, coherent breaths at ~5–6 breaths/min while tracking HR drop in the recovery window.</p>
+          <p class="cue-coach-extra">Directly stimulates parasympathetic activation, improves HRR₆₀ and readiness for the next effort.</p>
+          <p class="cue-quote">"Reset with the rhythm of your heart."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🛶</span><span class="cue-name">Rowing Breath</span></div>
+          <p class="cue-how">Inhale — pause — exhale — pause, like smooth oar strokes.</p>
+          <p class="cue-coach-extra">Enhances venous return, smooths ventilatory decline, supports lactate clearance.</p>
+          <p class="cue-quote">"Row your breath — pull calmness back in."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🌱</span><span class="cue-name">Grounding Breath</span></div>
+          <p class="cue-how">Slow, deep belly breath with attention on contact points — feet, hands.</p>
+          <p class="cue-coach-extra">Anchors attention, reduces post-crux jitters, combines physiological recovery with mental composure.</p>
+          <p class="cue-quote">"Root into the rock — breathe through your base."</p>
+        </div>
+        <div class="cue-card">
+          <div class="cue-icon-name"><span class="cue-icon">🐡</span><span class="cue-name">Puffafish Breath</span></div>
+          <p class="cue-how">Soft nasal inhale, lightly puff the cheeks, hold 0.5–1s, then a slow, controlled exhale through pursed lips. Repeat ×1–3 only.</p>
+          <p class="cue-coach-extra">Reduces sympathetic tension, releases jaw/face grip, normalises CO₂ after expressive breaths. A marker of high respiratory intelligence. Do NOT hyperventilate — it's a reset, not a pump.</p>
+          <p class="cue-quote">"Puff → pause → pour it out."</p>
+        </div>
+      </div>
+
+      <div class="limiter-box">
+        <p class="limiter-label">Red Limiter Pathway</p>
+        <p>HRR₆₀ &lt; 12–18 BPM? Do HRR Reset 2–3 min + Exhale Dump between burns.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LANGUAGE OF BREATH -->
+<div class="lang-section">
+  <div class="lang-inner">
+    <p class="hero-eyebrow">Making It Human</p>
+    <h2 class="zone-title" style="margin-bottom:0.8rem;">"Language of Breath" Map</h2>
+    <p class="hero-sub" style="margin-bottom:1.5rem;">Climbers describe what they feel in everyday phrases. Map those phrases straight to zones and tools.</p>
+    <table class="lang-table">
+      <thead><tr><th>Phrase</th><th>Likely Zone</th><th>Coaching Link</th></tr></thead>
+      <tbody>
+        <tr><td>"Catch my breath"</td><td>≤CP Recovery</td><td>Puffafish + Exhale Dump — BR stabilises, HRR₆₀ strong</td></tr>
+        <tr><td>"Sigh of relief"</td><td>Recovery</td><td>Exhale Dump — parasympathetic activation</td></tr>
+        <tr><td>"Gasping for air"</td><td>&gt;RCP (Severe)</td><td>Punctuated / Power Exhale — BR spikes, W′bal depleted</td></tr>
+        <tr><td>"Breathing room"</td><td>≤CP</td><td>Grounding Breath / Silk / Tide — efficiency, pacing</td></tr>
+        <tr><td>"Inspired" / "In flow"</td><td>At CP</td><td>Tide Rhythm + Metronome — BR steady, rhythmical</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CASE STUDIES -->
+<div class="cases-section coach-only">
+  <p class="hero-eyebrow">Controlled Redline — Elite Case Studies</p>
+  <h2 class="zone-title" style="margin-bottom:0.8rem;">Real Breath, Real Sends</h2>
+  <p class="hero-sub" style="margin-bottom:0.5rem;">Freja Shannon and Anna Hazelnutt both showed a remarkable 1:1 breath-to-second rhythm (~60 BPM) — not loss of control, but extraordinary efficiency and emotional steadiness at maximal intensity.</p>
+
+  <div class="case-grid">
+    <div class="case-card">
+      <p class="case-climber">Freja Shannon</p>
+      <p class="case-route">Sista Bossen, E8</p>
+      <p class="case-row"><strong>Pattern:</strong> Sustained 1:1 rhythm (~60 BPM) with brief expressive spikes</p>
+      <p class="case-row"><strong>Impact:</strong> Severe domain, ~75% W′bal depletion</p>
+      <p class="case-row"><strong>Coach cue:</strong> Punctuated exhale or Shield–Execute–Release rhythm to manage intensity</p>
+    </div>
+    <div class="case-card">
+      <p class="case-climber">Anna Hazelnutt</p>
+      <p class="case-route">Peace (Crux)</p>
+      <p class="case-row"><strong>Pattern:</strong> 1:1 rhythm (44 breaths / 44s) with one scream and a short hold</p>
+      <p class="case-row"><strong>Impact:</strong> Ceiling at 60 BPM, ~75% depletion</p>
+      <p class="case-row"><strong>Coach cue:</strong> Micro sighs or punctuated exhales near RCP to delay pump</p>
+    </div>
+    <div class="case-card">
+      <p class="case-climber">Margo Hayes</p>
+      <p class="case-route">Biographie, 9a+</p>
+      <p class="case-row"><strong>Pattern:</strong> Smooth, controlled — CP Zone (42–48 BPM)</p>
+      <p class="case-row"><strong>Detail:</strong> Climbed 16:40, rested 10:41 mid-route, using rhythmic breathing and route-map affirmations: breathe, rest, believe</p>
+    </div>
+    <div class="case-card">
+      <p class="case-climber">Adam Ondra</p>
+      <p class="case-route">Silence, 9c</p>
+      <p class="case-row"><strong>Pattern:</strong> RCP zone (49–55 BPM), mixed holds + grunts — transitional fatigue</p>
+      <p class="case-row"><strong>Detail:</strong> "It's easy: I'm either climbing or relaxing." Rested over 4 minutes before the send.</p>
+    </div>
+  </div>
+
+  <p style="font-size:0.8rem;font-weight:300;color:var(--mid);margin-top:1.5rem;line-height:1.7;">Most climbers in the redline zone show erratic or breath-hold patterns — the evenness Freja and Anna demonstrate is the anomaly. It suggests elite-level coupling between motor patterning, breath timing, and emotional regulation: <strong style="color:var(--ink);font-weight:600;">controlled redline</strong> — the ability to sustain rhythmic, high-frequency breathing without losing composure or coordination.</p>
+</div>
+
+<!-- COACH TAKEAWAYS -->
+<div class="cases-section coach-only" style="padding-top:0;">
+  <p class="hero-eyebrow">Apply Pranaclimb To</p>
+  <h2 class="zone-title" style="margin-bottom:1rem;">Coach Takeaways</h2>
+  <div class="cues-grid">
+    <div class="cue-card"><p class="cue-how"><strong style="color:var(--ink);">✅ Spot threshold zones on the wall</strong><br>Quickly identify when a climber is approaching CP or RCP using simple breath and effort cues.</p></div>
+    <div class="cue-card"><p class="cue-how"><strong style="color:var(--ink);">✅ Track fatigue and recovery in real time</strong><br>Use breathing patterns and HRR₆₀ to gauge recovery between burns — no tech required.</p></div>
+    <div class="cue-card"><p class="cue-how"><strong style="color:var(--ink);">✅ Build breath-led warm-ups and pacing</strong><br>Nasal breathing, rhythm drills, and exhale control to prime the body before cruxes.</p></div>
+    <div class="cue-card"><p class="cue-how"><strong style="color:var(--ink);">✅ Recognise inefficient breathing</strong><br>Spot over-breathing, breath-holding, or gasping — and coach climbers back to control.</p></div>
+    <div class="cue-card"><p class="cue-how"><strong style="color:var(--ink);">✅ Turn awareness into performance</strong><br>Use breath as feedback — not just for effort, but recovery, pacing, and decision-making.</p></div>
+  </div>
+</div>
+
+<div class="page-nav-strip">
+  <a href="breathing.html" class="page-nav-link">← Toolbox</a>
+  <a href="breathwork-practices.html" class="page-nav-link">Practices</a>
+  <a href="zone-coaching.html" class="page-nav-link current">Zone Coaching</a>
+</div>
+
+<footer>
+  <div class="footer-logo">PRANA<span>CLIMB</span></div>
+  <p class="footer-tagline">Love · Breathe · Climb</p>
+  <p style="font-size:0.72rem;font-weight:300;color:var(--mid);">© 2025 Pranaclimb Ltd · annie@pranaclimb.com</p>
+  <p style="font-size:0.68rem;margin-top:0.4rem;color:#999;">Insured via Insure4Sport / Aviva through Pranaclimb Ltd</p>
+</footer>
+
+<script>
+function setMode(mode) {
+  document.body.className = mode + '-mode';
+  document.getElementById('btn-coach').classList.toggle('active', mode === 'coach');
+  document.getElementById('btn-climber').classList.toggle('active', mode === 'climber');
+}
+function scrollToZone(n) {
+  document.querySelectorAll('.zone-pill').forEach(p => p.classList.remove('active'));
+  document.querySelector(`.zone-pill[data-zone="${n}"]`).classList.add('active');
+  document.getElementById('zone-' + n).scrollIntoView({behavior:'smooth', block:'start'});
+}
+// Highlight nav pill on scroll
+const zoneEls = [1,2,3,4].map(n => document.getElementById('zone-' + n));
+window.addEventListener('scroll', () => {
+  let current = 1;
+  zoneEls.forEach((el, i) => {
+    if (el.getBoundingClientRect().top < 200) current = i + 1;
+  });
+  document.querySelectorAll('.zone-pill').forEach(p => p.classList.remove('active'));
+  const activePill = document.querySelector(`.zone-pill[data-zone="${current}"]`);
+  if (activePill) activePill.classList.add('active');
+});
+</script>
+</body>
+</html>

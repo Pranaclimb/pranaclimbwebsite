@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Photos and videos of Annie Anderson climbing, cold water swimming, and breathwork practice in Cornwall. The story behind Pranaclimb: Love, Breathe, Climb." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranaclimb Gallery — Annie Anderson Climbing, Cornwall & Cold Water</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--pink:#ff00ff;--lime:#AAFF00;--blue:#89CFF0;--white:#fff;--off:#f5f5f2;--ink:#4a4a4a;--mid:#555;--border:#e0e0d8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Outfit',sans-serif;background:var(--white);color:var(--ink);}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.12em;color:var(--ink);text-decoration:none;}
+    .nav-logo span{color:var(--pink);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--mid);}
+    .nav-links a:hover{color:var(--pink);}
+    .nav-cta{background:var(--pink);color:#fff;padding:0.55rem 1.4rem;border-radius:2px;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;}
+    .hero{background:var(--lime);padding:10rem 4rem 5rem;display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:3rem;}
+    .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,8vw,7rem);line-height:0.95;color:var(--ink);}
+    .hero h1 span{color:var(--pink);}
+    .hero p{font-size:1rem;color:rgba(0,0,0,0.6);line-height:1.7;}
+    .filter-bar{padding:2rem 4rem;display:flex;gap:0.8rem;flex-wrap:wrap;border-bottom:1px solid var(--border);}
+    .filter-btn{font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.5rem 1.2rem;border:1.5px solid var(--border);background:#fff;color:var(--mid);border-radius:2px;cursor:pointer;transition:all 0.2s;}
+    .filter-btn:hover,.filter-btn.active{background:var(--pink);border-color:var(--pink);color:#fff;}
+    .gallery-wrap{padding:3rem 4rem 5rem;}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);}
+    .gallery-item.hidden{display:none;}
+    .gallery-img-wrap{position:relative;overflow:hidden;aspect-ratio:1;cursor:pointer;}
+    .gallery-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s;}
+    .gallery-img-wrap:hover img{transform:scale(1.05);}
+    .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(255,0,255,0.85) 0%,transparent 60%);opacity:0;transition:opacity 0.3s;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;}
+    .gallery-img-wrap:hover .gallery-overlay{opacity:1;}
+    .gallery-caption{font-size:0.9rem;font-weight:600;color:#fff;line-height:1.4;margin-bottom:0.4rem;}
+    .gallery-tag{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--lime);}
+    .lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;flex-direction:column;}
+    .lightbox.open{display:flex;}
+    .lightbox img{max-width:90vw;max-height:80vh;object-fit:contain;}
+    .lightbox-caption{color:#fff;font-size:0.9rem;margin-top:1rem;opacity:0.8;}
+    .lightbox-close{position:absolute;top:2rem;right:2rem;color:#fff;cursor:pointer;background:none;border:1.5px solid rgba(255,255,255,0.4);padding:0.4rem 1rem;border-radius:2px;font-family:'Bebas Neue',sans-serif;letter-spacing:0.1em;}
+    .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);font-size:2rem;color:#fff;cursor:pointer;background:none;border:none;padding:1rem;opacity:0.6;font-family:'Bebas Neue',sans-serif;}
+    .lightbox-prev{left:1rem;}
+    .lightbox-next{right:1rem;}
+    .lightbox-count{position:absolute;bottom:1.5rem;font-size:0.75rem;color:rgba(255,255,255,0.5);}
+    footer{background:var(--white);color:#fff;padding:4rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;}
+    .footer-brand .nav-logo{color:#fff;display:block;margin-bottom:1rem;}
+    .footer-brand p{font-size:1rem;line-height:1.7;color:rgba(255,255,255,0.85);max-width:260px;}
+    .footer-col h4{font-size:0.8rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.2rem;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
+    .footer-col a{font-size:1rem;color:rgba(255,255,255,0.85);text-decoration:none;}
+    .footer-col a:hover{color:#fff;}
+    .footer-col.trading a{font-weight:600;background:rgba(255,255,255,0.2);padding:0.6rem 1rem;border-radius:2px;display:inline-block;}
+    .footer-bottom{background:var(--white);padding:1.2rem 4rem;display:flex;justify-content:space-between;align-items:center;}
+    .footer-bottom p{font-size:0.75rem;color:rgba(0,0,0,0.5);}
+    .footer-bottom a{color:rgba(0,0,0,0.5);text-decoration:none;}
+    @media(max-width:900px){
+      nav{padding:1rem 1.5rem;}.nav-links{display:none;}
+      .hero,.filter-bar,.gallery-wrap{padding:4rem 1.5rem;}
+      .hero{grid-template-columns:1fr;padding-top:8rem;}
+      .gallery-grid{grid-template-columns:repeat(2,1fr);}
+      footer{grid-template-columns:1fr;padding:3rem 1.5rem;}
+      .footer-bottom{padding:1rem 1.5rem;flex-direction:column;gap:0.5rem;text-align:center;}
+    }
+  </style>
+  <link rel="canonical" href="https://www.pranaclimb.com/gallery" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+  <ul class="nav-links">
+    <li><a href="methodology.html">Method</a></li>
+    <li><a href="rba.html">RBA</a></li>
+    <li><a href="book.html">Book</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#annie">Annie</a></li>
+    <li><a href="gallery.html" style="color:var(--pink);">Photos & Videos</a></li>
+  </ul>
+  <a href="rba.html" class="nav-cta">Book Your RBA</a>
+</nav>
+
+<div class="hero">
+  <h1>PHOTOS &amp;<br><span>VIDEOS</span></h1>
+  <div><p>Climbing, yoga, cold water, breathwork — <strong>life at Pranaclimb.</strong> Cornwall and beyond. 21 photos.</p></div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterGallery('all',this)">All (21)</button>
+  <button class="filter-btn" onclick="filterGallery('Climbing',this)">Climbing</button>
+  <button class="filter-btn" onclick="filterGallery('Yoga',this)">Yoga</button>
+  <button class="filter-btn" onclick="filterGallery('Cold Water',this)">Cold Water</button>
+  <button class="filter-btn" onclick="filterGallery('Cornwall',this)">Cornwall</button>
+  <button class="filter-btn" onclick="filterGallery('Coaching',this)">Coaching</button>
+  <button class="filter-btn" onclick="filterGallery('Breathwork',this)">Breathwork</button>
+  <button class="filter-btn" onclick="filterGallery('Book',this)">Book</button>
+</div>
+
+<div class="gallery-wrap">
+  <div class="gallery-grid" id="gallery">
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/bouldering-cornwall-2006.jpg" alt="Bouldering, Cornwall 2006" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Bouldering, Cornwall 2006</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Cornwall"><div class="gallery-img-wrap"><img src="images/walking-to-crag.jpg" alt="Walking to the crag, Cornwall" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Walking to the crag, Cornwall</span><span class="gallery-tag">Cornwall</span></div></div></div>
+    <div class="gallery-item" data-cat="Yoga"><div class="gallery-img-wrap"><img src="images/yoga-climbing-pamukkale.jpg" alt="Yoga & Climbing – Pamukkale" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Yoga & Climbing – Pamukkale</span><span class="gallery-tag">Yoga</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/sea-cliff-climbing.jpg" alt="Sea cliff climbing, Cornwall" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Sea cliff climbing, Cornwall</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/climbing-sennen.jpg" alt="Climbing at Sennen, Cornwall" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Climbing at Sennen, Cornwall</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Cold Water"><div class="gallery-img-wrap"><img src="images/annie-cold-water.jpg" alt="Cold water swimming, Cornwall" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Cold water swimming, Cornwall</span><span class="gallery-tag">Cold Water</span></div></div></div>
+    <div class="gallery-item" data-cat="Cornwall"><div class="gallery-img-wrap"><img src="images/bosigran-ridge.jpg" alt="Bosigran Ridge, Cornwall" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Bosigran Ridge, Cornwall</span><span class="gallery-tag">Cornwall</span></div></div></div>
+    <div class="gallery-item" data-cat="Yoga"><div class="gallery-img-wrap"><img src="images/yoga-perranporth.jpg" alt="Yoga at Perranporth Beach" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Yoga at Perranporth Beach</span><span class="gallery-tag">Yoga</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/annie-red-rocks.jpg" alt="Annie – red rock climbing" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Annie – red rock climbing</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Book"><div class="gallery-img-wrap"><img src="images/pranaclimb-book-cover.jpg" alt="Pranaclimb: Love, Breathe, Climb" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Pranaclimb: Love, Breathe, Climb</span><span class="gallery-tag">Book</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/topping-out-sea-cliff.jpg" alt="Topping out, Cornish sea cliff" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Topping out, Cornish sea cliff</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/rigging-ropes.jpg" alt="Rigging the ropes, Cornwall" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Rigging the ropes, Cornwall</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/sea-cliff-turquoise.jpg" alt="Sea cliff climbing, turquoise water" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Sea cliff climbing, turquoise water</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/bouldering-sunset.jpg" alt="Bouldering at sunset, Cornwall moorland" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Bouldering at sunset, Cornwall moorland</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Coaching"><div class="gallery-img-wrap"><img src="images/climbing-coaching-sennen.jpg" alt="Climbing coaching, Sennen" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Climbing coaching, Sennen</span><span class="gallery-tag">Coaching</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/sea-cliff-cornwall.jpg" alt="Sea cliff climbing, Cornwall" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Sea cliff climbing, Cornwall</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/anvil-chorus.jpg" alt="Anvil Chorus (VS) – Annie Anderson" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Anvil Chorus (VS) – Annie Anderson</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Yoga"><div class="gallery-img-wrap"><img src="images/headstand-lanyon-quoit.jpg" alt="Headstand at Lanyon Quoit, Cornwall" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Headstand at Lanyon Quoit, Cornwall</span><span class="gallery-tag">Yoga</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/summit-crew.jpg" alt="After the climb – summit crew" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">After the climb – summit crew</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Climbing"><div class="gallery-img-wrap"><img src="images/annie-zennor.jpg" alt="Annie at Zennor, Cornwall" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Annie at Zennor, Cornwall</span><span class="gallery-tag">Climbing</span></div></div></div>
+    <div class="gallery-item" data-cat="Breathwork"><div class="gallery-img-wrap"><img src="images/breathwork-climbing.png" alt="Breathwork & climbing performance" loading="lazy"/><div class="gallery-overlay"><span class="gallery-caption">Breathwork & climbing performance</span><span class="gallery-tag">Breathwork</span></div></div></div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕ CLOSE</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">&#8592;</button>
+  <img id="lightbox-img" src="" alt=""/>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <div class="lightbox-count" id="lightbox-count"></div>
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">&#8594;</button>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:var(--ink)">PRANA<span style="color:var(--pink)">CLIMB</span></a>
+    <p style="margin-top:0.8rem; font-size:0.88rem; line-height:1.7; color:var(--mid);">With love and the ocean 🌊<br>Annie Anderson — Pranaclimb | OceanDips</p>
+    <div style="display:flex; gap:0.8rem; margin-top:1.2rem;">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--mid)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="var(--mid)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 15v7H9V8z" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:annie@pranaclimb.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--mid);">annie@pranaclimb.com</p>
+    <p style="font-size:0.75rem; margin-top:0.3rem; color:var(--mid);">07875 170 847</p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pages</h4>
+    <ul style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="rba.html">Assessment</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="app.html">The App</a></li>
+      <li><a href="annie.html">About Annie</a></li>
+      <li><a href="gallery.html">Photos</a></li>
+      <li><a href="mailto:annie@pranaclimb.com">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pranaclimb Ltd</h4>
+    <p style="font-size:0.78rem; line-height:1.8; color:var(--mid);">
+      Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.<br><br>
+      Annie is a qualified <strong style="color:var(--ink);">SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong style="color:var(--ink);">Registered Yoga Teacher RYT 200</strong> (2012).<br><br>
+      Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong style="color:var(--ink);">Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).<br><br>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" style="color:var(--pink); font-weight:600; text-decoration:none;">Connect on LinkedIn &rarr;</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Trading As</h4>
+    <ul>
+      <li><a href="https://www.pranaclimb.com">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com" target="_blank">🌊 OceanDips</a></li>
+    </ul>
+    <p style="font-size:0.78rem; color:var(--mid); margin-top:0.8rem; line-height:1.8;"><strong style="color:var(--ink);">Pranaclimb Ltd</strong><br>Company No. 16626114<br>13 Upton Towans, Hayle<br>Cornwall TR27 5BJ</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div style="display:flex; flex-direction:column; gap:0.3rem;">
+    <p>&copy; 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p style="font-size:0.7rem; color:rgba(0,0,0,0.4);">pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  </div>
+  <div style="display:flex; gap:1.5rem; flex-shrink:0; margin-left:2rem;">
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Statcounter -->
+<script type="text/javascript">
+var sc_project=11925361; 
+var sc_invisible=1; 
+var sc_security="14a77c6b"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11925361/0/14a77c6b/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter -->
+</body>
+</html>

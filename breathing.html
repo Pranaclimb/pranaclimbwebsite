@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breathing Toolbox — Pranaclimb</title>
+<meta name="description" content="Free guided breathing timers and breathwork tools for climbers — Wim Hof, Box Breathing, Cyclic Sighing and more. Backed by research, built for the wall.">
+<link rel="canonical" href="https://www.pranaclimb.com/breathing">
+<meta property="og:title" content="Breathing Toolbox — Pranaclimb">
+<meta property="og:description" content="Free guided breathing timers and breathwork tools for climbers — Wim Hof, Box Breathing, Cyclic Sighing and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.pranaclimb.com/breathing">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Pranaclimb Breathing Toolbox",
+  "description": "A collection of guided breathing exercises and timers for climbers, including Wim Hof Breathing, Box Breathing, and Cyclic Sighing.",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "url": "https://www.pranaclimb.com/wim-hof", "name": "Wim Hof Breathing"},
+    {"@type": "ListItem", "position": 2, "url": "https://www.pranaclimb.com/box-breathing", "name": "Box Breathing"},
+    {"@type": "ListItem", "position": 3, "url": "https://www.pranaclimb.com/cyclic-sighing", "name": "Cyclic Sighing"},
+    {"@type": "ListItem", "position": 4, "url": "https://www.pranaclimb.com/breathwork-practices", "name": "Breathwork Practices"},
+    {"@type": "ListItem", "position": 5, "url": "https://www.pranaclimb.com/zone-coaching", "name": "Zone Coaching"}
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pink: #ff00ff;
+    --lime: #AAFF00;
+    --blue: #89CFF0;
+    --ink: #3a3a3a;
+    --mid: #666;
+    --off: #f5f5f2;
+    --border: #e0e0d8;
+    --white: #fff;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Outfit', sans-serif; color: var(--ink); background: var(--white); }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--white); border-bottom: 2px solid var(--lime);
+    padding: 0.8rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.1em; color: var(--ink); text-decoration: none; }
+  .nav-logo span { color: var(--lime); }
+  .nav-tagline { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pink); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--pink); }
+
+  /* HERO */
+  .hero {
+    background: var(--off);
+    border-bottom: 3px solid var(--lime);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+  }
+  .hero-logo { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; letter-spacing: 0.12em; color: var(--ink); margin-bottom: 0.2rem; }
+  .hero-logo span { color: var(--lime); }
+  .hero-tagline { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--pink); margin-bottom: 1.2rem; }
+  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: 0.06em; color: var(--ink); margin-bottom: 1rem; line-height: 1.05; }
+  .hero-title span { color: var(--pink); }
+  .hero-sub { font-size: 1rem; font-weight: 300; color: var(--mid); max-width: 600px; margin: 0 auto 2rem; line-height: 1.7; }
+  .hero-pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .hero-pill { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 16px; border-radius: 2px; }
+  .hero-pill.pink { background: var(--pink); color: var(--white); }
+  .hero-pill.lime { background: var(--lime); color: var(--ink); }
+  .hero-pill.blue { background: var(--blue); color: var(--ink); }
+
+  /* SECTION LAYOUT */
+  .section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+  .section-header { margin-bottom: 2.5rem; }
+  .section-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pink); margin-bottom: 0.4rem; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 0.06em; color: var(--ink); margin-bottom: 0.5rem; }
+  .section-title span { color: var(--lime); }
+  .section-desc { font-size: 0.9rem; font-weight: 300; color: var(--mid); line-height: 1.7; max-width: 640px; }
+  .lime-bar { height: 3px; background: var(--lime); width: 48px; margin: 0.8rem 0 1.2rem; border-radius: 2px; }
+
+  /* TOOL CARDS */
+  .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin-bottom: 2rem; }
+  .tool-card {
+    background: var(--off); border: 1px solid var(--border); border-radius: 2px;
+    padding: 1.4rem; cursor: pointer; transition: border-color 0.2s, transform 0.15s;
+    position: relative;
+  }
+  .tool-card:hover { border-color: var(--pink); transform: translateY(-2px); }
+  .tool-card.active { border-color: var(--pink); border-left: 3px solid var(--pink); }
+  .tool-card-zone { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; display: inline-block; margin-bottom: 0.8rem; }
+  .zone-recovery { background: var(--blue); color: var(--ink); }
+  .zone-activation { background: var(--lime); color: var(--ink); }
+  .zone-performance { background: var(--pink); color: var(--white); }
+  .zone-all { background: var(--ink); color: var(--white); }
+  .tool-card-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .tool-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.06em; color: var(--ink); margin-bottom: 0.4rem; }
+  .tool-card-desc { font-size: 0.8rem; font-weight: 300; color: var(--mid); line-height: 1.6; margin-bottom: 0.8rem; }
+  .tool-card-cue { font-size: 0.75rem; font-style: italic; color: var(--pink); font-weight: 500; }
+  .tool-launch { display: inline-block; margin-top: 0.8rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--pink); color: var(--white); padding: 6px 14px; border-radius: 2px; border: none; cursor: pointer; transition: background 0.15s; text-decoration: none; }
+  .tool-launch:hover { background: #cc00cc; }
+  .tool-launch.secondary { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
+  .tool-launch.secondary:hover { border-color: var(--ink); }
+
+  /* TIMER MODAL */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.7); align-items: center; justify-content: center;
+    padding: 1rem;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--white); border-radius: 2px; width: 100%; max-width: 560px;
+    max-height: 92vh; overflow-y: auto; padding: 2rem 1.8rem 2.5rem;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 1rem; right: 1rem;
+    background: none; border: none; font-size: 1.4rem; cursor: pointer;
+    color: var(--mid); line-height: 1;
+  }
+  .modal-close:hover { color: var(--pink); }
+
+  /* SHARED TIMER STYLES */
+  .t-logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.1em; color: var(--ink); }
+  .t-logo span { color: var(--lime); }
+  .t-tagline { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pink); }
+  .t-lbar { height: 2px; background: var(--lime); margin: 0.5rem 0 1rem; }
+  .t-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .t-sub { font-size: 0.8rem; font-weight: 300; color: var(--mid); margin-bottom: 1.4rem; }
+  .t-card { background: var(--off); border: 1px solid var(--border); border-radius: 2px; padding: 1.2rem 1.4rem; margin-bottom: 1rem; }
+  .t-row { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem; }
+  .t-row:last-child { margin-bottom: 0; }
+  .t-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); min-width: 130px; }
+  .t-val { font-size: 0.95rem; font-weight: 600; min-width: 30px; text-align: right; }
+  input[type=range] { flex: 1; accent-color: var(--pink); }
+  .t-btn { width: 100%; padding: 0.85rem; background: var(--pink); color: var(--white); border: none; border-radius: 2px; font-family: 'Outfit', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; margin-bottom: 0.5rem; transition: background 0.15s; }
+  .t-btn:hover { background: #cc00cc; }
+  .t-btn.outline { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
+  .t-btn.outline:hover { border-color: var(--ink); }
+  .t-btn.lime-btn { background: var(--lime); color: var(--ink); }
+  .t-btn.lime-btn:hover { background: #88cc00; }
+  .timer-view { display: none; text-align: center; }
+  .t-round-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); background: var(--lime); padding: 3px 12px; border-radius: 2px; margin-bottom: 0.5rem; }
+  .t-ret-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--blue); padding: 3px 10px; border-radius: 2px; margin-bottom: 1rem; }
+  .t-phase-lbl { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+  .t-phase-desc { font-size: 0.8rem; font-weight: 300; color: var(--mid); margin-bottom: 1.2rem; min-height: 18px; }
+  .t-count { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; letter-spacing: 0.04em; margin-bottom: 1.4rem; }
+  .orb { width: 100px; height: 100px; border-radius: 50%; background: var(--blue); margin: 0 auto 1.4rem; transition: transform 0.8s ease-in-out, background 0.8s; }
+  .orb.inhale { transform: scale(1.3); background: var(--pink); }
+  .orb.exhale { transform: scale(0.82); background: var(--blue); }
+  .orb.hold { transform: scale(1.15); background: var(--ink); }
+  .orb.idle { transform: scale(1); background: var(--blue); }
+  .circ-wrap { position: relative; width: 160px; height: 160px; margin: 0 auto 1.4rem; }
+  .circ-wrap svg { position: absolute; top: 0; left: 0; transform: rotate(-90deg); }
+  .circ-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .circ-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; letter-spacing: 0.04em; line-height: 1; }
+  .circ-unit { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); margin-top: 2px; }
+  .t-dots { display: flex; gap: 7px; justify-content: center; margin-bottom: 1.2rem; }
+  .tdot { width: 7px; height: 7px; border-radius: 50%; background: var(--border); transition: background 0.3s; }
+  .tdot.done { background: var(--blue); }
+  .tdot.active { background: var(--pink); }
+  .t-ctrls { display: flex; gap: 8px; justify-content: center; margin-top: 0.8rem; }
+  .t-ctrl { padding: 0.55rem 1.2rem; border: 1.5px solid var(--border); border-radius: 2px; background: transparent; font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.15s; }
+  .t-ctrl:hover { border-color: var(--ink); }
+  .t-ctrl.pink-ctrl { background: var(--pink); color: var(--white); border-color: var(--pink); }
+  .t-ctrl.pink-ctrl:hover { background: #cc00cc; }
+  .complete-view { display: none; text-align: center; padding: 1.5rem 0; }
+  .complete-done { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; letter-spacing: 0.08em; color: var(--lime); }
+  .complete-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+  .complete-text { font-size: 0.85rem; font-weight: 300; color: var(--mid); margin-bottom: 1.5rem; }
+
+  /* BOX BREATHING SPECIFIC */
+  .box-svg-wrap { width: 160px; height: 160px; margin: 0 auto 1.4rem; }
+
+  /* RESEARCH STRIP */
+  .research-strip { background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 2rem; }
+  .research-inner { max-width: 900px; margin: 0 auto; }
+  .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
+  .research-card { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--lime); border-radius: 2px; padding: 1.4rem; }
+  .research-card-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); margin-bottom: 0.6rem; }
+  .research-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.06em; color: var(--ink); margin-bottom: 0.5rem; }
+  .research-card-text { font-size: 0.78rem; font-weight: 300; color: var(--mid); line-height: 1.7; }
+  .research-card-stat { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; background: var(--blue); color: var(--ink); padding: 3px 10px; border-radius: 2px; margin-top: 0.8rem; }
+
+  /* ZONE MAP */
+  .zone-table { width: 100%; border-collapse: collapse; margin-top: 1.2rem; font-size: 0.82rem; }
+  .zone-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); padding: 0.6rem 0.8rem; text-align: left; background: var(--off); border-bottom: 2px solid var(--lime); }
+  .zone-table td { padding: 0.8rem; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+  .zone-table tr:last-child td { border-bottom: none; }
+  .zone-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: middle; }
+
+  /* FOOTER */
+  footer { background: var(--off); color: var(--mid); padding: 2.5rem 2rem; text-align: center; border-top: 3px solid var(--lime); }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.1em; color: var(--ink); margin-bottom: 0.3rem; }
+  .footer-logo span { color: var(--lime); }
+  .footer-tagline { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pink); margin-bottom: 1rem; }
+  .footer-text { font-size: 0.75rem; font-weight: 300; color: var(--mid); }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    nav { padding: 0.8rem 1rem; }
+    .nav-links { display: none; }
+    .hero { padding: 3rem 1.2rem 2.5rem; }
+    .section { padding: 2.5rem 1.2rem; }
+    .research-strip { padding: 2.5rem 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div>
+    <a href="#" class="nav-logo">PRANA<span>CLIMB</span></a>
+    <p class="nav-tagline">Love · Breathe · Climb</p>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#timers">Timers</a></li>
+    <li><a href="#zones">Zones</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="breathwork-practices.html">Practices</a></li>
+    <li><a href="zone-coaching.html">Zone Coaching</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-logo">PRANA<span>CLIMB</span></div>
+  <p class="hero-tagline">Love · Breathe · Climb</p>
+  <h1 class="hero-title">Breathing <span>Toolbox</span></h1>
+  <p class="hero-sub">Science-backed breathwork for climbers. From Wim Hof activation to recovery sighing — every tool your lungs need on the wall and off it.</p>
+  <div class="hero-pills">
+    <span class="hero-pill pink">Performance</span>
+    <span class="hero-pill lime">Recovery</span>
+    <span class="hero-pill blue">Activation</span>
+  </div>
+</section>
+
+<!-- TOOLS OVERVIEW -->
+<div id="tools" class="section">
+  <div class="section-header">
+    <p class="section-eyebrow">Breathing Toolbox</p>
+    <h2 class="section-title">Your breathing <span>toolkit</span></h2>
+    <div class="lime-bar"></div>
+    <p class="section-desc">Each tool is mapped to a Pranaclimb performance zone. Use them strategically — before, during, and after your climbs.</p>
+  </div>
+  <div class="tools-grid">
+
+    <div class="tool-card">
+      <span class="tool-card-zone zone-activation">Activation</span>
+      <div class="tool-card-icon">🌬</div>
+      <div class="tool-card-title">Wim Hof Method</div>
+      <p class="tool-card-desc">Progressive hyperventilation rounds followed by full retention holds. Accelerates VO₂ kinetics, primes CP, and builds CO₂ resilience before performance.</p>
+      <p class="tool-card-cue">"Breathe deep, hold strong, rise."</p>
+      <br>
+      <button class="tool-launch" onclick="openModal('wimhof')">Launch Timer →</button>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-card-zone zone-recovery">Recovery</span>
+      <div class="tool-card-icon">⬜</div>
+      <div class="tool-card-title">Box Breathing</div>
+      <p class="tool-card-desc">4:4:4:4 equal-phase breathing. Resets the nervous system, manages CO₂ at rest holds, and restores W′bal between efforts. Ideal at CP zone.</p>
+      <p class="tool-card-cue">"Inhale control, exhale calm."</p>
+      <br>
+      <button class="tool-launch" onclick="openModal('box')">Launch Timer →</button>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-card-zone zone-recovery">Recovery</span>
+      <div class="tool-card-icon">💨</div>
+      <div class="tool-card-title">Cyclic Sighing</div>
+      <p class="tool-card-desc">Double inhale through the nose, long slow exhale through the mouth. Most effective breathwork for mood improvement and reducing physiological arousal (Huberman et al., 2023).</p>
+      <p class="tool-card-cue">"Sigh it out — release and reset."</p>
+      <br>
+      <button class="tool-launch" onclick="openModal('sigh')">Launch Timer →</button>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-card-zone zone-recovery">Recovery</span>
+      <div class="tool-card-icon">🎈</div>
+      <div class="tool-card-title">Balloon Breathing</div>
+      <p class="tool-card-desc">Deep nasal inhale, slow exhale into a balloon. Clinically shown to raise SpO₂ from 95.7% to 98.1% (Misra et al., 2023). Builds expiratory control and diaphragm strength.</p>
+      <p class="tool-card-cue">"Fill it strong, release it slow."</p>
+      <br>
+      <button class="tool-launch secondary" onclick="openModal('balloon')">How To →</button>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-card-zone zone-performance">Performance</span>
+      <div class="tool-card-icon">⚡</div>
+      <div class="tool-card-title">Power Exhale</div>
+      <p class="tool-card-desc">Forceful, sharp exhale at crux moments. Reduces inspiratory load, delays respiratory muscle metaboreflex, and releases core tension on hard moves. Above CP / RCP zone.</p>
+      <p class="tool-card-cue">"Exhale sharp — drive through the crux."</p>
+      <br>
+      <button class="tool-launch secondary" onclick="openModal('power')">How To →</button>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-card-zone zone-all">All Zones</span>
+      <div class="tool-card-icon">👅</div>
+      <div class="tool-card-title">Tongue-Y Balance</div>
+      <p class="tool-card-desc">Rest tongue gently on hard palate, lips soft, teeth slightly apart. Promotes jaw and neck relaxation, supports nasal breathing, and reduces accessory muscle tension.</p>
+      <p class="tool-card-cue">"Rest your tongue — soften your jaw, steady your breath."</p>
+      <br>
+      <button class="tool-launch secondary" onclick="openModal('tongue')">How To →</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- TIMERS SECTION -->
+<div id="timers" style="background:var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 2rem;">
+  <div style="max-width:900px; margin:0 auto;">
+    <div class="section-header">
+      <p class="section-eyebrow">Guided Timers</p>
+      <h2 class="section-title">Breathe with <span>guidance</span></h2>
+      <div class="lime-bar"></div>
+      <p class="section-desc">Interactive timers with full visual and phase guidance. Set your session, press begin, breathe.</p>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:1rem;">
+      <div style="background:var(--white); border:1px solid var(--border); border-radius:2px; padding:1.5rem; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">🌬</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.06em; margin-bottom:0.4rem;">Wim Hof Timer</div>
+        <p style="font-size:0.78rem; font-weight:300; color:var(--mid); margin-bottom:1rem;">Progressive retention · 4 rounds · Fully customisable</p>
+        <button class="tool-launch" onclick="openModal('wimhof')">Open Timer →</button>
+      </div>
+      <div style="background:var(--white); border:1px solid var(--border); border-radius:2px; padding:1.5rem; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">⬜</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.06em; margin-bottom:0.4rem;">Box Breathing Timer</div>
+        <p style="font-size:0.78rem; font-weight:300; color:var(--mid); margin-bottom:1rem;">4:4:4:4 · Calm & reset · Recovery tool</p>
+        <button class="tool-launch" onclick="openModal('box')">Open Timer →</button>
+      </div>
+      <div style="background:var(--white); border:1px solid var(--border); border-radius:2px; padding:1.5rem; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">💨</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.06em; margin-bottom:0.4rem;">Cyclic Sigh Timer</div>
+        <p style="font-size:0.78rem; font-weight:300; color:var(--mid); margin-bottom:1rem;">Double inhale · Long exhale · 5-min reset</p>
+        <button class="tool-launch" onclick="openModal('sigh')">Open Timer →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ZONE MAP -->
+<div id="zones" class="section">
+  <div class="section-header">
+    <p class="section-eyebrow">Zone Mapping</p>
+    <h2 class="section-title">Find your <span>zone</span></h2>
+    <div class="lime-bar"></div>
+    <p class="section-desc">Your breathing rate is your performance compass. Use this map to identify where you are and which tool to reach for.</p>
+  </div>
+  <table class="zone-table">
+    <thead>
+      <tr>
+        <th>Zone</th>
+        <th>BR (BPM)</th>
+        <th>RPE</th>
+        <th>Breathing State</th>
+        <th>Recommended Tool</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="zone-dot" style="background:#89CFF0;"></span><strong>Sub-threshold</strong></td>
+        <td>≤ 35</td>
+        <td>≤ 6</td>
+        <td>Slow, nasal, diaphragmatic</td>
+        <td>Tongue-Y Balance · Cyclic Sigh</td>
+      </tr>
+      <tr>
+        <td><span class="zone-dot" style="background:#AAFF00;"></span><strong>CP Zone</strong></td>
+        <td>40–45</td>
+        <td>7–8</td>
+        <td>Efficient diaphragmatic, sustainable</td>
+        <td>Box Breathing · Coherent Breathing</td>
+      </tr>
+      <tr>
+        <td><span class="zone-dot" style="background:#ffd700;"></span><strong>Amber / RCP</strong></td>
+        <td>45–55</td>
+        <td>8–9</td>
+        <td>Mixed nasal→oral, rhythm tightening</td>
+        <td>Cyclic Sigh · Power Exhale at crux</td>
+      </tr>
+      <tr>
+        <td><span class="zone-dot" style="background:#ff00ff;"></span><strong>Redline</strong></td>
+        <td>&gt; 55</td>
+        <td>9–10</td>
+        <td>Expressive, short bursts, W′ depleting</td>
+        <td>Power Exhale · Wim Hof pre-session</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- RESEARCH -->
+<div id="research" class="research-strip">
+  <div class="research-inner">
+    <p class="section-eyebrow">Research Spotlight</p>
+    <h2 class="section-title">The science <span>behind it</span></h2>
+    <div class="lime-bar"></div>
+    <div class="research-grid">
+
+      <div class="research-card">
+        <p class="research-card-tag">Wim Hof · VO₂ Kinetics</p>
+        <p class="research-card-title">Warm-Up Breathing & Endurance</p>
+        <p class="research-card-text">A 17–22 min Wim Hof breathing warm-up altered VO₂ consumption during incremental cycling, potentially facilitating endurance performance and reducing subjective strain in young athletes. Average heart rates trended lower in preceded stages.</p>
+        <span class="research-card-stat">Bahenský et al., 2021</span>
+      </div>
+
+      <div class="research-card">
+        <p class="research-card-tag">Cyclic Sighing · Mood</p>
+        <p class="research-card-title">5-Min Breathwork vs Meditation</p>
+        <p class="research-card-text">In a randomised controlled trial, 5 minutes of cyclic sighing produced greater mood improvement and reduction in respiratory rate than mindfulness meditation. Exhale-focused breathing was most effective for stress management.</p>
+        <span class="research-card-stat">Balban et al., 2023 (Huberman Lab)</span>
+      </div>
+
+      <div class="research-card">
+        <p class="research-card-tag">Balloon Breathing · SpO₂</p>
+        <p class="research-card-title">Oxygen Saturation Improvement</p>
+        <p class="research-card-text">30 minutes of balloon-blowing exercise significantly raised SpO₂ from 95.7% to 98.1% in 250 patients. Activates the diaphragm and intercostals, enhancing alveolar ventilation and gas exchange efficiency.</p>
+        <span class="research-card-stat">Misra et al., 2023 — Cureus</span>
+      </div>
+
+      <div class="research-card">
+        <p class="research-card-tag">Vocalisation · Ventilation</p>
+        <p class="research-card-title">Yelling & Aerobic Power</p>
+        <p class="research-card-text">Yelling at maximal effort led to higher peak power, time to exhaustion, and greater VO₂ and ventilation during 90–100% maximal cycling — without increased muscle activation. Supports Pranaclimb's +5 BPM scream adjustment rule.</p>
+        <span class="research-card-stat">Chen et al., 2015 — ResearchGate</span>
+      </div>
+
+      <div class="research-card">
+        <p class="research-card-tag">Metaboreflex · W′bal</p>
+        <p class="research-card-title">Respiratory Muscle Fatigue</p>
+        <p class="research-card-text">Repeated Valsalva-type pressure raises intrathoracic pressure, activates the respiratory muscle metaboreflex, and causes vasoconstriction in limb musculature — accelerating W′ depletion. Validates the Scream-Density Override Rule.</p>
+        <span class="research-card-stat">Yamaguchi et al., 2020</span>
+      </div>
+
+      <div class="research-card">
+        <p class="research-card-tag">Sighing · Reset</p>
+        <p class="research-card-title">Sighs as Physiological Resetters</p>
+        <p class="research-card-text">Spontaneous sighs act as physiological and psychological resetters, reducing tension and improving self-reported relief. Supports assigning a low or negative BR adjustment for sighs in Pranaclimb coaching.</p>
+        <span class="research-card-stat">Vlemincx et al., 2016</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">PRANA<span>CLIMB</span></div>
+  <p class="footer-tagline">Love · Breathe · Climb</p>
+  <p class="footer-text">© 2025 Pranaclimb Ltd · annie@pranaclimb.com · ORCID 0009-0001-6172-3996</p>
+  <p style="font-size:0.7rem; margin-top:0.5rem; color:#555;">Insured via Insure4Sport / Aviva through Pranaclimb Ltd</p>
+</footer>
+
+<!-- ========== MODALS ========== -->
+
+<!-- WIM HOF MODAL -->
+<div class="modal-overlay" id="modal-wimhof">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('wimhof')">✕</button>
+    <div class="t-logo">PRANA<span>CLIMB</span></div>
+    <p class="t-tagline">Love · Breathe · Climb</p>
+    <div class="t-lbar"></div>
+    <p class="t-title">Wim Hof Breathing Timer</p>
+    <p class="t-sub">Progressive retention · fully customisable rounds</p>
+
+    <div id="wh-setup">
+      <div class="t-card">
+        <div class="t-row"><span class="t-label">Rounds</span><input type="range" min="1" max="5" value="4" id="wh-rounds" step="1" oninput="document.getElementById('wh-rounds-v').textContent=this.value"><span class="t-val" id="wh-rounds-v">4</span></div>
+        <div class="t-row"><span class="t-label">Breaths / round</span><input type="range" min="20" max="40" value="40" id="wh-breaths" step="5" oninput="document.getElementById('wh-breaths-v').textContent=this.value"><span class="t-val" id="wh-breaths-v">40</span></div>
+      </div>
+      <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:0.6rem;">Retention per round (seconds)</p>
+      <div id="wh-rounds-list"></div>
+      <button style="width:100%;padding:0.6rem;background:transparent;border:1.5px dashed var(--border);border-radius:2px;font-family:'Outfit',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);cursor:pointer;margin-bottom:1rem;" onclick="whAddRound()">+ Add Round</button>
+      <button class="t-btn" onclick="whStart()">Begin Session →</button>
+    </div>
+
+    <div id="wh-timer" class="timer-view">
+      <div class="t-dots" id="wh-dots"></div>
+      <p class="t-round-tag" id="wh-round-tag">Round 1</p>
+      <p class="t-ret-badge" id="wh-ret-badge">90 sec hold</p>
+      <div id="wh-breath-phase">
+        <div class="orb" id="wh-orb"></div>
+        <p class="t-phase-lbl" id="wh-lbl">Get Ready</p>
+        <p class="t-phase-desc" id="wh-desc">Find a comfortable position</p>
+        <div class="t-count" id="wh-ctr"></div>
+      </div>
+      <div id="wh-hold-phase" style="display:none">
+        <div class="circ-wrap">
+          <svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="80" r="70" fill="none" stroke="#e0e0d8" stroke-width="5"/><circle cx="80" cy="80" r="70" fill="none" stroke="#89CFF0" stroke-width="5" stroke-dasharray="440" stroke-dashoffset="440" id="wh-hold-arc" stroke-linecap="round" style="transition:stroke-dashoffset 1s linear"/></svg>
+          <div class="circ-inner"><span class="circ-num" id="wh-hold-num">90</span><span class="circ-unit">seconds</span></div>
+        </div>
+        <p class="t-phase-lbl">Retention Hold</p>
+        <p class="t-phase-desc">Exhale fully — hold on empty</p>
+      </div>
+      <div id="wh-rec-phase" style="display:none">
+        <div class="circ-wrap">
+          <svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="80" r="70" fill="none" stroke="#e0e0d8" stroke-width="5"/><circle cx="80" cy="80" r="70" fill="none" stroke="#ff00ff" stroke-width="5" stroke-dasharray="440" stroke-dashoffset="440" id="wh-rec-arc" stroke-linecap="round" style="transition:stroke-dashoffset 1s linear"/></svg>
+          <div class="circ-inner"><span class="circ-num" id="wh-rec-num">15</span><span class="circ-unit">seconds</span></div>
+        </div>
+        <p class="t-phase-lbl">Recovery Breath</p>
+        <p class="t-phase-desc">Inhale fully — hold for 15 seconds</p>
+      </div>
+      <div class="t-ctrls">
+        <button class="t-ctrl" onclick="whStop()">✕ Stop</button>
+        <button class="t-ctrl pink-ctrl" id="wh-pause-btn" onclick="whPause()">⏸ Pause</button>
+      </div>
+    </div>
+    <div id="wh-complete" class="complete-view">
+      <p class="complete-done">DONE</p>
+      <p class="complete-title">Session Complete</p>
+      <p class="complete-text" id="wh-complete-text"></p>
+      <button class="t-btn" onclick="whReset()" style="max-width:220px;margin:0 auto;display:block;">Start Again →</button>
+    </div>
+  </div>
+</div>
+
+<!-- BOX BREATHING MODAL -->
+<div class="modal-overlay" id="modal-box">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('box')">✕</button>
+    <div class="t-logo">PRANA<span>CLIMB</span></div>
+    <p class="t-tagline">Love · Breathe · Climb</p>
+    <div class="t-lbar"></div>
+    <p class="t-title">Box Breathing</p>
+    <p class="t-sub">4:4:4:4 · Reset your nervous system · Restore W′bal</p>
+
+    <div id="box-setup">
+      <div class="t-card">
+        <div class="t-row"><span class="t-label">Phase duration (sec)</span><input type="range" min="3" max="8" value="4" id="box-phase" step="1" oninput="document.getElementById('box-phase-v').textContent=this.value"><span class="t-val" id="box-phase-v">4</span></div>
+        <div class="t-row"><span class="t-label">Rounds</span><input type="range" min="3" max="12" value="6" id="box-rounds" step="1" oninput="document.getElementById('box-rounds-v').textContent=this.value"><span class="t-val" id="box-rounds-v">6</span></div>
+      </div>
+      <button class="t-btn" onclick="boxStart()">Begin Session →</button>
+    </div>
+
+    <div id="box-timer" class="timer-view">
+      <p class="t-round-tag" id="box-round-tag">Round 1</p>
+      <div class="box-svg-wrap">
+        <svg viewBox="0 0 160 160" width="160" height="160" id="box-svg">
+          <rect x="20" y="20" width="120" height="120" rx="4" fill="none" stroke="#e0e0d8" stroke-width="4"/>
+          <rect x="20" y="20" width="120" height="120" rx="4" fill="none" stroke="#ff00ff" stroke-width="4"
+            stroke-dasharray="480" stroke-dashoffset="480" id="box-arc" style="transition:stroke-dashoffset 0.1s linear"/>
+          <text x="80" y="72" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="32" fill="#3a3a3a" id="box-num">4</text>
+          <text x="80" y="96" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#666" id="box-phase-lbl">INHALE</text>
+        </svg>
+      </div>
+      <p class="t-phase-desc" id="box-desc">Breathe in steadily through the nose</p>
+      <div class="t-dots" id="box-dots"></div>
+      <div class="t-ctrls">
+        <button class="t-ctrl" onclick="boxStop()">✕ Stop</button>
+        <button class="t-ctrl pink-ctrl" id="box-pause-btn" onclick="boxPause()">⏸ Pause</button>
+      </div>
+    </div>
+    <div id="box-complete" class="complete-view">
+      <p class="complete-done">DONE</p>
+      <p class="complete-title">Session Complete</p>
+      <p class="complete-text" id="box-complete-text"></p>
+      <button class="t-btn" onclick="boxReset()" style="max-width:220px;margin:0 auto;display:block;">Start Again →</button>
+    </div>
+  </div>
+</div>
+
+<!-- CYCLIC SIGH MODAL -->
+<div class="modal-overlay" id="modal-sigh">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('sigh')">✕</button>
+    <div class="t-logo">PRANA<span>CLIMB</span></div>
+    <p class="t-tagline">Love · Breathe · Climb</p>
+    <div class="t-lbar"></div>
+    <p class="t-title">Cyclic Sighing</p>
+    <p class="t-sub">Double inhale · Long exhale · Most effective for mood & stress (Huberman et al.)</p>
+
+    <div id="sigh-setup">
+      <div class="t-card">
+        <div class="t-row"><span class="t-label">Duration (minutes)</span><input type="range" min="2" max="10" value="5" id="sigh-mins" step="1" oninput="document.getElementById('sigh-mins-v').textContent=this.value"><span class="t-val" id="sigh-mins-v">5</span></div>
+      </div>
+      <div style="background:var(--off);border:1px solid var(--border);border-radius:2px;padding:1rem 1.2rem;margin-bottom:1rem;font-size:0.8rem;font-weight:300;color:var(--mid);line-height:1.7;">
+        <strong style="font-weight:600;color:var(--ink);">How it works:</strong> Take a full inhale through the nose, then a short second sniff to top up the lungs. Then release a long, slow exhale through the mouth. Let the exhale be longer than both inhales combined.
+      </div>
+      <button class="t-btn" onclick="sighStart()">Begin Session →</button>
+    </div>
+
+    <div id="sigh-timer" class="timer-view">
+      <p class="t-round-tag" id="sigh-round-tag">Breath 1</p>
+      <div class="orb" id="sigh-orb"></div>
+      <p class="t-phase-lbl" id="sigh-lbl">Inhale</p>
+      <p class="t-phase-desc" id="sigh-desc">Full breath in through the nose</p>
+      <div class="t-count" id="sigh-time-left"></div>
+      <div class="t-ctrls">
+        <button class="t-ctrl" onclick="sighStop()">✕ Stop</button>
+        <button class="t-ctrl pink-ctrl" id="sigh-pause-btn" onclick="sighPause()">⏸ Pause</button>
+      </div>
+    </div>
+    <div id="sigh-complete" class="complete-view">
+      <p class="complete-done">DONE</p>
+      <p class="complete-title">Session Complete</p>
+      <p class="complete-text">Rest and notice how you feel. Cortisol down, HRV up.</p>
+      <button class="t-btn" onclick="sighReset()" style="max-width:220px;margin:0 auto;display:block;">Start Again →</button>
+    </div>
+  </div>
+</div>
+
+<!-- HOW TO MODALS (Balloon, Power Exhale, Tongue-Y) -->
+<div class="modal-overlay" id="modal-balloon">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('balloon')">✕</button>
+    <div class="t-logo">PRANA<span>CLIMB</span></div><p class="t-tagline">Love · Breathe · Climb</p><div class="t-lbar"></div>
+    <p class="t-title">🎈 Balloon Breathing</p>
+    <p class="t-sub">Expansion Breath · Recovery Zone</p>
+    <div style="font-size:0.85rem;line-height:1.8;color:var(--ink);">
+      <p style="margin-bottom:1rem;"><strong>What it is:</strong> Breathe deeply through the nose, then exhale slowly and steadily into a balloon, extending the exhalation as long as possible.</p>
+      <p style="margin-bottom:1rem;"><strong>Why it works:</strong> Activates the diaphragm and intercostals, increases ribcage expansion, and strengthens expiratory control. Clinically shown to raise SpO₂ from 95.7% → 98.1% (Misra et al., 2023).</p>
+      <p style="margin-bottom:1rem;"><strong>When to use:</strong> Recovery phases, off-wall sessions, between redpoint attempts.</p>
+      <p style="margin-bottom:1.5rem; font-style:italic; color:var(--pink); font-weight:500;">"Fill it strong, release it slow — every balloon breath lifts your oxygen."</p>
+      <div style="background:var(--off);border-left:3px solid var(--lime);padding:1rem 1.2rem;border-radius:0 2px 2px 0;font-size:0.78rem;">
+        <strong>Research:</strong> Misra et al. (2023) — 30 min balloon breathing raised SpO₂ significantly in 250 patients. Supports use as a ventilatory training tool.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-power">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('power')">✕</button>
+    <div class="t-logo">PRANA<span>CLIMB</span></div><p class="t-tagline">Love · Breathe · Climb</p><div class="t-lbar"></div>
+    <p class="t-title">⚡ Power Exhale</p>
+    <p class="t-sub">Crux Tool · Above CP / RCP Zone</p>
+    <div style="font-size:0.85rem;line-height:1.8;color:var(--ink);">
+      <p style="margin-bottom:1rem;"><strong>What it is:</strong> A forceful, sharp exhale timed to the hardest move on the wall. Think of it as a controlled burst — not a scream, but a deliberate pressure release.</p>
+      <p style="margin-bottom:1rem;"><strong>Why it works:</strong> Reduces inspiratory load, delays the respiratory muscle metaboreflex (Yamaguchi 2020), releases core tension, and can enhance neural drive. Aliverti et al. showed that during phonation, all three chest-wall compartments contribute — shifting mechanics favourably at crux.</p>
+      <p style="margin-bottom:1rem;"><strong>When to use:</strong> At crux moves, hard lock-offs, or when you feel the pump onset. Not for continuous use — use once, then reset with nasal breathing.</p>
+      <p style="margin-bottom:1.5rem; font-style:italic; color:var(--pink); font-weight:500;">"Exhale sharp — drive through the crux."</p>
+      <div style="background:var(--off);border-left:3px solid var(--pink);padding:1rem 1.2rem;border-radius:0 2px 2px 0;font-size:0.78rem;">
+        <strong>⚠️ Scream-Density Rule:</strong> 1–3 vocalised power exhales = +5 BPM BR adjustment. ≥7 = metaboreflex activation risk. Budget them wisely.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-tongue">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('tongue')">✕</button>
+    <div class="t-logo">PRANA<span>CLIMB</span></div><p class="t-tagline">Love · Breathe · Climb</p><div class="t-lbar"></div>
+    <p class="t-title">👅 Tongue-Y Balance</p>
+    <p class="t-sub">Recovery Cue · All Zones</p>
+    <div style="font-size:0.85rem;line-height:1.8;color:var(--ink);">
+      <p style="margin-bottom:1rem;"><strong>What it is:</strong> Place the tongue gently against the hard palate (roof of the mouth). Lips soft, teeth slightly apart. Breathe diaphragmatically through the nose.</p>
+      <p style="margin-bottom:1rem;"><strong>Why it works:</strong> May promote jaw and neck relaxation, reduce accessory muscle tension, and support nasal breathing. Raises interoceptive awareness — pairs beautifully with Mirror Breath and Grounding Breath.</p>
+      <p style="margin-bottom:1rem;"><strong>When to use:</strong> During ≤CP recovery holds, while route reading, or in post-crux grounding phases. Avoid during high-effort zones if it increases accessory muscle activity for you.</p>
+      <p style="margin-bottom:1.5rem; font-style:italic; color:var(--pink); font-weight:500;">"Rest your tongue on the roof — soften your jaw, steady your breath."</p>
+      <div style="background:var(--off);border-left:3px solid var(--blue);padding:1rem 1.2rem;border-radius:0 2px 2px 0;font-size:0.78rem;">
+        <strong>Research note:</strong> Sherwin et al. (2024) reference Rocabado's recommendation for tongue-palate rest to reduce accessory muscle activity. Carlson et al. (1997) notes nuance — apply contextually.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ========== MODAL CONTROL ==========
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById('modal-' + id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('.modal-overlay').forEach(el => {
+  el.addEventListener('click', e => { if (e.target === el) { el.classList.remove('open'); document.body.style.overflow = ''; } });
+});
+
+// ========== WIM HOF ==========
+let whRounds = [60, 90, 120, 150];
+let whPlan = [], whCurrent = 0, whBreaths = 40;
+let whPaused = false, whStopped = false, whTimer = null;
+let whInhale = true, whBreathCount = 0;
+const WH_PACE = 1600, WH_CIRC = 440;
+
+function whRenderRounds() {
+  const list = document.getElementById('wh-rounds-list');
+  list.innerHTML = '';
+  whRounds.forEach((r, i) => {
+    const row = document.createElement('div');
+    row.style.cssText = 'display:grid;grid-template-columns:28px 1fr 40px 28px;gap:6px;align-items:center;background:var(--off);border:1px solid var(--border);border-radius:2px;padding:0.55rem 0.7rem;margin-bottom:5px;';
+    row.innerHTML = `<span style="font-family:'Bebas Neue',sans-serif;font-size:1rem;color:var(--pink);text-align:center;">${i+1}</span>
+      <input type="range" min="30" max="180" step="15" value="${r}" style="accent-color:var(--blue);" oninput="whRounds[${i}]=parseInt(this.value);this.nextElementSibling.textContent=this.value+'s'">
+      <span style="font-size:0.78rem;font-weight:600;color:var(--ink);text-align:right;">${r}s</span>
+      <button onclick="whRounds.splice(${i},1);whRenderRounds()" style="background:none;border:none;cursor:pointer;color:#ccc;font-size:0.9rem;" title="Remove">✕</button>`;
+    list.appendChild(row);
+  });
+}
+function whAddRound() {
+  const last = whRounds.length ? whRounds[whRounds.length-1] : 60;
+  whRounds.push(Math.min(last+30, 180));
+  whRenderRounds();
+}
+whRenderRounds();
+
+function whBuildDots() {
+  const d = document.getElementById('wh-dots'); d.innerHTML = '';
+  whPlan.forEach((_, i) => { const dot = document.createElement('div'); dot.className = 'tdot'; dot.id = 'whdot-'+i; d.appendChild(dot); });
+}
+function whUpdateDots() {
+  whPlan.forEach((_,i) => {
+    const el = document.getElementById('whdot-'+i);
+    el.className = i < whCurrent-1 ? 'tdot done' : i === whCurrent-1 ? 'tdot active' : 'tdot';
+  });
+}
+function whStart() {
+  whBreaths = parseInt(document.getElementById('wh-breaths').value);
+  whPlan = whRounds.map(r => r);
+  whPaused = false; whStopped = false; whCurrent = 0;
+  document.getElementById('wh-setup').style.display = 'none';
+  document.getElementById('wh-timer').style.display = 'block';
+  whBuildDots(); whNextRound();
+}
+function whNextRound() {
+  whCurrent++;
+  if (whCurrent > whPlan.length) { whComplete(); return; }
+  whUpdateDots();
+  document.getElementById('wh-round-tag').textContent = 'Round ' + whCurrent + ' of ' + whPlan.length;
+  document.getElementById('wh-ret-badge').textContent = whPlan[whCurrent-1] + ' sec hold';
+  document.getElementById('wh-breath-phase').style.display = 'block';
+  document.getElementById('wh-hold-phase').style.display = 'none';
+  document.getElementById('wh-rec-phase').style.display = 'none';
+  whBreathCount = 0; whInhale = true; whRunBreathing();
+}
+function whRunBreathing() {
+  if (whStopped) return;
+  if (whPaused) { whTimer = setTimeout(whRunBreathing, 200); return; }
+  const orb = document.getElementById('wh-orb'), lbl = document.getElementById('wh-lbl'), desc = document.getElementById('wh-desc'), ctr = document.getElementById('wh-ctr');
+  if (whBreathCount >= whBreaths) { orb.className = 'orb idle'; whRunRetention(); return; }
+  if (whInhale) {
+    orb.className = 'orb inhale'; lbl.textContent = 'Inhale'; desc.textContent = 'Deep breath in through the nose';
+    whBreathCount++; ctr.textContent = whBreathCount + ' / ' + whBreaths; whInhale = false;
+    whTimer = setTimeout(whRunBreathing, WH_PACE);
+  } else {
+    orb.className = 'orb exhale'; lbl.textContent = 'Exhale'; desc.textContent = 'Let it go — passive release'; whInhale = true;
+    whTimer = setTimeout(whRunBreathing, WH_PACE);
+  }
+}
+function whRunRetention() {
+  if (whStopped) return;
+  document.getElementById('wh-breath-phase').style.display = 'none';
+  document.getElementById('wh-hold-phase').style.display = 'block';
+  let secs = whPlan[whCurrent-1];
+  const arc = document.getElementById('wh-hold-arc'), num = document.getElementById('wh-hold-num'), total = secs;
+  function tick() {
+    if (whStopped) return; if (whPaused) { whTimer = setTimeout(tick,200); return; }
+    num.textContent = secs; arc.style.strokeDashoffset = WH_CIRC - (WH_CIRC*(total-secs)/total);
+    if (secs<=0) { whRunRecovery(); return; } secs--; whTimer = setTimeout(tick,1000);
+  }
+  setTimeout(() => { arc.style.strokeDashoffset = WH_CIRC; tick(); }, 50);
+}
+function whRunRecovery() {
+  if (whStopped) return;
+  document.getElementById('wh-hold-phase').style.display = 'none';
+  document.getElementById('wh-rec-phase').style.display = 'block';
+  let secs = 15;
+  const arc = document.getElementById('wh-rec-arc'), num = document.getElementById('wh-rec-num');
+  function tick() {
+    if (whStopped) return; if (whPaused) { whTimer = setTimeout(tick,200); return; }
+    num.textContent = secs; arc.style.strokeDashoffset = WH_CIRC - (WH_CIRC*(15-secs)/15);
+    if (secs<=0) { whNextRound(); return; } secs--; whTimer = setTimeout(tick,1000);
+  }
+  setTimeout(() => { arc.style.strokeDashoffset = WH_CIRC; tick(); }, 50);
+}
+function whPause() { whPaused = !whPaused; document.getElementById('wh-pause-btn').textContent = whPaused ? '▶ Resume' : '⏸ Pause'; }
+function whStop() { whStopped = true; clearTimeout(whTimer); whReset(); }
+function whReset() {
+  whStopped = true; clearTimeout(whTimer);
+  document.getElementById('wh-setup').style.display = 'block';
+  document.getElementById('wh-timer').style.display = 'none';
+  document.getElementById('wh-complete').style.display = 'none';
+  document.getElementById('wh-pause-btn').textContent = '⏸ Pause';
+  whPaused = false; whStopped = false;
+}
+function whComplete() {
+  document.getElementById('wh-timer').style.display = 'none';
+  document.getElementById('wh-complete').style.display = 'block';
+  document.getElementById('wh-complete-text').textContent = whPlan.length + ' rounds complete. Rest and notice how you feel.';
+}
+
+// ========== BOX BREATHING ==========
+let boxPhase = 4, boxTotalRounds = 6, boxCurrent = 0;
+let boxPaused = false, boxStopped = false, boxTimer = null;
+let boxPhaseIdx = 0; // 0=inhale,1=hold,2=exhale,3=hold
+const boxPhaseNames = ['Inhale','Hold','Exhale','Hold'];
+const boxPhaseDescs = ['Breathe in steadily through the nose','Hold, full and still','Release slowly and steadily','Hold, empty and calm'];
+const BOX_CIRC = 480;
+
+function boxBuildDots() {
+  const d = document.getElementById('box-dots'); d.innerHTML = '';
+  for (let i = 0; i < boxTotalRounds; i++) { const dot = document.createElement('div'); dot.className = 'tdot'; dot.id = 'boxdot-'+i; d.appendChild(dot); }
+}
+function boxUpdateDots() {
+  for (let i = 0; i < boxTotalRounds; i++) {
+    const el = document.getElementById('boxdot-'+i);
+    el.className = i < boxCurrent-1 ? 'tdot done' : i === boxCurrent-1 ? 'tdot active' : 'tdot';
+  }
+}
+function boxStart() {
+  boxPhase = parseInt(document.getElementById('box-phase').value);
+  boxTotalRounds = parseInt(document.getElementById('box-rounds').value);
+  boxCurrent = 0; boxPhaseIdx = 0; boxPaused = false; boxStopped = false;
+  document.getElementById('box-setup').style.display = 'none';
+  document.getElementById('box-timer').style.display = 'block';
+  boxBuildDots(); boxNextPhase();
+}
+function boxNextPhase() {
+  if (boxStopped) return;
+  if (boxPhaseIdx === 0) {
+    boxCurrent++;
+    if (boxCurrent > boxTotalRounds) { boxComplete(); return; }
+    boxUpdateDots();
+    document.getElementById('box-round-tag').textContent = 'Round ' + boxCurrent + ' of ' + boxTotalRounds;
+  }
+  boxRunPhase();
+}
+function boxRunPhase() {
+  if (boxStopped) return;
+  const arc = document.getElementById('box-arc'), num = document.getElementById('box-num'), phaseLbl = document.getElementById('box-phase-lbl'), desc = document.getElementById('box-desc');
+  num.textContent = boxPhase; phaseLbl.textContent = boxPhaseNames[boxPhaseIdx]; desc.textContent = boxPhaseDescs[boxPhaseIdx];
+  arc.style.strokeDashoffset = BOX_CIRC;
+  let secs = boxPhase, total = boxPhase;
+  function tick() {
+    if (boxStopped) return; if (boxPaused) { boxTimer = setTimeout(tick,200); return; }
+    num.textContent = secs; arc.style.strokeDashoffset = BOX_CIRC - (BOX_CIRC*(total-secs)/total);
+    if (secs<=0) { boxPhaseIdx = (boxPhaseIdx+1)%4; boxNextPhase(); return; }
+    secs--; boxTimer = setTimeout(tick,1000);
+  }
+  setTimeout(() => { arc.style.strokeDashoffset = BOX_CIRC; tick(); }, 50);
+}
+function boxPause() { boxPaused = !boxPaused; document.getElementById('box-pause-btn').textContent = boxPaused ? '▶ Resume' : '⏸ Pause'; }
+function boxStop() { boxStopped = true; clearTimeout(boxTimer); boxReset(); }
+function boxReset() {
+  boxStopped = true; clearTimeout(boxTimer);
+  document.getElementById('box-setup').style.display = 'block';
+  document.getElementById('box-timer').style.display = 'none';
+  document.getElementById('box-complete').style.display = 'none';
+  document.getElementById('box-pause-btn').textContent = '⏸ Pause';
+  boxPhaseIdx = 0; boxPaused = false; boxStopped = false;
+}
+function boxComplete() {
+  document.getElementById('box-timer').style.display = 'none';
+  document.getElementById('box-complete').style.display = 'block';
+  document.getElementById('box-complete-text').textContent = boxTotalRounds + ' rounds complete. Nervous system reset.';
+}
+
+// ========== CYCLIC SIGHING ==========
+let sighMins = 5, sighPaused = false, sighStopped = false, sighTimer = null;
+let sighPhase = 0, sighBreathNum = 0, sighSecsLeft = 0;
+// phases: 0=inhale1(2s), 1=inhale2 sniff(1s), 2=exhale(4s)
+const sighPhases = [
+  { name:'Inhale', desc:'Full breath in through the nose', dur:2, cls:'inhale' },
+  { name:'Top Up', desc:'Short second sniff — fill to the top', dur:1, cls:'inhale' },
+  { name:'Exhale', desc:'Long slow release through the mouth', dur:4, cls:'exhale' },
+];
+
+function sighStart() {
+  sighMins = parseInt(document.getElementById('sigh-mins').value);
+  sighPaused = false; sighStopped = false; sighPhase = 0; sighBreathNum = 0;
+  sighSecsLeft = sighMins * 60;
+  document.getElementById('sigh-setup').style.display = 'none';
+  document.getElementById('sigh-timer').style.display = 'block';
+  sighRunPhase();
+}
+function sighRunPhase() {
+  if (sighStopped) return;
+  const orb = document.getElementById('sigh-orb'), lbl = document.getElementById('sigh-lbl'), desc = document.getElementById('sigh-desc'), timeLeft = document.getElementById('sigh-time-left');
+  const p = sighPhases[sighPhase];
+  orb.className = 'orb ' + p.cls; lbl.textContent = p.name; desc.textContent = p.desc;
+  if (sighPhase === 0) { sighBreathNum++; document.getElementById('sigh-round-tag').textContent = 'Breath ' + sighBreathNum; }
+  let secs = p.dur;
+  function tick() {
+    if (sighStopped) return; if (sighPaused) { sighTimer = setTimeout(tick,200); return; }
+    const mins = Math.floor(sighSecsLeft/60), s = sighSecsLeft%60;
+    timeLeft.textContent = mins + ':' + (s<10?'0':'')+s;
+    if (sighSecsLeft <= 0) { sighComplete(); return; }
+    if (secs <= 0) { sighPhase = (sighPhase+1)%3; sighRunPhase(); return; }
+    secs--; sighSecsLeft--;
+    sighTimer = setTimeout(tick,1000);
+  }
+  tick();
+}
+function sighPause() { sighPaused = !sighPaused; document.getElementById('sigh-pause-btn').textContent = sighPaused ? '▶ Resume' : '⏸ Pause'; }
+function sighStop() { sighStopped = true; clearTimeout(sighTimer); sighReset(); }
+function sighReset() {
+  sighStopped = true; clearTimeout(sighTimer);
+  document.getElementById('sigh-setup').style.display = 'block';
+  document.getElementById('sigh-timer').style.display = 'none';
+  document.getElementById('sigh-complete').style.display = 'none';
+  document.getElementById('sigh-pause-btn').textContent = '⏸ Pause';
+  sighPaused = false; sighStopped = false;
+}
+function sighComplete() {
+  document.getElementById('sigh-timer').style.display = 'none';
+  document.getElementById('sigh-complete').style.display = 'block';
+}
+</script>
+</body>
+</html>

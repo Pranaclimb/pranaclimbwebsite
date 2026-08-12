@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Privacy policy for Pranaclimb Ltd — how we collect, use and protect your data. GDPR compliant. Registered in England & Wales, Company No. 16626114." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Pranaclimb Ltd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink:   #ff00ff;
+      --lime:   #AAFF00;
+      --blue:   #89CFF0;
+      --white:  #ffffff;
+      --off:    #f5f5f2;
+      --ink:    #3a3a3a;
+      --mid:    #555555;
+      --border: #e0e0d8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem 3rem;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.12em; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--pink); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--mid); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--pink); }
+    .nav-cta { background: var(--pink); color: var(--white); padding: 0.55rem 1.4rem; border-radius: 2px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: #cc00cc; }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--white);
+      padding: 10rem 4rem 5rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: end; gap: 3rem;
+    }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 8vw, 7rem); line-height: 0.95; letter-spacing: 0.02em; color: var(--ink); }
+    .hero h1 span { color: var(--pink); }
+    .hero-meta p { font-size: 0.82rem; color: rgba(0,0,0,0.6); line-height: 1.7; margin-bottom: 0.5rem; }
+    .hero-meta strong { color: var(--ink); }
+    .hero-meta a { color: var(--pink); font-weight: 600; text-decoration: none; }
+
+    /* ─── LAYOUT ─── */
+    .body-wrap { display: grid; grid-template-columns: 240px 1fr; max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar { padding-right: 3rem; position: sticky; top: 6rem; align-self: start; }
+    .sidebar h3 { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pink); margin-bottom: 1rem; }
+    .sidebar ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .sidebar a { font-size: 0.82rem; color: var(--mid); text-decoration: none; transition: color 0.2s; line-height: 1.5; display: block; padding: 0.2rem 0 0.2rem 0.8rem; border-left: 2px solid transparent; }
+    .sidebar a:hover { color: var(--pink); border-left-color: var(--pink); }
+
+    /* ─── CONTENT ─── */
+    .content { padding-left: 3rem; border-left: 1px solid var(--border); }
+    .section { margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 1px solid var(--border); }
+    .section:last-child { border-bottom: none; margin-bottom: 0; }
+    .sec-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--lime); line-height: 1; margin-bottom: 0.3rem; }
+    .sec-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.03em; color: var(--ink); margin-bottom: 1.2rem; }
+    .content p { font-size: 0.92rem; line-height: 1.85; color: var(--mid); margin-bottom: 1rem; }
+    .content h4 { font-size: 0.85rem; font-weight: 700; color: var(--ink); margin: 1.5rem 0 0.6rem; letter-spacing: 0.03em; }
+    .content ul { list-style: none; margin: 0.8rem 0; display: flex; flex-direction: column; gap: 0.5rem; }
+    .content li { font-size: 0.9rem; line-height: 1.6; color: var(--mid); display: flex; gap: 0.7rem; align-items: flex-start; }
+    .content li::before { content: ''; flex-shrink: 0; width: 6px; height: 6px; background: var(--pink); border-radius: 50%; margin-top: 0.5rem; }
+    .content li.lime::before { background: var(--lime); }
+    .content strong { color: var(--ink); font-weight: 600; }
+    .content a { color: var(--pink); text-decoration: none; font-weight: 600; }
+    .content a:hover { text-decoration: underline; }
+
+    .highlight-box { background: var(--off); border-left: 3px solid var(--lime); padding: 1.2rem 1.5rem; margin: 1.2rem 0; font-size: 0.88rem; line-height: 1.7; color: var(--mid); border-radius: 0 2px 2px 0; }
+    .highlight-box.pink { border-left-color: var(--pink); }
+    .highlight-box.blue { background: rgba(137,207,240,0.15); border-left-color: var(--blue); }
+
+    .right-tag { display: inline-block; background: var(--pink); color: var(--white); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 2px; margin-right: 0.4rem; }
+    .right-tag.blue { background: var(--white); color: var(--ink); }
+    .right-tag.lime { background: var(--lime); color: var(--ink); }
+
+    .rights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+    .right-item { background: var(--off); border: 1.5px solid var(--border); padding: 1.2rem; border-radius: 2px; }
+    .right-item h5 { font-size: 0.8rem; font-weight: 700; color: var(--ink); margin-bottom: 0.4rem; }
+    .right-item p { font-size: 0.82rem; line-height: 1.6; color: var(--mid); margin: 0; }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--white); color: var(--ink); padding: 4rem; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; }
+    .footer-brand .nav-logo { color: var(--white); display: block; margin-bottom: 1rem; }
+    .footer-brand p { font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.85); max-width: 260px; }
+    .footer-col h4 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-col a { font-size: 1rem; color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--mid); }
+    .footer-col.trading a { font-size: 1.05rem; font-weight: 600; color: var(--white); background: rgba(255,255,255,0.2); padding: 0.6rem 1rem; border-radius: 2px; display: inline-block; transition: background 0.2s; }
+    .footer-col.trading a:hover { background: rgba(255,255,255,0.35); }
+    .footer-bottom { background: var(--white); padding: 1.2rem 4rem; display: flex; justify-content: space-between; align-items: center; }
+    .footer-bottom p { font-size: 0.75rem; color: var(--mid); }
+    .footer-bottom a { color: rgba(0,0,0,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--pink); }
+
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 8rem 1.5rem 3rem; }
+      .body-wrap { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
+      .sidebar { display: none; }
+      .content { padding-left: 0; border-left: none; }
+      .rights-grid { grid-template-columns: 1fr; }
+      footer { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
+      .footer-bottom { padding: 1rem 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+  <link rel="canonical" href="https://www.pranaclimb.com/privacy" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+  <ul class="nav-links">
+    <li><a href="methodology.html">Method</a></li>
+    <li><a href="rba.html">Assessment</a></li>
+    <li><a href="index.html#coaching">Coaching</a></li>
+    <li><a href="index.html#app">App</a></li>
+    <li><a href="book.html">Book</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#annie">Annie</a></li>
+    <li><a href="gallery.html">Photos & Videos</a></li>
+  </ul>
+  <a href="rba.html" class="nav-cta">Book Assessment</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>PRIVACY<br><span>POLICY</span></h1>
+  <div class="hero-meta">
+    <p><strong>Effective date:</strong> January 2026</p>
+    <p><strong>Last updated:</strong> April 2026</p>
+    <p>This Privacy Policy applies to all personal data collected by <strong>Pranaclimb Ltd</strong> through its trading names <strong>pranaclimb.com</strong> and <strong>oceandips.com</strong>.</p>
+    <p style="margin-top:0.8rem;">We are committed to protecting your privacy and handling your data with care, transparency, and respect — in accordance with <strong>UK GDPR</strong> and applicable data protection laws.</p>
+  </div>
+</div>
+
+<!-- BODY -->
+<div style="max-width:800px; margin:0 auto; padding:5rem 2rem;">
+
+  <p style="font-size:0.95rem; color:var(--mid); line-height:1.7; margin-bottom:2.5rem;">Click any section below to read more. Questions? Email <a href="mailto:annie@pranaclimb.com" style="color:var(--pink); font-weight:600;">annie@pranaclimb.com</a></p>
+
+    <!-- ACCORDION -->
+    <div class="accordion">
+
+      <div class="acc-item" id="s1">
+        <button class="acc-trigger">
+          <span class="acc-num">01</span>
+          <span class="acc-label">Who We Are</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p><strong>Pranaclimb Ltd</strong> is the data controller responsible for personal data collected through pranaclimb.com and oceandips.com — both trading names of Pranaclimb Ltd.</p>
+          <div class="highlight-box">
+            <strong>Pranaclimb Ltd</strong><br>
+            Registered in England & Wales · Company No. 16626114<br>
+            Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ<br><br>
+            📧 <a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a><br>
+            🌐 <a href="https://www.pranaclimb.com">www.pranaclimb.com</a> &nbsp;·&nbsp; <a href="https://www.oceandips.com" target="_blank">www.oceandips.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s2">
+        <button class="acc-trigger">
+          <span class="acc-num">02</span>
+          <span class="acc-label">Data We Collect</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>We may collect name, email address, messages, coaching information, purchase and billing details, and basic website usage data (pages visited, device type, approximate location). We do <strong>not</strong> store full card details — payments are handled securely by our payment providers.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s3">
+        <button class="acc-trigger">
+          <span class="acc-num">03</span>
+          <span class="acc-label">How We Use Your Data</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>We use your data to deliver services, respond to enquiries, send emails you've opted into, improve the site, and meet legal obligations.</p>
+          <div class="highlight-box pink">🔒 We will <strong>never</strong> sell, rent, or trade your personal data.</div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s4">
+        <button class="acc-trigger">
+          <span class="acc-num">04</span>
+          <span class="acc-label">Legal Basis for Processing (UK GDPR)</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>We process your data on the grounds of <strong>consent</strong> (email subscriptions), <strong>contract</strong> (purchases), <strong>legitimate interests</strong> (improving services), and <strong>legal obligations</strong> (accounting/tax compliance).</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s5">
+        <button class="acc-trigger">
+          <span class="acc-num">05</span>
+          <span class="acc-label">Email Communications</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Email subscriptions are managed through <strong>Kit (formerly ConvertKit)</strong>. You can unsubscribe at any time via the link at the bottom of any email. We will never email you without your consent.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s6">
+        <button class="acc-trigger">
+          <span class="acc-num">06</span>
+          <span class="acc-label">Cookies & Analytics</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>This site is hosted on <strong>Cloudflare Pages</strong>, which uses essential cookies for security and performance. We do not use advertising or third-party tracking cookies. You can disable cookies in your browser settings.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s7">
+        <button class="acc-trigger">
+          <span class="acc-num">07</span>
+          <span class="acc-label">Where Your Data is Stored</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Your data is stored via <strong>Cloudflare Pages</strong> (hosting), <strong>Kit</strong> (email), and our <strong>payment providers</strong>. All platforms are GDPR-compliant and handle your data securely.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s8">
+        <button class="acc-trigger">
+          <span class="acc-num">08</span>
+          <span class="acc-label">Sharing Your Data</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>We only share data when necessary with Cloudflare, Kit, payment processors, our accountant, and legal authorities if required by law. We do not sell or share your data for marketing purposes.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s9">
+        <button class="acc-trigger">
+          <span class="acc-num">09</span>
+          <span class="acc-label">How Long We Keep Your Data</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Email subscribers — until you unsubscribe. Customers — as required by law for accounting records. Enquiries — as long as needed. You can request deletion at any time by emailing <a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a>.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s10">
+        <button class="acc-trigger">
+          <span class="acc-num">10</span>
+          <span class="acc-label">Your Rights</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Under UK GDPR you have the right to <strong>access, correct, delete, restrict, port, and object</strong> to your data. To exercise any right, email <a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a>. We aim to respond within one month. You may also complain to the <a href="https://ico.org.uk" target="_blank">ICO</a>.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s11">
+        <button class="acc-trigger">
+          <span class="acc-num">11</span>
+          <span class="acc-label">Ocean Dips & Your Data</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p><strong>Ocean Dips</strong> is a trading name of Pranaclimb Ltd. Any data collected through oceandips.com is subject to this same Privacy Policy. Pranaclimb Ltd is the single data controller for both brands.</p>
+          <div class="highlight-box blue">🌊 Cold water coaching, breathwork, climbing, walks and retreats in Cornwall — all operating under Pranaclimb Ltd.</div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s12">
+        <button class="acc-trigger">
+          <span class="acc-num">12</span>
+          <span class="acc-label">Third-Party Links</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>We may link to ResearchGate, SportRxiv, Kit, social media, and other sites. These have their own privacy policies and we are not responsible for their practices.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s13">
+        <button class="acc-trigger">
+          <span class="acc-num">13</span>
+          <span class="acc-label">Changes to This Policy</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <p>We may update this policy from time to time. Changes will be posted here with a revised effective date. Continued use of the site means you accept the updated policy.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" id="s14">
+        <button class="acc-trigger">
+          <span class="acc-num">14</span>
+          <span class="acc-label">Contact & Complaints</span>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="highlight-box">
+            <strong>Annie Anderson – Pranaclimb Ltd</strong><br>
+            📧 <a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a><br>
+            📍 13 Upton Towans, Hayle, Cornwall. TR27 5BJ<br><br>
+            Complaints to the ICO: <a href="https://ico.org.uk" target="_blank">ico.org.uk</a> · 📞 0303 123 1113
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end accordion -->
+</div>
+
+<style>
+  .accordion { display: flex; flex-direction: column; gap: 0; border: 1.5px solid var(--border); }
+  .acc-item { border-bottom: 1px solid var(--border); }
+  .acc-item:last-child { border-bottom: none; }
+  .acc-trigger {
+    width: 100%; display: flex; align-items: center; gap: 1.2rem;
+    padding: 1.4rem 1.8rem; background: var(--white);
+    border: none; cursor: pointer; text-align: left;
+    transition: background 0.2s;
+  }
+  .acc-trigger:hover { background: var(--off); }
+  .acc-item.open .acc-trigger { background: var(--off); }
+  .acc-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--lime); line-height: 1; flex-shrink: 0; width: 2rem; }
+  .acc-label { font-size: 0.95rem; font-weight: 600; color: var(--ink); flex: 1; letter-spacing: 0.02em; }
+  .acc-icon { font-size: 1.4rem; color: var(--pink); flex-shrink: 0; transition: transform 0.3s; font-weight: 300; }
+  .acc-item.open .acc-icon { transform: rotate(45deg); }
+  .acc-body { display: none; padding: 0 1.8rem 1.8rem 5rem; }
+  .acc-item.open .acc-body { display: block; }
+  .acc-body p { font-size: 0.9rem; line-height: 1.8; color: var(--mid); margin-bottom: 0.8rem; }
+  .acc-body .highlight-box { margin-top: 0.8rem; }
+</style>
+
+<script>
+  document.querySelectorAll('.acc-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+  <div class="content">
+
+    <div class="section" id="s1">
+      <div class="sec-num">01</div>
+      <div class="sec-title">Who We Are</div>
+      <p><strong>Pranaclimb Ltd</strong> is the data controller responsible for personal data collected through this website and through oceandips.com. Both are trading names of Pranaclimb Ltd.</p>
+      <div class="highlight-box">
+        <strong>Pranaclimb Ltd</strong><br>
+        Registered in England & Wales · Company No. 16626114<br>
+        Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ<br><br>
+        📧 <a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a><br>
+        🌐 <a href="https://www.pranaclimb.com">www.pranaclimb.com</a> &nbsp;·&nbsp;
+        <a href="https://www.oceandips.com" target="_blank">www.oceandips.com</a>
+      </div>
+    </div>
+
+    <div class="section" id="s2">
+      <div class="sec-num">02</div>
+      <div class="sec-title">Data We Collect</div>
+      <h4>Information you provide directly</h4>
+      <ul>
+        <li>Name and email address</li>
+        <li>Messages or enquiries you send us</li>
+        <li>Coaching or assessment information you choose to share</li>
+        <li>Details provided when subscribing, downloading resources, or purchasing</li>
+      </ul>
+      <h4>Purchase information</h4>
+      <ul>
+        <li>Billing and transaction details</li>
+        <li>Payment information — processed securely by our payment providers. We do <strong>not</strong> store full card details</li>
+      </ul>
+      <h4>Website usage data</h4>
+      <ul>
+        <li>Pages visited and time on site</li>
+        <li>Device and browser type</li>
+        <li>Approximate location (city/country)</li>
+        <li>Interaction data via analytics</li>
+      </ul>
+      <p>This helps us improve the website and understand what content is most helpful to climbers and cold water swimmers.</p>
+    </div>
+
+    <div class="section" id="s3">
+      <div class="sec-num">03</div>
+      <div class="sec-title">How We Use Your Data</div>
+      <p>We use your information to:</p>
+      <ul>
+        <li>Deliver downloads, courses, coaching, and services you request</li>
+        <li>Send newsletters or blog updates you've opted into via Kit</li>
+        <li>Respond to enquiries and support requests</li>
+        <li>Improve site performance and content</li>
+        <li>Maintain security and prevent misuse</li>
+        <li>Meet legal and accounting obligations</li>
+      </ul>
+      <div class="highlight-box pink">
+        🔒 We will <strong>never</strong> sell, rent, or trade your personal data.
+      </div>
+    </div>
+
+    <div class="section" id="s4">
+      <div class="sec-num">04</div>
+      <div class="sec-title">Legal Basis for Processing (UK GDPR)</div>
+      <p>We process your data based on the following legal grounds:</p>
+      <ul>
+        <li><strong>Consent</strong> — when you subscribe to emails or opt in to communications</li>
+        <li><strong>Contract</strong> — when you purchase services or products</li>
+        <li><strong>Legitimate interests</strong> — improving the site and services responsibly</li>
+        <li><strong>Legal obligations</strong> — accounting and tax compliance</li>
+      </ul>
+    </div>
+
+    <div class="section" id="s5">
+      <div class="sec-num">05</div>
+      <div class="sec-title">Email Communications</div>
+      <p>If you subscribe to the Pranaclimb blog or download resources, you may receive emails about breathwork science, climbing performance, new posts, tools, resources, and app updates.</p>
+      <p>Your email list subscription is managed through <strong>Kit (formerly ConvertKit)</strong>. Kit's privacy policy is available at <a href="https://kit.com/privacy" target="_blank">kit.com/privacy</a>.</p>
+      <div class="highlight-box">
+        You can unsubscribe at any time by clicking <strong>"unsubscribe"</strong> at the bottom of any email. We will never email you without your consent.
+      </div>
+    </div>
+
+    <div class="section" id="s6">
+      <div class="sec-num">06</div>
+      <div class="sec-title">Cookies & Analytics</div>
+      <p>This site is hosted on <strong>Cloudflare Pages</strong>. Cloudflare may use essential cookies and technologies to:</p>
+      <ul>
+        <li>Enable core website functionality and security</li>
+        <li>Protect against bots and malicious traffic</li>
+        <li>Provide basic analytics on site performance</li>
+      </ul>
+      <p>We do not currently use advertising cookies or third-party tracking beyond what is necessary for site functionality.</p>
+      <p>You can disable cookies through your browser settings, though some features may not work correctly.</p>
+    </div>
+
+    <div class="section" id="s7">
+      <div class="sec-num">07</div>
+      <div class="sec-title">Where Your Data is Stored</div>
+      <p>Your data is processed and stored via the following trusted platforms:</p>
+      <ul>
+        <li><strong>Cloudflare Pages</strong> — website hosting and delivery</li>
+        <li><strong>Kit</strong> — email list management and communications</li>
+        <li><strong>Payment providers</strong> — secure transaction processing</li>
+      </ul>
+      <p>All platforms used are GDPR-compliant and handle data in accordance with UK data protection law. We take reasonable steps to ensure your data is treated securely at all times.</p>
+    </div>
+
+    <div class="section" id="s8">
+      <div class="sec-num">08</div>
+      <div class="sec-title">Sharing Your Data</div>
+      <p>We only share data when strictly necessary with:</p>
+      <ul>
+        <li>Cloudflare (website hosting)</li>
+        <li>Kit (email communications)</li>
+        <li>Payment processors</li>
+        <li>Professional services such as accounting</li>
+        <li>Legal authorities if required by law</li>
+      </ul>
+      <div class="highlight-box pink">
+        🔒 We do not sell, trade, or share your data with third parties for marketing purposes.
+      </div>
+    </div>
+
+    <div class="section" id="s9">
+      <div class="sec-num">09</div>
+      <div class="sec-title">How Long We Keep Your Data</div>
+      <ul>
+        <li><strong>Email subscribers</strong> — until you unsubscribe</li>
+        <li><strong>Customers</strong> — as required for service delivery and legal/accounting records</li>
+        <li><strong>Enquiries</strong> — as long as needed for communication purposes</li>
+      </ul>
+      <p>You can request deletion of your data at any time by emailing <a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a>.</p>
+    </div>
+
+    <div class="section" id="s10">
+      <div class="sec-num">10</div>
+      <div class="sec-title">Your Rights</div>
+      <p>Under UK GDPR, you have the following rights regarding your personal data:</p>
+      <div class="rights-grid">
+        <div class="right-item">
+          <h5>✅ Access</h5>
+          <p>Request a copy of the data we hold about you.</p>
+        </div>
+        <div class="right-item">
+          <h5>✅ Correction</h5>
+          <p>Ask us to correct inaccurate or incomplete data.</p>
+        </div>
+        <div class="right-item">
+          <h5>✅ Deletion</h5>
+          <p>Request that we delete your personal data.</p>
+        </div>
+        <div class="right-item">
+          <h5>✅ Restriction</h5>
+          <p>Ask us to restrict how we process your data.</p>
+        </div>
+        <div class="right-item">
+          <h5>✅ Portability</h5>
+          <p>Receive your data in a portable, usable format.</p>
+        </div>
+        <div class="right-item">
+          <h5>✅ Objection</h5>
+          <p>Object to processing based on legitimate interests.</p>
+        </div>
+      </div>
+      <div class="highlight-box">
+        To exercise any of these rights, email: <a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a><br>
+        We aim to respond within <strong>one month</strong>.
+      </div>
+      <p>You also have the right to lodge a complaint with the <strong>UK Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk" target="_blank">ico.org.uk</a>.</p>
+    </div>
+
+    <div class="section" id="s11">
+      <div class="sec-num">11</div>
+      <div class="sec-title">Ocean Dips & Your Data</div>
+      <p><strong>Ocean Dips</strong> is a trading name of Pranaclimb Ltd. Any personal data collected through <a href="https://www.oceandips.com" target="_blank">oceandips.com</a> is subject to this same Privacy Policy and is controlled by Pranaclimb Ltd.</p>
+      <p>Services offered under the Ocean Dips trading name include cold water coaching, breathwork, climbing, walks and retreats in Cornwall. Data collected in relation to these services is handled identically to data collected through pranaclimb.com.</p>
+      <div class="highlight-box blue">
+        🌊 <strong>Pranaclimb Ltd</strong> is the single data controller for both pranaclimb.com and oceandips.com.
+      </div>
+    </div>
+
+    <div class="section" id="s12">
+      <div class="sec-num">12</div>
+      <div class="sec-title">Third-Party Links</div>
+      <p>Our site may link to external websites including ResearchGate, SportRxiv, Kit, social media platforms, and other resources. These sites have their own privacy policies and we are not responsible for their practices. We encourage you to review the privacy policy of any site you visit.</p>
+    </div>
+
+    <div class="section" id="s13">
+      <div class="sec-num">13</div>
+      <div class="sec-title">Changes to This Policy</div>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our services, technology, or legal requirements. Updates will be posted here with a revised effective date. Continued use of the site after changes means you accept the updated policy.</p>
+    </div>
+
+    <div class="section" id="s14">
+      <div class="sec-num">14</div>
+      <div class="sec-title">Contact & Complaints</div>
+      <p>For any questions about this Privacy Policy, or to exercise your data rights:</p>
+      <div class="highlight-box">
+        <strong>Annie Anderson – Pranaclimb Ltd</strong><br>
+        📧 <a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a><br>
+        🌐 <a href="https://www.pranaclimb.com">www.pranaclimb.com</a><br>
+        📍 13 Upton Towans, Hayle, Cornwall. TR27 5BJ<br><br>
+        If you are not satisfied with our response, you have the right to complain to the <strong>ICO</strong>:<br>
+        🌐 <a href="https://ico.org.uk" target="_blank">ico.org.uk</a> · 📞 0303 123 1113
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:var(--ink)">PRANA<span style="color:var(--pink)">CLIMB</span></a>
+    <p style="margin-top:0.8rem; font-size:0.88rem; line-height:1.7; color:var(--mid);">With love and the ocean 🌊<br>Annie Anderson — Pranaclimb | OceanDips</p>
+    <div style="display:flex; gap:0.8rem; margin-top:1.2rem;">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--mid)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="var(--mid)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 15v7H9V8z" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:annie@pranaclimb.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--mid);">annie@pranaclimb.com</p>
+    <p style="font-size:0.75rem; margin-top:0.3rem; color:var(--mid);">07875 170 847</p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pages</h4>
+    <ul style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="rba.html">Assessment</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="app.html">The App</a></li>
+      <li><a href="annie.html">About Annie</a></li>
+      <li><a href="gallery.html">Photos</a></li>
+      <li><a href="mailto:annie@pranaclimb.com">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pranaclimb Ltd</h4>
+    <p style="font-size:0.78rem; line-height:1.8; color:var(--mid);">
+      Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.<br><br>
+      Annie is a qualified <strong style="color:var(--ink);">SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong style="color:var(--ink);">Registered Yoga Teacher RYT 200</strong> (2012).<br><br>
+      Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong style="color:var(--ink);">Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).<br><br>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" style="color:var(--pink); font-weight:600; text-decoration:none;">Connect on LinkedIn &rarr;</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Trading As</h4>
+    <ul>
+      <li><a href="https://www.pranaclimb.com">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com" target="_blank">🌊 OceanDips</a></li>
+    </ul>
+    <p style="font-size:0.78rem; color:var(--mid); margin-top:0.8rem; line-height:1.8;"><strong style="color:var(--ink);">Pranaclimb Ltd</strong><br>Company No. 16626114<br>13 Upton Towans, Hayle<br>Cornwall TR27 5BJ</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div style="display:flex; flex-direction:column; gap:0.3rem;">
+    <p>&copy; 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p style="font-size:0.7rem; color:rgba(0,0,0,0.4);">pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  </div>
+  <div style="display:flex; gap:1.5rem; flex-shrink:0; margin-left:2rem;">
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Statcounter -->
+<script type="text/javascript">
+var sc_project=11925361; 
+var sc_invisible=1; 
+var sc_security="14a77c6b"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11925361/0/14a77c6b/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter -->
+</body>
+</html>

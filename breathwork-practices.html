@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breathwork Practices — Pranaclimb</title>
+<meta name="description" content="22 breathwork and pranayama practices for climbers — Ujjayi, Nadi Shodhana, Kapalabhati, Bhastrika and more. Research-backed techniques from the Pranaclimb Workbook.">
+<link rel="canonical" href="https://www.pranaclimb.com/breathwork-practices">
+<meta property="og:title" content="Breathwork Practices — Pranaclimb">
+<meta property="og:description" content="22 breathwork and pranayama practices for climbers, backed by research.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.pranaclimb.com/breathwork-practices">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --pink:#ff00ff; --lime:#AAFF00; --blue:#89CFF0; --ink:#3a3a3a; --mid:#666; --off:#f5f5f2; --border:#e0e0d8; --white:#fff; }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Outfit',sans-serif; color:var(--ink); background:var(--white); }
+
+  /* NAV */
+  nav { position:sticky; top:0; z-index:100; background:var(--white); border-bottom:2px solid var(--lime); padding:0.8rem 2rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; }
+  .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.1em; color:var(--ink); text-decoration:none; }
+  .nav-logo span { color:var(--lime); }
+  .nav-tagline { font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); }
+  .nav-links { display:flex; gap:1.5rem; list-style:none; flex-wrap:wrap; }
+  .nav-links a { font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); text-decoration:none; transition:color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--pink); }
+
+  /* HERO */
+  .hero { background:var(--off); border-bottom:3px solid var(--lime); padding:4rem 2rem 3rem; }
+  .hero-inner { max-width:960px; margin:0 auto; }
+  .hero-eyebrow { font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); margin-bottom:0.5rem; }
+  .hero-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.6rem,7vw,4.5rem); letter-spacing:0.06em; color:var(--ink); line-height:1; margin-bottom:0.8rem; }
+  .hero-title span { color:var(--pink); }
+  .hero-sub { font-size:0.95rem; font-weight:300; color:var(--mid); max-width:660px; line-height:1.8; margin-bottom:1.2rem; }
+  .hero-quote { background:var(--white); border-left:3px solid var(--lime); padding:1rem 1.4rem; margin-bottom:1.5rem; max-width:660px; }
+  .hero-quote p { font-size:0.88rem; font-style:italic; color:var(--ink); line-height:1.7; }
+  .hero-quote cite { display:block; font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); margin-top:0.5rem; font-style:normal; }
+  .hero-pills { display:flex; gap:8px; flex-wrap:wrap; }
+  .pill { font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:5px 14px; border-radius:2px; }
+  .pill-lime { background:var(--lime); color:var(--ink); }
+  .pill-pink { background:var(--pink); color:var(--white); }
+  .pill-blue { background:var(--blue); color:var(--ink); }
+  .pill-off { background:var(--white); color:var(--ink); border:1px solid var(--border); }
+
+  /* FILTER BAR */
+  .filter-bar { background:var(--white); border-bottom:1px solid var(--border); padding:1rem 2rem; display:flex; gap:8px; flex-wrap:wrap; justify-content:center; position:sticky; top:72px; z-index:90; }
+  .filter-btn { font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:6px 14px; border-radius:2px; border:1.5px solid var(--border); background:transparent; cursor:pointer; transition:all 0.15s; color:var(--mid); }
+  .filter-btn:hover { border-color:var(--pink); color:var(--pink); }
+  .filter-btn.active { background:var(--pink); color:var(--white); border-color:var(--pink); }
+  .filter-btn.f-slow.active { background:var(--blue); border-color:var(--blue); color:var(--ink); }
+  .filter-btn.f-fast.active { background:var(--lime); border-color:var(--lime); color:var(--ink); }
+  .filter-btn.f-pranayama.active { background:var(--pink); border-color:var(--pink); color:var(--white); }
+  .filter-btn.f-climbing.active { background:var(--ink); border-color:var(--ink); color:var(--white); }
+  .filter-btn.f-recovery.active { background:var(--blue); border-color:var(--blue); color:var(--ink); }
+
+  /* MAIN GRID */
+  .main { max-width:960px; margin:0 auto; padding:3rem 2rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:1.2rem; }
+
+  /* PRACTICE CARDS */
+  .card { background:var(--white); border:1px solid var(--border); border-radius:2px; display:flex; flex-direction:column; transition:border-color 0.2s, transform 0.15s; cursor:pointer; }
+  .card:hover { border-color:var(--pink); transform:translateY(-2px); }
+  .card-top { padding:1.4rem 1.4rem 0; }
+  .card-tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:0.8rem; }
+  .tag { font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:3px 9px; border-radius:2px; }
+  .tag-slow { background:var(--blue); color:var(--ink); }
+  .tag-fast { background:var(--lime); color:var(--ink); }
+  .tag-pranayama { background:var(--pink); color:var(--white); }
+  .tag-climbing { background:var(--ink); color:var(--white); }
+  .tag-recovery { background:var(--blue); color:var(--ink); }
+  .tag-retention { background:#e8d5f0; color:#6b21a8; }
+  .card-icon { font-size:1.6rem; margin-bottom:0.5rem; }
+  .card-title { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.06em; color:var(--ink); margin-bottom:0.4rem; }
+  .card-sub { font-size:0.75rem; font-weight:600; color:var(--mid); margin-bottom:0.6rem; letter-spacing:0.05em; }
+  .card-desc { font-size:0.82rem; font-weight:300; color:var(--mid); line-height:1.7; margin-bottom:1rem; }
+  .card-cue { font-size:0.78rem; font-style:italic; color:var(--pink); font-weight:500; padding:0 1.4rem 0; }
+  .card-body { padding:1.4rem; flex:1; }
+  .card-footer { padding:1rem 1.4rem; border-top:1px solid var(--border); }
+  .card-benefits { display:flex; flex-wrap:wrap; gap:4px; }
+  .benefit { font-size:0.62rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--mid); background:var(--off); border-radius:2px; padding:3px 8px; }
+
+  /* DETAIL PANEL */
+  .detail-overlay { display:none; position:fixed; inset:0; z-index:200; background:rgba(0,0,0,0.6); align-items:center; justify-content:center; padding:1rem; }
+  .detail-overlay.open { display:flex; }
+  .detail-panel { background:var(--white); width:100%; max-width:640px; max-height:92vh; overflow-y:auto; border-radius:2px; position:relative; }
+  .detail-header { padding:2rem 2rem 1rem; border-bottom:1px solid var(--border); position:sticky; top:0; background:var(--white); z-index:10; }
+  .detail-close { position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--mid); line-height:1; }
+  .detail-close:hover { color:var(--pink); }
+  .detail-eyebrow { font-size:0.65rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--pink); margin-bottom:0.3rem; }
+  .detail-title { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:0.06em; color:var(--ink); line-height:1; margin-bottom:0.3rem; }
+  .detail-sub { font-size:0.82rem; font-weight:300; color:var(--mid); }
+  .detail-content { padding:1.5rem 2rem 2rem; }
+  .d-section { margin-bottom:1.8rem; }
+  .d-label { font-size:0.65rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--pink); margin-bottom:0.4rem; }
+  .d-title { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.06em; color:var(--ink); margin-bottom:0.6rem; }
+  .d-lbar { height:2px; background:var(--lime); width:32px; border-radius:2px; margin-bottom:0.8rem; }
+  .d-text { font-size:0.85rem; font-weight:300; color:var(--mid); line-height:1.8; margin-bottom:0.6rem; }
+  .d-text strong { font-weight:600; color:var(--ink); }
+  .d-steps { list-style:none; counter-reset:steps; }
+  .d-steps li { counter-increment:steps; display:flex; gap:0.8rem; align-items:flex-start; margin-bottom:0.8rem; font-size:0.85rem; font-weight:300; color:var(--mid); line-height:1.7; }
+  .d-steps li::before { content:counter(steps); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; color:var(--pink); min-width:22px; line-height:1.15; }
+  .d-steps li strong { font-weight:600; color:var(--ink); display:block; margin-bottom:1px; }
+  .d-cue { background:var(--off); border-left:3px solid var(--pink); padding:0.8rem 1rem; border-radius:0 2px 2px 0; margin-bottom:0.6rem; font-size:0.85rem; font-style:italic; color:var(--ink); }
+  .d-research { background:var(--off); border:1px solid var(--border); border-top:3px solid var(--lime); border-radius:2px; padding:1rem 1.2rem; margin-bottom:0.6rem; }
+  .d-research-tag { font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); margin-bottom:0.3rem; }
+  .d-research-text { font-size:0.8rem; font-weight:300; color:var(--mid); line-height:1.7; }
+  .d-stat { display:inline-block; font-size:0.62rem; font-weight:700; background:var(--blue); color:var(--ink); padding:3px 9px; border-radius:2px; margin-top:0.5rem; }
+  .d-benefits { display:flex; flex-wrap:wrap; gap:5px; }
+  .d-benefit { font-size:0.68rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink); background:var(--off); border-radius:2px; padding:4px 10px; border:1px solid var(--border); }
+
+  /* INTRO STRIP */
+  .intro-strip { background:var(--off); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:3rem 2rem; }
+  .intro-inner { max-width:960px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; }
+  .intro-card { background:var(--white); border:1px solid var(--border); border-radius:2px; padding:1.4rem; }
+  .intro-card-icon { font-size:1.8rem; margin-bottom:0.6rem; }
+  .intro-card-title { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.06em; color:var(--ink); margin-bottom:0.4rem; }
+  .intro-card-text { font-size:0.8rem; font-weight:300; color:var(--mid); line-height:1.7; }
+
+  footer { background:var(--off); padding:2.5rem 2rem; text-align:center; border-top:3px solid var(--lime); }
+  .footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.1em; color:var(--ink); }
+  .footer-logo span { color:var(--lime); }
+  .footer-tagline { font-size:0.62rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); margin-bottom:0.6rem; }
+  .page-nav-strip { background:var(--white); border-top:1px solid var(--border); padding:1.5rem 2rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+  .page-nav-link { font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); text-decoration:none; padding:0.5rem 1.1rem; border:1.5px solid var(--border); border-radius:2px; transition:all 0.15s; }
+  .page-nav-link:hover { color:var(--pink); border-color:var(--pink); }
+  .page-nav-link.current { background:var(--lime); color:var(--ink); border-color:var(--lime); }
+
+  .hidden { display:none !important; }
+  @media(max-width:600px) { nav { padding:0.8rem 1rem; } .main { padding:2rem 1.2rem; } .filter-bar { padding:0.8rem 1rem; top:66px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <a href="breathing.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+    <p class="nav-tagline">Love · Breathe · Climb</p>
+  </div>
+  <ul class="nav-links">
+    <li><a href="breathing.html">Toolbox</a></li>
+    <li><a href="wim-hof.html">Wim Hof</a></li>
+    <li><a href="box-breathing.html">Box Breathing</a></li>
+    <li><a href="cyclic-sighing.html">Cyclic Sighing</a></li>
+    <li><a href="breathwork-practices.html" class="active">Practices</a></li>
+    <li><a href="zone-coaching.html">Zone Coaching</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">From The Pranaclimb Workbook</p>
+    <h1 class="hero-title">Breathwork <span>Practices</span></h1>
+    <p class="hero-sub">Pranayama is always rhythmic. Breath control has an immediate impact on psychology, brain function, physiology and emotions. Even five minutes changes everything.</p>
+    <div class="hero-quote">
+      <p>"Just one session of slow, deep breathing had beneficial effects on anxiety and vagal tone in adults. This may be likened to 'micro dosing' breathwork, similar to single session mindfulness meditation practices."</p>
+      <cite>Meta-Analysis — Nature</cite>
+    </div>
+    <div class="hero-pills">
+      <span class="pill pill-blue">Slow Breathing</span>
+      <span class="pill pill-lime">Fast Breathing</span>
+      <span class="pill pill-pink">Pranayama</span>
+      <span class="pill pill-off">On The Rock</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="intro-inner">
+    <div class="intro-card">
+      <div class="intro-card-icon">🌊</div>
+      <div class="intro-card-title">Micro-Dosing Breathwork</div>
+      <p class="intro-card-text">5–10 minutes of deliberate breathing practice produces significant shifts in autonomic tone and well-being. Breathwork is rhythmic — varying in rate, depth, ratio, and intensity of inhales versus exhales.</p>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-icon">🧠</div>
+      <div class="intro-card-title">Bi-Directional Attention</div>
+      <p class="intro-card-text">Breathing has a bi-directional relationship with attention. During exercises, attention to breathing removes attention from worldly worries. Sustain attention, handle distraction, spread attention — all through breath.</p>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-icon">⚡</div>
+      <div class="intro-card-title">Immediate Impact</div>
+      <p class="intro-card-text">A breathing exercise proposing an equal inhalation/exhalation ratio promotes balance between sympathetic and parasympathetic activity, increases HRV, and promotes psychophysiological coherence.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All Practices</button>
+  <button class="filter-btn f-slow" data-filter="slow">🌊 Slow Breathing</button>
+  <button class="filter-btn f-fast" data-filter="fast">⚡ Fast Breathing</button>
+  <button class="filter-btn f-pranayama" data-filter="pranayama">🌸 Pranayama</button>
+  <button class="filter-btn f-climbing" data-filter="climbing">🧗 On The Rock</button>
+  <button class="filter-btn f-recovery" data-filter="recovery">💙 Recovery</button>
+</div>
+
+<!-- CARDS GRID -->
+<div class="main">
+  <div class="grid" id="grid">
+
+    <!-- COHERENT BREATHING -->
+    <div class="card" data-tags="slow recovery" onclick="openDetail('coherent')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-slow">Slow</span><span class="tag tag-recovery">Recovery</span></div>
+        <div class="card-icon">💓</div>
+        <div class="card-title">Coherent Breathing</div>
+        <div class="card-sub">6 Breaths Per Minute · 5s In / 5s Out</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Diaphragmatic breathing at six breaths per minute with equal inhale and exhale ratios. Maximises HRV, increases VO2 Max, reduces anxiety, and builds cardiorespiratory fitness.</p>
+      </div>
+      <p class="card-cue">"Breathe in harmony — let your diaphragm set the tempo."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">HRV ↑</span><span class="benefit">VO2 Max ↑</span><span class="benefit">Anxiety ↓</span><span class="benefit">Vagal Tone ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- UJJAYI -->
+    <div class="card" data-tags="slow pranayama climbing" onclick="openDetail('ujjayi')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-slow">Slow</span><span class="tag tag-pranayama">Pranayama</span></div>
+        <div class="card-icon">🌬</div>
+        <div class="card-title">Ujjayi Breath</div>
+        <div class="card-sub">Ocean Breath · Glottis Constriction</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Constrict the glottis to make an audible ocean sound. Immediate effect on state anxiety and attention. 19% increase in oxygen consumption. Used on the rock for pace control and focus.</p>
+      </div>
+      <p class="card-cue">"Breathe into the back of your throat — hear the ocean."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">O₂ +19%</span><span class="benefit">Anxiety ↓</span><span class="benefit">Focus ↑</span><span class="benefit">BRS ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NADI SHODHANA -->
+    <div class="card" data-tags="pranayama slow recovery" onclick="openDetail('nadi')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-pranayama">Pranayama</span><span class="tag tag-slow">Slow</span></div>
+        <div class="card-icon">👃</div>
+        <div class="card-title">Nadi Shodhana</div>
+        <div class="card-sub">Alternate Nostril Breathing · 10 min/day</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Alternate nostril breathing cleans the nadis, balances the autonomic nervous system, and significantly improves cardiorespiratory parameters. Reduces anxiety, increases VO2 Max, improves lung capacity.</p>
+      </div>
+      <p class="card-cue">"Balance your energy channels — breathe through both sides of yourself."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">VO2 Max ↑</span><span class="benefit">FVC ↑</span><span class="benefit">PNS ↑</span><span class="benefit">Calmness ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-7-8 -->
+    <div class="card" data-tags="slow recovery" onclick="openDetail('478')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-slow">Slow</span><span class="tag tag-recovery">Recovery</span></div>
+        <div class="card-icon">🛌</div>
+        <div class="card-title">4-7-8 Breath</div>
+        <div class="card-sub">Dr. Andrew Weil · Deep Relaxation</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Inhale 4 seconds, hold 7 seconds, forceful exhale 8 seconds. Powerful access to the relaxation response. Reduces anxiety, promotes sleep, and rapidly lowers physiological arousal.</p>
+      </div>
+      <p class="card-cue">"In 4 — hold 7 — release 8. Let the 8 carry everything away."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Relaxation ↑</span><span class="benefit">Anxiety ↓</span><span class="benefit">Sleep ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- KAPALABHATI -->
+    <div class="card" data-tags="fast pranayama" onclick="openDetail('kapalabhati')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-fast">Fast</span><span class="tag tag-pranayama">Pranayama</span></div>
+        <div class="card-icon">💨</div>
+        <div class="card-title">Kapalabhati</div>
+        <div class="card-sub">Skull Shining · Active Exhale / Passive Inhale</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Rapid active exhalation by contracting the abdominal muscles — the inhale is passive. Cleanses the respiratory system, energizes the body, enhances lung capacity. Does not cause hyperventilation.</p>
+      </div>
+      <p class="card-cue">"Active out, passive in — let your belly do the work."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Energy ↑</span><span class="benefit">Lung Capacity ↑</span><span class="benefit">Focus ↑</span><span class="benefit">SNS ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BHASTRIKA -->
+    <div class="card" data-tags="fast pranayama" onclick="openDetail('bhastrika')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-fast">Fast</span><span class="tag tag-pranayama">Pranayama</span></div>
+        <div class="card-icon">🔥</div>
+        <div class="card-title">Bhastrika</div>
+        <div class="card-sub">Bellows Breath · Active Inhale & Exhale</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Both inhale and exhale are powerful and active. Strengthens diaphragm and abdominal muscles, increases O₂/CO₂ exchange, improves VO2 Max and cardiorespiratory fitness. 5 rounds.</p>
+      </div>
+      <p class="card-cue">"Pump the bellows — fire up your energy."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">VO2 Max ↑</span><span class="benefit">Diaphragm ↑</span><span class="benefit">Energy ↑</span><span class="benefit">O₂/CO₂ ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BHRAMARI -->
+    <div class="card" data-tags="pranayama recovery slow" onclick="openDetail('bhramari')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-pranayama">Pranayama</span><span class="tag tag-recovery">Recovery</span></div>
+        <div class="card-icon">🐝</div>
+        <div class="card-title">Bhramari</div>
+        <div class="card-sub">Bee Breath · Humming Exhale</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Hum like a bumblebee on the exhale. Increases nitric oxide 15-fold (vasodilator), releases anxiety, relieves sinusitis, increases CO₂ tolerance, and stimulates the vagus nerve.</p>
+      </div>
+      <p class="card-cue">"Let the hum carry your tension away."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">NO ×15</span><span class="benefit">Vagus ↑</span><span class="benefit">Anxiety ↓</span><span class="benefit">CO₂ Tol ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OM CHANTING -->
+    <div class="card" data-tags="pranayama recovery slow" onclick="openDetail('om')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-pranayama">Pranayama</span><span class="tag tag-recovery">Recovery</span></div>
+        <div class="card-icon">🕉</div>
+        <div class="card-title">Pranav — OM Chanting</div>
+        <div class="card-sub">AUM · 5 min · ~30 cycles</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Chanting OM at six breaths per minute produces synchronous increases in cardiovascular rhythms and enhanced baroreflex sensitivity. Reduces anxiety, depression, and stimulates the vagus nerve through vibration.</p>
+      </div>
+      <p class="card-cue">"Allow OM to flow with your breath — feel the vibrations."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">BRS ↑</span><span class="benefit">PNS ↑</span><span class="benefit">Anxiety ↓</span><span class="benefit">Vagus ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OKINAGA -->
+    <div class="card" data-tags="slow pranayama recovery" onclick="openDetail('okinaga')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-slow">Slow</span><span class="tag tag-pranayama">Pranayama</span></div>
+        <div class="card-icon">🥷</div>
+        <div class="card-title">Okinaga</div>
+        <div class="card-sub">Ninja Breath · Prolonged Exhale</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Ancient Japanese ninja breathing combining extreme prolonged breathing with mindfulness and visual imagery. Breathing frequency of ~1 breath per minute. Parasympathetic dominance, theta waves, relaxed alertness.</p>
+      </div>
+      <p class="card-cue">"No effort, no forcing — a trickle of air. Feel the control."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Theta ↑</span><span class="benefit">PNS ↑</span><span class="benefit">Anxiety ↓</span><span class="benefit">Focus ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SURYA BHEDANA -->
+    <div class="card" data-tags="pranayama fast" onclick="openDetail('surya')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-pranayama">Pranayama</span><span class="tag tag-fast">Energising</span></div>
+        <div class="card-icon">☀️</div>
+        <div class="card-title">Surya Bhedana</div>
+        <div class="card-sub">Sun Piercing Breath · Right Nostril</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Inhale through the right nostril (sun/Pingala), hold, exhale through the left. Energising and warming. Right nostril breathing increases oxygen consumption by 28%. 3–5 minutes or 8–10 rounds.</p>
+      </div>
+      <p class="card-cue">"Breathe in the sun — energise and rise."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">O₂ +28%</span><span class="benefit">Energy ↑</span><span class="benefit">SNS ↑</span><span class="benefit">Warming</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- APNEA / BREATH HOLDING -->
+    <div class="card" data-tags="climbing recovery retention" onclick="openDetail('apnea')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-climbing">On The Rock</span><span class="tag tag-retention">Retention</span></div>
+        <div class="card-icon">🤿</div>
+        <div class="card-title">Apnea / Breath Holding</div>
+        <div class="card-sub">CO₂ Tolerance · Kumbhaka · Dynamic & Static</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Static and dynamic breath holding trains CO₂ tolerance, triggers spleen contraction for +3–10% oxygen capacity, improves lactate tolerance, and trains the physiological urge to breathe. Repeat, repeat, repeat.</p>
+      </div>
+      <p class="card-cue">"Relax deeper during the urge-to-breathe phase."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">CO₂ Tol ↑</span><span class="benefit">SpO₂ ↑</span><span class="benefit">Lactate Tol ↑</span><span class="benefit">Spleen ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- POWER EXHALE / SCREAM -->
+    <div class="card" data-tags="climbing fast" onclick="openDetail('scream')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-climbing">On The Rock</span><span class="tag tag-fast">Performance</span></div>
+        <div class="card-icon">💪</div>
+        <div class="card-title">Power Exhale / Yell</div>
+        <div class="card-sub">Crux Tool · Handgrip +25%</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">A vocalized exhalation increases static handgrip force by 25% compared to passive breathing. Shortens expiration, increases RR, enhances CO₂ removal, and powerfully activates the sympathetic nervous system.</p>
+      </div>
+      <p class="card-cue">"Exhale sharp — drive through the crux."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Grip +25%</span><span class="benefit">Peak Power ↑</span><span class="benefit">VE ↑</span><span class="benefit">SNS ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SO HUM MANTRA -->
+    <div class="card" data-tags="pranayama recovery slow" onclick="openDetail('sohum')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-pranayama">Pranayama</span><span class="tag tag-recovery">Recovery</span></div>
+        <div class="card-icon">✨</div>
+        <div class="card-title">So Hum Mantra Breath</div>
+        <div class="card-sub">I Am That · Universal Connection</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Inhale with "So", exhale with "Hum" — silently repeated. A practice of connection to universal energy. Promotes deep calmness, present-moment awareness, and energetic clarity.</p>
+      </div>
+      <p class="card-cue">"I am that I am. We are all connected to universal prana."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Calmness ↑</span><span class="benefit">Connection ↑</span><span class="benefit">Presence ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2:1 BREATHING -->
+    <div class="card" data-tags="slow climbing recovery" onclick="openDetail('ratio')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-slow">Slow</span><span class="tag tag-climbing">On The Rock</span></div>
+        <div class="card-icon">↔️</div>
+        <div class="card-title">2:1 Extended Exhale</div>
+        <div class="card-sub">Reduce Fear · Heart Rate ↓</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Taking twice as long to exhale as inhale slows the heart rate, decreases residual lung air, and reduces fear and anxiety. Try 4:2, 6:3, 8:4, 10:5, 12:6 — through the nose — for 2 minutes.</p>
+      </div>
+      <p class="card-cue">"Extend your exhale — think I'm OK."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">HR ↓</span><span class="benefit">Fear ↓</span><span class="benefit">PNS ↑</span><span class="benefit">Anxiety ↓</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PURSED LIPS -->
+    <div class="card" data-tags="slow climbing recovery" onclick="openDetail('pursed')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-slow">Slow</span><span class="tag tag-climbing">On The Rock</span></div>
+        <div class="card-icon">💋</div>
+        <div class="card-title">Pursed / Kiss Lips Breathing</div>
+        <div class="card-sub">Controlled Exhale · CO₂ Release</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Breathe in through nose, exhale slowly through tightly pursed or kiss lips. Opens airways during exhalation, improves gas exchange, relieves shortness of breath, and gains control when anxious.</p>
+      </div>
+      <p class="card-cue">"Kiss life — breathe your entire breath out."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">BR ↓</span><span class="benefit">Gas Exchange ↑</span><span class="benefit">Control ↑</span><span class="benefit">CO₂ ↓</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESSIVE MUSCLE RELAXATION -->
+    <div class="card" data-tags="recovery slow" onclick="openDetail('pmr')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-recovery">Recovery</span><span class="tag tag-slow">Slow</span></div>
+        <div class="card-icon">🧘</div>
+        <div class="card-title">Progressive Muscle Relaxation</div>
+        <div class="card-sub">Tense & Release · Full Body Scan</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Systematically tense and release each muscle group used in climbing — feet, calves, thighs, glutes, core, back, chest, shoulders, forearms, biceps, neck, jaw, face. 5 seconds tension, 10 seconds release.</p>
+      </div>
+      <p class="card-cue">"Tense and feel. Release and notice."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Tension ↓</span><span class="benefit">Recovery ↑</span><span class="benefit">Awareness ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BREATH OF FIRE -->
+    <div class="card" data-tags="fast pranayama climbing" onclick="openDetail('breathoffire')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-fast">Fast</span><span class="tag tag-pranayama">Pranayama</span></div>
+        <div class="card-icon">🌀</div>
+        <div class="card-title">Breath of Fire</div>
+        <div class="card-sub">Kundalini · Equal Rapid Inhale & Exhale</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">A short, rapid, equal-length inhale and exhale through the nose. Unlike Kapalabhati, both phases are active and the same length. Builds heat, energy, and sympathetic activation fast.</p>
+      </div>
+      <p class="card-cue">"Equal and rapid — fan the flame."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Energy ↑</span><span class="benefit">SNS ↑</span><span class="benefit">Heat ↑</span><span class="benefit">Alertness ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALKALINE BREATHING -->
+    <div class="card" data-tags="fast climbing" onclick="openDetail('alkaline')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-fast">Fast</span><span class="tag tag-climbing">On The Rock</span></div>
+        <div class="card-icon">🌬</div>
+        <div class="card-title">Alkaline Breathing</div>
+        <div class="card-sub">Powerful Inhale · Sigh "Haaaa" Exhale</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">A powerful inhale through the nose followed by a sighing "haaaa" release through the mouth. Double Alkaline speeds the rhythm: two nasal inhales then one active exhale — a quick energy primer before a session.</p>
+      </div>
+      <p class="card-cue">"Power in — let it go with a sigh."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Alkalise Blood</span><span class="benefit">Energy ↑</span><span class="benefit">SNS ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHANDRA / SURYA ANULOMA-VILOMA -->
+    <div class="card" data-tags="pranayama slow recovery" onclick="openDetail('anulomaviloma')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-pranayama">Pranayama</span><span class="tag tag-slow">Slow</span></div>
+        <div class="card-icon">🌗</div>
+        <div class="card-title">Chandra & Surya Anuloma-Viloma</div>
+        <div class="card-sub">Moon (Left) Cooling · Sun (Right) Warming</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Uninostril breathing — not alternating like Nadi Shodhana, but breathing entirely through one side. Chandra (left/moon) is heat-dissipating and cooling. Surya (right/sun) is heat-generating and energising.</p>
+      </div>
+      <p class="card-cue">"Choose your channel — cool the moon, warm the sun."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Cooling (L)</span><span class="benefit">Warming (R)</span><span class="benefit">ANS Balance ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRATILOMA -->
+    <div class="card" data-tags="pranayama slow climbing" onclick="openDetail('pratiloma')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-pranayama">Pranayama</span><span class="tag tag-slow">Slow</span></div>
+        <div class="card-icon">🫁</div>
+        <div class="card-title">Pratiloma</div>
+        <div class="card-sub">Airflow Resistance · Diaphragm Strength</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Partially close the nostrils on inhale to create resistance, strengthening inspiratory muscles and the diaphragm. ×10 inhalations with relaxed exhales, ×5 rounds. Add Kumbhaka (a hold after exhale) to progress.</p>
+      </div>
+      <p class="card-cue">"Feel the diaphragm contract against the resistance."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Diaphragm ↑</span><span class="benefit">Inspiratory Strength ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALSALVA / CRUX BREATH HOLD -->
+    <div class="card" data-tags="climbing retention" onclick="openDetail('valsalva')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-climbing">On The Rock</span><span class="tag tag-retention">Retention</span></div>
+        <div class="card-icon">🧗</div>
+        <div class="card-title">Valsalva Maneuver — Crux Hold</div>
+        <div class="card-sub">Forced Expiration Against Closed Glottis</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">A brief, forceful exhale against a closed glottis at the hardest moment of a move — increasing intra-abdominal pressure for core stability and force production. Used briefly, then released immediately.</p>
+      </div>
+      <p class="card-cue">"Brace, commit, release — never hold longer than the move needs."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Core Stability ↑</span><span class="benefit">Force ↑</span><span class="benefit">IAP ↑</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOUBLE ALKALINE / BREATHWORK FLOW -->
+    <div class="card" data-tags="fast climbing" onclick="openDetail('breathflow')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-fast">Fast</span><span class="tag tag-climbing">On The Rock</span></div>
+        <div class="card-icon">⚡</div>
+        <div class="card-title">Breathwork Flow — Energy Primer</div>
+        <div class="card-sub">Double Inhale Pattern · Pre-Session</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">A short flow combining double nasal inhales, single exhales, and a full hold to spike energy and focus before climbing. Builds quickly, peaks with a held inhale, then settles.</p>
+      </div>
+      <p class="card-cue">"Build the charge — hold it — release ready."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Energy ↑</span><span class="benefit">Focus ↑</span><span class="benefit">Pre-Climb Primer</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end grid -->
+</div>
+
+<!-- DETAIL PANELS -->
+<div class="detail-overlay" id="detail-overlay" onclick="closeDetail(event)">
+  <div class="detail-panel" id="detail-panel">
+    <div class="detail-header">
+      <button class="detail-close" onclick="closeAllDetails()">✕</button>
+      <p class="detail-eyebrow" id="d-eyebrow"></p>
+      <h2 class="detail-title" id="d-title"></h2>
+      <p class="detail-sub" id="d-sub"></p>
+    </div>
+    <div class="detail-content" id="d-content"></div>
+  </div>
+</div>
+
+<div class="page-nav-strip">
+  <a href="breathing.html" class="page-nav-link">← Toolbox</a>
+  <a href="wim-hof.html" class="page-nav-link">Wim Hof</a>
+  <a href="box-breathing.html" class="page-nav-link">Box Breathing</a>
+  <a href="cyclic-sighing.html" class="page-nav-link">Cyclic Sighing</a>
+  <a href="breathwork-practices.html" class="page-nav-link current">Practices</a>
+  <a href="zone-coaching.html" class="page-nav-link">Zone Coaching →</a>
+</div>
+
+<footer>
+  <div class="footer-logo">PRANA<span>CLIMB</span></div>
+  <p class="footer-tagline">Love · Breathe · Climb</p>
+  <p style="font-size:0.72rem;font-weight:300;color:var(--mid);">© 2025 Pranaclimb Ltd · annie@pranaclimb.com</p>
+  <p style="font-size:0.68rem;margin-top:0.4rem;color:#999;">Insured via Insure4Sport / Aviva through Pranaclimb Ltd</p>
+</footer>
+
+<script>
+// ========== FILTER ==========
+const filterBtns = document.querySelectorAll('.filter-btn');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.card').forEach(card => {
+      if (f === 'all' || card.dataset.tags.includes(f)) card.classList.remove('hidden');
+      else card.classList.add('hidden');
+    });
+  });
+});
+
+// ========== DETAIL DATA ==========
+const details = {
+  coherent: {
+    eyebrow: 'Slow Breathing · Recovery',
+    title: 'Coherent Breathing',
+    sub: 'Resonant Breathing · 6 BPM · 5s In / 5s Out',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Coherent breathing is diaphragmatic breathing at <strong>six breaths per minute</strong> with equal inhale and exhale ratios and no deliberate pauses. Breathe in for 5 seconds, breathe out for 5 seconds. Ujjayi constriction on both phases is optional but enhances effect.</p>
+        <p class="d-text">6 BPM is the resonant frequency of the heart — at this rate, the cardiovascular and respiratory systems synchronise, dramatically enhancing HRV (heart rate variability) and vagal tone.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Breathe in through your nose to a count of 5</strong>Constrict the glottis to make it audible (Ujjayi). Diaphragmatic — belly first.</li>
+          <li><strong>Breathe out through your nose to a count of 5</strong>Ujjayi on the exhale. Smooth, even, no forcing.</li>
+          <li><strong>Continue for 5–10 minutes</strong>Once or twice a day. Aim for 10 minutes total.</li>
+          <li><strong>Record HRV before and after</strong>Track your progress with an HRV app.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cues</p><h3 class="d-title">Coaching Cues</h3><div class="d-lbar"></div>
+        <div class="d-cue">"Breathe in harmony — let your diaphragm set the tempo."</div>
+        <div class="d-cue">"Six breaths, one minute — find your resonant frequency."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Research</p><h3 class="d-title">The Science</h3><div class="d-lbar"></div>
+        <div class="d-research">
+          <p class="d-research-tag">Cardiorespiratory Fitness · RCT</p>
+          <p class="d-research-text">One week of coherent breathing training proved effective in improving cardiorespiratory fitness in healthy adults — maintaining normal PR, RR and Borg Score while increasing VO2 Max and Forced Vital Capacity (FVC).</p>
+          <span class="d-stat">Cardiorespiratory Fitness Study, 2021</span>
+        </div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">HRV ↑</span><span class="d-benefit">Sustained Attention ↑</span><span class="d-benefit">Cortisol ↓</span><span class="d-benefit">SpO₂ ↑</span><span class="d-benefit">Vagal Tone ↑</span><span class="d-benefit">Anxiety ↓</span><span class="d-benefit">VO2 Max ↑</span><span class="d-benefit">FVC ↑</span></div>
+      </div>`
+  },
+  ujjayi: {
+    eyebrow: 'Pranayama · Slow Breathing',
+    title: 'Ujjayi Breath',
+    sub: 'Ocean Breath · Glottis Constriction · Immediate Effect on State Anxiety',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Ujjayi is practised by <strong>constricting the glottis muscles</strong> at the back of the throat to create an audible ocean-like sound on both the inhale and exhale. This allows greater control over airflow and slows breathing rate.</p>
+        <p class="d-text">The audible breath acts as a feedback loop — if you can hear it, you're in control of it. Ujjayi creates greater mindfulness of breathing pace on the wall.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Open your mouth wide</strong>Breathe out warm air onto your hand. Listen to the sound and feel the sensation.</li>
+          <li><strong>Now close your mouth</strong>Create the same constriction at the back of your throat. Focus on the breath at the back of your throat.</li>
+          <li><strong>Inhale and exhale through your nose</strong>Keep the glottal constriction. You should hear a soft ocean sound.</li>
+          <li><strong>Use during coherent breathing or on the wall</strong>Ujjayi is most powerful at 6 BPM. Effective on rest holds to pace your recovery.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cues</p><h3 class="d-title">Coaching Cues</h3><div class="d-lbar"></div>
+        <div class="d-cue">"Breathe into the back of your throat — hear the ocean."</div>
+        <div class="d-cue">"Constrict and control — audible breath is focused breath."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Research</p><h3 class="d-title">The Science</h3><div class="d-lbar"></div>
+        <div class="d-research">
+          <p class="d-research-tag">O₂ Consumption · Anxiety · Attention</p>
+          <p class="d-research-text">Studies on Ujjayi demonstrated a 19% increase in oxygen consumption. Showed significant decrease in state-trait anxiety and a significant increase in sustained and selective attention. Increased cardiac output and decreased heart rate. BRS increases with slow breathing, including Ujjayi.</p>
+          <span class="d-stat">Pranayama Research, Multiple Studies</span>
+        </div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">O₂ +19%</span><span class="d-benefit">Anxiety ↓</span><span class="d-benefit">Attention ↑</span><span class="d-benefit">HR ↓</span><span class="d-benefit">BRS ↑</span><span class="d-benefit">Vagal Tone ↑</span><span class="d-benefit">Vigour ↑</span></div>
+      </div>`
+  },
+  nadi: {
+    eyebrow: 'Pranayama · ANB',
+    title: 'Nadi Shodhana',
+    sub: 'Alternate Nostril Breathing · 10 min/day for 4 weeks',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Nadi Shodhana (alternate nostril breathing) cleans the nadis — the subtle energy channels. <strong>Right nostril corresponds to Pingala (solar/active). Left nostril corresponds to Ida (lunar/calm).</strong> Alternating brings them into balance.</p>
+        <p class="d-text">Use Vishnu Mudra: touch index and middle fingers to palm of right hand, leaving thumb, ring finger and pinky extended. Close right nostril with thumb; close left with ring finger and pinky.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Sit comfortably, legs crossed</strong>Left hand on left knee. Breathe normally through nose.</li>
+          <li><strong>Exhale completely</strong>Close right nostril with right thumb. Inhale slowly through left nostril.</li>
+          <li><strong>Close both nostrils</strong>Close left with ring finger and pinky. Exhale through right nostril.</li>
+          <li><strong>Inhale through right nostril</strong>Close right. Exhale through left. This is one round.</li>
+          <li><strong>Work up to 10 rounds</strong>Practice 10 minutes a day for 4 weeks for full benefit. If lightheaded — breathe normally.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cues</p><h3 class="d-title">Coaching Cues</h3><div class="d-lbar"></div>
+        <div class="d-cue">"Balance your energy channels — breathe through both sides of yourself."</div>
+        <div class="d-cue">"Left for calm. Right for energy. Together — balance."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Research</p><h3 class="d-title">The Science</h3><div class="d-lbar"></div>
+        <div class="d-research">
+          <p class="d-research-tag">ANS Balance · Cardiorespiratory · VO2</p>
+          <p class="d-research-text">A 2021 study found ANB produces consistent positive physiological changes: shifting sympathovagal balance toward parasympathetic predominance, significant improvement in cardiorespiratory parameters (pulse, SBP, DBP, FVC, FEV1, PEFR), and increased VO2 Max. Nadi Shodhana strengthens the diaphragm, opens small airways, reduces the work of breathing, and improves gas exchange.</p>
+          <span class="d-stat">Yoga-Based ANB Study, 2021</span>
+        </div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Anxiety ↓</span><span class="d-benefit">VO2 Max ↑</span><span class="d-benefit">FVC ↑</span><span class="d-benefit">FEV1 ↑</span><span class="d-benefit">PNS ↑</span><span class="d-benefit">Calmness ↑</span><span class="d-benefit">Concentration ↑</span><span class="d-benefit">Memory ↑</span></div>
+      </div>`
+  },
+  478: {
+    eyebrow: 'Slow Breathing · Relaxation Response',
+    title: '4-7-8 Breath',
+    sub: 'Dr. Andrew Weil · Deep Relaxation',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Breathe in for 4 seconds, hold for 7 seconds, and forcefully breathe out for 8 seconds. Do 4 breath cycles. The extended hold and long exhale powerfully activate the parasympathetic nervous system and the relaxation response.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Exhale completely</strong>Let all the air out through your mouth with a whooshing sound.</li>
+          <li><strong>Inhale quietly through your nose — 4 counts</strong>Diaphragmatic, belly first.</li>
+          <li><strong>Hold your breath — 7 counts</strong>Still and comfortable. Do not tense.</li>
+          <li><strong>Exhale forcefully — 8 counts</strong>Blow air out through your mouth with a whoosh. Complete emptying.</li>
+          <li><strong>Repeat for 4 cycles</strong>This constitutes one round. Build to 8 cycles over time.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cues</p><h3 class="d-title">Coaching Cues</h3><div class="d-lbar"></div>
+        <div class="d-cue">"In 4 — hold 7 — release 8. Let the 8 carry everything away."</div>
+        <div class="d-cue">"Use before sleep after a big session — cortisol drops, recovery begins."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Relaxation ↑</span><span class="d-benefit">Anxiety ↓</span><span class="d-benefit">Sleep ↑</span><span class="d-benefit">PNS ↑</span></div>
+      </div>`
+  },
+  kapalabhati: {
+    eyebrow: 'Fast Breathing · Pranayama',
+    title: 'Kapalabhati',
+    sub: 'Skull Shining Breath · Active Exhale / Passive Inhale',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Kapalabhati is an <strong>active exhalation by rapid contraction of the abdominal muscles</strong> with passive inhalation. The inhale happens automatically as a result of the exhalation. The primary aim is to cleanse the respiratory system and energise the body.</p>
+        <p class="d-text">Although rapid breathing, Kapalabhati does not cause hyperventilation. CO₂ concentrations after practice are similar to resting state — the heart rate response differs from hyperventilation.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Sit comfortably and take a few deep breaths</strong>Spine tall, shoulders relaxed.</li>
+          <li><strong>Begin rapid forceful exhalations</strong>Contract lower abdominal muscles sharply on each exhale. Keep the inhale passive — let it happen naturally.</li>
+          <li><strong>Start with 1 minute</strong>Gradually increase as you build strength and familiarity. Work towards 3–5 minutes.</li>
+          <li><strong>End with a slow deep breath</strong>Sit quietly and observe the energy.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cues</p><h3 class="d-title">Coaching Cues</h3><div class="d-lbar"></div>
+        <div class="d-cue">"Active out, passive in — let your belly do the work."</div>
+        <div class="d-cue">"Fast but not forceful — cleanse and clear."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Energy ↑</span><span class="d-benefit">Lung Capacity ↑</span><span class="d-benefit">Focus ↑</span><span class="d-benefit">Abdominal Strength ↑</span><span class="d-benefit">Pre-frontal Cortex ↑</span></div>
+      </div>`
+  },
+  bhastrika: {
+    eyebrow: 'Fast Breathing · Pranayama',
+    title: 'Bhastrika',
+    sub: 'Bellows Breath · Active Inhale & Exhale · 5 Rounds',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Bhastrika is <strong>both a powerful inhale and a powerful exhale</strong> — unlike Kapalabhati where only the exhale is active. Begin with an inhale raising your hands above your head. Exhale with pursed lips, lowering hands. ×7, then double speed ×14.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Fully inhale</strong>Raise hands above head. Palms open. Squeeze the pelvic floor. Send the energy up.</li>
+          <li><strong>Exhale pursed lips</strong>Lower hands, palms closed. ×7 reps.</li>
+          <li><strong>Double speed</strong>Same movement, faster. ×14 reps.</li>
+          <li><strong>Breathe fully in and hold</strong>Final inhale — raise hands — squeeze pelvic floor.</li>
+          <li><strong>Exhale with a sigh</strong>Slow, complete release. Normal breathing. 5 rounds total.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">VO2 Max ↑</span><span class="d-benefit">Diaphragm ↑</span><span class="d-benefit">Energy ↑</span><span class="d-benefit">FVC ↑</span><span class="d-benefit">SNS Balance ↑</span><span class="d-benefit">Cardiorespiratory ↑</span></div>
+      </div>`
+  },
+  bhramari: {
+    eyebrow: 'Pranayama · Recovery',
+    title: 'Bhramari',
+    sub: 'Bee Breath · Humming Exhale · Nitric Oxide ×15',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Named after the Black Indian Bee, Bhramari produces a <strong>vibrating, buzzing, humming sound on the exhale through the nose</strong>. Humming increases nitric oxide (a powerful vasodilator) by 15 times and adds airway resistance that cues active exhales.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Sit cross-legged, spine tall</strong>Close your eyes to calm and internalise consciousness.</li>
+          <li><strong>Place thumbs in ears</strong>Fingers over eyes, bridge of nose, lips (pinkies touching lips).</li>
+          <li><strong>Inhale slowly and deeply through nostrils</strong>Full diaphragmatic breath.</li>
+          <li><strong>Exhale making a bumble bee sound</strong>Keep lips sealed. The hum comes through the nose. Vibrate the throat and sinuses. Up to 20 minutes.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">NO ×15</span><span class="d-benefit">Anxiety ↓</span><span class="d-benefit">Vagus ↑</span><span class="d-benefit">Sinusitis ↓</span><span class="d-benefit">CO₂ Tol ↑</span><span class="d-benefit">Peace ↑</span></div>
+      </div>`
+  },
+  om: {
+    eyebrow: 'Pranayama · Recovery',
+    title: 'Pranav — OM Chanting',
+    sub: 'AUM · ~30 cycles · 5 minutes',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">OM is considered a sacred syllable — a universal sound, the seed of all words. <strong>Chanting OM at six breaths per minute</strong> produces robust and synchronous increases in cardiovascular rhythms with enhanced baroreflex sensitivity. It stimulates the vagus nerve through vibration.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Sit comfortably and relax</strong>Close your eyes. Meditate on the symbol of OM — bright white.</li>
+          <li><strong>Inhale into belly, into chest</strong>Full diaphragmatic breath. Not forced — effortless.</li>
+          <li><strong>Exhale chanting: a-ā-u-ū-m</strong>Allow the sound OM to unfold in its own way. The length of O-O-OM-M-Mmm should exactly match your normal out-breath.</li>
+          <li><strong>Allow OM to flow with your breath</strong>Not mechanical repetition — spontaneous and unique. 5 minutes, ~30 cycles.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cues</p><h3 class="d-title">Coaching Cues</h3><div class="d-lbar"></div>
+        <div class="d-cue">"Allow OM to flow with your breath — feel the vibrations."</div>
+        <div class="d-cue">"Not mechanical — each OM is new, unique, fresh."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">BRS ↑</span><span class="d-benefit">PNS ↑</span><span class="d-benefit">Anxiety ↓</span><span class="d-benefit">Depression ↓</span><span class="d-benefit">Vagus ↑</span><span class="d-benefit">Alertness ↑</span></div>
+      </div>`
+  },
+  okinaga: {
+    eyebrow: 'Slow Breathing · Ninja Mindfulness',
+    title: 'Okinaga',
+    sub: 'Long Breath · Japanese Ninja Technique · ~1 BPM',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Okinaga is a <strong>complex mental concentration combining extreme prolonged breathing, attention-focusing skills, and visual imagery in unison with the universe</strong>. Developed by ninjas in ancient Japan, the breathing frequency reaches approximately one breath per minute.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Fully exhale</strong>Begin from empty.</li>
+          <li><strong>Inhale slowly through your nose</strong>Feel the coolness at the back of your throat. No effort, no forcing — a trickle of air. Slowly and steadily expanding the lungs. Feel the diaphragm.</li>
+          <li><strong>Extend the exhale</strong>Try 10 seconds in / 10 seconds out. Build to 15, 20, 30 seconds or even a minute over time.</li>
+          <li><strong>Practice for 15 minutes</strong>Standing, sitting, walking, or lying down. Stay present.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Theta ↑</span><span class="d-benefit">Alpha 2 ↑</span><span class="d-benefit">PNS ↑</span><span class="d-benefit">Anxiety ↓</span><span class="d-benefit">Focus ↑</span><span class="d-benefit">Relaxed Alertness</span></div>
+      </div>`
+  },
+  surya: {
+    eyebrow: 'Pranayama · Energising',
+    title: 'Surya Bhedana',
+    sub: 'Sun Piercing Breath · Right Nostril · O₂ +28%',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Surya Bhedana is an <strong>energising and warming pranayama</strong>. Inhale through the right nostril (Pingala/sun channel), hold as long as comfortable, exhale through the left. Right nostril breathing increases oxygen consumption by 28%.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Sit in a comfortable meditative posture</strong>Create Vishnu Mudra with right hand.</li>
+          <li><strong>Block off your left nostril</strong>Inhale through your right nostril.</li>
+          <li><strong>Hold your breath</strong>For as long as comfortable. Block right nostril.</li>
+          <li><strong>Exhale through your left nostril</strong>This is one round. Repeat. 3–5 minutes or 8–10 rounds.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">O₂ +28%</span><span class="d-benefit">Energy ↑</span><span class="d-benefit">Warming</span><span class="d-benefit">SNS ↑</span></div>
+      </div>`
+  },
+  apnea: {
+    eyebrow: 'On The Rock · Retention',
+    title: 'Apnea / Breath Holding',
+    sub: 'CO₂ Tolerance · Kumbhaka · Repeat, Repeat, Repeat',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Breath holding trains <strong>CO₂ tolerance and psychological tolerance of maximal apnea</strong>. Hold after exhalation (bahya/low lung) is more relaxing and may increase CO₂ tolerance. Hold after inhalation (antara/high lung) creates tension and pressure. Static = still. Dynamic = while moving.</p>
+        <p class="d-text">Breath holding triggers spleen contraction — releasing stored erythrocytes into circulation, causing a 3–10% increase in blood oxygen-carrying capacity.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practices</p><h3 class="d-title">Types</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>No-Contraction Table</strong>Breath hold until first contractions (urge to breathe), then +10 seconds. 4–5 holds, relaxing between.</li>
+          <li><strong>CO₂ Table</strong>Decreasing rest time between fixed holds. Builds CO₂ tolerance — the body accumulates CO₂ and learns to tolerate it.</li>
+          <li><strong>O₂ Table</strong>Increasing hold time, fixed rest. Accustoms body to lower oxygen levels.</li>
+          <li><strong>Apnea Walks</strong>Hold breath for 10 seconds, breathe for 20 seconds. Repeat 10–12 times.</li>
+          <li><strong>BOLT Score</strong>Body Oxygen Level Test — aim for 40 seconds or more.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">⚠️ Safety</p><div class="d-lbar"></div>
+        <div class="d-cue" style="border-color:var(--pink);">Never practice breath holding in water without a trained partner. Always practice in a safe, supervised environment.</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">CO₂ Tol ↑</span><span class="d-benefit">SpO₂ ↑</span><span class="d-benefit">Lactate Tol ↑</span><span class="d-benefit">Spleen ↑</span><span class="d-benefit">Vagus ↑</span><span class="d-benefit">Inflammation ↓</span></div>
+      </div>`
+  },
+  scream: {
+    eyebrow: 'On The Rock · Performance',
+    title: 'Power Exhale / Yell',
+    sub: 'Vocalized Exhalation · Handgrip +25%',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">A vocalized exhalation (grunt, yell, scream) at the moment of maximum force increases static handgrip by 25% compared to passive breathing and by 11% over silent forced exhalation. <strong>Timing is crucial — at the moment of sticking the hold.</strong></p>
+        <p class="d-text">Peak force of the finger flexors increases significantly during forced expiration. The Pranaclimb Scream-Density Rule: 1–3 vocalised exhales = +5 BPM adjustment. ≥7 = metaboreflex risk. Budget them.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To Use It</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Inhale before the crux</strong>Full breath — commitment breath — then move.</li>
+          <li><strong>Exhale on the hardest move</strong>Sharp, audible, forceful — exactly as you stick the hold.</li>
+          <li><strong>Resume nasal breathing immediately</strong>Don't continue breath-holding. Legacy breath-holding causes hypoxia and faster fatigue.</li>
+          <li><strong>Budget your screams</strong>Reserve for crux moments only. Continuous yelling depletes W′ reserve faster.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Research</p><h3 class="d-title">The Science</h3><div class="d-lbar"></div>
+        <div class="d-research">
+          <p class="d-research-tag">Grip Strength · VO2 · Ventilation</p>
+          <p class="d-research-text">Yelling at maximal effort led to higher peak power, time to exhaustion, and greater VO₂ and ventilation during 90–100% maximal cycling — without increased muscle activation. Aliverti et al. found that during phonation, all three chest-wall compartments contribute to expired volume, creating favourable conditions for ventilation effectiveness during extreme exercise.</p>
+          <span class="d-stat">Chen et al., 2015 · Aliverti et al.</span>
+        </div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Grip +25%</span><span class="d-benefit">Peak Power ↑</span><span class="d-benefit">VE ↑</span><span class="d-benefit">Time to Exhaustion ↑</span><span class="d-benefit">CO₂ Removal ↑</span></div>
+      </div>`
+  },
+  sohum: {
+    eyebrow: 'Pranayama · Recovery',
+    title: 'So Hum Mantra Breath',
+    sub: 'I Am That · Universal Prana · Present-Moment Calmness',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">So Hum means "I am That" — a connection to universal energy (prana). Inhale with the silent mantra <strong>"So"</strong>, exhale with <strong>"Hum"</strong>. The sounds are silently repeated in your mind as you breathe.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Close your eyes</strong>Draw a circle of light around yourself in your mind. Imagine yourself sitting in this protected space, connected to the universal energy around you.</li>
+          <li><strong>Inhale with "So"</strong>Silent, in the mind. Feel the breath expand your torso.</li>
+          <li><strong>Exhale with "Hum"</strong>Let go. Feel the connection. Practice for a few minutes. Feel calmness.</li>
+          <li><strong>Finish with Anjali Mudra and gratitude</strong>Hands to heart. Give thanks.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Calmness ↑</span><span class="d-benefit">Connection ↑</span><span class="d-benefit">Presence ↑</span><span class="d-benefit">Clarity ↑</span></div>
+      </div>`
+  },
+  ratio: {
+    eyebrow: 'Slow Breathing · On The Rock',
+    title: '2:1 Extended Exhale',
+    sub: 'Reduce Fear & Anxiety · Heart Rate Down',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Taking twice as long to exhale as inhale <strong>slows the heart rate, decreases residual lung air, and reduces fear and anxiety</strong>. The extended exhale activates the vagus nerve and parasympathetic system. Try ratios: 4:2, 6:3, 8:4, 10:5, 12:6. Two minutes through the nose.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Begin with 4:2</strong>Inhale 4 seconds, exhale 8 seconds. Through the nose.</li>
+          <li><strong>Build over time</strong>6:3, 8:4, 10:5, 12:6 — extend as comfortable. Minimum 2 minutes.</li>
+          <li><strong>On the rock</strong>Use at rest holds, or between attempts. Associate the exhale with recovery and calm. "Extend your exhale — think I'm OK."</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">HR ↓</span><span class="d-benefit">Fear ↓</span><span class="d-benefit">PNS ↑</span><span class="d-benefit">Anxiety ↓</span><span class="d-benefit">Vagus ↑</span></div>
+      </div>`
+  },
+  pursed: {
+    eyebrow: 'Slow Breathing · On The Rock',
+    title: 'Pursed / Kiss Lips Breathing',
+    sub: 'Controlled Exhale · CO₂ Relief · Airway Support',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Breathe in through your nose and breathe out through <strong>tightly pursed or kiss lips</strong> — slow, controlled, smooth. Pursed-lip breathing helps support breathing by opening airways during exhalation and increasing excretion of CO₂, preventing or relieving hypercapnia.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Inhale through your nose</strong>2–4 counts. Diaphragmatic, relaxed.</li>
+          <li><strong>Pucker or kiss lips</strong>As if blowing ou        <li><strong>Exhale slowly through pursed lips</strong>4–8 counts. Smooth, easy, controlled. Do not force.</li>
+          <li><strong>Use during rests on the wall</strong>Especially effective for managing pump and shortness of breath at rest holds.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cue</p><div class="d-lbar"></div>
+        <div class="d-cue">"Kiss life — breathe your entire breath out."</div>
+        <div class="d-cue">"The most crucial part of my redpoint burns is breathing. If I just breathe, I still have a chance." — Paige Claassen</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">BR ↓</span><span class="d-benefit">Pump Relief</span><span class="d-benefit">Gas Exchange ↑</span><span class="d-benefit">Control ↑</span><span class="d-benefit">CO₂ ↓</span><span class="d-benefit">Anxiety ↓</span></div>
+      </div>`
+  },
+  pmr: {
+    eyebrow: 'Recovery · Body Scan',
+    title: 'Progressive Muscle Relaxation',
+    sub: 'Tense & Release · Full Body · For Climbers',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Systematically tense and release each major muscle group. <strong>Hold tension for 5 seconds, release for 10 seconds</strong>, focusing on the contrast. 3 deep breaths to begin.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">Sequence</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Feet & Ankles</strong>Scrunch toes like grabbing the ground. Release, wiggle toes.</li>
+          <li><strong>Calves</strong>Point toes, flex calves. Relax, feet drop flat.</li>
+          <li><strong>Thighs & Glutes</strong>Squeeze together. Release, soften.</li>
+          <li><strong>Abdominals & Back</strong>Brace core, squeeze shoulder blades. Relax, breathe freely.</li>
+          <li><strong>Chest & Shoulders</strong>Deep breath, expand chest, hold. Shrug shoulders to ears. Release.</li>
+          <li><strong>Forearms & Biceps</strong>Clench fists — feel tension in forearms. Curl to shoulders. Release and open hands.</li>
+          <li><strong>Neck, Jaw & Face</strong>Turn head side to side. Clench jaw then release. Raise eyebrows, smile.</li>
+          <li><strong>Final relaxation</strong>A few deep breaths. Body heavy and relaxed. Open eyes slowly.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Tension ↓</span><span class="d-benefit">Recovery ↑</span><span class="d-benefit">Interoception ↑</span><span class="d-benefit">Sleep ↑</span><span class="d-benefit">Anxiety ↓</span></div>
+      </div>`
+  },
+  breathoffire: {
+    eyebrow: 'Fast Breathing · Kundalini',
+    title: 'Breath of Fire',
+    sub: 'Equal Rapid Inhale & Exhale Through The Nose',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Breath of Fire is a Kundalini practice of <strong>short, rapid, equal-length inhales and exhales</strong> through the nose. The key difference from Kapalabhati: both phases are equally active, rather than an active exhale with a passive inhale.</p>
+        <p class="d-text">The rapid equal rhythm builds heat and energy quickly, generating sympathetic activation — useful as a short, sharp wake-up before a session.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Sit tall, relax the shoulders</strong>Mouth closed, breathing entirely through the nose.</li>
+          <li><strong>Pump the belly in and out rapidly</strong>Equal, short, sharp inhales and exhales — like a metronome. Roughly 2–3 breaths per second.</li>
+          <li><strong>Start with 30 seconds</strong>Build up to 1–3 minutes as tolerance increases.</li>
+          <li><strong>Finish with a full inhale and exhale</strong>Sit in the stillness afterwards.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cue</p><div class="d-lbar"></div>
+        <div class="d-cue">"Equal and rapid — fan the flame."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Energy ↑</span><span class="d-benefit">SNS ↑</span><span class="d-benefit">Heat ↑</span><span class="d-benefit">Alertness ↑</span></div>
+      </div>`
+  },
+  alkaline: {
+    eyebrow: 'Fast Breathing · On The Rock',
+    title: 'Alkaline & Double Alkaline Breathing',
+    sub: 'Powerful Inhale · Sigh Release · Pre-Climb Primer',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Alkaline Breathing is a <strong>powerful inhale through the nose followed by a sigh ("haaaa") through the mouth</strong>. Like other forceful breathing patterns, it shifts blood pH towards alkaline and increases alertness.</p>
+        <p class="d-text">Double Alkaline Breathing speeds up the rhythm: <strong>two inhalations through the nose followed by one active exhale</strong>. A quick way to spike energy in the minutes before climbing.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Alkaline Breathing</strong>One powerful nasal inhale. Release with an audible sigh "haaaa" through the mouth. Repeat for several rounds.</li>
+          <li><strong>Double Alkaline Breathing</strong>Two quick nasal inhales (top up the lungs), then one active exhale through the mouth. Faster rhythm than single alkaline.</li>
+          <li><strong>Use before climbing</strong>A handful of rounds is enough — this is a primer, not a long practice.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cue</p><div class="d-lbar"></div>
+        <div class="d-cue">"Power in — let it go with a sigh."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Alkalise Blood</span><span class="d-benefit">Energy ↑</span><span class="d-benefit">SNS ↑</span><span class="d-benefit">Alertness ↑</span></div>
+      </div>`
+  },
+  anulomaviloma: {
+    eyebrow: 'Pranayama · Slow Breathing',
+    title: 'Chandra & Surya Anuloma-Viloma',
+    sub: 'Uninostril Breathing · Moon (Cooling) & Sun (Warming)',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Unlike Nadi Shodhana (which alternates), Anuloma-Viloma breathes entirely through <strong>one nostril for the whole practice</strong>. Chandra (Moon) Nadi Pranayama uses the left nostril — heat-dissipating and cooling. Surya (Sun) Anuloma-Viloma uses the right nostril — heat-generating.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Chandra Nadi (cooling)</strong>Close the right nostril. Inhale and exhale through the left nostril only. Breathe normally. Use when overheated, agitated, or post-effort.</li>
+          <li><strong>Surya Anuloma-Viloma (warming)</strong>Close the left nostril. Inhale and exhale through the right nostril only. Breathe normally. Use when needing energy or warmth.</li>
+          <li><strong>Practice 3–5 minutes</strong>Choose the channel that matches what your body needs in the moment.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cue</p><div class="d-lbar"></div>
+        <div class="d-cue">"Choose your channel — cool the moon, warm the sun."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Cooling (L)</span><span class="d-benefit">Warming (R)</span><span class="d-benefit">ANS Balance ↑</span><span class="d-benefit">Thermoregulation</span></div>
+      </div>`
+  },
+  pratiloma: {
+    eyebrow: 'Pranayama · Slow Breathing',
+    title: 'Pratiloma',
+    sub: 'Airflow Resistance · Diaphragm Strength',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">Pratiloma partially closes the nostrils during inhalation to create <strong>inspiratory resistance</strong> — training the diaphragm to work harder against airflow restriction. This builds inspiratory muscle strength and function over time.</p>
+        <p class="d-text">Pratiloma Kumbhaka adds a breath retention after exhalation for an additional training stimulus.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Partially close your nostrils</strong>Use gentle finger pressure or nostril constriction to create resistance while inhaling.</li>
+          <li><strong>Feel the diaphragm contracting</strong>Notice the extra work required to draw breath in against the resistance.</li>
+          <li><strong>Relaxed exhalation</strong>Release the resistance and exhale normally. ×10 inhalations.</li>
+          <li><strong>Repeat for 5 rounds</strong>Optionally add Pratiloma Kumbhaka — hold the breath briefly after exhaling — to progress further.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cue</p><div class="d-lbar"></div>
+        <div class="d-cue">"Feel the diaphragm contract against the resistance."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Diaphragm ↑</span><span class="d-benefit">Inspiratory Strength ↑</span><span class="d-benefit">Respiratory Endurance ↑</span></div>
+      </div>`
+  },
+  valsalva: {
+    eyebrow: 'On The Rock · Retention',
+    title: 'Valsalva Maneuver — Crux Hold',
+    sub: 'Forced Expiration Against A Closed Glottis',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">The Valsalva Maneuver is forced expiration against a closed glottis — naturally used in lifting, defecation, and blowing up a balloon. In climbing it's used briefly during a hard move to <strong>maximise intra-abdominal pressure, core stability, and strength</strong>.</p>
+        <p class="d-text">Research found well-trained climbers exhibit breath holding or Valsalva-like efforts during climbing movements, manifesting as intermittently raised mouth pressures — supporting climbing-specific movements, particularly on overhanging terrain.</p>
+        <p class="d-text"><strong>Caution:</strong> harder climbing evokes a substantial pressor response (rise in systolic blood pressure), and studies found no additional benefit of the Valsalva Maneuver over synchronised forced exhalation — which carries lower cardiovascular risk. For most moves, a forceful exhale timed to the effort is the safer, equally effective choice.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To Use It</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Inhale to prepare</strong>Before the crux move.</li>
+          <li><strong>Brace briefly</strong>A short hold against a closed glottis at the exact moment of maximum force — to stabilise the core.</li>
+          <li><strong>Release immediately after the move</strong>Don't extend the hold beyond the single hard movement — "legacy breath-holding" beyond the instant causes hypoxia and faster fatigue.</li>
+          <li><strong>Resume rhythmic breathing</strong>Nasal or oronasal, straight after.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cue</p><div class="d-lbar"></div>
+        <div class="d-cue">"Brace, commit, release — never hold longer than the move needs."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Core Stability ↑</span><span class="d-benefit">Force Production ↑</span><span class="d-benefit">IAP ↑</span><span class="d-benefit">Dynamic Stability ↑</span></div>
+      </div>`
+  },
+  breathflow: {
+    eyebrow: 'Fast Breathing · On The Rock',
+    title: 'Breathwork Flow — Energy Primer',
+    sub: 'Double Inhale Pattern · Pre-Session Activation',
+    content: `
+      <div class="d-section">
+        <p class="d-label">How it works</p><h3 class="d-title">The Method</h3><div class="d-lbar"></div>
+        <p class="d-text">A short sequence combining double nasal inhales, single exhales, and a held full breath to <strong>build energy and focus quickly</strong> before a climbing session. Designed as a brief primer, not a long practice.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Practice</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>2 nose inhales to belly and chest, 1 exhale</strong>Build the breath in two stages, then release in one.</li>
+          <li><strong>1 nose exhale, 1 nose inhale — faster</strong>Quicken the pace slightly.</li>
+          <li><strong>Fully exhale</strong>Empty completely.</li>
+          <li><strong>Fully inhale and hold</strong>Take a complete breath in and hold briefly — feel the charge build.</li>
+          <li><strong>1 nose exhale, 1 nose inhale</strong>Settle the rhythm.</li>
+          <li><strong>2 nose inhales, 1 exhale — to finish</strong>Repeat the opening pattern to close the sequence, then climb.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Cue</p><div class="d-lbar"></div>
+        <div class="d-cue">"Build the charge — hold it — release ready."</div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Benefits</p><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Energy ↑</span><span class="d-benefit">Focus ↑</span><span class="d-benefit">Pre-Climb Primer</span><span class="d-benefit">SNS ↑</span></div>
+      </div>`
+  }
+};
+
+function openDetail(id) {
+  const d = details[id];
+  if (!d) return;
+  document.getElementById('d-eyebrow').textContent = d.eyebrow;
+  document.getElementById('d-title').textContent = d.title;
+  document.getElementById('d-sub').textContent = d.sub;
+  document.getElementById('d-content').innerHTML = d.content;
+  document.getElementById('detail-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeAllDetails() {
+  document.getElementById('detail-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeDetail(e) {
+  if (e.target === document.getElementById('detail-overlay')) closeAllDetails();
+}
+</script>
+</body>
+</html>

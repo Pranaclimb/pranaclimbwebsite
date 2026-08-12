@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RP Sync in Climbing — Will Bosi, Jimmy Webb & Readiness Potential | Pranaclimb</title>
+  <meta name="description" content="Readiness Potential and RP Sync — the neuroscience of timing breath to movement. Will Bosi on Burden of Dreams V17 and Jimmy Webb on Sleepwalker V16 analysed second by second using the Pranaclimb framework." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--pink:#ff00ff;--lime:#AAFF00;--blue:#89CFF0;--white:#ffffff;--off:#f5f5f2;--ink:#4a4a4a;--mid:#555555;--border:#e0e0d8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:"Outfit",sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-family:"Bebas Neue",sans-serif;font-size:1.6rem;letter-spacing:0.12em;color:var(--ink);text-decoration:none;}
+    .nav-logo span{color:var(--pink);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--mid);}
+    .nav-links a:hover{color:var(--pink);}
+    .nav-cta{background:var(--pink);color:var(--white);padding:0.55rem 1.4rem;border-radius:2px;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;}
+    .article-hero{padding:9rem 4rem 4rem;background:var(--off);border-bottom:1.5px solid var(--border);}
+    .article-hero-inner{max-width:860px;margin:0 auto;}
+    .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);text-decoration:none;margin-bottom:2rem;}
+    .back-link:hover{color:var(--pink);}
+    .article-cats{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;}
+    .cat-tag{font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:2px;}
+    .cat-tag.pink{background:var(--pink);color:var(--white);}
+    .cat-tag.blue{background:var(--white);color:var(--ink);}
+    .cat-tag.lime{background:var(--lime);color:var(--ink);}
+    .cat-tag.off{background:var(--ink);color:var(--white);}
+    .article-hero h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:0.95;color:var(--ink);margin-bottom:1.2rem;}
+    .article-hero h1 span{color:var(--pink);}
+    .article-lead{font-family:"Lora",serif;font-size:1.1rem;line-height:1.8;color:var(--mid);margin-bottom:2rem;}
+    .article-meta{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid var(--border);}
+    .meta-author{display:flex;align-items:center;gap:0.8rem;}
+    .meta-author img{width:42px;height:42px;border-radius:50%;object-fit:cover;}
+    .meta-author-name{font-size:0.85rem;font-weight:600;color:var(--ink);}
+    .meta-author-title{font-size:0.72rem;color:var(--mid);}
+    .article-wrap{max-width:1100px;margin:0 auto;padding:4rem;display:grid;grid-template-columns:1fr 220px;gap:4rem;align-items:start;}
+    .article-body h2{font-family:"Bebas Neue",sans-serif;font-size:2rem;color:var(--ink);margin:3rem 0 1rem;}
+    .article-body h3{font-size:1rem;font-weight:700;color:var(--ink);margin:2rem 0 0.8rem;}
+    .article-body p{font-family:"Lora",serif;font-size:0.97rem;line-height:1.95;color:var(--mid);margin-bottom:1.2rem;}
+    .article-body strong{color:var(--ink);font-weight:600;}
+    .article-body a{color:var(--pink);font-weight:600;text-decoration:none;}
+    .article-body a:hover{text-decoration:underline;}
+    .pull-quote{background:var(--pink);padding:2rem 2.5rem;margin:2.5rem 0;border-radius:2px;}
+    .pull-quote blockquote{font-family:"Lora",serif;font-size:1.1rem;font-style:italic;line-height:1.7;color:var(--white);margin-bottom:0.8rem;}
+    .pull-quote cite{font-style:normal;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime);font-family:"Outfit",sans-serif;}
+    .hl{background:var(--off);border-left:3px solid var(--lime);padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;line-height:1.7;color:var(--mid);font-family:"Outfit",sans-serif;}
+    .hl.pink{border-left-color:var(--pink);}
+    .hl.blue{background:rgba(137,207,240,0.12);border-left-color:var(--blue);}
+    .hl strong{color:var(--ink);}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;font-family:"Outfit",sans-serif;}
+    .info-card{background:var(--off);border:1.5px solid var(--border);padding:1.2rem;}
+    .info-card h5{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink);margin-bottom:0.4rem;}
+    .info-card p{font-size:0.83rem;line-height:1.6;color:var(--mid);margin:0;font-family:"Outfit",sans-serif;}
+    .timestamp-grid{display:grid;grid-template-columns:100px 1fr;gap:0;border:1.5px solid var(--border);margin:1.5rem 0;font-family:"Outfit",sans-serif;}
+    .ts-time{padding:0.8rem;display:flex;align-items:center;justify-content:center;font-family:"Bebas Neue",sans-serif;font-size:1rem;border-bottom:1px solid var(--border);text-align:center;}
+    .ts-content{padding:0.8rem 1.2rem;border-bottom:1px solid var(--border);font-size:0.87rem;color:var(--mid);line-height:1.5;display:flex;align-items:center;}
+    .ts-time:last-of-type,.ts-content:last-of-type{border-bottom:none;}
+    .metrics-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1.5px solid var(--border);margin:1.5rem 0;font-family:"Outfit",sans-serif;}
+    .metric{background:var(--white);padding:1.2rem;text-align:center;}
+    .metric-val{font-family:"Bebas Neue",sans-serif;font-size:1.8rem;line-height:1;margin-bottom:0.3rem;}
+    .metric-val.pink{color:var(--pink);}
+    .metric-val.lime{color:var(--lime);}
+    .metric-val.blue{color:var(--blue);}
+    .metric-label{font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);}
+    .contrast-table{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--border);border:1.5px solid var(--border);margin:1.5rem 0;font-family:"Outfit",sans-serif;}
+    .contrast-card{background:var(--white);padding:1.8rem;}
+    .contrast-card.left{background:rgba(137,207,240,0.1);}
+    .contrast-card.right{background:rgba(255,0,255,0.05);}
+    .contrast-card h4{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;}
+    .contrast-card.left h4{color:var(--blue);}
+    .contrast-card.right h4{color:var(--pink);}
+    .contrast-card ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+    .contrast-card li{font-size:0.87rem;color:var(--mid);line-height:1.5;display:flex;gap:0.6rem;}
+    .article-img{margin:2rem 0;overflow:hidden;}
+    .article-img img{width:100%;display:block;}
+    .article-img figcaption{font-size:0.75rem;color:var(--mid);padding:0.7rem 1rem;background:var(--off);font-family:"Outfit",sans-serif;font-style:italic;}
+    .video-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.5rem 0;border-radius:2px;}
+    .video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+    .article-sidebar{position:sticky;top:6rem;align-self:start;}
+    .sidebar-card{background:var(--off);border:1.5px solid var(--border);padding:1.5rem;margin-bottom:1.2rem;}
+    .sidebar-card h4{font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem;}
+    .sidebar-card ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+    .sidebar-card li{font-size:0.82rem;color:var(--mid);padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+    .sidebar-card li:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-card a{color:var(--pink);text-decoration:none;font-weight:600;font-size:0.82rem;}
+    .sidebar-cta{background:var(--pink);padding:1.5rem;}
+    .sidebar-cta h4{font-size:0.9rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;}
+    .sidebar-cta p{font-size:0.8rem;color:rgba(255,255,255,0.85);line-height:1.6;margin-bottom:1rem;}
+    .sidebar-cta a{display:block;background:var(--lime);color:var(--ink);text-align:center;padding:0.7rem;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;}
+    .related{padding:4rem;background:var(--off);border-top:1.5px solid var(--border);}
+    .related-inner{max-width:860px;margin:0 auto;}
+    .related h3{font-family:"Bebas Neue",sans-serif;font-size:1.8rem;color:var(--ink);margin-bottom:2rem;}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);}
+    .related-card{background:var(--white);padding:1.8rem;text-decoration:none;color:inherit;transition:background 0.2s;}
+    .related-card:hover{background:var(--off);}
+    .related-card .cat{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--pink);margin-bottom:0.5rem;}
+    .related-card h4{font-family:"Bebas Neue",sans-serif;font-size:1.3rem;color:var(--ink);line-height:1.1;margin-bottom:0.6rem;}
+    .related-card p{font-size:0.82rem;color:var(--mid);line-height:1.6;}
+    .subscribe-strip{background:var(--white);padding:4rem;}
+    .subscribe-inner{max-width:600px;margin:0 auto;text-align:center;}
+    .subscribe-inner h3{font-family:"Bebas Neue",sans-serif;font-size:2rem;color:var(--ink);margin-bottom:0.5rem;}
+    .subscribe-inner p{font-size:0.9rem;color:var(--mid);line-height:1.7;margin-bottom:2rem;}
+    .kit-wrapper .formkit-input{font-family:"Outfit",sans-serif!important;font-size:0.9rem!important;padding:0.8rem 1rem!important;border:2px solid rgba(0,0,0,0.15)!important;border-radius:2px!important;}
+    .kit-wrapper .formkit-submit{background-color:#89CFF0!important;font-family:"Outfit",sans-serif!important;font-weight:600!important;letter-spacing:0.12em!important;text-transform:uppercase!important;border-radius:2px!important;border:1.5px solid rgba(255,255,255,0.8)!important;margin-top:0.6rem!important;}
+    footer{background:var(--white);color: var(--ink);padding:4rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;}
+    .footer-brand .nav-logo{color:var(--white);display:block;margin-bottom:1rem;}
+    .footer-brand p{font-size:1rem;line-height:1.7;color:rgba(255,255,255,0.85);max-width:260px;}
+    .footer-col h4{font-size:0.8rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin-bottom:1.2rem;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
+    .footer-col a{font-size:0.85rem;color:var(--mid);text-decoration:none;}
+    .footer-col a:hover{color:var(--pink);}
+    .footer-col.trading a{font-size:0.85rem;font-weight:600;background:var(--off);color:var(--ink);padding:0.5rem 1rem;border-radius:2px;display:inline-block;}
+    .footer-bottom{background:var(--white);padding:1.2rem 4rem;display:flex;justify-content:space-between;align-items:center;}
+    .footer-bottom p{font-size:0.75rem;color:rgba(0,0,0,0.5);}
+    .footer-bottom a{color:rgba(0,0,0,0.5);text-decoration:none;}
+    @media(max-width:900px){
+      nav{padding:1rem 1.5rem;}.nav-links{display:none;}
+      .article-hero{padding:6rem 1.5rem 2.5rem;}
+      .article-wrap{grid-template-columns:1fr;padding:2.5rem 1.5rem;gap:2rem;}
+      .article-sidebar{display:none;}
+      .two-col,.contrast-table,.metrics-row{grid-template-columns:1fr;}
+      .timestamp-grid{grid-template-columns:80px 1fr;}
+      .related-grid{grid-template-columns:1fr;}
+      .related,.subscribe-strip{padding:3rem 1.5rem;}
+      footer{grid-template-columns:1fr;padding:3rem 1.5rem;}
+      .footer-bottom{padding:1rem 1.5rem;flex-direction:column;gap:0.5rem;text-align:center;}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "RP and RP Sync — Will Bosi, Jimmy Webb and the Nervous System",
+    "description": "Readiness Potential and RP Sync — the neuroscience of timing breath to movement. Will Bosi and Jimmy Webb analysed second by second.",
+    "datePublished": "2025-05-01",
+    "author": {
+      "@type": "Person",
+      "name": "Annie Anderson",
+      "url": "https://www.pranaclimb.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pranaclimb",
+      "url": "https://www.pranaclimb.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.pranaclimb.com/images/Pranaclimb_APP_ICON.jpg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.pranaclimb.com/blog/rp-sync"
+    }
+  }
+  </script>
+  <link rel="canonical" href="https://www.pranaclimb.com/blog/rp-sync" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+  <ul class="nav-links">
+    <li><a href="methodology.html">Method</a></li>
+    <li><a href="rba.html">RBA</a></li>
+    <li><a href="book.html">Book</a></li>
+    <li><a href="blog.html" style="color:var(--pink);">Blog</a></li>
+    <li><a href="index.html#annie">Annie</a></li>
+    <li><a href="gallery.html">Photos & Videos</a></li>
+  </ul>
+  <a href="rba.html" class="nav-cta">Book Your RBA</a>
+</nav>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <a href="blog.html" class="back-link">← Back to Journal</a>
+    <div class="article-cats">
+      <span class="cat-tag pink">Elite Analysis</span>
+      <span class="cat-tag blue">Neuroscience</span>
+      <span class="cat-tag lime">Performance</span>
+      <span class="cat-tag off">Breathwork</span>
+    </div>
+    <h1>RP & RP Sync<br>in the <span>Wild</span></h1>
+    <p class="article-lead">Readiness Potential. RP Sync. The neuroscience of timing breath to movement at the critical moment. Will Bosi on Burden of Dreams V17 and Jimmy Webb on Sleepwalker V16 — analysed second by second using the Pranaclimb framework.</p>
+    <div class="article-meta">
+      <div class="meta-author">
+        <img src="images/annie-anderson-pranaclimb-founder-cold-water-swimming-cornwall.jpg" alt="Annie Anderson" />
+        <div>
+          <div class="meta-author-name">Annie Anderson</div>
+          <div class="meta-author-title">Researcher · Breathwork Specialist · Climber</div>
+        </div>
+      </div>
+      <span style="font-size:0.78rem;color:var(--mid);">By Annie Anderson · Pranaclimb</span>
+      <span style="font-size:0.78rem;color:var(--pink);font-weight:600;">7 min read</span>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1100px;margin:0 auto;">
+<div class="article-wrap">
+  <article class="article-body">
+
+    <figure class="article-img">
+      <img src="images/rock-climbing-breath-holds-bosigran-cornwall-pranaclimb.jpg" alt="Breath timing and RP Sync in climbing — Bosigran, Cornwall" />
+      <figcaption>The moment before the move. RP is silent, neural, invisible — but energetically real. RP Sync is the exhale that lands it. Bosigran, Cornwall.</figcaption>
+    </figure>
+
+    <h2>🧠 What is RP — Readiness Potential?</h2>
+    <p>The <strong>Readiness Potential (RP)</strong> is a measurable neural signal that appears in the brain 500–2000ms before a voluntary movement. First identified by Kornhuber & Deecke (1965), it represents the brain's preparation for action — the neurological build-up of motor intent before the body moves.</p>
+    <p>In climbing, RP is the invisible moment of commitment before the hardest move. It's what happens in the stillness just before you go. The exhale, the breath hold, the settling — these are the external expression of the Readiness Potential building in the nervous system.</p>
+
+    <div class="hl blue">
+      <strong>RP in climbing:</strong> Silent, neural, often invisible — but energetically real. It precedes movement, not accompanies it. The breath before the move is as important as the breath during it.
+    </div>
+
+    <h2>⚡ What is RP Sync?</h2>
+    <p><strong>RP Sync</strong> is the Pranaclimb term for the precise timing of an exhale to coincide with the hardest phase of a movement — usually the moment of maximum force application. It is the expression of the Readiness Potential in breath.</p>
+
+    <div class="contrast-table">
+      <div class="contrast-card left">
+        <h4>🧠 RP — Readiness Potential</h4>
+        <ul>
+          <li><span>→</span> Neural preparation phase</li>
+          <li><span>→</span> Occurs before the move</li>
+          <li><span>→</span> Silent — often an exhale or settling breath</li>
+          <li><span>→</span> Loads motor intent and focus</li>
+          <li><span>→</span> Invisible but energetically present</li>
+          <li><span>→</span> <strong>Will Bosi 16:33 — the exhale before</strong></li>
+        </ul>
+      </div>
+      <div class="contrast-card right">
+        <h4>⚡ RP Sync — Execution</h4>
+        <ul>
+          <li><span>→</span> Breath timed to movement</li>
+          <li><span>→</span> Occurs during the move</li>
+          <li><span>→</span> Exhale timed to force application</li>
+          <li><span>→</span> Maximises force, minimises metabolic waste</li>
+          <li><span>→</span> The exhale that lands the hold</li>
+          <li><span>→</span> <strong>Will Bosi 16:35 — the exhale on execution</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <blockquote>"You're not just breathing — you're speaking the nervous system's language. RP is the question. RP Sync is the answer."</blockquote>
+      <cite>— Pranaclimb</cite>
+    </div>
+
+    <h2>🧗 Will Bosi — Burden of Dreams V17</h2>
+    <p>Burden of Dreams is the hardest boulder problem in the world. Watch the send at timestamp 16:33 — three seconds that contain a near-perfect RP → RP Sync sequence:</p>
+
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/SlUw8X7xuq0?start=993" title="Will Bosi — Burden of Dreams V17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="timestamp-grid">
+      <div class="ts-time" style="background:var(--pink);color:white;">16:33</div>
+      <div class="ts-content">💨 <strong style="color:var(--ink);margin-right:0.4rem;">Exhale RP</strong> — controlled release, parasympathetic reset, diaphragm drops. Intent loading. This is the RP — neural preparation before the move.</div>
+      <div class="ts-time" style="background:var(--white);color:var(--ink);">16:34</div>
+      <div class="ts-content">🫁 <strong style="color:var(--ink);margin-right:0.4rem;">Deep inhale</strong> — diaphragm priming, O₂ loading, trunk pre-tension. Postural expansion for motor priming.</div>
+      <div class="ts-time" style="background:var(--lime);color:var(--ink);">16:35</div>
+      <div class="ts-content">⚡ <strong style="color:var(--ink);margin-right:0.4rem;">RP Sync Exhale</strong> — exhale timed precisely to the hardest move. Maximum force with minimum metabolic waste. Textbook RP Sync.</div>
+    </div>
+
+    <div class="hl">
+      <strong>Pranaclimb insight:</strong> This is RP without chaos — no scream, no stacking, no wasted metabolic cost. Will Bosi demonstrates <strong>timing over intensity</strong>. The exhale at 16:33 is not about ventilation — it marks intent, focus, and neural loading. The final exhale (RP Sync) coincides precisely with commitment and force application. A masterclass in efficiency.
+    </div>
+
+    <h2>🧩 Jimmy Webb — Sleepwalker V16</h2>
+    <p>Sleepwalker (Red Rocks, FA 2019) is one of the world's hardest boulder problems. Jimmy's first ascent in 44 seconds is a complete Pranaclimb case study — every stage of W′bal depletion, RP Sync, and emotional reset visible in the breath.</p>
+
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/TMIIffUMV8g?start=326" title="Jimmy Webb — Sleepwalker V16" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="timestamp-grid">
+      <div class="ts-time" style="background:var(--white);color:white;font-size:0.85rem;">5:26–5:35</div>
+      <div class="ts-content">⏸️ <strong style="color:var(--ink);margin-right:0.4rem;">Breath Hold (9s)</strong> — Valsalva bracing, trunk tension before the dyno. <em>+8 BPM adjustment.</em></div>
+      <div class="ts-time" style="background:var(--white);color:var(--ink);">5:35</div>
+      <div class="ts-content">👃 <strong style="color:var(--ink);margin-right:0.4rem;">Strong nasal inhale</strong> — diaphragm prime before the crux dyno. RP preparation — postural set.</div>
+      <div class="ts-time" style="background:var(--white);color:white;">5:36</div>
+      <div class="ts-content">⏸️ <strong style="color:var(--ink);margin-right:0.4rem;">Breath Hold</strong> — maximum tension. <em>+6 BPM adjustment.</em></div>
+      <div class="ts-time" style="background:var(--pink);color:white;">5:45</div>
+      <div class="ts-content">🎯 <strong style="color:var(--ink);margin-right:0.4rem;">THE CRUX DYNO</strong> — W′bal at or near depletion. Neural commitment.</div>
+      <div class="ts-time" style="background:var(--lime);color:var(--ink);">5:52</div>
+      <div class="ts-content">💨 <strong style="color:var(--ink);margin-right:0.4rem;">Exhale — sticking the hold</strong> — textbook RP Sync. Force transfer + re-oxygenation on catch.</div>
+      <div class="ts-time" style="background:var(--pink);color:white;font-size:0.85rem;">5:53–5:55</div>
+      <div class="ts-content">😤 <strong style="color:var(--ink);margin-right:0.4rem;">Scream + BH</strong> — max neural drive. <em>+10 BPM adjustment. Accelerates W′bal depletion.</em></div>
+      <div class="ts-time" style="background:var(--white);color:var(--ink);">6:06</div>
+      <div class="ts-content">💨 <strong style="color:var(--ink);margin-right:0.4rem;">Exhale</strong> — final reset. BR begins to drop.</div>
+      <div class="ts-time" style="background:var(--lime);color:var(--ink);">6:07</div>
+      <div class="ts-content">🎉 <strong style="color:var(--ink);margin-right:0.4rem;">YESSSSSS</strong> — emotional release sigh. Vagal activation. Parasympathetic reset begins.</div>
+      <div class="ts-time" style="background:var(--lime);color:var(--ink);">6:12</div>
+      <div class="ts-content">🙌 <strong style="color:var(--ink);margin-right:0.4rem;">WOOOOHOOOO</strong> — dopamine surge, relief sigh. HRR₆₀ clock starts.</div>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric"><div class="metric-val pink">~55–60 BPM</div><div class="metric-label">Adjusted BR (RCP Zone)</div></div>
+      <div class="metric"><div class="metric-val pink">85–95%</div><div class="metric-label">Est. W′bal Depletion</div></div>
+      <div class="metric"><div class="metric-val lime">44s</div><div class="metric-label">Total Duration</div></div>
+    </div>
+
+    <h2>🔍 Key Pranaclimb Takeaways</h2>
+
+    <div class="two-col">
+      <div class="info-card">
+        <h5>🧠 RP = Preparation</h5>
+        <p>Silent, neural, often invisible — but energetically real. The exhale before the move signals intent, not just ventilation. Bosi's 16:33 is the RP.</p>
+      </div>
+      <div class="info-card">
+        <h5>⚡ RP Sync = Execution</h5>
+        <p>The exhale that lands the move. Timed to maximum force application. Bosi's 16:35 and Webb's 5:52 are both textbook RP Sync.</p>
+      </div>
+      <div class="info-card">
+        <h5>🪨 Bouldering Hides Cost</h5>
+        <p>Breath holds and screams mask true ventilatory demand. Sleepwalker's adjusted BR of 55–60 BPM puts it firmly in RCP zone — this is a route, not "just" a boulder problem.</p>
+      </div>
+      <div class="info-card">
+        <h5>🎉 YESSSS is Physiology</h5>
+        <p>The emotional release at 6:07 and WOOOHOOOO at 6:12 are not just celebration. They are relief sighs — vagal activation, parasympathetic reset, HRR₆₀ beginning.</p>
+      </div>
+      <div class="info-card">
+        <h5>⏱️ Sequencing Over Force</h5>
+        <p>Sleepwalker shows how breath sequencing — BH → nasal inhale → RP Sync exhale — allows climbers to survive near-total W′bal depletion. Timing matters more than raw power.</p>
+      </div>
+      <div class="info-card">
+        <h5>🧗 Even Boulders Cross CP</h5>
+        <p>Long boulder sequences (~40s+) push into CP/RCP zones. The physiological demands are closer to a short sport route than a single explosive move.</p>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <blockquote>"Sequencing matters more than force. Sleepwalker shows how breath timing allows climbers to survive near-total W′bal depletion."</blockquote>
+      <cite>— Pranaclimb</cite>
+    </div>
+
+    <h2>🫁 How to Train RP Sync</h2>
+    <p>RP Sync is trainable. Start on easy terrain where you can focus purely on breath timing — not on not falling:</p>
+
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.8rem;margin:1rem 0;font-family:'Outfit',sans-serif;">
+      <li style="display:flex;gap:0.8rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--lime);font-size:1rem;">1</span><span><strong style="color:var(--ink);">On easy routes</strong> — consciously exhale as you move through each hard hold. Notice how it affects power and composure.</span></li>
+      <li style="display:flex;gap:0.8rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--lime);font-size:1rem;">2</span><span><strong style="color:var(--ink);">At cruxes on your project</strong> — identify the single hardest move. Practise the RP exhale → inhale → RP Sync exhale sequence in isolation.</span></li>
+      <li style="display:flex;gap:0.8rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--lime);font-size:1rem;">3</span><span><strong style="color:var(--ink);">Use verbal cues</strong> — "exhale and commit" or "breathe and move" timed to the crux. The cue anchors the timing.</span></li>
+      <li style="display:flex;gap:0.8rem;font-size:0.9rem;color:var(--mid);align-items:flex-start;"><span style="color:var(--lime);font-size:1rem;">4</span><span><strong style="color:var(--ink);">Video review</strong> — watch your own clips and listen for the breath. Are you holding? Exhaling before or after the move? This is exactly what the Pranaclimb RBA captures.</span></li>
+    </ul>
+
+    <div class="hl pink">
+      <strong>The Pranaclimb RBA</strong> captures your RP Sync patterns — identifying whether you hold, exhale early, or time breath correctly on crux moves. It's the diagnostic foundation for building conscious breath timing. <a href="rba.html">Book your RBA →</a>
+    </div>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul>
+        <li>What is RP?</li>
+        <li>RP vs RP Sync</li>
+        <li>Will Bosi — 3 seconds</li>
+        <li>Jimmy Webb — 44 seconds</li>
+        <li>6 Key Takeaways</li>
+        <li>How to Train RP Sync</li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h4>Related Reading</h4>
+      <ul>
+        <li><a href="blog-tim-emmett-era-vella.html">Tim Emmett Case Study</a></li>
+        <li><a href="blog-micro-breath-holds.html">Micro-Breath Holds</a></li>
+        <li><a href="blog-rpe-breathing-rate.html">BR & RPE in Climbing</a></li>
+        <li><a href="elite-analysis.html">Elite Analysis</a></li>
+        <li><a href="methodology.html">Methodology Q&A</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-cta">
+      <h4>Find Your RP Sync</h4>
+      <p>The RBA captures your breath patterns on real routes — identifying exactly where and how you can improve timing.</p>
+      <a href="rba.html">Book Your RBA →</a>
+    </div>
+  </aside>
+</div>
+</div>
+
+<div class="related">
+  <div class="related-inner">
+    <h3>More From the Journal</h3>
+    <div class="related-grid">
+      <a href="blog-tim-emmett-era-vella.html" class="related-card">
+        <div class="cat">Elite Analysis · Case Study</div>
+        <h4>Tim Emmett & Era Vella</h4>
+        <p>Eight years. 130 days. W′bal zone mapping, torso stiffness, and Tim's 4-minute exhale hold breathwork.</p>
+      </a>
+      <a href="blog-micro-breath-holds.html" class="related-card">
+        <div class="cat">Breathing Science</div>
+        <h4>Micro-Breath Holding</h4>
+        <p>One breath hold can cost you 2–3 natural breaths. The hidden cost and how to manage it.</p>
+      </a>
+      <a href="blog-fear-to-commitment.html" class="related-card">
+        <div class="cat">Emotion & Mind</div>
+        <h4>From Fear to Commitment</h4>
+        <p>How emotion regulation shapes breathing, posture, and the moment you decide to commit.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="subscribe-strip">
+  <div class="subscribe-inner">
+    <h3>Subscribe to the Journal</h3>
+    <p>Breathing science, elite analysis, and early access to <em>Pranaclimb: Love, Breathe, Climb</em>. Free first chapter when you subscribe.</p>
+    <div class="kit-wrapper">
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form action="https://app.kit.com/forms/9354489/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9354489" data-uid="3d6cc9da4e" data-format="inline" data-version="5">
+        <div data-style="clean">
+          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+          <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+            <div class="formkit-field">
+              <input class="formkit-input" name="email_address" placeholder="Your email address" required="" type="email" style="color:#3a3a3a;border-color:#e3e3e3;border-radius:2px;">
+            </div>
+            <button data-element="submit" class="formkit-submit" style="color:#3a3a3a;background-color:#89CFF0;border-radius:2px;font-weight:600;border:1.5px solid rgba(255,255,255,0.8);">
+              <div class="formkit-spinner"><div></div><div></div><div></div></div>
+              <span>Subscribe</span>
+            </button>
+          </div>
+          <div class="formkit-powered-by-convertkit-container">
+            <a href="https://kit.com" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:var(--ink)">PRANA<span style="color:var(--pink)">CLIMB</span></a>
+    <p style="margin-top:0.8rem; font-size:0.88rem; line-height:1.7; color:var(--mid);">With love and the ocean 🌊<br>Annie Anderson — Pranaclimb | OceanDips</p>
+    <div style="display:flex; gap:0.8rem; margin-top:1.2rem;">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--mid)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="var(--mid)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 15v7H9V8z" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:annie@pranaclimb.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--mid);">annie@pranaclimb.com</p>
+    <p style="font-size:0.75rem; margin-top:0.3rem; color:var(--mid);">07875 170 847</p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pages</h4>
+    <ul style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="rba.html">Assessment</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="app.html">The App</a></li>
+      <li><a href="annie.html">About Annie</a></li>
+      <li><a href="gallery.html">Photos</a></li>
+      <li><a href="mailto:annie@pranaclimb.com">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pranaclimb Ltd</h4>
+    <p style="font-size:0.78rem; line-height:1.8; color:var(--mid);">
+      Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.<br><br>
+      Annie is a qualified <strong style="color:var(--ink);">SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong style="color:var(--ink);">Registered Yoga Teacher RYT 200</strong> (2012).<br><br>
+      Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong style="color:var(--ink);">Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).<br><br>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" style="color:var(--pink); font-weight:600; text-decoration:none;">Connect on LinkedIn &rarr;</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Trading As</h4>
+    <ul>
+      <li><a href="https://www.pranaclimb.com">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com" target="_blank">🌊 OceanDips</a></li>
+    </ul>
+    <p style="font-size:0.78rem; color:var(--mid); margin-top:0.8rem; line-height:1.8;"><strong style="color:var(--ink);">Pranaclimb Ltd</strong><br>Company No. 16626114<br>13 Upton Towans, Hayle<br>Cornwall TR27 5BJ</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div style="display:flex; flex-direction:column; gap:0.3rem;">
+    <p>&copy; 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p style="font-size:0.7rem; color:rgba(0,0,0,0.4);">pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  </div>
+  <div style="display:flex; gap:1.5rem; flex-shrink:0; margin-left:2rem;">
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Statcounter -->
+<script type="text/javascript">
+var sc_project=11925361; 
+var sc_invisible=1; 
+var sc_security="14a77c6b"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11925361/0/14a77c6b/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter -->
+</body>
+</html>

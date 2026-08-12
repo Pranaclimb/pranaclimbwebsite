@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wim Hof Breathing Timer — Pranaclimb</title>
+<meta name="description" content="Free guided Wim Hof breathing timer with progressive retention rounds. Learn the method, coaching cues, and the science behind it. Built by Pranaclimb.">
+<link rel="canonical" href="https://www.pranaclimb.com/wim-hof">
+<meta property="og:title" content="Wim Hof Breathing Timer — Pranaclimb">
+<meta property="og:description" content="Free guided Wim Hof breathing timer with progressive retention rounds, coaching cues, and the science behind it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.pranaclimb.com/wim-hof">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Wim Hof Breathing Method",
+  "description": "Controlled hyperventilation followed by breath retention, used to build CO2 resilience and prime the body for climbing performance.",
+  "step": [
+    {"@type": "HowToStep", "name": "Get comfortable", "text": "Lie down or sit upright. Relax your jaw, shoulders and belly."},
+    {"@type": "HowToStep", "name": "Power breaths", "text": "Take 30-40 deep power breaths, inhaling through the nose and exhaling passively."},
+    {"@type": "HowToStep", "name": "Retention hold", "text": "After the final exhale, hold the breath for as long as is comfortable."},
+    {"@type": "HowToStep", "name": "Recovery breath", "text": "Take one full deep inhale and hold for 15 seconds, then release."},
+    {"@type": "HowToStep", "name": "Repeat", "text": "Repeat for 3-4 rounds."}
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --pink:#ff00ff; --lime:#AAFF00; --blue:#89CFF0; --ink:#3a3a3a; --mid:#666; --off:#f5f5f2; --border:#e0e0d8; --white:#fff; }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Outfit',sans-serif; color:var(--ink); background:var(--white); }
+
+  nav { position:sticky; top:0; z-index:100; background:var(--white); border-bottom:2px solid var(--lime); padding:0.8rem 2rem; display:flex; align-items:center; justify-content:space-between; }
+  .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.1em; color:var(--ink); text-decoration:none; }
+  .nav-logo span { color:var(--lime); }
+  .nav-tagline { font-size:0.65rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); text-decoration:none; transition:color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--pink); }
+  .nav-back { font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); text-decoration:none; display:flex; align-items:center; gap:6px; transition:color 0.15s; }
+  .nav-back:hover { color:var(--pink); }
+
+  .hero { background:var(--off); border-bottom:3px solid var(--lime); padding:4rem 2rem 3rem; }
+  .hero-inner { max-width:900px; margin:0 auto; }
+  .hero-eyebrow { font-size:0.7rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); margin-bottom:0.5rem; }
+  .hero-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.8rem,7vw,5rem); letter-spacing:0.06em; color:var(--ink); line-height:1; margin-bottom:0.8rem; }
+  .hero-title span { color:var(--pink); }
+  .hero-sub { font-size:1rem; font-weight:300; color:var(--mid); max-width:580px; line-height:1.75; margin-bottom:1.5rem; }
+  .hero-pills { display:flex; gap:8px; flex-wrap:wrap; }
+  .pill { font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:5px 14px; border-radius:2px; }
+  .pill-lime { background:var(--lime); color:var(--ink); }
+  .pill-pink { background:var(--pink); color:var(--white); }
+  .pill-blue { background:var(--blue); color:var(--ink); }
+  .pill-off { background:var(--white); color:var(--ink); border:1px solid var(--border); }
+
+  .page-grid { max-width:900px; margin:0 auto; padding:3rem 2rem; display:grid; grid-template-columns:1fr 380px; gap:3rem; align-items:start; }
+  @media(max-width:780px) { .page-grid { grid-template-columns:1fr; padding:2rem 1.2rem; } }
+
+  /* LEFT COLUMN */
+  .content-block { margin-bottom:2.5rem; }
+  .block-eyebrow { font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--pink); margin-bottom:0.4rem; }
+  .block-title { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.06em; color:var(--ink); margin-bottom:0.6rem; }
+  .lime-bar { height:3px; background:var(--lime); width:40px; border-radius:2px; margin-bottom:1rem; }
+  .body-text { font-size:0.88rem; font-weight:300; color:var(--mid); line-height:1.8; margin-bottom:0.8rem; }
+  .body-text strong { font-weight:600; color:var(--ink); }
+
+  .steps { list-style:none; counter-reset:steps; }
+  .steps li { counter-increment:steps; display:flex; gap:1rem; align-items:flex-start; margin-bottom:1rem; font-size:0.88rem; font-weight:300; color:var(--mid); line-height:1.7; }
+  .steps li::before { content:counter(steps); font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:0.04em; color:var(--pink); min-width:28px; line-height:1.1; }
+  .steps li strong { font-weight:600; color:var(--ink); display:block; margin-bottom:2px; }
+
+  .cue-card { background:var(--off); border-left:3px solid var(--pink); border-radius:0 2px 2px 0; padding:1rem 1.2rem; margin-bottom:0.8rem; }
+  .cue-card-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--pink); margin-bottom:0.3rem; }
+  .cue-card-text { font-size:0.85rem; font-style:italic; color:var(--ink); font-weight:400; }
+
+  .research-box { background:var(--off); border:1px solid var(--border); border-top:3px solid var(--lime); border-radius:2px; padding:1.2rem 1.4rem; margin-bottom:0.8rem; }
+  .research-box-tag { font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--mid); margin-bottom:0.4rem; }
+  .research-box-title { font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:0.06em; color:var(--ink); margin-bottom:0.5rem; }
+  .research-box-text { font-size:0.8rem; font-weight:300; color:var(--mid); line-height:1.7; }
+  .research-stat { display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:0.08em; background:var(--blue); color:var(--ink); padding:3px 10px; border-radius:2px; margin-top:0.6rem; }
+
+  .zone-badge { display:inline-flex; align-items:center; gap:8px; background:var(--off); border:1px solid var(--border); border-radius:2px; padding:0.6rem 1rem; margin-bottom:0.6rem; font-size:0.82rem; }
+  .zone-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+
+  /* RIGHT COLUMN — TIMER */
+  .timer-sticky { position:sticky; top:80px; }
+  .timer-card { background:var(--white); border:1px solid var(--border); border-radius:2px; padding:1.8rem; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+  .t-logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.1em; color:var(--ink); }
+  .t-logo span { color:var(--lime); }
+  .t-tagline { font-size:0.6rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--pink); }
+  .t-lbar { height:2px; background:var(--lime); margin:0.5rem 0 1rem; }
+  .t-title { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.06em; margin-bottom:0.2rem; }
+  .t-sub { font-size:0.75rem; font-weight:300; color:var(--mid); margin-bottom:1.2rem; }
+  .t-row { display:flex; align-items:center; gap:0.8rem; margin-bottom:0.7rem; }
+  .t-label { font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); min-width:120px; }
+  .t-val { font-size:0.9rem; font-weight:600; min-width:28px; text-align:right; }
+  input[type=range] { flex:1; accent-color:var(--pink); }
+  .t-card-inner { background:var(--off); border:1px solid var(--border); border-radius:2px; padding:1rem 1.1rem; margin-bottom:0.8rem; }
+  .t-btn { width:100%; padding:0.8rem; background:var(--pink); color:var(--white); border:none; border-radius:2px; font-family:'Outfit',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:background 0.15s; margin-bottom:0.4rem; }
+  .t-btn:hover { background:#cc00cc; }
+  .t-btn.sec { background:transparent; color:var(--ink); border:1.5px solid var(--border); }
+  .t-btn.sec:hover { border-color:var(--ink); }
+  .timer-view { display:none; text-align:center; }
+  .t-round-tag { display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink); background:var(--lime); padding:3px 10px; border-radius:2px; margin-bottom:0.4rem; }
+  .t-ret-badge { display:inline-block; font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); background:var(--blue); padding:3px 10px; border-radius:2px; margin-bottom:0.8rem; }
+  .t-phase-lbl { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.06em; margin-bottom:0.2rem; }
+  .t-phase-desc { font-size:0.75rem; font-weight:300; color:var(--mid); margin-bottom:1rem; min-height:16px; }
+  .t-count { font-family:'Bebas Neue',sans-serif; font-size:2.4rem; letter-spacing:0.04em; margin-bottom:1.2rem; }
+  .orb { width:90px; height:90px; border-radius:50%; background:var(--blue); margin:0 auto 1.2rem; transition:transform 0.8s ease-in-out,background 0.8s; }
+  .orb.inhale { transform:scale(1.3); background:var(--pink); }
+  .orb.exhale { transform:scale(0.82); background:var(--blue); }
+  .orb.idle { transform:scale(1); background:var(--blue); }
+  .circ-wrap { position:relative; width:140px; height:140px; margin:0 auto 1.2rem; }
+  .circ-wrap svg { position:absolute; top:0; left:0; transform:rotate(-90deg); }
+  .circ-inner { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .circ-num { font-family:'Bebas Neue',sans-serif; font-size:2.2rem; letter-spacing:0.04em; line-height:1; }
+  .circ-unit { font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); }
+  .t-dots { display:flex; gap:6px; justify-content:center; margin-bottom:1rem; }
+  .tdot { width:6px; height:6px; border-radius:50%; background:var(--border); transition:background 0.3s; }
+  .tdot.done { background:var(--blue); }
+  .tdot.active { background:var(--pink); }
+  .t-ctrls { display:flex; gap:6px; justify-content:center; margin-top:0.6rem; }
+  .t-ctrl { padding:0.5rem 1rem; border:1.5px solid var(--border); border-radius:2px; background:transparent; font-family:'Outfit',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:all 0.15s; }
+  .t-ctrl:hover { border-color:var(--ink); }
+  .t-ctrl.pink { background:var(--pink); color:var(--white); border-color:var(--pink); }
+  .t-ctrl.pink:hover { background:#cc00cc; }
+  .complete-view { display:none; text-align:center; padding:1rem 0; }
+  .complete-done { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:0.08em; color:var(--lime); }
+  .complete-title { font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:0.06em; margin-bottom:0.4rem; }
+  .complete-text { font-size:0.8rem; font-weight:300; color:var(--mid); margin-bottom:1.2rem; }
+
+  .rounds-list-item { display:grid; grid-template-columns:24px 1fr 38px 24px; gap:5px; align-items:center; background:var(--white); border:1px solid var(--border); border-radius:2px; padding:0.5rem 0.7rem; margin-bottom:4px; }
+  .add-round-btn { width:100%; padding:0.55rem; background:transparent; border:1.5px dashed var(--border); border-radius:2px; font-family:'Outfit',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); cursor:pointer; margin-bottom:0.8rem; transition:all 0.15s; }
+  .add-round-btn:hover { border-color:var(--lime); }
+
+  footer { background:var(--off); color:var(--mid); padding:2.5rem 2rem; text-align:center; border-top:3px solid var(--lime); }
+  .footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.1em; color:var(--ink); }
+  .footer-logo span { color:var(--lime); }
+  .footer-tagline { font-size:0.62rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--pink); margin-bottom:0.6rem; }
+  .footer-text { font-size:0.72rem; font-weight:300; }
+  .page-nav-strip { background:var(--white); border-top:1px solid var(--border); padding:1.5rem 2rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+  .page-nav-link { font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); text-decoration:none; padding:0.5rem 1.2rem; border:1.5px solid var(--border); border-radius:2px; transition:all 0.15s; }
+  .page-nav-link:hover { color:var(--pink); border-color:var(--pink); }
+  .page-nav-link.current { background:var(--lime); color:var(--ink); border-color:var(--lime); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <a href="breathing.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+    <p class="nav-tagline">Love · Breathe · Climb</p>
+  </div>
+  <ul class="nav-links">
+    <li><a href="breathing.html">Toolbox</a></li>
+    <li><a href="wim-hof.html" class="active">Wim Hof</a></li>
+    <li><a href="box-breathing.html">Box Breathing</a></li>
+    <li><a href="cyclic-sighing.html">Cyclic Sighing</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Breathing Toolbox · Activation</p>
+    <h1 class="hero-title">Wim Hof <span>Breathing</span></h1>
+    <p class="hero-sub">Controlled hyperventilation followed by breath retention. Proven to accelerate VO₂ kinetics, build CO₂ resilience, and prime your body for peak performance on the wall.</p>
+    <div class="hero-pills">
+      <span class="pill pill-lime">Activation</span>
+      <span class="pill pill-pink">Pre-Climb</span>
+      <span class="pill pill-blue">CO₂ Resilience</span>
+      <span class="pill pill-off">4 Rounds</span>
+    </div>
+  </div>
+</section>
+
+<div class="page-grid">
+  <!-- LEFT -->
+  <div>
+
+    <div class="content-block">
+      <p class="block-eyebrow">How it works</p>
+      <h2 class="block-title">The Method</h2>
+      <div class="lime-bar"></div>
+      <p class="body-text">The Wim Hof Method uses <strong>controlled hyperventilation</strong> to manipulate the body's CO₂ and O₂ balance. By taking 30–40 deep power breaths, you temporarily reduce CO₂ levels and alkalise the blood — allowing a longer, more comfortable breath hold on the subsequent retention phase.</p>
+      <p class="body-text">Each round ends with a <strong>recovery breath</strong> — a full inhale held for 15 seconds — before the next round begins. Over 3–4 rounds, the practice builds CO₂ tolerance, activates the sympathetic nervous system, and measurably improves oxygen uptake kinetics.</p>
+    </div>
+
+    <div class="content-block">
+      <p class="block-eyebrow">Step by step</p>
+      <h2 class="block-title">How To Practice</h2>
+      <div class="lime-bar"></div>
+      <ol class="steps">
+        <li><strong>Get comfortable</strong>Lie down or sit upright. Relax your jaw, shoulders and belly. Tongue rests gently on the roof of your mouth.</li>
+        <li><strong>Power breaths (30–40 reps)</strong>Inhale deeply through the nose — feel your belly, ribs and chest expand. Exhale passively, letting it fall out. Don't force the exhale. Keep a steady rhythm, about one breath every 1.5–2 seconds.</li>
+        <li><strong>Retention hold</strong>After the final exhale, let the breath fall out naturally and hold — don't force a full exhale. Hold for as long as is comfortable. This is your retention time.</li>
+        <li><strong>Recovery breath</strong>When you feel the urge to breathe, take one full deep inhale and hold for 15 seconds. Then release and begin the next round.</li>
+        <li><strong>Repeat for 3–4 rounds</strong>Each round you may find your retention time increases. Stay relaxed — never strain or force.</li>
+      </ol>
+    </div>
+
+    <div class="content-block">
+      <p class="block-eyebrow">Pranaclimb Coaching</p>
+      <h2 class="block-title">Coaching Cues</h2>
+      <div class="lime-bar"></div>
+      <div class="cue-card">
+        <p class="cue-card-label">Power Breath</p>
+        <p class="cue-card-text">"Breathe into harmony — let your diaphragm set the tone."</p>
+      </div>
+      <div class="cue-card">
+        <p class="cue-card-label">Retention Hold</p>
+        <p class="cue-card-text">"Settle into the stillness — your body knows how to hold."</p>
+      </div>
+      <div class="cue-card">
+        <p class="cue-card-label">Recovery Breath</p>
+        <p class="cue-card-text">"Fill completely — lock it in, feel the charge."</p>
+      </div>
+      <div class="cue-card">
+        <p class="cue-card-label">General</p>
+        <p class="cue-card-text">"Breathe deep, hold strong, rise."</p>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <p class="block-eyebrow">Zone Mapping</p>
+      <h2 class="block-title">When To Use It</h2>
+      <div class="lime-bar"></div>
+      <div class="zone-badge"><span class="zone-dot" style="background:var(--lime)"></span><span><strong>Pre-climb activation</strong> — 20–30 mins before a redpoint attempt or hard session</span></div>
+      <div class="zone-badge"><span class="zone-dot" style="background:var(--blue)"></span><span><strong>Morning practice</strong> — fasted, on waking, lying down for best results</span></div>
+      <div class="zone-badge"><span class="zone-dot" style="background:var(--pink)"></span><span><strong>Never in water</strong> — always practice in a safe, seated or lying position</span></div>
+      <p class="body-text" style="margin-top:0.8rem;">A 17–22 minute Wim Hof session as warm-up altered VO₂ consumption during incremental exercise in a manner that may facilitate endurance performance, while participants' average heart rates trended lower — suggesting reduced perceived exertion at the same output.</p>
+    </div>
+
+    <div class="content-block">
+      <p class="block-eyebrow">Research Spotlight</p>
+      <h2 class="block-title">The Science</h2>
+      <div class="lime-bar"></div>
+      <div class="research-box">
+        <p class="research-box-tag">VO₂ Kinetics · Endurance</p>
+        <p class="research-box-title">Warm-Up Breathing & Performance</p>
+        <p class="research-box-text">Incorporating a 17–22 minute Wim Hof breathing warm-up before endurance performance altered VO₂ consumption during incremental cycling exercise, potentially facilitating endurance performance and reducing subjective strain in young endurance athletes. Participants' average heart rates trended lower in stages preceded by the breathing warm-up.</p>
+        <span class="research-stat">Bahenský et al., 2021</span>
+      </div>
+      <div class="research-box">
+        <p class="research-box-tag">Sympathetic Activation · O₂ Delivery</p>
+        <p class="research-box-title">Hyperventilation & Sympathetic Response</p>
+        <p class="research-box-text">Manipulation of breathing through a combination of hyperventilation and breath holding can elicit a sympathetic response that may improve circulating oxygen uptake. This connects directly to Pranaclimb's use of Wim Hof as a pre-climb activation tool — priming CP and accelerating VO₂ kinetics before the session begins.</p>
+        <span class="research-stat">Hof et al., 2017 · Lindholm & Gennser, 2005</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT — TIMER -->
+  <div class="timer-sticky">
+    <div class="timer-card">
+      <div class="t-logo">PRANA<span>CLIMB</span></div>
+      <p class="t-tagline">Love · Breathe · Climb</p>
+      <div class="t-lbar"></div>
+      <p class="t-title">Wim Hof Timer</p>
+      <p class="t-sub">Progressive retention · fully customisable</p>
+
+      <div id="wh-setup">
+        <div class="t-card-inner">
+          <div class="t-row"><span class="t-label">Breaths / round</span><input type="range" min="20" max="40" value="40" id="wh-breaths" step="5" oninput="document.getElementById('wh-bv').textContent=this.value"><span class="t-val" id="wh-bv">40</span></div>
+        </div>
+        <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:0.5rem;">Retention per round</p>
+        <div id="wh-rounds-list"></div>
+        <button class="add-round-btn" onclick="whAddRound()">+ Add Round</button>
+        <button class="t-btn" onclick="whStart()">Begin Session →</button>
+      </div>
+
+      <div id="wh-timer" class="timer-view">
+        <div class="t-dots" id="wh-dots"></div>
+        <p class="t-round-tag" id="wh-rtag">Round 1</p>
+        <p class="t-ret-badge" id="wh-rbadge">90 sec hold</p>
+        <div id="wh-bphase">
+          <div class="orb" id="wh-orb"></div>
+          <p class="t-phase-lbl" id="wh-lbl">Get Ready</p>
+          <p class="t-phase-desc" id="wh-desc">Find a comfortable position</p>
+          <div class="t-count" id="wh-ctr"></div>
+        </div>
+        <div id="wh-hphase" style="display:none">
+          <div class="circ-wrap">
+            <svg width="140" height="140" viewBox="0 0 140 140"><circle cx="70" cy="70" r="62" fill="none" stroke="#e0e0d8" stroke-width="5"/><circle cx="70" cy="70" r="62" fill="none" stroke="#89CFF0" stroke-width="5" stroke-dasharray="390" stroke-dashoffset="390" id="wh-harc" stroke-linecap="round" style="transition:stroke-dashoffset 1s linear"/></svg>
+            <div class="circ-inner"><span class="circ-num" id="wh-hnum">90</span><span class="circ-unit">sec</span></div>
+          </div>
+          <p class="t-phase-lbl">Retention Hold</p>
+          <p class="t-phase-desc">Exhale fully — hold on empty</p>
+        </div>
+        <div id="wh-rphase" style="display:none">
+          <div class="circ-wrap">
+            <svg width="140" height="140" viewBox="0 0 140 140"><circle cx="70" cy="70" r="62" fill="none" stroke="#e0e0d8" stroke-width="5"/><circle cx="70" cy="70" r="62" fill="none" stroke="#ff00ff" stroke-width="5" stroke-dasharray="390" stroke-dashoffset="390" id="wh-rarc" stroke-linecap="round" style="transition:stroke-dashoffset 1s linear"/></svg>
+            <div class="circ-inner"><span class="circ-num" id="wh-rnum">15</span><span class="circ-unit">sec</span></div>
+          </div>
+          <p class="t-phase-lbl">Recovery Breath</p>
+          <p class="t-phase-desc">Inhale fully — hold 15 seconds</p>
+        </div>
+        <div class="t-ctrls">
+          <button class="t-ctrl" onclick="whStop()">✕ Stop</button>
+          <button class="t-ctrl pink" id="wh-pbtn" onclick="whPause()">⏸ Pause</button>
+        </div>
+      </div>
+
+      <div id="wh-complete" class="complete-view">
+        <p class="complete-done">DONE</p>
+        <p class="complete-title">Session Complete</p>
+        <p class="complete-text" id="wh-ctext"></p>
+        <button class="t-btn" onclick="whReset()" style="max-width:200px;margin:0 auto;display:block;">Start Again →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-nav-strip">
+  <a href="breathing.html" class="page-nav-link">← Toolbox</a>
+  <a href="wim-hof.html" class="page-nav-link current">Wim Hof</a>
+  <a href="box-breathing.html" class="page-nav-link">Box Breathing →</a>
+  <a href="cyclic-sighing.html" class="page-nav-link">Cyclic Sighing →</a>
+</div>
+
+<footer>
+  <div class="footer-logo">PRANA<span>CLIMB</span></div>
+  <p class="footer-tagline">Love · Breathe · Climb</p>
+  <p class="footer-text">© 2025 Pranaclimb Ltd · annie@pranaclimb.com</p>
+  <p style="font-size:0.68rem;margin-top:0.4rem;color:#999;">Insured via Insure4Sport / Aviva through Pranaclimb Ltd</p>
+</footer>
+
+<script>
+let whRounds=[60,90,120,150],whPlan=[],whCurrent=0,whBreaths=40;
+let whPaused=false,whStopped=false,whTimer=null,whInhale=true,whBC=0;
+const WHP=1600,WHC=390;
+
+function whRender(){
+  const l=document.getElementById('wh-rounds-list');l.innerHTML='';
+  whRounds.forEach((r,i)=>{
+    const d=document.createElement('div');d.className='rounds-list-item';
+    d.innerHTML=`<span style="font-family:'Bebas Neue',sans-serif;font-size:0.95rem;color:var(--pink);text-align:center;">${i+1}</span>
+    <input type="range" min="30" max="180" step="15" value="${r}" style="accent-color:var(--blue);" oninput="whRounds[${i}]=parseInt(this.value);this.nextElementSibling.textContent=this.value+'s'">
+    <span style="font-size:0.75rem;font-weight:600;text-align:right;">${r}s</span>
+    <button onclick="if(whRounds.length>1){whRounds.splice(${i},1);whRender()}" style="background:none;border:none;cursor:pointer;color:#ccc;font-size:0.85rem;">✕</button>`;
+    l.appendChild(d);
+  });
+}
+function whAddRound(){const l=whRounds.length?whRounds[whRounds.length-1]:60;whRounds.push(Math.min(l+30,180));whRender();}
+whRender();
+
+function whBuildDots(){const d=document.getElementById('wh-dots');d.innerHTML='';whPlan.forEach((_,i)=>{const dot=document.createElement('div');dot.className='tdot';dot.id='whd'+i;d.appendChild(dot);});}
+function whUpdateDots(){whPlan.forEach((_,i)=>{const e=document.getElementById('whd'+i);e.className=i<whCurrent-1?'tdot done':i===whCurrent-1?'tdot active':'tdot';});}
+
+function whStart(){
+  whBreaths=parseInt(document.getElementById('wh-breaths').value);
+  whPlan=[...whRounds];whPaused=false;whStopped=false;whCurrent=0;
+  document.getElementById('wh-setup').style.display='none';
+  document.getElementById('wh-timer').style.display='block';
+  whBuildDots();whNext();
+}
+function whNext(){
+  whCurrent++;if(whCurrent>whPlan.length){whComplete();return;}
+  whUpdateDots();
+  document.getElementById('wh-rtag').textContent='Round '+whCurrent+' of '+whPlan.length;
+  document.getElementById('wh-rbadge').textContent=whPlan[whCurrent-1]+' sec hold';
+  document.getElementById('wh-bphase').style.display='block';
+  document.getElementById('wh-hphase').style.display='none';
+  document.getElementById('wh-rphase').style.display='none';
+  whBC=0;whInhale=true;whBreath();
+}
+function whBreath(){
+  if(whStopped)return;if(whPaused){whTimer=setTimeout(whBreath,200);return;}
+  const orb=document.getElementById('wh-orb'),lbl=document.getElementById('wh-lbl'),desc=document.getElementById('wh-desc'),ctr=document.getElementById('wh-ctr');
+  if(whBC>=whBreaths){orb.className='orb idle';whHold();return;}
+  if(whInhale){orb.className='orb inhale';lbl.textContent='Inhale';desc.textContent='Deep breath in through the nose';whBC++;ctr.textContent=whBC+' / '+whBreaths;whInhale=false;}
+  else{orb.className='orb exhale';lbl.textContent='Exhale';desc.textContent='Let it go — passive release';whInhale=true;}
+  whTimer=setTimeout(whBreath,WHP);
+}
+function whHold(){
+  if(whStopped)return;
+  document.getElementById('wh-bphase').style.display='none';document.getElementById('wh-hphase').style.display='block';
+  let s=whPlan[whCurrent-1];const arc=document.getElementById('wh-harc'),num=document.getElementById('wh-hnum'),tot=s;
+  function tick(){if(whStopped)return;if(whPaused){whTimer=setTimeout(tick,200);return;}num.textContent=s;arc.style.strokeDashoffset=WHC-(WHC*(tot-s)/tot);if(s<=0){whRec();return;}s--;whTimer=setTimeout(tick,1000);}
+  setTimeout(()=>{arc.style.strokeDashoffset=WHC;tick();},50);
+}
+function whRec(){
+  if(whStopped)return;
+  document.getElementById('wh-hphase').style.display='none';document.getElementById('wh-rphase').style.display='block';
+  let s=15;const arc=document.getElementById('wh-rarc'),num=document.getElementById('wh-rnum');
+  function tick(){if(whStopped)return;if(whPaused){whTimer=setTimeout(tick,200);return;}num.textContent=s;arc.style.strokeDashoffset=WHC-(WHC*(15-s)/15);if(s<=0){whNext();return;}s--;whTimer=setTimeout(tick,1000);}
+  setTimeout(()=>{arc.style.strokeDashoffset=WHC;tick();},50);
+}
+function whPause(){whPaused=!whPaused;document.getElementById('wh-pbtn').textContent=whPaused?'▶ Resume':'⏸ Pause';}
+function whStop(){whStopped=true;clearTimeout(whTimer);whReset();}
+function whReset(){
+  whStopped=true;clearTimeout(whTimer);
+  document.getElementById('wh-setup').style.display='block';
+  document.getElementById('wh-timer').style.display='none';
+  document.getElementById('wh-complete').style.display='none';
+  document.getElementById('wh-pbtn').textContent='⏸ Pause';
+  whPaused=false;whStopped=false;
+}
+function whComplete(){
+  document.getElementById('wh-timer').style.display='none';
+  document.getElementById('wh-complete').style.display='block';
+  document.getElementById('wh-ctext').textContent=whPlan.length+' rounds complete. Rest and notice how you feel.';
+}
+</script>
+</body>
+</html>

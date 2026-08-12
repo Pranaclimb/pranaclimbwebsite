@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Pranaclimb Remote Breathing Assessment — map your personal CP, RCP, W'bal thresholds and breathing limiters on real routes. No lab, no wearables. Book 1:1 with Annie Anderson." />
+  <title>Remote Breathing Assessment for Climbers — Find Your CP & RCP | Pranaclimb</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink:#ff00ff; --lime:#AAFF00; --blue:#89CFF0;
+      --white:#ffffff; --off:#f5f5f2; --ink:#4a4a4a;
+      --mid:#555555; --border:#e0e0d8;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Outfit',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.12em;color:var(--ink);text-decoration:none;}
+    .nav-logo span{color:var(--pink);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--mid);transition:color 0.2s;}
+    .nav-links a:hover{color:var(--pink);}
+    .nav-cta{background:var(--pink);color:var(--white);padding:0.55rem 1.4rem;border-radius:2px;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+    .nav-cta:hover{background:#cc00cc;}
+
+    /* HERO */
+    .hero{background:var(--white);padding:10rem 4rem 5rem;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;}
+    .hero-label{font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem;}
+    .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5.5rem);line-height:0.95;letter-spacing:0.02em;color:var(--ink);margin-bottom:1.5rem;}
+    .hero h1 span{color:var(--pink);}
+    .hero-sub{font-size:0.82rem;font-weight:600;letter-spacing:0.05em;color:var(--mid);margin-bottom:1.5rem;line-height:1.6;}
+    .hero p{font-size:0.95rem;color:var(--mid);line-height:1.8;margin-bottom:1.2rem;}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;}
+    .btn-primary{display:inline-block;background:var(--pink);color:var(--white);padding:0.85rem 2rem;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background 0.2s;}
+    .btn-primary:hover{background:#cc00cc;}
+    .btn-secondary{display:inline-block;border:2px solid var(--ink);color:var(--ink);padding:0.85rem 2rem;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all 0.2s;}
+    .btn-secondary:hover{background:var(--ink);color:var(--white);}
+    .hero-right{display:flex;flex-direction:column;gap:1rem;}
+    .hero-stat{background:rgba(255,255,255,0.6);border:1.5px solid rgba(255,255,255,0.8);padding:1.2rem 1.5rem;border-radius:2px;}
+    .hero-stat .stat-val{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--pink);line-height:1;}
+    .hero-stat .stat-label{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);}
+    .hero-stat p{font-size:0.82rem;color:var(--mid);line-height:1.5;margin-top:0.3rem;}
+
+    .intro-strip{background:var(--off);padding:3rem 4rem;border-bottom:1.5px solid var(--border);}
+    .intro-strip p{font-size:1rem;color:var(--mid);line-height:1.8;max-width:800px;}
+    .intro-strip strong{color:var(--ink);}
+
+    /* 6-STEP PROCESS */
+    .process{padding:6rem 4rem;background:var(--white);}
+    .section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--pink);margin-bottom:0.5rem;}
+    .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--ink);line-height:1;margin-bottom:0.5rem;}
+    .divider{width:48px;height:3px;background:var(--lime);margin:0.8rem 0 3rem;}
+
+    .step{display:block;padding:2.5rem 0;border-bottom:1.5px solid var(--border);gap:5rem;align-items:center;padding:4rem 0;border-bottom:1.5px solid var(--border);}
+    .step:last-child{border-bottom:none;}
+    .step.reverse .step-content{order:2;}
+
+    .step-num{font-family:'Bebas Neue',sans-serif;font-size:0.72rem;letter-spacing:0.2em;color:var(--mid);margin-bottom:0.3rem;}
+    .step-title{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:0.03em;line-height:1;margin-bottom:0.5rem;}
+    .step-subtitle{font-size:1rem;font-weight:600;color:var(--mid);margin-bottom:1.5rem;letter-spacing:0.02em;}
+    .step-body p{font-size:0.92rem;line-height:1.85;color:var(--mid);margin-bottom:1rem;}
+    .step-body strong{color:var(--ink);}
+
+    .step-list{list-style:none;display:flex;flex-direction:column;gap:0.7rem;margin:1rem 0;}
+    .step-list li{display:flex;align-items:flex-start;gap:0.8rem;font-size:0.9rem;color:var(--mid);line-height:1.5;}
+    .step-list li .dot{flex-shrink:0;width:8px;height:8px;border-radius:50%;margin-top:0.4rem;}
+    .step-list li .dot.pink{background:var(--pink);}
+    .step-list li .dot.lime{background:var(--lime);}
+    .step-list li .dot.blue{background:var(--white);}
+
+
+    /* STEP VISUAL PANELS */
+
+
+    /* PROTOCOL DETAIL */
+    .protocol-section{background:var(--off);padding:6rem 4rem;}
+    .protocol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);margin-top:2rem;}
+    .protocol-card{background:var(--white);padding:2.5rem 2rem;}
+    .protocol-card .p-num{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:var(--lime);line-height:1;margin-bottom:0.5rem;}
+    .protocol-card h3{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink);margin-bottom:0.8rem;}
+    .protocol-card p{font-size:0.87rem;line-height:1.7;color:var(--mid);}
+
+    /* OPTIONAL MARKERS */
+    .optional-section{background:var(--white);padding:6rem 4rem;}
+    .optional-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);margin-top:2rem;}
+    .optional-card{background:var(--white);padding:1.8rem 1.5rem;text-align:center;}
+    .optional-card:hover{background:var(--off);}
+    .optional-icon{font-size:1.8rem;margin-bottom:0.8rem;}
+    .optional-name{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--ink);margin-bottom:0.4rem;}
+    .optional-label{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--pink);margin-bottom:0.6rem;}
+    .optional-card p{font-size:0.8rem;line-height:1.6;color:var(--mid);}
+
+    /* WHO IS IT FOR */
+    .who-section{background:var(--white);padding:6rem 4rem;}
+    .who-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem;}
+    .who-card{background:rgba(255,255,255,0.4);padding:1.5rem;text-align:center;border-radius:2px;}
+    .who-icon{font-size:1.8rem;margin-bottom:0.6rem;}
+    .who-card p{font-size:0.8rem;font-weight:600;color:var(--ink);line-height:1.4;}
+
+    /* BOOKING */
+    .booking-section{background:var(--pink);padding:6rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+    .booking-section h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);color:var(--white);line-height:0.95;margin-bottom:1rem;}
+    .booking-section p{font-size:1rem;color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:1.5rem;}
+    .booking-card{background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);padding:3rem;border-radius:2px;}
+    .booking-card h3{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--white);margin-bottom:0.5rem;}
+    .booking-card .b-label{font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;}
+    .booking-includes{list-style:none;display:flex;flex-direction:column;gap:0.7rem;margin-bottom:2rem;}
+    .booking-includes li{display:flex;gap:0.7rem;font-size:0.88rem;color:rgba(255,255,255,0.85);line-height:1.5;}
+    .booking-includes li::before{content:'✓';color:var(--lime);font-weight:700;flex-shrink:0;}
+    .btn-lime{display:inline-block;background:var(--lime);color:var(--ink);padding:0.9rem 2rem;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:opacity 0.2s;}
+    .btn-lime:hover{opacity:0.85;}
+    .btn-white{display:inline-block;background:var(--white);color:var(--pink);padding:0.9rem 2rem;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;margin-top:0.8rem;display:block;text-align:center;transition:all 0.2s;}
+    .btn-white:hover{background:var(--lime);color:var(--ink);}
+
+    /* FOOTER */
+    footer{background:var(--white);color: var(--ink);padding:4rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;}
+    .footer-brand .nav-logo{color:var(--white);display:block;margin-bottom:1rem;}
+    .footer-brand p{font-size:1rem;line-height:1.7;color:rgba(255,255,255,0.85);max-width:260px;}
+    .footer-col h4{font-size:0.8rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1.2rem;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.7rem;}
+    .footer-col a{font-size:1rem;color:rgba(255,255,255,0.85);text-decoration:none;transition:color 0.2s;}
+    .footer-col a:hover{color:var(--white);}
+    .footer-col.trading a{font-weight:600;background:rgba(255,255,255,0.2);padding:0.6rem 1rem;border-radius:2px;display:inline-block;}
+    .footer-bottom{background:var(--white);padding:1.2rem 4rem;display:flex;justify-content:space-between;align-items:center;}
+    .footer-bottom p{font-size:0.75rem;color:rgba(0,0,0,0.5);}
+    .footer-bottom a{color:rgba(0,0,0,0.5);text-decoration:none;}
+    .footer-bottom a:hover{color:var(--pink);}
+
+    @media(max-width:900px){
+      nav{padding:1rem 1.5rem;} .nav-links{display:none;}
+      .hero,.process,.protocol-section,.optional-section,.who-section,.booking-section{padding:4rem 1.5rem;}
+      .hero,.step,.booking-section{grid-template-columns:1fr;}
+      .protocol-grid{grid-template-columns:1fr;}
+      .optional-grid,.who-grid{grid-template-columns:repeat(2,1fr);}
+      footer{grid-template-columns:1fr;padding:3rem 1.5rem;}
+      .footer-bottom{padding:1rem 1.5rem;flex-direction:column;gap:0.5rem;text-align:center;}
+    }
+  </style>
+  <link rel="canonical" href="https://www.pranaclimb.com/rba" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+  <ul class="nav-links">
+    <li><a href="methodology.html">Method</a></li>
+    <li><a href="rba.html" style="color:var(--pink);">RBA</a></li>
+    <li><a href="index.html#coaching">Coaching</a></li>
+    <li><a href="index.html#app">App</a></li>
+    <li><a href="index.html#book">Book</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#annie">Annie</a></li>
+    <li><a href="gallery.html">Photos & Videos</a></li>
+  </ul>
+  <a href="mailto:annie@pranaclimb.com" class="nav-cta">Book Your RBA</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-label">Pranaclimb</div>
+    <h1>REMOTE<br>BREATHING<br><span>ASSESSMENT</span></h1>
+    <div class="hero-sub">Non-Invasive Tracking of Critical Power (CP) and W′bal-ODE in Rock Climbing Using BR, RPE, and HRR₆₀</div>
+    <p>Your breath is the fastest, most reliable guide to effort, recovery, and focus on the wall. The Pranaclimb RBA is a <strong>field-based system</strong> that gives climbers clear, actionable insights into performance and recovery — without lab equipment.</p>
+    <div class="hero-btns">
+      <a href="mailto:annie@pranaclimb.com" class="btn-primary">Book Your RBA</a>
+      <a href="methodology.html" class="btn-secondary">Read the Methodology</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stat">
+      <div class="stat-val">🫁 BR</div>
+      <div class="stat-label">Breathing Rate</div>
+      <p>Real-time effort signal — the fastest marker of intensity on the wall.</p>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-val">🎯 RPE</div>
+      <div class="stat-label">Perceived Exertion (CR-10)</div>
+      <p>Internal effort perception, tightly correlated with breathing rate.</p>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-val">❤️ HRR₆₀</div>
+      <div class="stat-label">Heart Rate Recovery</div>
+      <p>Recovery speed — your readiness signal for the next attempt.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- 6-STEP PROCESS -->
+<section class="process">
+  <div class="section-label">The Protocol</div>
+  <div class="section-title">How the RBA Works</div>
+  <div class="divider"></div>
+
+  <!-- STEP 1: ASSESS -->
+  <div class="step">
+    <div class="step-content step-body">
+      <div class="step-num">Step 01 of 06</div>
+      <div class="step-title" style="color:var(--pink);">ASSESS</div>
+      <div class="step-subtitle">Remote Breathing Assessment</div>
+      <p>The foundation of everything. Your breathing is recorded during a maximal-effort climb — capturing every breath, hold, grunt, and scream to build a complete picture of your physiological response to effort.</p>
+      <ul class="step-list">
+        <li><span class="dot pink"></span>Breathing Rate (BR)</li>
+        <li><span class="dot pink"></span>RPE (CR-10) — perceived effort</li>
+        <li><span class="dot pink"></span>Expressive breathing (holds, grunts, screams)</li>
+        <li><span class="dot pink"></span>HRR₆₀ — heart rate recovery at 60 seconds</li>
+        <li><span class="dot pink"></span>Optional deep dive: CO₂ tolerance, PEFR, SpO₂, rib mobility</li>
+      </ul>
+      <p style="font-size:0.8rem;font-style:italic;color:var(--mid);margin-top:1rem;">What's measured in the real world</p>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: INTERPRET -->
+  <div class="step reverse">
+    <div class="step-content step-body">
+      <div class="step-num">Step 02 of 06</div>
+      <div class="step-title" style="color:var(--blue);">INTERPRET</div>
+      <div class="step-subtitle">Physiological Mapping</div>
+      <p>Your raw data is translated into meaningful performance insights. Annie maps your breathing patterns to your personal physiological thresholds — identifying exactly where you are relative to CP and RCP.</p>
+      <ul class="step-list">
+        <li><span class="dot blue"></span>⛰️ CP ≈ 45 BPM / RPE 8</li>
+        <li><span class="dot blue"></span>🔥 RCP &gt; 55 BPM / RPE 9–10</li>
+        <li><span class="dot blue"></span>⚡ W′bal depletion & recharge rates</li>
+        <li><span class="dot blue"></span>🫁 Effective BR (raw + expression cost)</li>
+        <li><span class="dot blue"></span>❤️ Recovery speed (HRR₆₀ + BR return)</li>
+      </ul>
+      <p style="font-size:0.8rem;font-style:italic;color:var(--mid);margin-top:1rem;">What it means</p>
+    </div>
+  </div>
+          <div style="background:rgba(255,0,255,0.15);padding:1rem 1.2rem;border-radius:2px;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--pink);">🔥 &gt;55 BPM / RPE 9–10</div>
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);">Resp. Compensation Point</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.6);padding:1rem 1.2rem;border-radius:2px;">
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--ink);">⚡ W′bal ODE</div>
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);">Anaerobic Reserve Tracking</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3: IDENTIFY -->
+  <div class="step">
+    <div class="step-content step-body">
+      <div class="step-num">Step 03 of 06</div>
+      <div class="step-title" style="color:var(--ink);">IDENTIFY</div>
+      <div class="step-subtitle">Where Performance Breaks Down</div>
+      <p>Every climber has specific limiters — the hidden factors that make effort feel harder than it should. Your RBA reveals exactly which ones are holding you back.</p>
+      <ul class="step-list">
+        <li><span class="dot pink"></span>Early BR spike — intensity rising too fast</li>
+        <li><span class="dot pink"></span>Excessive breath holds / Valsalva</li>
+        <li><span class="dot pink"></span>High expressive cost (especially in bouldering)</li>
+        <li><span class="dot pink"></span>Slow HRR₆₀ — poor aerobic recovery</li>
+        <li><span class="dot pink"></span>Poor CO₂ tolerance — panic before failure</li>
+        <li><span class="dot pink"></span>Rib stiffness / thoracic restriction</li>
+        <li><span class="dot pink"></span>High stress → chaotic breathing patterns</li>
+      </ul>
+      <p style="font-size:0.8rem;font-style:italic;color:var(--mid);margin-top:1rem;">Why effort feels harder than it should</p>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4: COACH -->
+  <div class="step reverse">
+    <div class="step-content step-body">
+      <div class="step-num">Step 04 of 06</div>
+      <div class="step-title" style="color:var(--lime);-webkit-text-stroke:1px #aaa;">COACH</div>
+      <div class="step-subtitle">Pranaclimb Coaching Protocol (CoPro)</div>
+      <p>Your RBA findings become a personalised coaching programme. Annie builds breathing cues, pacing strategies, and recovery protocols tailored precisely to your limiters and goals.</p>
+      <ul class="step-list">
+        <li><span class="dot lime"></span>🧭 Zone-based breathing cues: ≤CP → efficiency & calm · CP/Grey Zone → rhythm & control · &gt;RCP → power without chaos</li>
+        <li><span class="dot lime"></span>💨 Expressive efficiency — use power exhales, reduce stacked holds & wasted screams</li>
+        <li><span class="dot lime"></span>🌬 Recovery optimisation — sigh resets, nasal downshifting, HRR₆₀ breathing protocols</li>
+      </ul>
+      <p style="font-size:0.8rem;font-style:italic;color:var(--mid);margin-top:1rem;">What to do differently</p>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 5: ADAPT -->
+  <div class="step">
+    <div class="step-content step-body">
+      <div class="step-num">Step 05 of 06</div>
+      <div class="step-title" style="color:var(--ink);">ADAPT</div>
+      <div class="step-subtitle">Training & Behaviour Change</div>
+      <p>With consistent practice of your personalised programme, breathing patterns change — and performance follows. The changes are measurable, progressive, and lasting.</p>
+      <ul class="step-list">
+        <li><span class="dot blue"></span>Breath-aware pacing</li>
+        <li><span class="dot blue"></span>Better crux timing (RP Sync)</li>
+        <li><span class="dot blue"></span>Faster recovery between burns</li>
+        <li><span class="dot blue"></span>Improved composure under stress</li>
+        <li><span class="dot blue"></span>Reduced injury risk (ribs, diaphragm, over-bracing)</li>
+      </ul>
+      <p style="font-size:0.8rem;font-style:italic;color:var(--mid);margin-top:1rem;">Change becomes automatic</p>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 6: CLIMB -->
+  <div class="step reverse">
+    <div class="step-content step-body">
+      <div class="step-num">Step 06 of 06</div>
+      <div class="step-title" style="color:var(--pink);">CLIMB</div>
+      <div class="step-subtitle">Respiratory Intelligence in Action</div>
+      <p>The result is a climber who <em>understands</em> their own physiology — who can read their breath, manage their energy, and perform with precision at their limit.</p>
+      <ul class="step-list">
+        <li><span class="dot pink"></span>Hold CP longer</li>
+        <li><span class="dot pink"></span>Push RCP with control</li>
+        <li><span class="dot pink"></span>Recover faster between attempts</li>
+        <li><span class="dot pink"></span>Stay calm under pressure</li>
+        <li><span class="dot pink"></span>Climb with precision at your limit</li>
+      </ul>
+      <div style="margin-top:2rem;padding:1.5rem;background:var(--off);border-left:3px solid var(--pink);">
+        <p style="font-size:1.1rem;font-style:italic;color:var(--ink);font-weight:500;">✨ Love. Breathe. Climb.</p>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- PROTOCOL DETAIL -->
+<section class="protocol-section">
+  <div class="section-label">Core RBA Protocol</div>
+  <div class="section-title">The 4-Minute Test</div>
+  <div class="divider"></div>
+  <p style="font-size:0.95rem;color:var(--mid);max-width:650px;margin-bottom:0;">Ideal for field use (projecting), coaching sessions, or post-climb reviews. No lab equipment needed.</p>
+  <div class="protocol-grid">
+    <div class="protocol-card">
+      <div class="p-num">01</div>
+      <h3>2 Min Baseline</h3>
+      <p>Calm nasal breathing before the effort. Establishes your resting BR and parasympathetic state as a reference point.</p>
+    </div>
+    <div class="protocol-card">
+      <div class="p-num">02</div>
+      <h3>4 Min Maximal Climb</h3>
+      <p>A maximal-effort route with a focused 1-minute crux segment. BR is tracked via microphone or smartphone audio. CP identified near BR ~45 BPM / RPE 8. RCP near BR &gt;55 BPM / RPE 10.</p>
+    </div>
+    <div class="protocol-card">
+      <div class="p-num">03</div>
+      <h3>1 Min Recovery</h3>
+      <p>Passive recovery. Record HRR₆₀ (heart rate drop) and BR return to ≤30 BPM. This is your recovery fingerprint.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OPTIONAL MARKERS -->
+<section class="optional-section">
+  <div class="section-label">Extended Deep-Dive</div>
+  <div class="section-title">Five Pillars of Breathing Intelligence</div>
+  <div class="divider"></div>
+  <p style="font-size:0.95rem;color:var(--mid);max-width:650px;margin-bottom:0;">Optional extended markers that build a complete <strong>Respiratory Resilience Profile (RRP)</strong>.</p>
+  <div class="optional-grid">
+    <div class="optional-card">
+      <div class="optional-icon">💨</div>
+      <div class="optional-name">PEFR</div>
+      <div class="optional-label">Power</div>
+      <p>Peak Expiratory Flow Rate — expiratory strength & airflow power. Strong exhale delays respiratory fatigue.</p>
+    </div>
+    <div class="optional-card">
+      <div class="optional-icon">🌬️</div>
+      <div class="optional-name">CO₂ Tolerance</div>
+      <div class="optional-label">Control</div>
+      <p>Pranaclimb MBT — breath-hold control & composure under rising CO₂. Delays hyperventilation on the crux.</p>
+    </div>
+    <div class="optional-card">
+      <div class="optional-icon">🩸</div>
+      <div class="optional-name">SpO₂ + PI</div>
+      <div class="optional-label">Oxygen Delivery</div>
+      <p>Oxygenation + circulation quality. SpO₂ ≥95% & PI &gt;1% = strong recovery signal.</p>
+    </div>
+    <div class="optional-card">
+      <div class="optional-icon">🏗️</div>
+      <div class="optional-name">BIQ</div>
+      <div class="optional-label">Flexibility</div>
+      <p>Breathing IQ — thoracic mobility & rib mechanics. Larger tidal volume = lower breathing cost.</p>
+    </div>
+    <div class="optional-card">
+      <div class="optional-icon">🧘‍♀️</div>
+      <div class="optional-name">NRP</div>
+      <div class="optional-label">Calm</div>
+      <p>Neural Recovery Protocol — parasympathetic reset. Faster W′ recharge & emotional regulation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IS IT FOR -->
+<section class="who-section">
+  <div class="section-label">Who It's For</div>
+  <div class="section-title">The RBA is For You If...</div>
+  <div class="divider"></div>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-icon">🧗</div>
+      <p>Coaches seeking real-time on-the-wall diagnostics</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">🧠</div>
+      <p>Climbers of all levels connecting breath with performance</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">🌬️</div>
+      <p>Breathwork practitioners integrating physiology into sport</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">🔬</div>
+      <p>Researchers exploring field-based respiratory energetics</p>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">⚡</div>
+      <p>Athletes in other intermittent or tactical sports</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking-section">
+  <div>
+    <h2>BOOK YOUR<br>REMOTE<br>ASSESSMENT</h2>
+    <p>Work directly with Annie Anderson — researcher, breathwork specialist, and lifelong climber — to map your breathing thresholds and build a programme that transforms how you climb.</p>
+    <p>Available <strong>remote (video call)</strong> and <strong>in-person (Cornwall)</strong>.</p>
+    <a href="methodology.html" style="color:rgba(255,255,255,0.7);font-size:0.85rem;text-decoration:none;">Read the full methodology →</a>
+  </div>
+  <div class="booking-card">
+    <h3>Remote Breathing Assessment</h3>
+    <div class="b-label">1:1 with Annie · Remote or In-Person</div>
+    <ul class="booking-includes">
+      <li>Full breathing pattern analysis</li>
+      <li>CO₂ tolerance and breath-hold baseline tests</li>
+      <li>Movement-specific breathing assessment</li>
+      <li>Detailed written report with personalised findings</li>
+      <li>Priority areas identified and ranked</li>
+      <li>Personalised CoPro coaching programme</li>
+      <li>60-minute session with Annie directly</li>
+    </ul>
+    <a href="mailto:annie@pranaclimb.com" class="btn-lime">Book Your RBA</a>
+    <a href="mailto:annie@pranaclimb.com" class="btn-white">Email Annie Directly</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:var(--ink)">PRANA<span style="color:var(--pink)">CLIMB</span></a>
+    <p style="margin-top:0.8rem; font-size:0.88rem; line-height:1.7; color:var(--mid);">With love and the ocean 🌊<br>Annie Anderson — Pranaclimb | OceanDips</p>
+    <div style="display:flex; gap:0.8rem; margin-top:1.2rem;">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--mid)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="var(--mid)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 15v7H9V8z" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:annie@pranaclimb.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--mid);">annie@pranaclimb.com</p>
+    <p style="font-size:0.75rem; margin-top:0.3rem; color:var(--mid);">07875 170 847</p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pages</h4>
+    <ul style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="rba.html">Assessment</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="app.html">The App</a></li>
+      <li><a href="annie.html">About Annie</a></li>
+      <li><a href="gallery.html">Photos</a></li>
+      <li><a href="mailto:annie@pranaclimb.com">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pranaclimb Ltd</h4>
+    <p style="font-size:0.78rem; line-height:1.8; color:var(--mid);">
+      Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.<br><br>
+      Annie is a qualified <strong style="color:var(--ink);">SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong style="color:var(--ink);">Registered Yoga Teacher RYT 200</strong> (2012).<br><br>
+      Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong style="color:var(--ink);">Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).<br><br>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" style="color:var(--pink); font-weight:600; text-decoration:none;">Connect on LinkedIn &rarr;</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Trading As</h4>
+    <ul>
+      <li><a href="https://www.pranaclimb.com">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com" target="_blank">🌊 OceanDips</a></li>
+    </ul>
+    <p style="font-size:0.78rem; color:var(--mid); margin-top:0.8rem; line-height:1.8;"><strong style="color:var(--ink);">Pranaclimb Ltd</strong><br>Company No. 16626114<br>13 Upton Towans, Hayle<br>Cornwall TR27 5BJ</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div style="display:flex; flex-direction:column; gap:0.3rem;">
+    <p>&copy; 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p style="font-size:0.7rem; color:rgba(0,0,0,0.4);">pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  </div>
+  <div style="display:flex; gap:1.5rem; flex-shrink:0; margin-left:2rem;">
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Statcounter -->
+<script type="text/javascript">
+var sc_project=11925361; 
+var sc_invisible=1; 
+var sc_security="14a77c6b"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11925361/0/14a77c6b/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter -->
+</body>
+</html>

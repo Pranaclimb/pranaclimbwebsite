@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- CORE PAGES -->
+  <url><loc>https://www.pranaclimb.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.pranaclimb.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.pranaclimb.com/rba</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.pranaclimb.com/research</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.pranaclimb.com/methodology</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pranaclimb.com/coaching</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pranaclimb.com/annie</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pranaclimb.com/book</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pranaclimb.com/app</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/elite-analysis</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/gallery</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.pranaclimb.com/pranaclimb-chapter-I</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pranaclimb.com/sitemap</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+
+  <!-- BLOG POSTS — SCIENCE & ACADEMIC -->
+  <url><loc>https://www.pranaclimb.com/blog-heart-rate-fails-climbers</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-science-of-screaming</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-respiratory-motor-coupling</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-metaboreflex</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-effective-breathing-rate</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-grey-zone</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- BLOG POSTS — PERFORMANCE -->
+  <url><loc>https://www.pranaclimb.com/blog-co2-hidden-superpower</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-three-breath-cues</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-recovery-protocol</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-rp-sync</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-rpe-breathing-rate</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-co2-tolerance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-micro-breath-holds</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-fear-to-commitment</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-diaphragm-thoracic-stability</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-capillarization</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-spleen-breath-holding</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-pranayama-angiogenesis</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-bhastrika-pranayama</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.pranaclimb.com/blog-tim-emmett-era-vella</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- TOOLS & PRACTICES -->
+  <url><loc>https://www.pranaclimb.com/breathing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pranaclimb.com/breathwork-practices</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.pranaclimb.com/zone-coaching</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- LEGAL -->
+  <url><loc>https://www.pranaclimb.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.pranaclimb.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+</urlset>

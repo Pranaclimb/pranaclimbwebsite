@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Pranaclimb analysis of elite climbers — breathing rate, W'bal zone mapping, RP Sync, and expressive breathing in Adam Ondra, Magnus Midtbø, Will Bosi and more." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Climber Breathing Analysis — Adam Ondra, Magnus Midtbø & More | Pranaclimb</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink:   #ff00ff;
+      --lime:   #AAFF00;
+      --blue:   #89CFF0;
+      --white:  #ffffff;
+      --off:    #f5f5f2;
+      --ink:    #3a3a3a;
+      --mid:    #555555;
+      --border: #e0e0d8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 3rem; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.12em; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--pink); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--mid); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--pink); }
+    .nav-cta { background: var(--pink); color: var(--white); padding: 0.55rem 1.4rem; border-radius: 2px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: #cc00cc; }
+
+    /* HERO */
+    .hero { background: var(--off); padding: 10rem 4rem 5rem; display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 3rem; }
+    .hero-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pink); margin-bottom: 1rem; }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 0.95; letter-spacing: 0.02em; color: var(--ink); }
+    .hero h1 span { color: var(--pink); }
+    .hero-right { padding-bottom: 0.5rem; }
+    .hero-right p { font-size: 1rem; color: var(--mid); line-height: 1.8; margin-bottom: 1rem; }
+    .hero-quote { border-left: 3px solid var(--pink); padding-left: 1.2rem; font-size: 1rem; font-style: italic; color: var(--ink); line-height: 1.7; margin-top: 1.5rem; }
+    .hero-quote cite { font-style: normal; font-size: 0.75rem; color: var(--mid); display: block; margin-top: 0.4rem; }
+
+    /* CONTENT WRAP */
+    .content-wrap { max-width: 900px; margin: 0 auto; padding: 5rem 2rem; }
+
+    /* SECTION DIVIDER */
+    .section-divider { width: 48px; height: 3px; background: var(--lime); margin: 0.8rem 0 2rem; }
+
+    /* CASE STUDY CARD */
+    .case-study {
+      margin-bottom: 4rem;
+      border: 1.5px solid var(--border);
+    }
+    .case-study-header {
+      background: var(--off);
+      padding: 2rem 2.5rem;
+      border-bottom: 1.5px solid var(--border);
+      display: flex; align-items: flex-start; gap: 1.5rem;
+    }
+    .case-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--pink); line-height: 1; flex-shrink: 0; }
+    .case-title-wrap {}
+    .case-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.3rem; }
+    .case-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.03em; color: var(--ink); line-height: 1.1; }
+    .case-title span { color: var(--pink); }
+    .case-body { padding: 2rem 2.5rem; }
+    .case-body p { font-size: 0.92rem; line-height: 1.85; color: var(--mid); margin-bottom: 1rem; }
+    .case-body p:last-child { margin-bottom: 0; }
+    .case-body strong { color: var(--ink); font-weight: 600; }
+
+    /* METRICS ROW */
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1.5px solid var(--border); margin: 1.5rem 0; }
+    .metric { background: var(--white); padding: 1.2rem 1rem; text-align: center; }
+    .metric-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; line-height: 1; margin-bottom: 0.3rem; }
+    .metric-val.pink { color: var(--pink); }
+    .metric-val.lime { color: var(--lime); }
+    .metric-val.blue { color: var(--blue); }
+    .metric-val.ink { color: var(--ink); }
+    .metric-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); }
+
+    /* IMG PLACEHOLDER */
+    .img-placeholder { background: var(--ink); border: 1.5px solid rgba(255,255,255,0.08); padding: 3rem 2rem; text-align: center; margin: 1.5rem 0; border-radius: 2px; }
+    .img-placeholder p { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    .img-placeholder .img-label { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--lime); margin-bottom: 0.5rem; }
+
+    /* HIGHLIGHT BOX */
+    .highlight { background: var(--off); border-left: 3px solid var(--lime); padding: 1.2rem 1.5rem; margin: 1.2rem 0; font-size: 0.88rem; line-height: 1.7; color: var(--mid); }
+    .highlight.pink { border-left-color: var(--pink); }
+    .highlight.blue { background: rgba(137,207,240,0.12); border-left-color: var(--blue); }
+    .highlight strong { color: var(--ink); }
+
+    /* TIMELINE */
+    .timeline { list-style: none; display: flex; flex-direction: column; gap: 0; border: 1.5px solid var(--border); margin: 1.2rem 0; }
+    .timeline li { display: flex; align-items: flex-start; gap: 1rem; padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); font-size: 0.87rem; color: var(--mid); line-height: 1.5; }
+    .timeline li:last-child { border-bottom: none; }
+    .timeline li .tl-icon { flex-shrink: 0; font-size: 1rem; width: 1.5rem; text-align: center; }
+
+    /* RULE BOX */
+    .rule-box { background: var(--pink); color: var(--white); padding: 1.5rem 2rem; margin: 1.5rem 0; border-radius: 2px; }
+    .rule-box h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.05em; margin-bottom: 0.8rem; color: var(--lime); }
+    .rule-box p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+    .rule-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.5rem; }
+    .rule-box li { font-size: 0.85rem; color: rgba(255,255,255,0.85); display: flex; gap: 0.6rem; }
+    .rule-box li::before { content: '→'; color: var(--lime); flex-shrink: 0; }
+
+    /* PHYSIOLOGY BOX */
+    .physio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+    .physio-item { background: var(--off); border: 1.5px solid var(--border); padding: 1.2rem; }
+    .physio-item h5 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); margin-bottom: 0.4rem; }
+    .physio-item p { font-size: 0.83rem; line-height: 1.6; color: var(--mid); }
+
+    /* SUMMARY TABLE */
+    .summary-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+    .summary-table th { background: var(--white); color: var(--ink); padding: 0.8rem 1rem; text-align: left; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+    .summary-table th:first-child { color: var(--pink); }
+    .summary-table td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--border); color: var(--mid); line-height: 1.5; }
+    .summary-table tr:nth-child(even) td { background: var(--off); }
+    .summary-table td strong { color: var(--ink); }
+    .summary-table td.pink { color: var(--pink); font-weight: 700; }
+    .summary-table td.lime { color: #6a9900; font-weight: 700; }
+
+    /* EXPRESSIVE LOAD */
+    .exp-load { background: var(--white); padding: 2.5rem; margin: 2rem 0; border-radius: 2px; }
+    .exp-load h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--ink); margin-bottom: 0.3rem; }
+    .exp-load .def-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--pink); margin-bottom: 1rem; }
+    .exp-load p { font-size: 0.9rem; line-height: 1.8; color: var(--ink); margin-bottom: 0.8rem; }
+    .exp-load strong { font-weight: 700; }
+
+    /* TAKEAWAYS */
+    .takeaways { background: var(--off); border: 1.5px solid var(--border); padding: 2.5rem; margin: 2rem 0; }
+    .takeaways h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--ink); margin-bottom: 1.5rem; }
+    .takeaways-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .takeaway-item { background: var(--white); border: 1.5px solid var(--border); padding: 1.2rem; display: flex; gap: 0.8rem; align-items: flex-start; }
+    .takeaway-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .takeaway-item p { font-size: 0.85rem; line-height: 1.6; color: var(--mid); }
+    .takeaway-item strong { color: var(--ink); }
+
+    /* TIM EMMETT INTEGRATION */
+    .philosophy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1.5px solid var(--border); margin: 1.5rem 0; }
+    .philosophy-item { background: var(--white); padding: 1.2rem; text-align: center; font-size: 0.8rem; color: var(--mid); line-height: 1.5; }
+    .philosophy-item .phi-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+    /* INTRO */
+    .page-intro { padding: 3rem 0; border-bottom: 1.5px solid var(--border); margin-bottom: 4rem; }
+    .page-intro p { font-size: 1rem; line-height: 1.85; color: var(--mid); margin-bottom: 1rem; }
+    .page-intro strong { color: var(--ink); }
+
+    /* SECTION HEADING */
+    .section-heading { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--ink); letter-spacing: 0.03em; margin-bottom: 0.3rem; }
+    .section-label-text { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pink); margin-bottom: 0.5rem; }
+
+    /* FOOTER */
+    footer { background: var(--white); color: var(--ink); padding: 4rem; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; }
+    .footer-brand .nav-logo { color: var(--white); display: block; margin-bottom: 1rem; }
+    .footer-brand p { font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.85); max-width: 260px; }
+    .footer-col h4 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-col a { font-size: 1rem; color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--mid); }
+    .footer-col.trading a { font-weight: 600; background: rgba(255,255,255,0.2); padding: 0.6rem 1rem; border-radius: 2px; display: inline-block; }
+    .footer-bottom { background: var(--white); padding: 1.2rem 4rem; display: flex; justify-content: space-between; align-items: center; }
+    .footer-bottom p { font-size: 0.75rem; color: var(--mid); }
+    .footer-bottom a { color: rgba(0,0,0,0.5); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--pink); }
+
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; } .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 8rem 1.5rem 3rem; }
+      .content-wrap { padding: 3rem 1.5rem; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .physio-grid, .takeaways-grid, .philosophy-grid { grid-template-columns: 1fr; }
+      footer { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
+      .footer-bottom { padding: 1rem 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+  <link rel="canonical" href="https://www.pranaclimb.com/elite-analysis" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#methodology">Method</a></li>
+    <li><a href="index.html#assessment">Assessment</a></li>
+    <li><a href="index.html#coaching">Coaching</a></li>
+    <li><a href="index.html#app">App</a></li>
+    <li><a href="index.html#book">Book</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#annie">Annie</a></li>
+    <li><a href="gallery.html">Photos & Videos</a></li>
+  </ul>
+  <a href="index.html#assessment" class="nav-cta">Book Assessment</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-label">Pranaclimb Methodology</div>
+    <h1>ANALYSIS OF<br><span>ELITE</span><br>CLIMBERS</h1>
+  </div>
+  <div class="hero-right">
+    <p>Case study comparison of Breathing Rate and W′bal depletion across elite climbers. These examples highlight the importance of contextual adjustment for breath expressions — especially breath holds, which mask ventilatory strain despite high metabolic demand.</p>
+    <div class="hero-quote">
+      "The more expressive the breath, the higher the hidden cost. Control the breath, and you control the climb."
+      <cite>— Pranaclimb Methodology</cite>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <div class="page-intro">
+    <p>The scalable BPM correction maintains both <strong>rigour and adaptability</strong> in the model. Here's how Pranaclimb decodes elite climbers' breath patterns to reveal performance, pacing, and recovery secrets.</p>
+    <p>Each case study applies the <strong>Pranaclimb BR adjustment framework</strong> — accounting for screams, grunts, breath holds, and expressive exhalations — to reveal the true physiological cost hidden beneath raw breathing rate data.</p>
+  </div>
+
+  <!-- ─── CASE 1: ADAM ONDRA CHICKEN NOSE ─── -->
+  <div class="case-study" id="ondra-chicken">
+    <div class="case-study-header">
+      <div class="case-num">01</div>
+      <div class="case-title-wrap">
+        <div class="case-label">Case Study · Adam Ondra</div>
+        <div class="case-title">Chicken Nose <span>9a+</span> — Isenfluh, Switzerland</div>
+        <div style="font-size:0.78rem; color:var(--mid); margin-top:0.3rem;">Crux window: 13:28–14:28</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="metrics">
+        <div class="metric"><div class="metric-val pink">~36</div><div class="metric-label">Raw BR (BPM)</div></div>
+        <div class="metric"><div class="metric-val lime">~51</div><div class="metric-label">Adjusted BR</div></div>
+        <div class="metric"><div class="metric-val blue">9–10</div><div class="metric-label">Estimated RPE</div></div>
+        <div class="metric"><div class="metric-val ink">60–70%</div><div class="metric-label">W′bal Depletion</div></div>
+      </div>
+      <p>Adam Ondra's ascent of Chicken Nose provides a textbook example of apparent BR undercounting during high-intensity effort. Over the 60-second crux, raw breathing rate was ~36 BPM. However, <strong>five power screams, one grunt, one passat, and approximately five brief breath holds</strong> were observed — each reflecting high ventilatory strain and isometric tension.</p>
+      <p>Applying the Pranaclimb BR correction <strong>(+15 BPM)</strong> raised the adjusted BR to ~51 BPM, placing him above CP and nearing RCP. The estimated RPE was 9–10, confirming a maximal anaerobic effort. W′bal depletion was ~60–70%, consistent with a prolonged crux well into the severe intensity domain.</p>
+      <div class="highlight">
+        <strong>Key insight:</strong> This illustrates the need for expressive-breathing correction in overhanging sequences with explosive or inverted movement.
+      </div>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin:1.5rem 0; border-radius:2px;">
+        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/s2kKAQ-KgKk" title="Adam Ondra — Chicken Nose 9a+" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CASE 2: ADAM ONDRA SILENCE ─── -->
+  <div class="case-study" id="ondra-silence">
+    <div class="case-study-header">
+      <div class="case-num">02</div>
+      <div class="case-title-wrap">
+        <div class="case-label">Case Study · Adam Ondra</div>
+        <div class="case-title">Silence <span>9c</span> — Historic First Ascent</div>
+        <div style="font-size:0.78rem; color:var(--mid); margin-top:0.3rem;">Crux window: 11:02–12:02</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="metrics">
+        <div class="metric"><div class="metric-val pink">~33</div><div class="metric-label">Raw BR (BPM)</div></div>
+        <div class="metric"><div class="metric-val lime">~48</div><div class="metric-label">Adjusted BR</div></div>
+        <div class="metric"><div class="metric-val blue">9–10</div><div class="metric-label">Estimated RPE</div></div>
+        <div class="metric"><div class="metric-val ink">60–70%</div><div class="metric-label">W′bal Depletion</div></div>
+      </div>
+      <p>In the historic ascent of Silence, Ondra demonstrated similar breath suppression dynamics. The 60-second crux showed a raw BR of ~33 BPM, despite visible strain. Analysis revealed <strong>one scream, one grunt, one passat, and ~5 brief breath holds</strong> — warranting a +15 BPM correction.</p>
+      <p>The adjusted BR of ~48 BPM indicates a clear breach of CP (~45 BPM), closely approaching RCP. RPE was estimated at 9–10, consistent with the intense neuromuscular and psychological demands of the route. W′bal depletion was again ~60–70%.</p>
+      <div class="highlight">
+        <strong>Key insight:</strong> This example reinforces the reliability of Pranaclimb's correction framework when high performance masks ventilatory effort through bracing and explosive exhalations.
+      </div>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin:1.5rem 0; border-radius:2px;">
+        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/ZRTNHDd0gL8" title="Adam Ondra — Silence 9c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CASE 3: FREJA SHANNON ─── -->
+  <div class="case-study" id="freja">
+    <div class="case-study-header">
+      <div class="case-num">03</div>
+      <div class="case-title-wrap">
+        <div class="case-label">Case Study · Freja Shannon</div>
+        <div class="case-title">Sista Bossen <span>E8 6c</span> — Bohuslan, Sweden</div>
+        <div style="font-size:0.78rem; color:var(--mid); margin-top:0.3rem;">Upper crux window: 0:15–1:15</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="metrics">
+        <div class="metric"><div class="metric-val pink">&gt;60</div><div class="metric-label">Raw BR (BPM)</div></div>
+        <div class="metric"><div class="metric-val lime">No adj.</div><div class="metric-label">Correction needed</div></div>
+        <div class="metric"><div class="metric-val blue">10</div><div class="metric-label">Estimated RPE</div></div>
+        <div class="metric"><div class="metric-val ink">70–80%</div><div class="metric-label">W′bal Depletion</div></div>
+      </div>
+      <p>Freja Shannon's crux sequence on <em>Sista Bossen</em> offers a clear example of sustained effort well into the severe domain. Her raw breathing rate remained <strong>consistently above 60 BPM</strong> for the entire 60 seconds, with two screams and one audible swear reflecting intense ventilatory and emotional load.</p>
+      <p>Given the already elevated BR, no adjustment was necessary — her ventilatory drive was fully captured in the raw data. This profile places her clearly <strong>beyond the RCP threshold</strong>, with W′bal depletion estimated at 70–80%.</p>
+      <div class="highlight">
+        <strong>Key insight:</strong> The case exemplifies how high BR and expressive breathing under duress reliably indicate anaerobic load and metabolic fatigue in real-time conditions.
+      </div>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin:1.5rem 0; border-radius:2px;">
+        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/fzv4nn4nfqs" title="Freja Shannon — Sista Bossen E8 6c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CASE 4: MARGO HAYES ─── -->
+  <div class="case-study" id="margo">
+    <div class="case-study-header">
+      <div class="case-num">04</div>
+      <div class="case-title-wrap">
+        <div class="case-label">Case Study · Margo Hayes</div>
+        <div class="case-title">Biographie <span>5.15a</span></div>
+        <div style="font-size:0.78rem; color:var(--mid); margin-top:0.3rem;">Crux window: 4:28–5:28</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="metrics">
+        <div class="metric"><div class="metric-val pink">~19</div><div class="metric-label">Raw BR (BPM)</div></div>
+        <div class="metric"><div class="metric-val lime">~34–35</div><div class="metric-label">Adjusted BR</div></div>
+        <div class="metric"><div class="metric-val blue">7–8</div><div class="metric-label">Estimated RPE</div></div>
+        <div class="metric"><div class="metric-val ink">Near CP</div><div class="metric-label">W′bal Estimate</div></div>
+      </div>
+      <p>During Margo Hayes' crux sequence on Biographie, the raw breathing rate was recorded at approximately 19 BPM — a deceptively low value. Closer analysis identified:</p>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; margin:1rem 0; padding-left:1rem;">
+        <li style="display:flex; gap:0.6rem; font-size:0.88rem; color:var(--mid);"><span style="color:var(--pink);">+8</span> BPM — 3–4 second breath hold at the start</li>
+        <li style="display:flex; gap:0.6rem; font-size:0.88rem; color:var(--mid);"><span style="color:var(--pink);">+2</span> BPM — brief breath hold during high-tension moves</li>
+        <li style="display:flex; gap:0.6rem; font-size:0.88rem; color:var(--mid);"><span style="color:var(--pink);">+6</span> BPM — 2 forceful grunts and a sigh during high-tension moves</li>
+        <li style="display:flex; gap:0.6rem; font-size:0.88rem; color:var(--mid);"><span style="color:var(--mid);">+0</span> BPM — 3 audible sighs ("ahhs") near the end</li>
+      </ul>
+      <p>Total correction: <strong>~+16 BPM</strong> → adjusted BR of <strong>~34–35 BPM</strong>. Although this remains below CP (~45 BPM), the elevated RPE (7–8) and presence of breath holding suggest metabolic intensity was <strong>likely near CP</strong>, with breath control strategies compressing ventilatory frequency.</p>
+      <div class="highlight pink">
+        <strong>Key insight:</strong> This highlights the need for <strong>duration-based breath hold adjustments</strong> in the Pranaclimb methodology to accurately estimate workload in scenarios where expressive breathing significantly masks true ventilatory demand.
+      </div>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin:1.5rem 0; border-radius:2px;">
+        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/C_N8znD3exI" title="Margo Hayes — Biographie 5.15a" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SUMMARY TABLE ─── -->
+  <div style="margin-bottom:4rem;">
+    <div class="section-label-text">Summary</div>
+    <div class="section-heading">Case Study Comparison Table</div>
+    <div class="section-divider"></div>
+    <p style="font-size:0.9rem; color:var(--mid); margin-bottom:1.5rem;">A summary comparison of the four Pranaclimb athlete case studies — Adam Ondra (×2), Freja Shannon, and Margo Hayes.</p>
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>Athlete & Route</th>
+          <th>Raw BR</th>
+          <th>Correction</th>
+          <th>Adj. BR</th>
+          <th>RPE</th>
+          <th>W′bal Depletion</th>
+          <th>Zone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Adam Ondra</strong><br>Chicken Nose 9a+</td>
+          <td>~36 BPM</td>
+          <td class="lime">+15 BPM</td>
+          <td><strong>~51 BPM</strong></td>
+          <td>9–10</td>
+          <td class="pink">60–70%</td>
+          <td>Above CP → RCP</td>
+        </tr>
+        <tr>
+          <td><strong>Adam Ondra</strong><br>Silence 9c</td>
+          <td>~33 BPM</td>
+          <td class="lime">+15 BPM</td>
+          <td><strong>~48 BPM</strong></td>
+          <td>9–10</td>
+          <td class="pink">60–70%</td>
+          <td>Above CP → RCP</td>
+        </tr>
+        <tr>
+          <td><strong>Freja Shannon</strong><br>Sista Bossen E8 6c</td>
+          <td>&gt;60 BPM</td>
+          <td>None needed</td>
+          <td><strong>&gt;60 BPM</strong></td>
+          <td>10</td>
+          <td class="pink">70–80%</td>
+          <td>Beyond RCP</td>
+        </tr>
+        <tr>
+          <td><strong>Margo Hayes</strong><br>Biographie 5.15a</td>
+          <td>~19 BPM</td>
+          <td class="lime">+16 BPM</td>
+          <td><strong>~34–35 BPM</strong></td>
+          <td>7–8</td>
+          <td>Near CP</td>
+          <td>Near CP</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight blue">
+      <strong>Note:</strong> These examples illustrate Pranaclimb's capacity to detect RCP and W′bal dynamics in real-world conditions through non-invasive breathing analysis and perceived effort. Vocalized breathing functions as a legitimate physiological amplifier, elevating oxygen uptake and respiratory drive under maximal load.
+    </div>
+  </div>
+
+  <!-- ─── CASE 5: ROBBIE PHILLIPS ─── -->
+  <div class="case-study" id="robbie">
+    <div class="case-study-header">
+      <div class="case-num">05</div>
+      <div class="case-title-wrap">
+        <div class="case-label">Case Study · Robbie Phillips — BritRock Films</div>
+        <div class="case-title">Tsaranoro Atsimo <span>8a+</span> — Madagascar (700m Big Wall)</div>
+        <div style="font-size:0.78rem; color:var(--mid); margin-top:0.3rem;">Crux window: 0:54–1:54</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <p>Robbie Phillips battling demons on the 8a+ crux sequence of his new route on the 700m Big Wall — a sustained high-altitude effort where breath management becomes critical to survival as well as performance.</p>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin:1.5rem 0; border-radius:2px;">
+        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/lsPbJxsGfZw" title="Robbie Phillips — Tsaranoro Atsimo, Madagascar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CASE 6: ANNA HAZELNUTT ─── -->
+  <div class="case-study" id="anna">
+    <div class="case-study-header">
+      <div class="case-num">06</div>
+      <div class="case-title-wrap">
+        <div class="case-label">Case Study · Anna Hazelnutt</div>
+        <div class="case-title">Redpoint Crux of <span>Peace</span></div>
+      </div>
+    </div>
+    <div class="case-body">
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin:1.5rem 0; border-radius:2px;">
+        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/DWAo1ovfvy0" title="Anna Hazelnutt — Peace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CASE 7: JIMMY WEBB ─── -->
+  <div class="case-study" id="jimmy">
+    <div class="case-study-header">
+      <div class="case-num">07</div>
+      <div class="case-title-wrap">
+        <div class="case-label">Case Study · Jimmy Webb</div>
+        <div class="case-title">Sleepwalker <span>8C+ / V16</span> — First Ascent, 2019</div>
+        <div style="font-size:0.78rem; color:var(--mid); margin-top:0.3rem;">Crux window: 5:26–6:12 (44 seconds)</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <div class="metrics">
+        <div class="metric"><div class="metric-val pink">55–60</div><div class="metric-label">Adjusted BR</div></div>
+        <div class="metric"><div class="metric-val lime">RCP</div><div class="metric-label">Zone</div></div>
+        <div class="metric"><div class="metric-val blue">Steep</div><div class="metric-label">Terrain</div></div>
+        <div class="metric"><div class="metric-val ink">85–95%</div><div class="metric-label">W′bal Depletion</div></div>
+      </div>
+      <p>This is gold for showing how expressive breathing, holds, and power exhales line up with Pranaclimb's adjustment rules.</p>
+      <p><strong>Observed breathing:</strong> long breath holds, nasal inhale, power exhale, scream.</p>
+
+      <ul class="timeline">
+        <li><span class="tl-icon">⏱</span><div>Early <strong>BH (9s)</strong> — tension bracing, +8 BPM adjustment</div></li>
+        <li><span class="tl-icon">👃</span><div><strong>Strong nasal inhale</strong> before dyno — RP Sync prime</div></li>
+        <li><span class="tl-icon">💨</span><div><strong>Exhale at crux catch</strong> — textbook RP Sync release</div></li>
+        <li><span class="tl-icon">😤</span><div><strong>Scream + BH</strong> — +10 BPM, accelerates depletion</div></li>
+        <li><span class="tl-icon">🫁</span><div><strong>Relief sigh + YESSS / WOOO</strong> — emotional parasympathetic reset</div></li>
+      </ul>
+
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin:1.5rem 0; border-radius:2px;">
+        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/TMIIffUMV8g" title="Jimmy Webb — Sleepwalker V16" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CASE 8: TIM EMMETT ─── -->
+  <div class="case-study" id="tim">
+    <div class="case-study-header">
+      <div class="case-num">08</div>
+      <div class="case-title-wrap">
+        <div class="case-label">Case Study · Tim Emmett — Scream Density Override</div>
+        <div class="case-title">Era Vella <span>9a</span></div>
+        <div style="font-size:0.78rem; color:var(--mid); margin-top:0.3rem;">Crux window: 0:23–1:23 · ~7 screams in 60 seconds</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <p>Tim Emmett's <strong>~7 screams in 60 seconds</strong> on Era Vella isn't just emotional intensity — it's a physiological case study in how <strong>expressive exhalations affect respiratory load, W′bal depletion, and diaphragmatic fatigue</strong>.</p>
+      <div class="highlight pink">
+        <strong>"Yelling gives power; breathing restores control."</strong>
+      </div>
+
+      <p>Each scream functions as an <strong>expressive exhale</strong> — a short, high-pressure burst through partial glottal closure. Tim's attempt reveals how scream density masks true respiratory cost. With ~7 screams in under a minute, his adjusted BR and W′bal confirm RCP intensity — validating <strong>Pranaclimb's Scream-Density Override rule</strong> as a key diagnostic for expressive, high-intensity climbing.</p>
+
+      <p>Stacked screams, grunts, and long breath holds create high intrathoracic pressure, rapid CO₂ accumulation, and diaphragmatic strain. These effects push the climber into the <strong>Respiratory Compensation Point (RCP)</strong> even when raw BR appears low.</p>
+
+      <div class="rule-box">
+        <h4>🔹 Scream-Density Override — Application Rule</h4>
+        <p>Trigger the Override when:</p>
+        <ul>
+          <li>7 or more screams occur within 60 seconds</li>
+          <li>Total time spent screaming + holding breath ≥ 15s (≈25% of the window)</li>
+        </ul>
+      </div>
+
+      <div class="physio-grid">
+        <div class="physio-item">
+          <h5>🫁 Intrathoracic Pressure</h5>
+          <p>Surges with each scream → high tension on diaphragm and intercostals</p>
+        </div>
+        <div class="physio-item">
+          <h5>💨 Tidal Volume</h5>
+          <p>Reduced tidal volume → less O₂ exchange despite heavy exhale force</p>
+        </div>
+        <div class="physio-item">
+          <h5>⚡ W′bal Depletion</h5>
+          <p>Estimated <strong>80–95% depletion</strong> across the crux</p>
+        </div>
+        <div class="physio-item">
+          <h5>⚠️ Injury Risk</h5>
+          <p>Repeated screaming strains diaphragm and intercostals — potentially causing rib flare or displacement (as seen in Tim's case)</p>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <div class="section-label-text">Tim Emmett Case Integration</div>
+        <p style="font-size:0.9rem; color:var(--mid); line-height:1.7; margin:0.8rem 0;">Why it fits the Pranaclimb Methodology — he demonstrated the philosophy: <strong><em>Turn every dial to 10 — strength, breath, mind, recovery, belief.</em></strong></p>
+        <div class="philosophy-grid">
+          <div class="philosophy-item"><div class="phi-icon">🫁</div>Breathwork</div>
+          <div class="philosophy-item"><div class="phi-icon">❄️</div>Cold immersion</div>
+          <div class="philosophy-item"><div class="phi-icon">🧠</div>Mindfulness</div>
+          <div class="philosophy-item"><div class="phi-icon">📈</div>Long-term pacing</div>
+          <div class="philosophy-item"><div class="phi-icon">🔥</div>Emotional expression</div>
+          <div class="philosophy-item"><div class="phi-icon">🧗</div>Route-specific strength</div>
+          <div class="philosophy-item"><div class="phi-icon">🧊</div>Composure under stress</div>
+          <div class="philosophy-item"><div class="phi-icon">⏳</div>W′bal management over 45m pitch</div>
+        </div>
+      </div>
+
+      <div style="margin:1.5rem 0; padding:1.2rem; background:var(--off); border:1.5px solid var(--border); border-radius:2px; text-align:center;">
+        <p style="font-size:0.8rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--pink); margin-bottom:0.8rem;">🎬 Tim Emmett — Era Vella 9a</p>
+        <a href="https://www.instagram.com/p/DPevdeqCEMU/" target="_blank" style="display:inline-block; background:var(--pink); color:white; padding:0.7rem 1.8rem; font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; border-radius:2px;">Watch on Instagram →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── EXPRESSIVE LOAD ─── -->
+  <div class="exp-load">
+    <div class="def-label">Definition</div>
+    <h3>🧩 Expressive Load</h3>
+    <p><strong>Expressive Load</strong> is the cumulative physiological cost of non-rhythmic breath acts — screams, grunts, sighs, and holds — that alter CO₂/O₂ exchange and neural activation.</p>
+    <p><strong>Coaching Application:</strong> Use it to understand how expressive breathing shifts a climber's effort into higher intensity zones even when BR looks low. Manage through sighs, nasal resets, and CO₂-tolerance training.</p>
+  </div>
+
+  <!-- ─── KEY TAKEAWAYS ─── -->
+  <div class="takeaways">
+    <h3>Key Takeaways for Coaches & Climbers</h3>
+    <div class="takeaways-grid">
+      <div class="takeaway-item">
+        <div class="takeaway-icon">💪</div>
+        <p>Expressive breathing (screams, grunts) adds measurable <strong>metabolic cost</strong> — treat it like power output.</p>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">📊</div>
+        <p><strong>Budget screams and grunts</strong> to sustain power while minimising diaphragmatic fatigue.</p>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">⏸️</div>
+        <p>Use <strong>breath holds tactically</strong> — not continuously. Duration matters.</p>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">🔄</div>
+        <p>Train <strong>resilience in rhythmic breathing</strong> under fatigue.</p>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">🎯</div>
+        <p>Train <strong>expressive efficiency</strong> to sustain power without overloading the respiratory system.</p>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">😮‍💨</div>
+        <p>Encourage <strong>active recovery sighs</strong> and nasal recovery breaths during micro-rests to restore oxygen balance.</p>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">💨</div>
+        <p><strong>Exhale on execution</strong> — RP Sync maximises precision at the crux moment.</p>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">🫁</div>
+        <p>Train <strong>diaphragmatic strength and control</strong> to prevent rib or intercostal stress under high tension.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="text-align:center; padding:3rem 0; border-top:1.5px solid var(--border);">
+    <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--pink); margin-bottom:0.8rem;">Apply the Methodology</p>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:var(--ink); margin-bottom:1.2rem;">Book Your Remote Breathing Assessment</h2>
+    <p style="font-size:0.95rem; color:var(--mid); max-width:500px; margin:0 auto 2rem;">Get your own BR analysis, threshold mapping, and personalised breathwork programme — just like the elite climbers above.</p>
+    <a href="index.html#assessment" style="display:inline-block; background:var(--pink); color:var(--white); padding:0.9rem 2.5rem; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; border-radius:2px;">Book Your RBA</a>
+    <div style="margin-top:1.2rem;">
+      <a href="https://www.researchgate.net/publication/393491795_The_Pranaclimb_Methodology_Non-Invasive_Tracking_of_Critical_Power_and_W'bal_Modelling_in_Rock_Climbing_Using_Breathing_Rate_RPE_and_HRR_A_field-adapted_model_integrating_physiology_breathwork_and_rec" target="_blank" style="font-size:0.82rem; color:var(--pink); font-weight:600; text-decoration:none;">Read the full research paper on ResearchGate →</a>
+    </div>
+  </div>
+
+</div><!-- end content-wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:var(--ink)">PRANA<span style="color:var(--pink)">CLIMB</span></a>
+    <p style="margin-top:0.8rem; font-size:0.88rem; line-height:1.7; color:var(--mid);">With love and the ocean 🌊<br>Annie Anderson — Pranaclimb | OceanDips</p>
+    <div style="display:flex; gap:0.8rem; margin-top:1.2rem;">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--mid)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="var(--mid)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 15v7H9V8z" fill="var(--mid)"/></svg>
+      </a>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:annie@pranaclimb.com" title="Email" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--mid);">annie@pranaclimb.com</p>
+    <p style="font-size:0.75rem; margin-top:0.3rem; color:var(--mid);">07875 170 847</p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pages</h4>
+    <ul style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="rba.html">Assessment</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="app.html">The App</a></li>
+      <li><a href="annie.html">About Annie</a></li>
+      <li><a href="gallery.html">Photos</a></li>
+      <li><a href="mailto:annie@pranaclimb.com">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Pranaclimb Ltd</h4>
+    <p style="font-size:0.78rem; line-height:1.8; color:var(--mid);">
+      Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.<br><br>
+      Annie is a qualified <strong style="color:var(--ink);">SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong style="color:var(--ink);">Registered Yoga Teacher RYT 200</strong> (2012).<br><br>
+      Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong style="color:var(--ink);">Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).<br><br>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" style="color:var(--pink); font-weight:600; text-decoration:none;">Connect on LinkedIn &rarr;</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <h4 style="color:var(--mid);">Trading As</h4>
+    <ul>
+      <li><a href="https://www.pranaclimb.com">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com" target="_blank">🌊 OceanDips</a></li>
+    </ul>
+    <p style="font-size:0.78rem; color:var(--mid); margin-top:0.8rem; line-height:1.8;"><strong style="color:var(--ink);">Pranaclimb Ltd</strong><br>Company No. 16626114<br>13 Upton Towans, Hayle<br>Cornwall TR27 5BJ</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <div style="display:flex; flex-direction:column; gap:0.3rem;">
+    <p>&copy; 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p style="font-size:0.7rem; color:rgba(0,0,0,0.4);">pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  </div>
+  <div style="display:flex; gap:1.5rem; flex-shrink:0; margin-left:2rem;">
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Statcounter -->
+<script type="text/javascript">
+var sc_project=11925361; 
+var sc_invisible=1; 
+var sc_security="14a77c6b"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11925361/0/14a77c6b/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter -->
+</body>
+</html>
