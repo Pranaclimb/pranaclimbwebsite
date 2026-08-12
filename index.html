@@ -1,78 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pranaclimb - Master your breathing, transform your performance">
-    <title>Pranaclimb - Breathing Training & Performance</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="Pranaclimb bridges ancient pranayama with modern sports science, giving climbers a measurable edge in endurance, recovery, and focus on the wall."/>
+  <title>Breathing for Climbing - Science-Based Breathwork Training | Pranaclimb</title>
+  <link rel="canonical" href="https://www.pranaclimb.com/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--pink:#ff00ff;--lime:#aaff00;--blue:#89cff0;--ink:#4a4a4a;--mid:#5e5e5e;--off:#f5f5f2;--border:#e0e0d8;--white:#fff}
+    html{scroll-behavior:smooth}
+    body{font-family:'Outfit',Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+    img{display:block;max-width:100%}
+    a{color:inherit}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1rem 3rem;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-logo,.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.65rem;letter-spacing:.12em;color:var(--ink);text-decoration:none;white-space:nowrap}
+    .nav-logo span,.footer-logo span{color:var(--pink)}
+    .nav-links{display:flex;gap:1.35rem;list-style:none;align-items:center}
+    .nav-links a{font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--mid)}
+    .nav-links a:hover{color:var(--pink)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.78rem 1.5rem;border-radius:2px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:2px solid transparent}
+    .btn-pink{background:var(--pink);color:#fff}
+    .btn-lime{background:var(--lime);color:var(--ink)}
+    .btn-outline{border-color:var(--ink);color:var(--ink);background:transparent}
+    .hero{min-height:94vh;padding:7rem 3rem 4rem;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:4rem;align-items:center;background:var(--off);border-bottom:1.5px solid var(--border)}
+    .hero-copy{max-width:680px}
+    .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem}
+    h1,h2,h3{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:.94;letter-spacing:0}
+    h1{font-size:clamp(4.5rem,9vw,8rem);color:var(--ink);margin-bottom:1.25rem}
+    h1 span{color:var(--pink)}
+    .hero-lead{font-size:1.08rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:560px;margin-bottom:2rem}
+    .hero-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+    .hero-media{align-self:stretch;min-height:520px;position:relative;overflow:hidden;background:var(--white)}
+    .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center}
+    .hero-note{position:absolute;left:1rem;bottom:1rem;background:var(--lime);color:var(--ink);padding:.45rem .75rem;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .section{padding:5rem 3rem}
+    .section-inner{max-width:1120px;margin:0 auto}
+    .section-head{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1fr);gap:3rem;align-items:end;margin-bottom:2.5rem}
+    h2{font-size:clamp(2.7rem,5vw,4.5rem);color:var(--ink)}
+    .section-lead{font-size:1rem;font-weight:300;line-height:1.85;color:var(--mid);max-width:680px}
+    .divider{width:48px;height:3px;background:var(--pink);border-radius:2px;margin:1rem 0 0}
+    .method-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--border);background:var(--border);gap:1.5px}
+    .metric{background:var(--white);padding:2rem;min-height:190px}
+    .metric-code{font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;color:var(--pink);margin-bottom:.75rem}
+    .metric h3,.card h3,.step h3,.blog-card h3{font-size:1.45rem;color:var(--ink);margin-bottom:.6rem}
+    .metric p,.card p,.step p,.blog-card p{font-size:.9rem;color:var(--mid);line-height:1.75}
+    .band{background:var(--off);border-top:1.5px solid var(--border);border-bottom:1.5px solid var(--border)}
+    .assessment{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:3rem;align-items:center}
+    .image-panel{min-height:420px;overflow:hidden;background:var(--white)}
+    .image-panel img{width:100%;height:100%;object-fit:cover}
+    .check-list{display:grid;gap:.65rem;margin:1.5rem 0 2rem;list-style:none}
+    .check-list li{position:relative;padding-left:1.35rem;color:var(--mid);font-size:.92rem}
+    .check-list li:before{content:"";position:absolute;left:0;top:.62rem;width:.45rem;height:.45rem;background:var(--pink);border-radius:50%}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border)}
+    .step{background:var(--white);padding:2rem}
+    .step-number{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:var(--lime);-webkit-text-stroke:1px var(--ink);line-height:1;margin-bottom:.7rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border)}
+    .card{background:var(--white);padding:0;display:flex;flex-direction:column}
+    .card img{height:220px;width:100%;object-fit:cover}
+    .card-body{padding:1.7rem;display:flex;flex-direction:column;gap:.8rem;flex:1}
+    .card-tag{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pink)}
+    .card .btn{align-self:flex-start;margin-top:auto}
+    .book{display:grid;grid-template-columns:minmax(220px,340px) minmax(0,1fr);gap:3rem;align-items:center}
+    .book-cover{background:var(--white);border:1.5px solid var(--border);padding:1rem}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border)}
+    .blog-card{background:var(--white);padding:1.7rem;min-height:260px;display:flex;flex-direction:column}
+    .blog-card a{margin-top:auto;color:var(--pink);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+    .annie{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:3rem;align-items:center}
+    .annie img{width:100%;height:480px;object-fit:cover}
+    .cta{background:var(--lime);padding:4rem 3rem;text-align:center;border-top:1.5px solid var(--border)}
+    .cta h2{font-size:clamp(2.5rem,5vw,4.2rem);margin-bottom:1rem}
+    .cta p{max-width:620px;margin:0 auto 1.6rem;color:var(--ink);font-weight:300;line-height:1.8}
+    footer{background:var(--white);border-top:1.5px solid var(--border);padding:4rem 3rem;display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:3rem}
+    footer p,footer a,footer li{font-size:.86rem;color:var(--mid);line-height:1.7}
+    footer ul{list-style:none;display:grid;gap:.35rem}
+    footer a{text-decoration:none}
+    footer a:hover{color:var(--pink)}
+    footer h4{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#888;margin-bottom:.8rem}
+    .small-print{grid-column:1/-1;border-top:1px solid var(--border);padding-top:1.5rem;font-size:.78rem;color:#777}
+    @media(max-width:980px){
+      nav{padding:1rem 1.5rem}.nav-links{display:none}
+      .hero{grid-template-columns:1fr;padding:6.5rem 1.5rem 3rem;gap:2rem;min-height:auto}.hero-media{min-height:62vw}
+      .section,.cta{padding:4rem 1.5rem}.section-head,.assessment,.book,.annie{grid-template-columns:1fr;gap:2rem}
+      .method-grid,.steps,.cards,.blog-grid,footer{grid-template-columns:1fr}
+      .annie img{height:auto}.image-panel{min-height:60vw}
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">Pranaclimb</div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#tools">Tools</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <nav aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+    <ul class="nav-links">
+      <li><a href="methodology.html">Method</a></li>
+      <li><a href="rba.html">Assessment</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="app.html">App</a></li>
+      <li><a href="book.html">Book</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="annie.html">Annie</a></li>
+      <li><a href="gallery.html">Photos</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h1>Master Your Breathing, Transform Your Performance</h1>
-                <p>Science-backed breathing techniques for athletes, climbers, and anyone looking to optimize their performance.</p>
-                <button class="cta-button">Get Started</button>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Pranaclimb</h2>
-                <p>Pranaclimb provides evidence-based breathing training tools and assessments to help you improve your performance.</p>
-            </div>
-        </section>
-
-        <section id="tools" class="tools">
-            <div class="container">
-                <h2>Our Tools</h2>
-                <div class="tools-grid">
-                    <div class="tool-card">
-                        <h3>Breathing Questionnaire</h3>
-                        <p>Assess your current breathing patterns</p>
-                    </div>
-                    <div class="tool-card">
-                        <h3>Energy Cost Calculator</h3>
-                        <p>Calculate energy expenditure and optimize training</p>
-                    </div>
-                    <div class="tool-card">
-                        <h3>Remote Breathing Assessment</h3>
-                        <p>Get professional breathing analysis remotely</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p>Questions? We'd love to hear from you.</p>
-                <a href="mailto:contact@pranaclimb.com" class="cta-button">Contact Us</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Pranaclimb. All rights reserved.</p>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Love · Breathe · Climb</p>
+        <h1>The Science<br/>of Breath<br/>for <span>Climbing</span></h1>
+        <p class="hero-lead">Pranaclimb bridges ancient pranayama with modern sports science, giving climbers a measurable edge in endurance, recovery, and focus on the wall.</p>
+        <div class="hero-actions">
+          <a class="btn btn-pink" href="rba.html">Book Your Assessment</a>
+          <a class="btn btn-outline" href="methodology.html">Explore the Method</a>
         </div>
-    </footer>
+      </div>
+      <div class="hero-media">
+        <img src="images/rock-climbing-breath-holds-bosigran-cornwall-pranaclimb.jpg" alt="Sea cliff climbing in Cornwall"/>
+        <div class="hero-note">Cornwall 2006</div>
+      </div>
+    </section>
 
-    <script src="js/main.js"></script>
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">The Pranaclimb Way</p>
+            <h2>Methodology</h2>
+            <div class="divider"></div>
+          </div>
+          <p class="section-lead">A breath-led climbing performance system. Field-based, non-invasive, and built for climbing's real-world demands: dynamic movement, anaerobic bursts, expressive breathing, and micro-rests.</p>
+        </div>
+        <div class="method-grid">
+          <article class="metric">
+            <div class="metric-code">BR</div>
+            <h3>Breathing Rate</h3>
+            <p>A real-time effort marker that tracks intensity as you climb, breath by breath.</p>
+          </article>
+          <article class="metric">
+            <div class="metric-code">RPE</div>
+            <h3>CR-10 Scale</h3>
+            <p>Perceived load, tightly correlated with breathing rate and used to identify your thresholds.</p>
+          </article>
+          <article class="metric">
+            <div class="metric-code">HRR</div>
+            <h3>Recovery Speed</h3>
+            <p>Heart-rate recovery at 60 seconds, one of the clearest signals of how quickly you bounce back.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="section-inner assessment">
+        <div class="image-panel">
+          <img src="images/pranaclimb-remote-breathing-assessment-app-climbers.jpg" alt="Remote breathing assessment for climbers"/>
+        </div>
+        <div>
+          <p class="eyebrow">Self-Guided Diagnostic & Training Tool</p>
+          <h2>Remote Breathing Assessment</h2>
+          <p class="section-lead">Your journey begins with a comprehensive remote assessment on and off the rock. The Pranaclimb RBA uses breathing rate, RPE, and heart-rate recovery to identify performance zones, recovery capacity, and breathing efficiency.</p>
+          <ul class="check-list">
+            <li>Breathing Rate and RPE during real climbing movement</li>
+            <li>Expressive breathing, holds, grunts, and high-effort patterns</li>
+            <li>HRR60 recovery tracking between burns</li>
+            <li>Optional deep dive into CO2 tolerance, PEFR, SpO2, and rib mobility</li>
+          </ul>
+          <a class="btn btn-pink" href="rba.html">Explore the Full RBA</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">The Pranaclimb RBA</p>
+            <h2>How the Assessment Works</h2>
+          </div>
+          <p class="section-lead">A three-stage process that maps your breathing physiology to real climbing performance in the real world, not a lab.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">01</div>
+            <h3>Assess</h3>
+            <p>Capture breathing rate, RPE, expressive breathing, recovery, and optional physiology markers.</p>
+          </article>
+          <article class="step">
+            <div class="step-number">02</div>
+            <h3>Interpret</h3>
+            <p>Map effort thresholds, recovery speed, and W'bal depletion so the data means something useful.</p>
+          </article>
+          <article class="step">
+            <div class="step-number">03</div>
+            <h3>Identify</h3>
+            <p>Find where performance breaks down: early breath spikes, holds, slow recovery, or stress-led chaos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Work With Annie</p>
+            <h2>Coaching</h2>
+          </div>
+          <p class="section-lead">A coaching option to match your goals and schedule, from a single session to a full transformation programme.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img src="images/pranaclimb-breathing-coach-annie-anderson-bouldering-cornwall.jpg" alt="Breathing coaching for climbing"/>
+            <div class="card-body">
+              <p class="card-tag">Single Session</p>
+              <h3>Breathing Assessment</h3>
+              <p>Diagnose your breathing patterns and leave with a personalised report and immediate priorities.</p>
+              <a class="btn btn-outline" href="services.html">Book Now</a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/climbing-coaching-sennen.jpg" alt="Climbing coaching at Sennen"/>
+            <div class="card-body">
+              <p class="card-tag">Most Popular</p>
+              <h3>Full Transformation</h3>
+              <p>Assessment, custom programme, weekly sessions, wall integration, and a long-term maintenance plan.</p>
+              <a class="btn btn-pink" href="coaching.html">Enquire</a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/sea-cliff-climbing.jpg" alt="Sea cliff climbing performance package"/>
+            <div class="card-body">
+              <p class="card-tag">Bespoke</p>
+              <h3>Performance Package</h3>
+              <p>For competitive climbers and teams needing periodisation, performance testing, and ongoing support.</p>
+              <a class="btn btn-outline" href="mailto:annie@pranaclimb.com">Get in Touch</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner book">
+        <div class="book-cover">
+          <img src="images/pranaclimb-book-cover.jpg" alt="Pranaclimb Love Breathe Climb book cover"/>
+        </div>
+        <div>
+          <p class="eyebrow">Coming Soon</p>
+          <h2>The Book</h2>
+          <p class="section-lead">A science-based guide to breathwork, endurance, and mindful performance. Learn how breathing transforms climbing, from the science of W'bal to the flow states of elite climbers.</p>
+          <a class="btn btn-lime" href="book.html">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Latest</p>
+            <h2>From the Blog</h2>
+          </div>
+          <p class="section-lead">Breathing science, climbing insights, and practical cues for calmer, stronger performance.</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <p class="card-tag">Breathing Science</p>
+            <h3>Why CO2 Tolerance is the Climber's Hidden Superpower</h3>
+            <p>Most climbers are unknowingly overbreathing on the wall. Here's what the science says and what to do about it.</p>
+            <a href="blog-co2-hidden-superpower.html">Read Article</a>
+          </article>
+          <article class="blog-card">
+            <p class="card-tag">Performance</p>
+            <h3>Three Breath Cues to Use Before Your Next Crux Move</h3>
+            <p>Simple, immediately applicable techniques to keep your nervous system calm when it matters most.</p>
+            <a href="blog-three-breath-cues.html">Read Article</a>
+          </article>
+          <article class="blog-card">
+            <p class="card-tag">Recovery</p>
+            <h3>Breathwork for Faster Climbing Recovery</h3>
+            <p>How a short post-session breathing routine can support recovery and reduce next-day fatigue.</p>
+            <a href="blog-recovery-protocol.html">Read Article</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner annie">
+        <div>
+          <p class="eyebrow">Founder of the Pranaclimb Methodology</p>
+          <h2>Annie Anderson</h2>
+          <p class="section-lead">Annie Anderson is an independent researcher, breathwork specialist, and lifelong climber with over 30 years of worldwide experience. Based on the sea cliffs of Cornwall, she created the Pranaclimb Methodology to track climbing performance through breathing, effort, and recovery.</p>
+          <a class="btn btn-pink" href="annie.html">Meet Annie</a>
+        </div>
+        <img src="images/annie-anderson-pranaclimb-founder-cold-water-swimming-cornwall.jpg" alt="Annie Anderson, founder of Pranaclimb"/>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <h2>The Breath-Led Performance System for Climbers</h2>
+      <p>Breathing regulates effort, delays fatigue, and accelerates recovery while climbing. Start breathing better, start climbing stronger.</p>
+      <a class="btn btn-pink" href="mailto:annie@pranaclimb.com">Contact Pranaclimb</a>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a href="index.html" class="footer-logo">PRANA<span>CLIMB</span></a>
+      <p style="margin-top:1rem">The Science of Breathing for Climbing Performance. Love Breathe Climb.</p>
+      <p><a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a></p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="rba.html">Assessment</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="app.html">The App</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>More</h4>
+      <ul>
+        <li><a href="book.html">The Book</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="annie.html">About Annie</a></li>
+        <li><a href="gallery.html">Photos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Trading As</h4>
+      <ul>
+        <li><a href="https://www.pranaclimb.com/">Pranaclimb</a></li>
+        <li><a href="https://oceandips.com/">Ocean Dips</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <p class="small-print">Pranaclimb Ltd trading as Pranaclimb & Ocean Dips. Registered in England & Wales, Company No. 16626114. Registered Office: 13 Upton Towans, Hayle, Cornwall, TR27 5BJ.</p>
+  </footer>
 </body>
 </html>
