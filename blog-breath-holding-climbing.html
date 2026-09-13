@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breath Holding in Climbing: Brace, Move, Breathe | Pranaclimb</title>
+  <meta name="description" content="A simple Pranaclimb guide to why climbers hold their breath, how it may support maximum-intensity movement, and how to train it with control." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--pink:#ff00ff;--lime:#aaff00;--blue:#89cff0;--white:#fff;--off:#f5f5f2;--ink:#454545;--mid:#606060;--border:#deded6}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+    body{font-family:"Outfit",sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:"Bebas Neue",sans-serif;font-size:1.6rem;letter-spacing:.12em;color:var(--ink);text-decoration:none}.logo span{color:var(--pink)}
+    .nav-links{display:flex;gap:1.8rem;list-style:none}.nav-links a{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--mid)}
+    .nav-cta{background:var(--pink);color:var(--white);padding:.55rem 1.25rem;text-decoration:none;font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+    .hero{padding:8.5rem 4rem 4.5rem;background:linear-gradient(135deg,var(--off) 0 62%,rgba(137,207,240,.22) 62% 100%)}
+    .hero-inner{max-width:1080px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
+    .back{display:inline-block;margin-bottom:1.5rem;color:var(--mid);text-decoration:none;font-size:.73rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+    .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}.tag{font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:.3rem .7rem;background:var(--pink);color:#fff}.tag.alt{background:var(--lime);color:var(--ink)}
+    h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(3rem,6vw,5.6rem);line-height:.9;margin-bottom:1.3rem}h1 span{color:var(--pink)}
+    .lead{font-family:"Lora",serif;font-size:1.12rem;line-height:1.8;color:var(--mid)}
+    .hero img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;border:8px solid #fff;box-shadow:0 18px 45px rgba(0,0,0,.12)}
+    main{max-width:800px;margin:auto;padding:4.5rem 2rem}
+    h2{font-family:"Bebas Neue",sans-serif;font-size:2.3rem;line-height:1.05;margin:3.2rem 0 1rem}h3{font-size:1.05rem;margin:2rem 0 .7rem}
+    p{font-family:"Lora",serif;font-size:1rem;line-height:1.9;color:var(--mid);margin-bottom:1.2rem}strong{color:var(--ink)}a{color:var(--pink);font-weight:600;text-decoration:none}a:hover{text-decoration:underline}
+    .statement{background:var(--pink);color:#fff;padding:2rem 2.3rem;margin:2.2rem 0;font-family:"Lora",serif;font-size:1.22rem;line-height:1.65}.statement strong{color:var(--lime)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.7rem 0}.card{background:var(--off);border-top:4px solid var(--pink);padding:1.35rem}.card:nth-child(2){border-color:var(--blue)}.card:nth-child(3){border-color:var(--lime)}
+    .card .number{font-family:"Bebas Neue",sans-serif;font-size:2rem;color:var(--pink)}.card h3{margin:.2rem 0 .55rem;font-size:.95rem}.card p{font-family:"Outfit",sans-serif;font-size:.84rem;line-height:1.65;margin:0}
+    .cue{background:var(--lime);padding:1.6rem 2rem;margin:2rem 0;text-align:center}.cue small{display:block;font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem}.cue strong{font-family:"Bebas Neue",sans-serif;font-size:2rem;letter-spacing:.03em}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}.compare section{border:1.5px solid var(--border);padding:1.45rem}.compare h3{margin:0 0 .7rem;text-transform:uppercase;font-size:.82rem;letter-spacing:.08em}.compare p{font-family:"Outfit",sans-serif;font-size:.88rem;line-height:1.7;margin:0}
+    .protocol{background:var(--off);border-left:4px solid var(--pink);padding:1.4rem 1.6rem;margin:1rem 0}.protocol h3{margin:0 0 .55rem}.protocol p{font-family:"Outfit",sans-serif;font-size:.9rem;line-height:1.7;margin:0}
+    .case{border:2px solid var(--blue);padding:1.6rem 1.8rem;margin:2rem 0}.case .label{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#337b9b;margin-bottom:.6rem}.case p:last-child{margin-bottom:0}
+    .safety{background:rgba(255,0,255,.07);border:1.5px solid var(--pink);padding:1.5rem;margin:2rem 0}.safety p{font-family:"Outfit",sans-serif;font-size:.88rem;line-height:1.7;margin:0}
+    .deep{background:#dceff7;color:var(--ink);padding:2.2rem;margin-top:3.5rem;border-top:4px solid var(--blue)}.deep h2{color:var(--ink);margin:0 0 .7rem}.deep p{color:var(--mid);font-family:"Outfit",sans-serif}.deep a{display:inline-block;background:var(--lime);color:var(--ink);padding:.8rem 1.1rem;font-size:.75rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+    footer{padding:2.5rem;text-align:center;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid)}
+    @media(max-width:800px){nav{padding:1rem 1.25rem}.nav-links{display:none}.hero{padding:6.5rem 1.4rem 3rem}.hero-inner{grid-template-columns:1fr;gap:2rem}.hero img{max-height:480px}.cards{grid-template-columns:1fr}.compare{grid-template-columns:1fr}main{padding:3rem 1.4rem}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Breath Holding in Climbing: Brace, Move, Breathe","description":"A simple Pranaclimb guide to why climbers hold their breath, how it may support maximum-intensity movement, and how to train it with control.","datePublished":"2026-09-13","dateModified":"2026-09-13","author":{"@type":"Person","name":"Annie Anderson"},"publisher":{"@type":"Organization","name":"Pranaclimb"}}
+  </script>
+  <link rel="canonical" href="https://www.pranaclimb.com/blog-breath-holding-climbing" />
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">PRANA<span>CLIMB</span></a>
+    <ul class="nav-links"><li><a href="methodology.html">Method</a></li><li><a href="rba.html">RBA</a></li><li><a href="blog.html">Blog</a></li><li><a href="gallery.html">Photos &amp; Videos</a></li></ul>
+    <a class="nav-cta" href="rba.html">Book Your RBA</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <a class="back" href="blog.html">← Back to Journal</a>
+        <div class="tags"><span class="tag">Climbing Breathwork</span><span class="tag alt">5 min read</span></div>
+        <h1>Breath Holding in Climbing:<br><span>Brace. Move. Breathe.</span></h1>
+        <p class="lead">Climbers often stop breathing at the exact moment the climbing becomes hardest. That is not automatically a mistake. A brief hold can help create tension, commitment and control—if the climber knows how to release it.</p>
+      </div>
+      <img src="images/micro-breath-holds-annie-bouldering.webp" alt="Annie Anderson bouldering in a braced position above the sea" />
+    </div>
+  </header>
+
+  <main>
+    <div class="statement"><strong>Pranaclimb position:</strong> breath holding is a trainable climbing behaviour. We develop the useful hold, the timely release and the recovery breath—then observe what changes on the wall.</div>
+
+    <h2>Breath Holding Is Already Part of Hard Climbing</h2>
+    <p>Watch a climber at absolute maximum. During a lock-off, deadpoint, heel-hook or powerful boulder sequence, breathing may briefly stop. The torso stiffens, force transfers through the body and attention narrows onto the move.</p>
+    <p>The important question is not simply, “Did the climber hold their breath?” It is: <strong>Did the hold help the movement, and did breathing restart soon enough to protect the next move?</strong></p>
+
+    <div class="cards">
+      <section class="card"><div class="number">01</div><h3>Brace the body</h3><p>A short hold can support trunk pressure and whole-body tension through one demanding movement.</p></section>
+      <section class="card"><div class="number">02</div><h3>Stay with the crux</h3><p>Training can build familiarity with air hunger and help the climber remain composed as internal strain rises.</p></section>
+      <section class="card"><div class="number">03</div><h3>Trigger wider physiology</h3><p>Longer or repeated holds can change oxygen, carbon dioxide and cardiovascular responses. The spleen may contribute when the stimulus is strong enough.</p></section>
+    </div>
+
+    <div class="cue"><small>On-wall cue</small><strong>Brace briefly if the move demands it—then release and breathe.</strong></div>
+
+    <h2>The Valsalva: More Than Simply Holding Your Breath</h2>
+    <p>A Valsalva manoeuvre is a forceful attempt to breathe out against a closed airway. During a hard lock-off, compression move or dynamic reach, a climber may create a brief Valsalva-like strain without consciously planning it. The rise in pressure through the chest and abdomen can help stiffen the trunk and transfer force across the body.</p>
+    <p>That pressure also changes circulation. If the strain continues, venous return and cardiac output can fall while the sympathetic nervous system works to defend blood pressure. When the hold is released, blood pressure can briefly dip and then overshoot. This is why Pranaclimb treats the hold as a <strong>useful but dose-dependent performance tool</strong>: brace for the move, release promptly, and restore breathing rather than stacking one hold onto the next.</p>
+    <p>In six trained male climbers, indoor bouldering produced intermittent mouth-pressure changes consistent with Valsalva-like effort and a substantial blood-pressure response. Separate strength research found that forced exhalation increased peak force in some muscle actions and that a full Valsalva was not superior. Together, these findings support training both options: a very brief hold when maximal stiffness is needed, and a forceful exhale when the move can be completed without closing the airway.</p>
+
+    <div class="statement"><strong>The convergence:</strong> one maximal move can contain four connected layers. You see the <strong>breath hold</strong>; Valsalva-like pressure may help create the brace; <strong>CO₂ tolerance</strong> influences how well the climber manages rising air hunger; and sufficiently strong apnoea and exercise stress may also engage the <strong>spleen</strong>. They can work together, but they are not four names for the same response.</div>
+
+    <h2>Where the Spleen Fits</h2>
+    <p>The spleen stores red-blood-cell-rich blood. During demanding apnoea, hypoxia and intense exercise it can contract, releasing some of those cells into circulation and temporarily increasing haemoglobin concentration.</p>
+    <p>That makes the spleen relevant to the Pranaclimb model. Maximum-intensity climbing combines muscular work, sympathetic stress and frequent breath holds. But a visible hold does not prove that the spleen has contracted, and spleen contraction has not yet been isolated as the reason a climber completes a route.</p>
+    <p>Pranaclimb therefore treats the spleen as a <strong>credible contributing mechanism</strong> within a larger performance response—not as a magic switch.</p>
+
+    <h2>Sport Routes and Boulders Need Different Breath Strategies</h2>
+    <div class="compare">
+      <section><h3>Sport-route onsight</h3><p>The effort is longer and recovery matters. Brief holds may help at individual crux moves, but the priority is restarting the breath, using rests well and preventing one hard sequence from disrupting the rest of the route.</p></section>
+      <section><h3>Boulder onsight</h3><p>The effort is shorter and more explosive. A deliberate brace may link two or three maximal moves. The priority is precision through the sequence, followed by an immediate release and full recovery.</p></section>
+    </div>
+
+    <h2>How Pranaclimb Trains It</h2>
+    <div class="protocol"><h3>1. Off-wall CO₂-related practice</h3><p>Use four comfortable end-expiratory walking holds of roughly 15–25 steps, with full breathing recovery between rounds. The aim is composure and control, not maximal deprivation.</p></div>
+    <div class="protocol"><h3>2. Sport-climbing practice</h3><p>On easy, familiar and securely protected climbing, explore a brief 2–3-second hold every 5–10 breaths. Release cleanly and check that rhythm, accuracy and decision-making remain intact.</p></div>
+    <div class="protocol"><h3>3. Boulder practice</h3><p>On low-risk familiar terrain, climb a controlled two- or three-move sequence on one breath. Match the release to the end of the sequence, then use about one minute of calm recovery breathing.</p></div>
+    <p>During a Respiratory Breathing Assessment, Pranaclimb can record hold duration, Raw Breathing Rate, Effective Breathing Rate, RPE and recovery. This turns an invisible habit into a behaviour that can be compared across attempts.</p>
+
+    <div class="case">
+      <div class="label">Elite-climbing observation</div>
+      <p><strong><a href="blog-tim-emmett-era-vella.html">Tim Emmett used demanding breath-retention practice before climbing <em>Era Vella</em> 9a</a>.</strong> Because the practice occurred a couple of days before the ascent, it cannot have supplied a short-lived red-cell boost during the send. Its more plausible contribution was longer-term familiarity with respiratory discomfort, composure under strain and confidence in continuing when breathing pressure became intense.</p>
+    </div>
+
+    <h2>What We Know—and What We Are Testing</h2>
+    <p>Research already shows that repeated apnoea and intense exercise can provoke meaningful physiological responses. Exercise breath-hold training has also improved the maintenance of later repeated high-intensity efforts in elite athletes.</p>
+    <p>The climbing-specific protocol is the next question. Pranaclimb is testing how hold duration, movement type, recovery breathing and the athlete’s individual response interact on real climbing. <strong>The method is controlled, progressive and measurable while the science continues to develop.</strong></p>
+
+    <div class="safety"><p><strong>Safety:</strong> brief planned holds on easy, familiar, securely protected climbing are different from maximal or serial apnoea. Practise demanding breath holds dry, at ground level and with appropriate supervision. Do not hyperventilate before breath holding in water, while driving, belaying or on exposed terrain.</p></div>
+
+    <section class="deep">
+      <h2>Want the Full Science?</h2>
+      <p>Read the optional deep dive for the spleen studies, apnoea mechanisms, acute exercise evidence, protocol distinctions and complete reference list.</p>
+      <a href="blog-spleen-breath-holding.html">Read the scientific deep dive →</a>
+    </section>
+  </main>
+
+  <footer>© 2026 Pranaclimb · Breathwork for climbers · By Annie Anderson</footer>
+</body>
+</html>
