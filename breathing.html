@@ -31,14 +31,13 @@
       "@type": "ItemList",
       "@id": "https://www.pranaclimb.com/breathing#techniques",
       "name": "Breathing Techniques for Climbers",
-      "numberOfItems": 6,
+      "numberOfItems": 5,
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "url": "https://www.pranaclimb.com/wim-hof", "name": "Wim Hof-Style Breathing for Climbers"},
         {"@type": "ListItem", "position": 2, "url": "https://www.pranaclimb.com/box-breathing", "name": "Box Breathing for Climbers"},
         {"@type": "ListItem", "position": 3, "url": "https://www.pranaclimb.com/cyclic-sighing", "name": "Cyclic Sighing for Climbers"},
         {"@type": "ListItem", "position": 4, "url": "https://www.pranaclimb.com/balloon-breathing", "name": "Balloon Breathing for Climbers"},
-        {"@type": "ListItem", "position": 5, "url": "https://www.pranaclimb.com/power-exhale", "name": "Power Exhale and PEFR for Climbers"},
-        {"@type": "ListItem", "position": 6, "url": "https://www.pranaclimb.com/tongue-jaw-reset", "name": "Tongue and Jaw Reset for Climbers"}
+        {"@type": "ListItem", "position": 5, "url": "https://www.pranaclimb.com/power-exhale", "name": "Power Exhale and PEFR for Climbers"}
       ]
     }
   ]
@@ -100,6 +99,11 @@
   .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 0.06em; color: var(--ink); margin-bottom: 0.5rem; }
   .section-title span { color: var(--lime); }
   .section-desc { font-size: 0.9rem; font-weight: 300; color: var(--mid); line-height: 1.7; max-width: 640px; }
+  .method-box { max-width: 920px; margin: 2.5rem auto 0; padding: 1.5rem 1.7rem; background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--lime); }
+  .method-box p { font-size: 0.88rem; font-weight: 300; color: var(--mid); line-height: 1.75; }
+  .method-box strong { color: var(--ink); }
+  .method-box .method-rule { display: block; margin-top: 0.75rem; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pink); }
+  .method-box a { color: var(--ink); font-weight: 600; }
   .lime-bar { height: 3px; background: var(--lime); width: 48px; margin: 0.8rem 0 1.2rem; border-radius: 2px; }
 
   /* TOOL CARDS */
@@ -137,7 +141,7 @@
   .video-level:hover { border-color: var(--pink); }
   .video-level.active { border-color: var(--lime); background: var(--lime); }
   .video-level small { display: block; margin-top: 0.2rem; color: var(--mid); font-size: 0.58rem; font-weight: 500; letter-spacing: 0.03em; text-transform: none; }
-  .retention-options { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.4rem; margin-bottom: 1rem; }
+  .retention-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-bottom: 1rem; }
   .retention-choice { position: relative; cursor: pointer; }
   .retention-choice input { position: absolute; opacity: 0; pointer-events: none; }
   .retention-choice span { display: block; padding: 0.6rem 0.2rem; border: 1.5px solid var(--border); border-radius: 2px; background: var(--white); color: var(--ink); text-align: center; font-size: 0.7rem; font-weight: 700; transition: border-color 0.15s, background 0.15s; }
@@ -204,7 +208,7 @@
   .circ-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
   .circ-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; letter-spacing: 0.04em; line-height: 1; }
   .circ-unit { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); margin-top: 2px; }
-  .t-dots { display: flex; gap: 7px; justify-content: center; margin-bottom: 1.2rem; }
+  .t-dots { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; margin-bottom: 1.2rem; }
   .tdot { width: 7px; height: 7px; border-radius: 50%; background: var(--border); transition: background 0.3s; }
   .tdot.done { background: var(--blue); }
   .tdot.active { background: var(--pink); }
@@ -233,16 +237,6 @@
   .box-key-step { padding: 0.45rem 0.25rem; border: 1px solid var(--border); border-radius: 2px; background: var(--off); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mid); transition: all 0.2s; }
   .box-key-step.active { color: var(--ink); border-color: var(--pink); background: #fff0ff; box-shadow: inset 0 -3px 0 var(--pink); }
 
-  /* RESEARCH STRIP */
-  .research-strip { background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 2rem; }
-  .research-inner { max-width: 900px; margin: 0 auto; }
-  .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
-  .research-card { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--lime); border-radius: 2px; padding: 1.4rem; }
-  .research-card-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); margin-bottom: 0.6rem; }
-  .research-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.06em; color: var(--ink); margin-bottom: 0.5rem; }
-  .research-card-text { font-size: 0.78rem; font-weight: 300; color: var(--mid); line-height: 1.7; }
-  .research-card-stat { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; background: var(--blue); color: var(--ink); padding: 3px 10px; border-radius: 2px; margin-top: 0.8rem; }
-
   /* ZONE MAP */
   .zone-table { width: 100%; border-collapse: collapse; margin-top: 1.2rem; font-size: 0.82rem; }
   .zone-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); padding: 0.6rem 0.8rem; text-align: left; background: var(--off); border-bottom: 2px solid var(--lime); }
@@ -263,7 +257,6 @@
     .nav-links { display: none; }
     .hero { padding: 3rem 1.2rem 2.5rem; }
     .section { padding: 2.5rem 1.2rem; }
-    .research-strip { padding: 2.5rem 1.2rem; }
   }
 </style>
 </head>
@@ -279,7 +272,6 @@
     <li><a href="#tools">Breathing Tools</a></li>
     <li><a href="#timers">Timers</a></li>
     <li><a href="#zones">Zones</a></li>
-    <li><a href="#research">Breathing Science</a></li>
     <li><a href="breathwork-practices.html">Practices</a></li>
     <li><a href="zone-coaching.html">Zone Coaching</a></li>
   </ul>
@@ -297,6 +289,14 @@
     <span class="hero-pill blue">Activation</span>
   </div>
 </section>
+
+<!-- METHOD INTRODUCTION -->
+<div style="padding:0 2rem;">
+  <div class="method-box">
+    <p><strong>Pranaclimb is a field-based breathing, effort and recovery system for climbers.</strong> The Remote Breathing Assessment records Raw BR, Effective BR, RPE and HRR₆₀. The Coaching Protocol then uses those observations to select breathing, pacing and recovery interventions appropriate to the climber and the intensity of the movement. <a href="methodology.html">Explore the Pranaclimb Methodology →</a></p>
+    <span class="method-rule">RBA measures · CoPro coaches</span>
+  </div>
+</div>
 
 <!-- TOOLS OVERVIEW -->
 <div id="tools" class="section">
@@ -320,7 +320,7 @@
         <div class="science-box-content">
           <p><strong>The breathing cycle:</strong> 30–40 deep rhythmic breaths reduce CO₂ and temporarily raise blood pH. The relaxed exhalation retention then allows O₂ to fall and CO₂ to rise again, creating a distinct hypoxic and interoceptive challenge. One recovery breath completes the round.</p>
           <p><strong>Why climbers may use it:</strong> the practice combines activation with voluntary control. It can provide an intense rehearsal of focus, commitment and composure while respiratory sensations change—qualities that may transfer meaningfully to the psychological demands of hard climbing.</p>
-          <p><strong>What research has observed:</strong> trained practitioners have demonstrated voluntary sympathetic activation and modulation of the innate immune response. A small study in young endurance athletes also reported faster VO₂ kinetics and lower perceived strain after a 17–22-minute breathing warm-up. These findings give the method a credible physiological and performance rationale, while direct climbing and Critical Power effects still require testing.</p>
+          <p><strong>What research has observed:</strong> trained practitioners have demonstrated voluntary sympathetic activation and modulation of the innate immune response. A small study in young endurance athletes also reported faster VO₂ kinetics and lower perceived strain after a 17–22-minute breathing warm-up. Together, these findings give the method a credible physiological and performance rationale; Pranaclimb extends that rationale into field testing of readiness, respiratory composure and hard-climbing preparation.</p>
           <p><strong>The Pranaclimb position:</strong> Wim Hof–style breathing is a purposeful off-wall activation and controlled-stress practice. We use it to explore readiness, respiratory composure and volitional control—not as a breathing pattern to perform while climbing.</p>
           <p>Evidence and further reading: <a href="https://www.pnas.org/doi/10.1073/pnas.1322174111" target="_blank" rel="noopener">Kox et al.</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9540300/" target="_blank" rel="noopener">Bahenský et al.</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8424088/" target="_blank" rel="noopener">Citherlet et al.</a> · <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0286933" target="_blank" rel="noopener">systematic review</a> · <a href="https://oxygenadvantage.com/blogs/blog/wim-hof" target="_blank" rel="noopener">Oxygen Advantage overview</a></p>
           <p style="margin-top:1rem;margin-bottom:0.35rem;"><strong>Choose your guided practice:</strong></p>
@@ -340,7 +340,7 @@
     </div>
 
     <div class="tool-card">
-      <span class="tool-card-zone zone-recovery">Recovery</span>
+      <span class="tool-card-zone zone-recovery">Regulation &amp; Focus</span>
       <div class="tool-card-icon">⬜</div>
       <div class="tool-card-title">Box Breathing</div>
       <span class="evidence-label">Regulation · Focus under pressure</span>
@@ -350,10 +350,11 @@
         <summary>Explore the practice &amp; science</summary>
         <div class="science-box-content">
           <p><strong>The practice:</strong> inhale gently through the nose for 4 seconds while tracing the first side of a square. Hold for 4 seconds at the corner. Exhale steadily through the nose or mouth for 4 seconds along the next side. Hold after the exhale for 4 seconds to complete the square. One full cycle takes 16 seconds—approximately 3.75 breaths per minute.</p>
-          <p><strong>Why climbers use it:</strong> the repeating count provides a clear attentional task when stress makes breathing and decision-making feel chaotic. In Pranaclimb it is a regulation practice—not a maximal breathing pattern and not a breathing rhythm that must be maintained through hard continuous movement.</p>
-          <p><strong>What the evidence shows:</strong> tactical breathing is widely taught for managing arousal under pressure. Experimental evidence indicates that it can reduce physiological arousal, although longer-exhale breathing may be more effective for some performance and HRV outcomes. Daily five-minute breathwork has also improved positive affect and respiratory-rate regulation, with cyclic sighing producing the strongest effects in the comparative trial.</p>
-          <p><strong>CO₂ and W′bal:</strong> the pauses alter CO₂ dynamics, but Box Breathing does not reliably increase CO₂; the response depends on breath depth and total ventilation. Keep each breath quiet and comfortable rather than oversized. The practice can support composure and ventilatory control while physiological recovery and W′bal reconstitution occur—it does not directly restore or measure W′bal.</p>
-          <p><strong>Where it fits:</strong> use it before starting, while visualising or reading a route, between attempts, or at a secure rest. During difficult continuous climbing, return to unrestricted breathing whenever the four-second pauses interfere with movement or create strain.</p>
+          <p><strong>Why climbers use it:</strong> the repeating count gives attention a clear task when stress makes breathing and decision-making feel chaotic. In Pranaclimb, Box Breathing creates calm readiness: breathing becomes deliberate, attention remains clear and the climber is prepared to act.</p>
+          <p><strong>What the evidence shows:</strong> tactical breathing can reduce physiological arousal under pressure. Five minutes of daily breathwork—including Box Breathing—has also improved mood and reduced respiratory rate. Comparative research suggests that prolonged-exhale breathing may better support some active tasks, giving each technique a distinct role.</p>
+          <p><strong>CO₂ response:</strong> the two pauses make the cycle mildly constraining, while the precise CO₂ response depends on breath depth and total ventilation. Quiet, moderate breaths preserve control and reduce the likelihood of overbreathing.</p>
+          <p><strong>Where it fits:</strong> practise for 2–5 minutes before climbing, during route reading or between attempts; build towards 5–10 minutes in regular training. At a genuinely secure rest, one to three cycles can restore attentional control.</p>
+          <p><strong>Pranaclimb position:</strong> Box Breathing is a practical focus and regulation tool. Its equal rhythm helps climbers organise attention, manage arousal and develop a repeatable breathing routine under pressure.</p>
           <p><strong>Emerging evidence:</strong> a small 30-day study reported improvements in FVC, FEV₁ and FIVC, but this finding is preliminary and requires replication before lung-function improvement can be treated as an established benefit.</p>
           <p>Evidence and further reading: <a href="https://pubmed.ncbi.nlm.nih.gov/39864026/" target="_blank" rel="noopener">Marchant et al.</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9873947/" target="_blank" rel="noopener">Balban et al.</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/32757097/" target="_blank" rel="noopener">Röttger et al.</a> · <a href="https://www.nature.com/articles/s41598-022-27247-y" target="_blank" rel="noopener">Fincham et al.</a> · <a href="https://doi.org/10.9734/jpri/2021/v33i58A34085" target="_blank" rel="noopener">Ahmed et al.</a></p>
         </div>
@@ -406,18 +407,6 @@
       <a class="tool-launch secondary" href="power-exhale.html">Power Exhale &amp; PEFR Guide →</a>
     </div>
 
-    <div class="tool-card">
-      <span class="tool-card-zone zone-all">All Zones</span>
-      <div class="tool-card-icon">👅</div>
-      <div class="tool-card-title">Tongue and Jaw Reset</div>
-      <span class="evidence-label">Jaw, Neck &amp; Breathing-Awareness Cue</span>
-      <p class="tool-card-desc">Rest the tongue lightly, keep the teeth apart and let the jaw and neck soften. Use this repeatable body-check during route reading, between attempts or at a secure recovery hold.</p>
-      <p class="tool-card-cue">"Tongue light, teeth apart, jaw free—let the breath settle."</p>
-      <br>
-      <button class="tool-launch secondary" onclick="openModal('tongue')">How To →</button>
-      <a class="tool-launch secondary" href="tongue-jaw-reset.html">Tongue and Jaw Reset Guide →</a>
-    </div>
-
   </div>
 </div>
 
@@ -434,19 +423,19 @@
       <div style="background:var(--white); border:1px solid var(--border); border-radius:2px; padding:1.5rem; text-align:center;">
         <div style="font-size:2rem; margin-bottom:0.5rem;">🌬</div>
         <div style="font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.06em; margin-bottom:0.4rem;">Wim Hof–Style Timer</div>
-        <p style="font-size:0.78rem; font-weight:300; color:var(--mid); margin-bottom:1rem;">Comfortable self-terminated retentions · Off-wall only</p>
+        <p style="font-size:0.78rem; font-weight:300; color:var(--mid); margin-bottom:1rem;">Progressive retention targets: 0:30 · 1:00 · 1:30 · 2:00 · Off-wall only</p>
         <button class="tool-launch" onclick="openModal('wimhof')">Open Timer →</button>
       </div>
       <div style="background:var(--white); border:1px solid var(--border); border-radius:2px; padding:1.5rem; text-align:center;">
         <div style="font-size:2rem; margin-bottom:0.5rem;">⬜</div>
         <div style="font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.06em; margin-bottom:0.4rem;">Box Breathing Timer</div>
-        <p style="font-size:0.78rem; font-weight:300; color:var(--mid); margin-bottom:1rem;">4:4:4:4 · Calm & reset · Recovery tool</p>
+        <p style="font-size:0.78rem; font-weight:300; color:var(--mid); margin-bottom:1rem;">4:4:4:4 · Focus and steadiness · Off-wall or secure rest</p>
         <button class="tool-launch" onclick="openModal('box')">Open Timer →</button>
       </div>
       <div style="background:var(--white); border:1px solid var(--border); border-radius:2px; padding:1.5rem; text-align:center;">
         <div style="font-size:2rem; margin-bottom:0.5rem;">💨</div>
         <div style="font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.06em; margin-bottom:0.4rem;">Cyclic Sigh Timer</div>
-        <p style="font-size:0.78rem; font-weight:300; color:var(--mid); margin-bottom:1rem;">Double inhale · Long exhale · 5-min reset</p>
+        <p style="font-size:0.78rem; font-weight:300; color:var(--mid); margin-bottom:1rem;">Double inhale · Long exhale · Five-minute practice</p>
         <button class="tool-launch" onclick="openModal('sigh')">Open Timer →</button>
       </div>
     </div>
@@ -459,7 +448,7 @@
     <p class="section-eyebrow">Zone Mapping</p>
     <h2 class="section-title">Find your <span>zone</span></h2>
     <div class="lime-bar"></div>
-    <p class="section-desc">Your breathing rate is your performance compass. Use this map to identify where you are and which tool to reach for.</p>
+    <p class="section-desc">Breathing rate is one part of your performance compass. Interpret it alongside RPE, breathing rhythm, breath holds, vocalisations and the movement itself to identify the likely intensity zone and choose an appropriate tool.</p>
   </div>
   <table class="zone-table">
     <thead>
@@ -474,95 +463,42 @@
     <tbody>
       <tr>
         <td><span class="zone-dot" style="background:#89CFF0;"></span><strong>Sub-threshold</strong></td>
-        <td>≤ 35</td>
+        <td>&lt; 35</td>
         <td>≤ 6</td>
-        <td>Slow, nasal, diaphragmatic</td>
-        <td>Tongue and Jaw Reset · Cyclic Sigh</td>
+        <td>Controlled rhythm; nasal breathing may remain comfortable</td>
+        <td>Nasal Circuit · Silk Breath · Cyclic Sighing</td>
+      </tr>
+      <tr>
+        <td><span class="zone-dot" style="background:#b7e85b;"></span><strong>Approaching CP</strong></td>
+        <td>35–40</td>
+        <td>6–7</td>
+        <td>Ventilation rising while movement remains controlled</td>
+        <td>Tide Rhythm · Movement-matched breathing</td>
       </tr>
       <tr>
         <td><span class="zone-dot" style="background:#AAFF00;"></span><strong>CP Zone</strong></td>
         <td>40–45</td>
         <td>7–8</td>
-        <td>Efficient diaphragmatic, sustainable</td>
-        <td>Box Breathing at a secure rest · Coherent Breathing</td>
+        <td>Hard but sustainable; rhythm and economy become important</td>
+        <td>Anchor Breath · Metronome Breathing · Secure-rest recovery</td>
       </tr>
       <tr>
-        <td><span class="zone-dot" style="background:#ffd700;"></span><strong>Amber / RCP</strong></td>
+        <td><span class="zone-dot" style="background:#ffd700;"></span><strong>Grey Zone / Approaching RCP</strong></td>
         <td>45–55</td>
         <td>8–9</td>
-        <td>Mixed nasal→oral, rhythm tightening</td>
-        <td>Cyclic Sigh · Power Exhale at crux</td>
+        <td>Increasing oral contribution, tighter rhythm and greater expressive load</td>
+        <td>Punctuated Breath · Selected Power Exhale · Secure micro-rest</td>
       </tr>
       <tr>
-        <td><span class="zone-dot" style="background:#ff00ff;"></span><strong>Redline</strong></td>
+        <td><span class="zone-dot" style="background:#ff00ff;"></span><strong>Redline / Above RCP</strong></td>
         <td>&gt; 55</td>
         <td>9–10</td>
-        <td>Expressive, short bursts, W′ depleting</td>
-        <td>Power Exhale · Core Snap Breath</td>
+        <td>Expressive breathing, brief holds and high-intensity bursts</td>
+        <td>Power Exhale · Core Snap Breath · Prompt return to ventilation</td>
       </tr>
     </tbody>
   </table>
-</div>
-
-<!-- RESEARCH -->
-<div id="research" class="research-strip">
-  <div class="research-inner">
-    <p class="section-eyebrow">Research Spotlight</p>
-    <h2 class="section-title">The science <span>behind it</span></h2>
-    <div class="lime-bar"></div>
-    <div class="research-grid">
-
-      <div class="research-card">
-        <p class="research-card-tag">Wim Hof · VO₂ Kinetics</p>
-        <p class="research-card-title">Warm-Up Breathing & Endurance</p>
-        <p class="research-card-text">A small study in young endurance athletes reported altered VO₂ kinetics and lower perceived strain after a 17–22-minute Wim Hof–style breathing warm-up. It did not demonstrate a meaningful performance improvement, and the proposed mechanisms remain speculative.</p>
-        <span class="research-card-stat">Bahenský et al. · Preliminary</span>
-      </div>
-
-      <div class="research-card">
-        <p class="research-card-tag">Cyclic Sighing · Mood</p>
-        <p class="research-card-title">Five-Minute Daily Practice</p>
-        <p class="research-card-text">In a month-long randomised trial, exhale-focused cyclic sighing produced greater improvement in positive affect and a larger reduction in resting respiratory rate than mindfulness in the reported models. Later findings are promising but mixed.</p>
-        <span class="research-card-stat">Balban et al., 2023 · Evidence evolving</span>
-      </div>
-
-      <div class="research-card">
-        <p class="research-card-tag">Box Breathing · Regulation</p>
-        <p class="research-card-title">Structure, Arousal &amp; Attention</p>
-        <p class="research-card-text">Box Breathing provides a repeatable attentional rhythm and can reduce physiological arousal under stress. It is not the strongest established HRV protocol: in an 84-person comparison, 6-breaths-per-minute breathing increased HRV more than square breathing.</p>
-        <span class="research-card-stat">Röttger et al., 2021 · Marchant et al., 2025</span>
-      </div>
-
-      <div class="research-card">
-        <p class="research-card-tag">Balloon Breathing · Evidence Boundary</p>
-        <p class="research-card-title">Resisted Exhale, Not an Oxygen Score</p>
-        <p class="research-card-text">Misra et al. reported mean SpO₂ rising from 95.7% to 98.1% after 30 minutes in 250 hospitalised COVID-19 patients. The result supports an acute clinical effect in that population—not a guaranteed response or climbing-performance gain in healthy athletes.</p>
-        <span class="research-card-stat">Misra et al., 2023 · population-specific evidence</span>
-      </div>
-
-      <div class="research-card">
-        <p class="research-card-tag">Vocalisation · Ventilation</p>
-        <p class="research-card-title">Yelling & Aerobic Power</p>
-        <p class="research-card-text">Yelling at maximal effort led to higher peak power, time to exhaustion, and greater VO₂ and ventilation during 90–100% maximal cycling — without increased muscle activation. Supports Pranaclimb's +5 BPM scream adjustment rule.</p>
-        <span class="research-card-stat">Chen et al., 2015 — ResearchGate</span>
-      </div>
-
-      <div class="research-card">
-        <p class="research-card-tag">Power Exhale · Force Expression</p>
-        <p class="research-card-title">A Brief Alternative to Prolonged Strain</p>
-        <p class="research-card-text">Forced exhalation increased maximal force in some—not all—tested isometric actions, and Valsalva was not superior. Optional PEFR records maximal expiratory flow off the wall; it complements the movement cue but does not measure crux timing or climbing performance.</p>
-        <span class="research-card-stat">Ikeda et al., 2009 · Ishida et al., 2014</span>
-      </div>
-
-      <div class="research-card">
-        <p class="research-card-tag">Sighing · Reset</p>
-        <p class="research-card-title">Sighs as Physiological Resetters</p>
-        <p class="research-card-text">Spontaneous sighs act as physiological and psychological resetters, reducing tension and improving self-reported relief. Supports assigning a low or negative BR adjustment for sighs in Pranaclimb coaching.</p>
-        <span class="research-card-stat">Vlemincx et al., 2016</span>
-      </div>
-
-    </div>
-  </div>
+  <p class="section-desc" style="margin-top:1rem;">These are Pranaclimb field anchors, not universal physiological cut-offs. Calibrate them using the individual climber’s Raw BR, Effective BR, RPE and breathing behaviour.</p>
 </div>
 
 <!-- FOOTER -->
@@ -583,13 +519,13 @@
     <p class="t-tagline">Love · Breathe · Climb</p>
     <div class="t-lbar"></div>
     <p class="t-title">Wim Hof–Style Breathing Timer</p>
-    <p class="t-sub">Optional off-wall hyperventilation–apnoea practice</p>
+    <p class="t-sub">Rhythmic breathing · Retention · Recovery</p>
 
     <div id="wh-setup">
       <div class="safety-box"><strong>Before you begin:</strong> practise seated or lying down in a safe place. Never combine the breathing rounds with climbing, swimming, cold-water immersion or driving. Listen to your body and keep every retention comfortable.</div>
       <div class="t-card">
         <div class="t-row"><span class="t-label">Rounds</span><input type="range" min="1" max="5" value="3" id="wh-rounds" step="1" oninput="document.getElementById('wh-rounds-v').textContent=this.value"><span class="t-val" id="wh-rounds-v">3</span></div>
-        <div class="t-row"><span class="t-label">Breaths / round</span><input type="range" min="20" max="40" value="30" id="wh-breaths" step="5" oninput="document.getElementById('wh-breaths-v').textContent=this.value"><span class="t-val" id="wh-breaths-v">30</span></div>
+        <div class="t-row"><span class="t-label">Breaths / round</span><input type="range" min="30" max="40" value="30" id="wh-breaths" step="5" oninput="document.getElementById('wh-breaths-v').textContent=this.value"><span class="t-val" id="wh-breaths-v">30</span></div>
       </div>
       <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:0.6rem;">Retention hold</p>
       <div class="retention-options" role="radiogroup" aria-label="Retention hold duration">
@@ -597,7 +533,6 @@
         <label class="retention-choice"><input type="radio" name="wh-retention" value="60" checked><span>1:00</span></label>
         <label class="retention-choice"><input type="radio" name="wh-retention" value="90"><span>1:30</span></label>
         <label class="retention-choice"><input type="radio" name="wh-retention" value="120"><span>2:00</span></label>
-        <label class="retention-choice"><input type="radio" name="wh-retention" value="150"><span>2:30</span></label>
       </div>
       <button class="t-btn" onclick="whStart()">Begin Session →</button>
     </div>
@@ -626,8 +561,8 @@
           <svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="80" r="70" fill="none" stroke="#e0e0d8" stroke-width="5"/><circle cx="80" cy="80" r="70" fill="none" stroke="#ff00ff" stroke-width="5" stroke-dasharray="440" stroke-dashoffset="440" id="wh-rec-arc" stroke-linecap="round" style="transition:stroke-dashoffset 1s linear"/></svg>
           <div class="circ-inner"><span class="circ-num" id="wh-rec-num">15</span><span class="circ-unit">seconds</span></div>
         </div>
-        <p class="t-phase-lbl">Recovery Breath</p>
-        <p class="t-phase-desc">Take one comfortable recovery breath. Release sooner if needed.</p>
+        <p class="t-phase-lbl">15-Second Recovery Hold</p>
+        <p class="t-phase-desc">Take one full recovery inhale, hold it for 15 seconds, then release.</p>
         <button class="t-btn outline" onclick="whEndRecovery()">Release &amp; Continue →</button>
       </div>
       <div class="t-ctrls">
@@ -657,7 +592,7 @@
     <div id="box-setup">
       <div class="t-card">
         <div class="t-row"><span class="t-label">Phase duration (sec)</span><input type="range" min="3" max="8" value="4" id="box-phase" step="1" oninput="document.getElementById('box-phase-v').textContent=this.value"><span class="t-val" id="box-phase-v">4</span></div>
-        <div class="t-row"><span class="t-label">Rounds</span><input type="range" min="3" max="12" value="6" id="box-rounds" step="1" oninput="document.getElementById('box-rounds-v').textContent=this.value"><span class="t-val" id="box-rounds-v">6</span></div>
+        <div class="t-row"><span class="t-label">Rounds (20 ≈ 5 min)</span><input type="range" min="3" max="40" value="20" id="box-rounds" step="1" oninput="document.getElementById('box-rounds-v').textContent=this.value"><span class="t-val" id="box-rounds-v">20</span></div>
       </div>
       <div class="safety-box"><strong>Practise comfortably:</strong> keep every breath quiet and controlled. Use Box Breathing before climbing, between attempts or at a secure rest. Shorten a phase or return to normal breathing if the holds create strain, dizziness or air hunger.</div>
       <button class="t-btn" onclick="boxStart()">Begin Session →</button>
@@ -743,7 +678,7 @@
   </div>
 </div>
 
-<!-- HOW TO MODALS (Balloon, Power Exhale, Tongue and Jaw Reset) -->
+<!-- HOW TO MODALS (Balloon and Power Exhale) -->
 <div class="modal-overlay" id="modal-balloon">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('balloon')">✕</button>
@@ -776,24 +711,6 @@
       <p style="margin-bottom:1.5rem; font-style:italic; color:var(--pink); font-weight:500;">"Exhale sharp — drive through the crux."</p>
       <div style="background:var(--off);border-left:3px solid var(--pink);padding:1rem 1.2rem;border-radius:0 2px 2px 0;font-size:0.78rem;">
         <strong>Pranaclimb measurement:</strong> record the audible exhale, any preceding breath hold, Raw BR, Effective BR and the following recovery breaths. Do not infer airway pressure or W′ expenditure from the sound alone.
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal-overlay" id="modal-tongue">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('tongue')">✕</button>
-    <div class="t-logo">PRANA<span>CLIMB</span></div><p class="t-tagline">Love · Breathe · Climb</p><div class="t-lbar"></div>
-    <p class="t-title">👅 Tongue and Jaw Reset</p>
-    <p class="t-sub">Recovery Cue · Below CP</p>
-    <div style="font-size:0.85rem;line-height:1.8;color:var(--ink);">
-      <p style="margin-bottom:1rem;"><strong>What it is:</strong> Let the tongue rest lightly near the front of the hard palate without pressing. Keep the lips soft, teeth slightly apart and jaw free. Allow quiet nasal breathing where comfortable.</p>
-      <p style="margin-bottom:1rem;"><strong>Why it may help:</strong> The cue makes jaw clenching, facial effort and neck tension easier to notice and gives the climber a repeatable route back to a comfortable breath. Its value should be judged from the climber’s response.</p>
-      <p style="margin-bottom:1rem;"><strong>When to use:</strong> During route reading, between attempts, at a secure below-CP recovery hold or after a crux. Do not impose the position during hard movement.</p>
-      <p style="margin-bottom:1.5rem; font-style:italic; color:var(--pink); font-weight:500;">"Tongue light, teeth apart, jaw free—let the breath settle."</p>
-      <div style="background:var(--off);border-left:3px solid var(--blue);padding:1rem 1.2rem;border-radius:0 2px 2px 0;font-size:0.78rem;">
-        <strong>Evidence boundary:</strong> Active tongue pressure can alter jaw and deep-neck muscle activity, but research does not show one universal relaxation response or a direct climbing-performance benefit. Pranaclimb therefore uses this as a light awareness cue and tests the individual response.
       </div>
     </div>
   </div>
@@ -888,11 +805,11 @@ function whRunBreathing() {
   const orb = document.getElementById('wh-orb'), lbl = document.getElementById('wh-lbl'), desc = document.getElementById('wh-desc'), ctr = document.getElementById('wh-ctr');
   if (whBreathCount >= whBreaths) { orb.className = 'orb idle'; whRunRetention(); return; }
   if (whInhale) {
-    orb.className = 'orb inhale'; lbl.textContent = 'Inhale'; desc.textContent = 'Deep breath in through the nose';
+    orb.className = 'orb inhale'; lbl.textContent = 'Inhale'; desc.textContent = 'Fill the belly, then the chest';
     whBreathCount++; ctr.textContent = whBreathCount + ' / ' + whBreaths; whInhale = false;
     whTimer = setTimeout(whRunBreathing, WH_PACE);
   } else {
-    orb.className = 'orb exhale'; lbl.textContent = 'Exhale'; desc.textContent = 'Let it go — passive release'; whInhale = true;
+    orb.className = 'orb exhale'; lbl.textContent = 'Release'; desc.textContent = 'Let the air go unforced through the mouth'; whInhale = true;
     whTimer = setTimeout(whRunBreathing, WH_PACE);
   }
 }
