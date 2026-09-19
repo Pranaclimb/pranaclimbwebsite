@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Breathwork Practices — Pranaclimb</title>
-<meta name="description" content="22 breathwork and pranayama practices for climbers — Ujjayi, Nadi Shodhana, Kapalabhati, Bhastrika and more. Research-backed techniques from the Pranaclimb Workbook.">
+<title>Breathing Exercises for Climbers | Pranaclimb</title>
+<meta name="description" content="23 breathing exercises and breathwork practices for climbers, including Wim Hof–style breathing, pranayama, recovery breathing and on-wall performance tools.">
 <link rel="canonical" href="https://www.pranaclimb.com/breathwork-practices">
-<meta property="og:title" content="Breathwork Practices — Pranaclimb">
-<meta property="og:description" content="22 breathwork and pranayama practices for climbers, backed by research.">
+<meta property="og:title" content="Breathing Exercises for Climbers | Pranaclimb">
+<meta property="og:description" content="23 breathing exercises for climbing preparation, performance, recovery and respiratory control.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.pranaclimb.com/breathwork-practices">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -108,6 +108,10 @@
   .d-stat { display:inline-block; font-size:0.62rem; font-weight:700; background:var(--blue); color:var(--ink); padding:3px 9px; border-radius:2px; margin-top:0.5rem; }
   .d-benefits { display:flex; flex-wrap:wrap; gap:5px; }
   .d-benefit { font-size:0.68rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink); background:var(--off); border-radius:2px; padding:4px 10px; border:1px solid var(--border); }
+  .d-video { position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; background:#111; border-radius:2px; margin-top:0.8rem; }
+  .d-video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .d-link { color:var(--pink); font-weight:600; text-decoration:none; }
+  .d-link:hover { text-decoration:underline; }
 
   /* INTRO STRIP */
   .intro-strip { background:var(--off); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:3rem 2rem; }
@@ -390,6 +394,25 @@
       </div>
     </div>
 
+    <!-- WIM HOF–STYLE BREATHING -->
+    <div class="card" data-tags="fast retention recovery" onclick="openDetail('wimhof')">
+      <div class="card-top">
+        <div class="card-tags"><span class="tag tag-fast">Energising</span><span class="tag tag-retention">Retention</span></div>
+        <div class="card-icon">❄️</div>
+        <div class="card-title">Wim Hof–Style Breathing</div>
+        <div class="card-sub">30–40 Breaths · Exhale Retention · Recovery Hold</div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">A powerful voluntary breathing practice combining full rhythmic breaths with an exhale retention and 15-second recovery hold. Useful for off-wall preparation, respiratory-discomfort training and focused commitment.</p>
+      </div>
+      <p class="card-cue">"Breathe fully — let go — hold — recover strong."</p>
+      <div class="card-footer">
+        <div class="card-benefits">
+          <span class="benefit">Readiness</span><span class="benefit">Focus</span><span class="benefit">Hypoxic Stimulus</span><span class="benefit">Volition</span>
+        </div>
+      </div>
+    </div>
+
     <!-- APNEA / BREATH HOLDING -->
     <div class="card" data-tags="climbing recovery retention" onclick="openDetail('apnea')">
       <div class="card-top">
@@ -667,6 +690,52 @@ filterBtns.forEach(btn => {
 
 // ========== DETAIL DATA ==========
 const details = {
+  wimhof: {
+    eyebrow: 'Off-Wall · Preparation & Training',
+    title: 'Wim Hof–Style Breathing',
+    sub: 'Full Rhythmic Breaths · Exhale Retention · 15-Second Recovery Hold',
+    content: `
+      <div class="d-section">
+        <p class="d-label">Pranaclimb Position</p><h3 class="d-title">A Powerful Voluntary Breathing Practice</h3><div class="d-lbar"></div>
+        <p class="d-text">Wim Hof–style breathing deliberately changes breathing chemistry and arousal. A round combines <strong>30–40 full, rhythmic breaths</strong>, a relaxed retention after the final exhale, and a <strong>15-second recovery hold</strong> after the next full inhalation.</p>
+        <p class="d-text">For climbers, its value lies in practising commitment, concentration and composure while respiratory sensations intensify. It can also provide an acute hypoxic stimulus while CO₂ rebuilds during the retention phase, together with a clear sense of physiological readiness. It is a preparation and training practice—not the breathing pattern to use while climbing.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">First Round</p><h3 class="d-title">How To</h3><div class="d-lbar"></div>
+        <ol class="d-steps">
+          <li><strong>Take 30 full breaths</strong>Inhale into the belly and chest, then let the air go without forcing. Keep the rhythm continuous. Experienced practitioners may use up to 40 breaths.</li>
+          <li><strong>Retain after the final exhale</strong>Let the breath go, then hold. Choose 30 seconds, 1 minute, 1 minute 30 seconds or 2 minutes according to experience. The timer is a target, never a requirement.</li>
+          <li><strong>Take the recovery breath</strong>Inhale fully and hold for 15 seconds, then release.</li>
+          <li><strong>Repeat for up to three rounds</strong>Notice how focus, comfort and the retention response change from round to round.</li>
+        </ol>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Why Climbers May Use It</p><h3 class="d-title">Performance Relevance</h3><div class="d-lbar"></div>
+        <div class="d-benefits"><span class="d-benefit">Respiratory-discomfort familiarity</span><span class="d-benefit">Focused commitment</span><span class="d-benefit">Arousal & readiness</span><span class="d-benefit">Volitional control</span><span class="d-benefit">Hypoxic stimulus</span></div>
+        <p class="d-text" style="margin-top:0.8rem;">Emerging exercise research suggests that a Wim Hof–style warm-up can alter VO₂ kinetics and perceived strain. Those findings justify continued performance research, while the immediate training value remains the deliberate experience of changing respiratory drive, arousal and attention.</p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">Beginner Practice</p><h3 class="d-title">Guided Wim Hof Method Breathing</h3><div class="d-lbar"></div>
+        <p class="d-text">This short official guided session is the clearest starting point because it leads the breaths, retention and recovery breath in real time.</p>
+        <div class="d-video"><iframe src="https://www.youtube-nocookie.com/embed/tybOi4hjZFQ" title="Guided Wim Hof Method breathing for beginners" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      </div>
+      <div class="d-section">
+        <p class="d-label">The Physiology</p><h3 class="d-title">What Happens During a Round?</h3><div class="d-lbar"></div>
+        <div class="d-research">
+          <p class="d-research-tag">Pranaclimb Explanation · Blood Gases · Arousal</p>
+          <p class="d-research-text"><strong>During the 30–40 full breaths</strong>, ventilation rises and more CO₂ is exhaled than the body is producing. Blood CO₂ falls and pH rises temporarily. This reduces the immediate urge to breathe, which is why the following retention can feel unexpectedly long.</p>
+          <p class="d-research-text" style="margin-top:0.6rem;"><strong>During the exhale retention</strong>, oxygen gradually falls while CO₂ rebuilds. The climber experiences a controlled hypoxic challenge, changing respiratory drive and a strong internal signal to remain calm, attentive and deliberate.</p>
+          <p class="d-research-text" style="margin-top:0.6rem;"><strong>The full recovery breath and 15-second hold</strong> finish the round, restoring ventilation and giving the practice its characteristic shift from activation into focused stillness.</p>
+          <span class="d-stat">Voluntary high-arousal breathwork</span>
+        </div>
+        <p class="d-text"><strong>Important distinction:</strong> the breathing phase does not store extra oxygen in already near-saturated blood. Its immediate effects arise principally from lowering CO₂, shifting pH and delaying respiratory drive; the retention then creates the falling-oxygen stimulus.</p>
+        <p class="d-text"><a class="d-link" href="wim-hof.html">Open the full Pranaclimb Wim Hof–style breathing page and timer →</a></p>
+      </div>
+      <div class="d-section">
+        <p class="d-label">One Clear Boundary</p><h3 class="d-title">Practise Off the Wall</h3><div class="d-lbar"></div>
+        <p class="d-text"><strong>Practise seated or lying down, away from water, exposure, driving and climbing.</strong> Tingling or light-headedness can occur; stop the round and return to normal breathing if you feel unwell. Retentions remain controlled and self-directed even when a timer target is selected.</p>
+      </div>`
+  },
   coherent: {
     eyebrow: 'Slow Breathing · Recovery',
     title: 'Coherent Breathing',
