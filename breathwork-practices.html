@@ -121,6 +121,23 @@
   .intro-card-title { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.06em; color:var(--ink); margin-bottom:0.4rem; }
   .intro-card-text { font-size:0.8rem; font-weight:300; color:var(--mid); line-height:1.7; }
 
+  /* PLAIN-ENGLISH GLOSSARY */
+  .glossary-section { background:var(--white); border-bottom:1px solid var(--border); padding:2.2rem 2rem; }
+  .glossary-wrap { max-width:960px; margin:0 auto; }
+  .glossary-wrap summary { list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+  .glossary-wrap summary::-webkit-details-marker { display:none; }
+  .glossary-eyebrow { font-size:0.65rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--pink); margin-bottom:0.3rem; }
+  .glossary-title { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.06em; color:var(--ink); }
+  .glossary-toggle { flex:0 0 auto; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); border:1px solid var(--border); padding:0.4rem 0.7rem; border-radius:2px; }
+  .glossary-wrap[open] .glossary-toggle::before { content:'Hide '; }
+  .glossary-wrap:not([open]) .glossary-toggle::before { content:'Show '; }
+  .glossary-intro { font-size:0.82rem; font-weight:300; color:var(--mid); line-height:1.7; margin:1rem 0; max-width:780px; }
+  .glossary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:0.7rem; }
+  .glossary-item { background:var(--off); border:1px solid var(--border); border-left:3px solid var(--lime); padding:0.8rem 0.9rem; border-radius:2px; }
+  .glossary-term { font-size:0.76rem; font-weight:700; color:var(--ink); margin-bottom:0.18rem; }
+  .glossary-text { font-size:0.74rem; font-weight:300; color:var(--mid); line-height:1.55; }
+  .glossary-note { margin-top:0.9rem; background:#eef8fc; border-left:3px solid var(--blue); padding:0.8rem 1rem; font-size:0.76rem; font-weight:300; color:var(--mid); line-height:1.6; }
+
   footer { background:var(--off); padding:2.5rem 2rem; text-align:center; border-top:3px solid var(--lime); }
   .footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.1em; color:var(--ink); }
   .footer-logo span { color:var(--lime); }
@@ -185,10 +202,47 @@
     <div class="intro-card">
       <div class="intro-card-icon">⚡</div>
       <div class="intro-card-title">Immediate Impact</div>
-      <p class="intro-card-text">A breathing exercise proposing an equal inhalation/exhalation ratio promotes balance between sympathetic and parasympathetic activity, increases HRV, and promotes psychophysiological coherence.</p>
+      <p class="intro-card-text">An equal inhalation/exhalation ratio can influence the balance between sympathetic nervous system (SNS) and parasympathetic nervous system (PNS) activity, increase heart-rate variability (HRV), and promote psychophysiological coherence.</p>
     </div>
   </div>
 </div>
+
+<!-- PLAIN-ENGLISH GLOSSARY -->
+<section class="glossary-section" aria-labelledby="glossary-title">
+  <details class="glossary-wrap" open>
+    <summary>
+      <div>
+        <p class="glossary-eyebrow">Breathing Science in Plain English</p>
+        <h2 class="glossary-title" id="glossary-title">What Do the Abbreviations Mean?</h2>
+      </div>
+      <span class="glossary-toggle">Glossary</span>
+    </summary>
+    <p class="glossary-intro">The cards use compact scientific terms so they remain easy to scan. <strong>↑</strong> means an increase or greater contribution; <strong>↓</strong> means a reduction. These symbols describe the proposed or observed direction of a response—not a guarantee that every person will respond identically.</p>
+    <div class="glossary-grid">
+      <div class="glossary-item"><p class="glossary-term">ANS · Autonomic Nervous System</p><p class="glossary-text">The body’s automatic regulation network. It includes sympathetic and parasympathetic activity and continuously adjusts breathing, circulation, digestion and arousal.</p></div>
+      <div class="glossary-item"><p class="glossary-term">SNS · Sympathetic Nervous System</p><p class="glossary-text">The mobilisation side of autonomic regulation. It supports alertness, cardiovascular drive and rapid action during challenge—useful for commitment and power as well as stress.</p></div>
+      <div class="glossary-item"><p class="glossary-term">PNS · Parasympathetic Nervous System</p><p class="glossary-text">The restoration side of autonomic regulation. It supports slowing, digestion and recovery, particularly after effort. SNS and PNS interact; they are not simple on/off switches.</p></div>
+      <div class="glossary-item"><p class="glossary-term">BR / RR · Breathing or Respiratory Rate</p><p class="glossary-text">The number of complete breathing cycles per minute. Pranaclimb uses BR; scientific papers often use RR or respiratory frequency.</p></div>
+      <div class="glossary-item"><p class="glossary-term">BPM · Per Minute</p><p class="glossary-text">The unit used for breathing rate or heart rate. The surrounding label tells you whether it means breaths per minute or heartbeats per minute.</p></div>
+      <div class="glossary-item"><p class="glossary-term">V̇E · Minute Ventilation</p><p class="glossary-text">The total volume of air breathed in or out each minute. It depends on both breathing rate and the volume of each breath.</p></div>
+      <div class="glossary-item"><p class="glossary-term">HR / PR · Heart or Pulse Rate</p><p class="glossary-text">The number of heartbeats per minute. HR describes cardiac rate; PR is the pulse measured at the body surface.</p></div>
+      <div class="glossary-item"><p class="glossary-term">HRV · Heart-Rate Variability</p><p class="glossary-text">The beat-to-beat variation in timing between heartbeats. It reflects adaptive autonomic regulation and must be interpreted in context—not as a standalone “calm score.”</p></div>
+      <div class="glossary-item"><p class="glossary-term">HRR₆₀ · 60-Second Heart-Rate Recovery</p><p class="glossary-text">The fall in heart rate during the first 60 seconds after effort. Pranaclimb uses it as a practical marker of immediate recovery.</p></div>
+      <div class="glossary-item"><p class="glossary-term">CO₂ · Carbon Dioxide</p><p class="glossary-text">A metabolic gas that helps regulate breathing drive, blood pH and oxygen release from haemoglobin. It is not merely a waste product.</p></div>
+      <div class="glossary-item"><p class="glossary-term">CO₂ Tolerance</p><p class="glossary-text">The ability to remain composed and functional as carbon dioxide and the urge to breathe rise. It is related to—but not identical to—maximum breath-hold time.</p></div>
+      <div class="glossary-item"><p class="glossary-term">O₂ / SpO₂ · Oxygen / Oxygen Saturation</p><p class="glossary-text">O₂ is oxygen. SpO₂ is the percentage estimate of haemoglobin carrying oxygen, usually obtained with a fingertip pulse oximeter.</p></div>
+      <div class="glossary-item"><p class="glossary-term">V̇O₂ / V̇O₂max · Oxygen Uptake</p><p class="glossary-text">V̇O₂ is the rate at which the body uses oxygen. V̇O₂max is the highest measured rate during maximal exercise.</p></div>
+      <div class="glossary-item"><p class="glossary-term">NO · Nitric Oxide</p><p class="glossary-text">A short-lived signalling molecule involved in blood-vessel regulation and airway biology. Here, NO means nitric oxide—not the word “no.”</p></div>
+      <div class="glossary-item"><p class="glossary-term">BRS · Baroreflex Sensitivity</p><p class="glossary-text">How effectively the nervous system adjusts heart rate and blood vessels in response to changes in blood pressure.</p></div>
+      <div class="glossary-item"><p class="glossary-term">FVC / FEV₁ / PEFR · Lung-Function Measures</p><p class="glossary-text">Forced vital capacity, forced expiratory volume in one second and peak expiratory flow rate. They describe different aspects of lung volume and expiratory flow.</p></div>
+      <div class="glossary-item"><p class="glossary-term">SBP / DBP · Blood Pressure</p><p class="glossary-text">Systolic and diastolic blood pressure: the higher pressure during cardiac contraction and the lower pressure between beats.</p></div>
+      <div class="glossary-item"><p class="glossary-term">IAP · Intra-Abdominal Pressure</p><p class="glossary-text">Pressure created within the abdominal cavity. Brief increases can contribute to trunk stiffness and force transfer during hard movement.</p></div>
+      <div class="glossary-item"><p class="glossary-term">W′ · Work Above Critical Power</p><p class="glossary-text">A finite high-intensity work reserve—the Pranaclimb “power battery.” It depletes during severe efforts and reconstitutes during sufficient recovery.</p></div>
+      <div class="glossary-item"><p class="glossary-term">RCT · Randomised Controlled Trial</p><p class="glossary-text">A study design that randomly assigns participants to different interventions or comparison conditions to reduce bias.</p></div>
+    </div>
+    <p class="glossary-note"><strong>Vagal tone</strong> describes parasympathetic influence carried largely through the vagus nerve. A breathing exercise can influence autonomic regulation without simply “switching on the PNS” or “switching off the SNS.”</p>
+  </details>
+</section>
 
 <!-- FILTER -->
 <div class="filter-bar">
@@ -446,7 +500,7 @@
       <p class="card-cue">"Exhale sharp — drive through the crux."</p>
       <div class="card-footer">
         <div class="card-benefits">
-          <span class="benefit">Grip +25%</span><span class="benefit">Peak Power ↑</span><span class="benefit">VE ↑</span><span class="benefit">SNS ↑</span>
+          <span class="benefit">Grip +25%</span><span class="benefit">Peak Power ↑</span><span class="benefit">V̇E ↑</span><span class="benefit">SNS ↑</span>
         </div>
       </div>
     </div>
@@ -1085,7 +1139,7 @@ const details = {
       </div>
       <div class="d-section">
         <p class="d-label">Benefits</p><h3 class="d-title">What It Does</h3><div class="d-lbar"></div>
-        <div class="d-benefits"><span class="d-benefit">Grip +25%</span><span class="d-benefit">Peak Power ↑</span><span class="d-benefit">VE ↑</span><span class="d-benefit">Time to Exhaustion ↑</span><span class="d-benefit">CO₂ Removal ↑</span></div>
+        <div class="d-benefits"><span class="d-benefit">Grip +25%</span><span class="d-benefit">Peak Power ↑</span><span class="d-benefit">V̇E ↑</span><span class="d-benefit">Time to Exhaustion ↑</span><span class="d-benefit">CO₂ Removal ↑</span></div>
       </div>`
   },
   sohum: {
