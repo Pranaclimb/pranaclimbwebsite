@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breathing Rate, Effort and RPE in Climbing | Pranaclimb</title>
+  <meta name="description" content="How breathing rate tracks perceived exertion in climbing, and how Pranaclimb combines Raw BR, RPE, HRR60 and EPOC-informed recovery with real climbing context." />
+  <link rel="canonical" href="https://pranaclimb.com/how-fast-we-are-breathing-indicates-how-hard-we-perceive-the-climbing-it-is-a-strong-marker-of-physical-effort/" />
+  <meta property="og:title" content="Breathing Rate, Effort and Perceived Exertion in Climbing" />
+  <meta property="og:description" content="How BR, RPE, HRR60 and post-climb recovery reveal effort and readiness in real climbing." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://pranaclimb.com/how-fast-we-are-breathing-indicates-how-hard-we-perceive-the-climbing-it-is-a-strong-marker-of-physical-effort/" />
+  <meta property="og:image" content="https://pranaclimb.com/images/breathing-rate-effort-rpe-climbing-pranaclimb.webp" />
+  <meta property="og:image:width" content="1448" />
+  <meta property="og:image:height" content="1086" />
+  <meta property="og:image:alt" content="Climber on a Cornish sea cliff with a rising breathing waveform illustrating breathing rate and perceived exertion" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Breathing Rate, Effort and Perceived Exertion in Climbing" />
+  <meta name="twitter:description" content="How BR, RPE, HRR60 and post-climb recovery reveal effort and readiness in real climbing." />
+  <meta name="twitter:image" content="https://pranaclimb.com/images/breathing-rate-effort-rpe-climbing-pranaclimb.webp" />
+  <meta name="twitter:image:alt" content="Climber on a Cornish sea cliff with a rising breathing waveform illustrating breathing rate and perceived exertion" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--pink:#ff00ff;--lime:#aaff00;--blue:#89cff0;--white:#fff;--off:#f5f5f2;--ink:#454545;--mid:#606060;--border:#deded6;--deep:#2f667e}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+    body{font-family:"Outfit",sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-family:"Bebas Neue",sans-serif;font-size:1.6rem;letter-spacing:.12em;color:var(--ink);text-decoration:none}.logo span{color:var(--pink)}
+    .nav-links{display:flex;gap:1.8rem;list-style:none}.nav-links a{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--mid)}
+    .nav-cta{background:var(--pink);color:var(--white);padding:.55rem 1.25rem;text-decoration:none;font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+    .hero{padding:8.5rem 4rem 4.5rem;background:linear-gradient(135deg,var(--off) 0 62%,rgba(137,207,240,.24) 62% 100%)}
+    .hero-inner{max-width:1080px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
+    .back{display:inline-block;margin-bottom:1.5rem;color:var(--mid);text-decoration:none;font-size:.73rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+    .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}.tag{font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:.3rem .7rem;background:var(--pink);color:#fff}.tag.alt{background:var(--lime);color:var(--ink)}
+    h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(3rem,6vw,5.4rem);line-height:.9;margin-bottom:1.3rem}h1 span{color:var(--pink)}
+    .lead{font-family:"Lora",serif;font-size:1.12rem;line-height:1.8;color:var(--mid)}
+    .signal{background:var(--white);border:8px solid var(--white);box-shadow:0 18px 45px rgba(0,0,0,.11);padding:1.5rem}
+    .signal-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.35rem}.signal-title{font-family:"Bebas Neue",sans-serif;font-size:2.1rem;letter-spacing:.04em;margin-bottom:1.2rem}
+    .signal-row{display:grid;grid-template-columns:90px 1fr 65px;gap:.65rem;align-items:center;margin:.85rem 0}.signal-name{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.signal-track{height:12px;background:var(--off);position:relative;overflow:hidden}.signal-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--lime),var(--pink))}.signal-value{text-align:right;font-family:"Bebas Neue",sans-serif;font-size:1.2rem}.signal-note{font-size:.72rem;line-height:1.55;color:var(--mid);border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem}
+    main{max-width:820px;margin:auto;padding:4.5rem 2rem}
+    .article-image{margin:2rem 0 2.5rem}.article-image img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}.article-image figcaption{font-size:.75rem;line-height:1.55;color:var(--mid);margin-top:.6rem}
+    h2{font-family:"Bebas Neue",sans-serif;font-size:2.3rem;line-height:1.05;margin:3.2rem 0 1rem}h3{font-size:1.05rem;margin:2rem 0 .7rem}
+    p{font-family:"Lora",serif;font-size:1rem;line-height:1.9;color:var(--mid);margin-bottom:1.2rem}strong{color:var(--ink)}a{color:var(--pink);font-weight:600;text-decoration:none}a:hover{text-decoration:underline}
+    ul{margin:1rem 0 1.5rem 1.3rem;color:var(--mid)}li{font-family:"Lora",serif;line-height:1.75;margin:.35rem 0}
+    .statement{background:var(--pink);color:#fff;padding:2rem 2.3rem;margin:2.2rem 0;font-family:"Lora",serif;font-size:1.22rem;line-height:1.65}.statement strong{color:var(--lime)}
+    .definition{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.7rem 0}.definition article{background:var(--off);border-top:4px solid var(--pink);padding:1.25rem}.definition article:nth-child(2){border-color:var(--blue)}.definition article:nth-child(3){border-color:var(--lime)}.definition h3{margin:0 0 .45rem;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}.definition p{font-family:"Outfit",sans-serif;font-size:.84rem;line-height:1.6;margin:0}
+    .quote{border-left:4px solid var(--blue);padding:1.2rem 1.5rem;margin:1.7rem 0;background:#eef8fc}.quote p{font-style:italic;margin:0 0 .55rem}.quote cite{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--deep);font-style:normal}
+    .zone-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin:1.5rem 0}.zone{border:1px solid var(--border);padding:1rem}.zone:nth-child(1){border-top:4px solid var(--blue)}.zone:nth-child(2){border-top:4px solid var(--lime)}.zone:nth-child(3){border-top:4px solid #f4b942}.zone:nth-child(4){border-top:4px solid var(--pink)}.zone strong{display:block;font-family:"Bebas Neue",sans-serif;font-size:1.25rem;margin-bottom:.25rem}.zone span{display:block;font-size:.74rem;line-height:1.5;color:var(--mid)}
+    .case{background:var(--off);border:1px solid var(--border);padding:1.7rem;margin:2rem 0}.case-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.35rem}.case h3{font-family:"Bebas Neue",sans-serif;font-size:1.55rem;margin:0 0 .8rem;letter-spacing:.04em}
+    .data-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.82rem}.data-table th{background:var(--ink);color:#fff;text-align:left;padding:.72rem}.data-table td{padding:.72rem;border-bottom:1px solid var(--border);vertical-align:top}.data-table tr:nth-child(even) td{background:#fff}.data-table small{display:block;color:var(--mid);line-height:1.45;margin-top:.2rem}
+    .formula{font-family:"Outfit",sans-serif;background:var(--white);border-left:4px solid var(--lime);padding:1rem 1.2rem;margin:1rem 0;font-size:.9rem;line-height:1.65}.formula code{font-weight:700;color:var(--ink)}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}.compare section{border:1.5px solid var(--border);padding:1.45rem}.compare h3{margin:0 0 .7rem;text-transform:uppercase;font-size:.82rem;letter-spacing:.08em}.compare p{font-family:"Outfit",sans-serif;font-size:.88rem;line-height:1.7;margin:0}
+    .method{background:#eef8fc;border-left:4px solid var(--blue);padding:1.5rem 1.7rem;margin:1.5rem 0}.method h3{margin:0 0 .6rem}.method p,.method li{font-family:"Outfit",sans-serif;font-size:.9rem;line-height:1.7}.method ul{margin-bottom:0}
+    .recovery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}.recovery-grid article{border:1px solid var(--border);border-top:4px solid var(--blue);padding:1.25rem}.recovery-grid article:nth-child(2){border-top-color:var(--lime)}.recovery-grid article:nth-child(3){border-top-color:var(--pink)}.recovery-grid h3{font-family:"Bebas Neue",sans-serif;font-size:1.25rem;letter-spacing:.04em;margin:0 0 .45rem}.recovery-grid p{font-family:"Outfit",sans-serif;font-size:.84rem;line-height:1.65;margin:0}
+    .practice-links{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin:1.5rem 0}.practice-link{display:block;border:1px solid var(--border);border-left:4px solid var(--lime);padding:1rem 1.1rem;color:var(--ink);background:var(--off)}.practice-link strong{display:block;font-size:.9rem;margin-bottom:.2rem}.practice-link span{display:block;font-size:.78rem;line-height:1.5;color:var(--mid);font-weight:400}
+    .caution{background:rgba(255,0,255,.06);border:1px solid rgba(255,0,255,.35);padding:1.3rem 1.5rem;margin:1.5rem 0}.caution p{font-family:"Outfit",sans-serif;font-size:.88rem;line-height:1.7;margin:0}
+    .references{margin-top:3rem;border-top:3px solid var(--lime);padding-top:1.5rem}.references ol{margin-left:1.25rem}.references li{font-family:"Outfit",sans-serif;font-size:.82rem;line-height:1.6;margin:.65rem 0}
+    .cta{background:#dceff7;padding:2.2rem;margin-top:3.5rem;border-top:4px solid var(--blue)}.cta h2{margin:0 0 .7rem}.cta p{font-family:"Outfit",sans-serif}.cta a{display:inline-block;background:var(--lime);color:var(--ink);padding:.8rem 1.1rem;font-size:.75rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin:.25rem .45rem .25rem 0}
+    footer{padding:2.5rem;text-align:center;border-top:1px solid var(--border);font-size:.75rem;color:var(--mid)}
+    @media(max-width:800px){nav{padding:1rem 1.25rem}.nav-links{display:none}.hero{padding:6.5rem 1.4rem 3rem}.hero-inner{grid-template-columns:1fr;gap:2rem}.definition,.compare,.recovery-grid,.practice-links{grid-template-columns:1fr}.zone-grid{grid-template-columns:1fr 1fr}main{padding:3rem 1.4rem}.data-table{font-size:.74rem}.data-table th,.data-table td{padding:.55rem}}
+    @media(max-width:480px){.zone-grid{grid-template-columns:1fr}.signal-row{grid-template-columns:72px 1fr 55px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Breathing Rate, Effort and Perceived Exertion in Climbing",
+    "description":"How breathing rate tracks perceived exertion in climbing and how Pranaclimb combines Raw BR, RPE, HRR60 and EPOC-informed recovery in the field.",
+    "image":["https://pranaclimb.com/images/breathing-rate-effort-rpe-climbing-pranaclimb.webp"],
+    "datePublished":"2021-09-17",
+    "dateModified":"2026-09-27",
+    "author":{"@type":"Person","name":"Annie Anderson"},
+    "publisher":{"@type":"Organization","name":"Pranaclimb Ltd"},
+    "mainEntityOfPage":"https://pranaclimb.com/how-fast-we-are-breathing-indicates-how-hard-we-perceive-the-climbing-it-is-a-strong-marker-of-physical-effort/"
+  }
+  </script>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">PRANA<span>CLIMB</span></a>
+    <ul class="nav-links"><li><a href="methodology.html">Method</a></li><li><a href="rba.html">RBA</a></li><li><a href="breathing.html">Breathing</a></li><li><a href="blog.html">Blog</a></li></ul>
+    <a class="nav-cta" href="rba.html">Book Your RBA</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <a class="back" href="blog.html">← Back to Journal</a>
+        <div class="tags"><span class="tag">Climbing Physiology</span><span class="tag alt">12 min read</span></div>
+        <h1>Breathing Rate,<br><span>Effort &amp; RPE</span><br>in Climbing</h1>
+        <p class="lead">How fast a climber breathes is one of the clearest field signals of how hard the climbing feels. Breathing rate changes rapidly with effort, but its real value appears when it is read alongside perceived exertion, movement and recovery.</p>
+      </div>
+      <aside class="signal" aria-label="Pranaclimb field signal illustration">
+        <p class="signal-label">Pranaclimb Field Signal</p>
+        <h2 class="signal-title">As Effort Rises</h2>
+        <div class="signal-row"><span class="signal-name">BR</span><span class="signal-track"><span class="signal-fill" style="display:block;width:88%"></span></span><span class="signal-value">↑</span></div>
+        <div class="signal-row"><span class="signal-name">RPE</span><span class="signal-track"><span class="signal-fill" style="display:block;width:88%"></span></span><span class="signal-value">↑</span></div>
+        <div class="signal-row"><span class="signal-name">W′bal</span><span class="signal-track"><span class="signal-fill" style="display:block;width:28%"></span></span><span class="signal-value">↓</span></div>
+        <div class="signal-row"><span class="signal-name">Recovery</span><span class="signal-track"><span class="signal-fill" style="display:block;width:42%"></span></span><span class="signal-value">↓</span></div>
+        <p class="signal-note">BR = breathing rate · RPE = rating of perceived exertion · W′bal = estimated high-intensity work reserve. The illustration shows the Pranaclimb interpretation—not a diagnostic test.</p>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <p><strong>Originally published 17 September 2021 · Scientifically revised September 2026</strong><br>By Annie Anderson, Founder &amp; Director of Pranaclimb · <em>Love, Breathe, Climb</em></p>
+
+    <figure class="article-image">
+      <img src="images/breathing-rate-effort-rpe-climbing-pranaclimb.webp" width="1448" height="1086" alt="Climber on a Cornish sea cliff with a rising breathing waveform illustrating breathing rate and perceived exertion" fetchpriority="high" />
+      <figcaption>Breathing rate becomes most useful when it is interpreted alongside perceived exertion, movement and recovery.</figcaption>
+    </figure>
+
+    <div class="statement"><strong>The central idea:</strong> breathing rate is not background noise. It is a fast, observable expression of the climber’s physical effort, perceived strain and response to the movement.</div>
+
+    <h2>Breathing Rate and Perceived Exertion</h2>
+    <p><strong>Respiratory frequency (fR)</strong>, called <strong>breathing rate (BR)</strong> within Pranaclimb, is the number of complete breathing cycles per minute. <strong>Rating of perceived exertion (RPE)</strong> is the climber’s conscious judgement of how hard the effort feels, usually scored from 0 to 10.</p>
+    <p>Across continuous and intermittent exercise, respiratory frequency closely follows the time course of perceived exertion. It also responds rapidly when high-intensity workload changes. That combination makes BR unusually useful for climbing, where effort rises and falls from move to move rather than remaining steady.</p>
+
+    <div class="definition">
+      <article><h3>Breathing Rate · BR</h3><p>Complete inhale–exhale cycles per minute. Pranaclimb normally counts the exhale because it is often easier to hear.</p></article>
+      <article><h3>Perceived Exertion · RPE</h3><p>The climber’s 0–10 judgement of effort, fatigue and discomfort at that moment.</p></article>
+      <article><h3>Recovery</h3><p>How rapidly BR and heart rate fall after the effort, interpreted alongside how the climber feels and moves.</p></article>
+    </div>
+
+    <div class="quote">
+      <p>Respiratory frequency is strongly associated with perceived exertion across varied exercise conditions and is a valuable measure for training monitoring.</p>
+      <cite>Paraphrased from Nicolò, Massaroni &amp; Passfield, 2017</cite>
+    </div>
+
+    <p>This does <strong>not</strong> mean BR measures every part of climbing physiology. It does mean that a microphone, video or wearable can capture a meaningful field signal that changes quickly as the climber approaches a limit.</p>
+
+    <h2>Why Breathing and Perceived Effort Converge</h2>
+    <p>Breathing rate and perceived effort often rise together because both respond rapidly to the intensity of the task and the motor drive required to continue it. The relationship is not a simple one-way rule in which fast breathing causes high RPE or slow breathing guarantees ease. It is an integrated response involving central motor command, respiratory sensations, working-muscle feedback, blood-gas chemistry, emotion and attention.</p>
+
+    <h3>CO₂, air hunger and respiratory sensation</h3>
+    <p>As exercise intensity rises, carbon-dioxide production, acidity and ventilatory demand increase. Chemoreceptor input and the growing work of breathing contribute to the sensation of breathlessness. A climber who is comfortable with respiratory discomfort may remain composed for longer, but <strong>CO₂-tolerance practice does not remove the need to ventilate</strong> or make a maximal effort metabolically easy.</p>
+
+    <h3>Respiratory-muscle work and afferent feedback</h3>
+    <p>Breathing is physical work. During hard climbing, the diaphragm and other respiratory muscles must ventilate while also contributing to trunk pressure and postural control. Sensory feedback from the respiratory system can intensify breathlessness and discomfort, while high respiratory-muscle work can compete with locomotor muscles for blood flow. This is one reason that BR, breathing expression and RPE are most informative when read together.</p>
+
+    <h3>Attention, emotion and mental fatigue</h3>
+    <p>A repeatable breathing rhythm can give attention somewhere useful to settle: the exhale, the movement or the next hold. This may reduce unnecessary cognitive noise without pretending that breath control erases physiological strain. Experimental work also shows that mental fatigue can shorten exercise tolerance by making the same physical output feel harder, even when cardiorespiratory and muscular responses are broadly similar.</p>
+
+    <div class="caution"><p><strong>The coaching distinction:</strong> lower BR often accompanies lower RPE, but deliberately suppressing BR during a hard crux may increase air hunger. Below CP, nasal or controlled breathing can support pacing when it meets the ventilatory demand. Near and above CP, the goal is effective ventilation, well-timed bracing and rapid recovery—not artificially slow breathing.</p></div>
+
+    <h2>Pranaclimb Field Anchors</h2>
+    <p>Pranaclimb uses the following values as <strong>working field anchors</strong>. They organise an individual assessment; they are not universal laboratory thresholds and should be refined from the climber’s own repeated data.</p>
+
+    <div class="zone-grid">
+      <div class="zone"><strong>Sub-CP</strong><span>BR generally &lt;~45 BPM<br>RPE ≤7<br>Sustainable control</span></div>
+      <div class="zone"><strong>CP Reference</strong><span>BR ~45 BPM<br>RPE ~8<br>Upper sustainable boundary</span></div>
+      <div class="zone"><strong>Grey Zone</strong><span>BR ~45–55 BPM<br>RPE 8–9<br>Rising instability</span></div>
+      <div class="zone"><strong>RCP / Redline</strong><span>BR &gt;~55 BPM<br>RPE 9–10<br>Rapid W′bal depletion</span></div>
+    </div>
+
+    <div class="caution"><p><strong>Individualise the number:</strong> route angle, fear, heat, breath holds, vocalisation, pacing and measurement method can all alter BR. Pranaclimb therefore combines BR with RPE, movement context and recovery rather than treating one number as a verdict.</p></div>
+
+    <h2>Adam Ondra and Štěpán Stráník: Same Route, Different Internal Demand</h2>
+    <p>In 2018, an iROZHLAS data-journalism project used smart shirts, pulse and respiratory monitoring, motion capture and video while Adam Ondra and Štěpán Stráník climbed the same indoor 8b route. The route was well below Ondra’s maximum grade but represented a much greater relative challenge for Stráník.</p>
+    <p>This was a two-climber demonstration, <strong>not a controlled scientific trial</strong>. It is nevertheless a useful field comparison because the external task was the same while the athletes’ relative capacities, movement strategies and completion times differed.</p>
+
+    <div class="case">
+      <p class="case-label">Archived Pranaclimb analysis of the Hexoskin display</p>
+      <h3>The Respiratory Comparison</h3>
+      <table class="data-table">
+        <thead><tr><th>Climber</th><th>BR</th><th>V̇E</th><th>Estimated VT</th><th>Pranaclimb interpretation</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Adam Ondra</strong></td><td>14 BPM</td><td>35.03 L/min</td><td>≈2.50 L</td><td>Low-frequency, deeper breathing consistent with a comparatively low internal demand.<small>Below the Pranaclimb CP reference.</small></td></tr>
+          <tr><td><strong>Štěpán Stráník</strong></td><td>36 BPM</td><td>67.97 L/min</td><td>≈1.89 L</td><td>Higher respiratory demand and a faster, shallower pattern than Ondra.<small>Elevated effort, but not automatically above CP.</small></td></tr>
+        </tbody>
+      </table>
+      <div class="formula"><code>Estimated tidal volume (VT) = minute ventilation (V̇E) ÷ breathing rate (BR)</code><br>Ondra: 35.03 ÷ 14 ≈ 2.50 L · Stráník: 67.97 ÷ 36 ≈ 1.89 L</div>
+      <p>The tidal-volume values are Pranaclimb calculations derived from the displayed BR and V̇E values. They should be read as estimates, not direct breath-by-breath spirometry.</p>
+    </div>
+
+    <h2>What the Comparison Can—and Cannot—Show</h2>
+    <div class="compare">
+      <section><h3>It can show</h3><p>The same route can impose very different internal demands. Ondra completed it faster with lower recorded BR, while Stráník spent longer on the wall and showed a greater respiratory response toward the finish.</p></section>
+      <section><h3>It cannot prove</h3><p>That one breathing pattern alone caused the performance difference, that 36 BPM equals CP for every climber, or that BR by itself separates physical effort from emotion.</p></section>
+    </div>
+
+    <p>The iROZHLAS report also described very low on-wall heart-rate and respiration values for Ondra, followed by sharp increases immediately after he finished. This highlights a climbing-specific challenge: bracing, breath holding, static upper-body work and measurement averaging can conceal internal work while the climber is still moving.</p>
+
+    <h2>Breathing Depth and Breathing Rate Tell Different Parts of the Story</h2>
+    <p><strong>Tidal volume (VT)</strong> is the volume of one breath. <strong>Minute ventilation (V̇E)</strong> is the total volume moved each minute. V̇E is determined by both breath depth and breath rate.</p>
+    <p>During progressive exercise, tidal volume usually rises before eventually approaching a plateau; further increases in ventilation then depend more heavily on respiratory frequency. Research on high-intensity interval exercise also shows that fR follows perceived exertion more closely than VT. The two variables are therefore complementary, not competitors.</p>
+    <p>At the same minute ventilation, a very rapid and shallow pattern directs a larger proportion of each breath into anatomical dead space. But “deep and slow” is not always the answer: near maximal effort, faster breathing is an appropriate part of meeting ventilatory demand. The practical goal is <strong>breathing that matches the work without becoming unnecessarily chaotic</strong>.</p>
+
+    <h2>Physical Effort, Emotion and the Climbing Context</h2>
+    <p>Breathing rate responds to physical effort, but climbing also adds exposure, uncertainty, commitment and fear. A rapid rise in BR may reflect muscular demand, emotional arousal or both. Conversely, a climber may appear to breathe slowly because repeated breath holds are hiding the true respiratory disturbance.</p>
+    <p>This is why Pranaclimb does not interpret BR in isolation. We ask:</p>
+    <ul>
+      <li>What movement or terrain occurred when BR changed?</li>
+      <li>Did the climber hold the breath, grunt, scream, sigh or forcefully exhale?</li>
+      <li>What was the climber’s RPE at the same moment?</li>
+      <li>How quickly did breathing and heart rate recover?</li>
+      <li>Did movement quality, decision-making or pacing change?</li>
+    </ul>
+
+    <h2>Raw BR and Effective BR</h2>
+    <p><strong>Raw BR</strong> is the directly counted breathing frequency. <strong>Effective BR</strong> is Pranaclimb’s field interpretation after documented breath holds and expressive breathing acts are considered. The correction prevents silent holds or forceful vocalisations from being mistaken for low effort.</p>
+
+    <div class="method">
+      <h3>What Effective BR does—and does not do</h3>
+      <ul>
+        <li>It records hidden interruptions and expressive acts within the breathing pattern.</li>
+        <li>It helps compare similar climbing attempts using a consistent coaching rule.</li>
+        <li>It does not directly measure V̇E, blood gases, airway pressure, lactate, CP or W′bal.</li>
+        <li>Sport and trad corrections are capped at +15 BPM; Raw BR at or above 60 BPM receives no additional correction.</li>
+      </ul>
+    </div>
+
+    <h2>Recovery Completes the Picture: HRR₆₀ and EPOC</h2>
+    <p>A climbing attempt does not end when the hands leave the wall. Breathing, circulation and metabolism continue responding while the climber rests. Pranaclimb therefore reads the effort and the recovery as one continuous event.</p>
+
+    <div class="recovery-grid">
+      <article><h3>BR Recovery</h3><p>How rapidly breathing falls from the final climbing intensity, whether rhythm returns, and whether breath holds, gasps or sighs continue into the rest.</p></article>
+      <article><h3>HRR₆₀</h3><p>The fall in heart rate from the end-of-effort value to the value recorded 60 seconds later. It adds a standardised cardiovascular recovery marker.</p></article>
+      <article><h3>EPOC</h3><p>Oxygen consumption remaining above the pre-exercise baseline after the climb. It describes metabolic recovery but cannot be measured directly from HR or BR alone.</p></article>
+    </div>
+
+    <h3>Heart Rate Recovery at 60 Seconds</h3>
+    <p><strong>HRR₆₀ = end-of-effort HR − HR after 60 seconds.</strong> The early fall in heart rate reflects rapid autonomic adjustment, including parasympathetic reactivation, alongside withdrawal of exercise-related drive. The value is also affected by the preceding intensity, active versus passive recovery, posture, temperature, hydration, medication and measurement timing.</p>
+    <p>Pranaclimb currently uses the following <strong>coaching bands</strong>: a drop of <strong>30 BPM or more</strong> is strong, <strong>20–29 BPM</strong> is moderate, and <strong>less than 20 BPM</strong> indicates limited recovery in that assessment. These are field interpretation bands—not diagnostic or universal clinical cut-offs—and they become most useful when the same climber repeats the same protocol.</p>
+
+    <h3>What EPOC Means for Climbers</h3>
+    <p><strong>Excess post-exercise oxygen consumption (EPOC)</strong> is the oxygen used above resting baseline after exercise. It supports the restoration of phosphocreatine and oxygen stores and accompanies the return of ventilation, circulation, temperature and hormonal activity towards baseline. Its magnitude and duration rise with the intensity and duration of the preceding work.</p>
+    <p>This is directly relevant to climbing. Repeated isometric forearm contractions and high-intensity movement draw on anaerobic energy, but restoration between attempts depends heavily on oxidative metabolism. Climbing research has shown that oxygen consumption can remain elevated into the post-climb recovery period.</p>
+
+    <div class="method">
+      <h3>Read the climb, then read the recovery</h3>
+      <ul>
+        <li><strong>At the finish:</strong> record terminal BR, HR, RPE and the final breathing expressions.</li>
+        <li><strong>During the first 30 seconds:</strong> observe whether breathing remains chaotic or begins to organise.</li>
+        <li><strong>At 60 seconds:</strong> calculate HRR₆₀ and record BR return, rhythm and perceived recovery.</li>
+        <li><strong>Across the rest:</strong> note when movement quality, breathing and readiness are restored for the next attempt.</li>
+      </ul>
+    </div>
+
+    <div class="statement"><strong>Pranaclimb recovery logic:</strong> HRR₆₀ and BR recovery are observable field markers. EPOC explains why oxygen demand remains elevated. W′bal separately models the high-intensity work reserve. They converge around recovery, but they are not interchangeable measurements.</div>
+
+    <h2>How to Use BR and RPE in Your Own Climbing</h2>
+    <div class="method">
+      <h3>Before the climb</h3>
+      <p>Record resting BR and readiness. Notice whether breathing is quiet and controlled or already elevated by anticipation.</p>
+    </div>
+    <div class="method">
+      <h3>During the climb</h3>
+      <p>Count complete breathing cycles, timestamp holds and expressive breaths, and pair the observation with movement, terrain and RPE.</p>
+    </div>
+    <div class="method">
+      <h3>After the climb</h3>
+      <p>Record terminal HR and BR, then measure HRR₆₀ and breathing recovery using the same posture and recovery protocol each time. The speed and quality of recovery help distinguish a hard but well-managed effort from one that has overwhelmed the climber’s current capacity.</p>
+    </div>
+
+    <div class="statement"><strong>Pranaclimb position:</strong> BR tells us how the effort is being expressed now; RPE tells us how the climber experiences it; recovery tells us what capacity remains for the next attempt.</div>
+
+    <h2>From Measurement to Practice</h2>
+    <p>The assessment identifies what the climber needs. The Pranaclimb practice library then turns that information into a targeted intervention: pacing below CP, breathing under load, emotional regulation or recovery between attempts.</p>
+    <div class="practice-links">
+      <a class="practice-link" href="breathing.html"><strong>Breathing for Climbers →</strong><span>Explore the complete breathing-science and practice hub.</span></a>
+      <a class="practice-link" href="breathwork-practices.html"><strong>Breathwork Practice Library →</strong><span>Match each intervention to its climbing purpose and intensity zone.</span></a>
+      <a class="practice-link" href="power-exhale.html"><strong>Power Exhale →</strong><span>Coordinate a deliberate exhale with force expression at a crux.</span></a>
+      <a class="practice-link" href="cyclic-sighing.html"><strong>Cyclic Sighing →</strong><span>Use a short exhale-focused practice as a subjective reset off the wall or in a secure rest.</span></a>
+    </div>
+
+    <h2>A Field Measure, Not a Laboratory Claim</h2>
+    <p>Wearable respiratory garments can measure BR, V̇E and HR during climbing, and later climbing research has shown how sensor data can be synchronised with video and route position. However, climbing motion, garment fit, breath holds and averaging windows can affect the signal.</p>
+    <p>Pranaclimb’s audio-first approach is designed for the crag: the recorded breath remains the primary observation, while RPE, video, heart-rate recovery and optional wearables add context. This does not replace laboratory gas analysis. It creates a repeatable method for learning from real climbing.</p>
+
+    <section class="references">
+      <h2>References and Sources</h2>
+      <ol>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5732209/" target="_blank" rel="noopener">Nicolò A, Massaroni C, Passfield L. Respiratory Frequency during Exercise: The Neglected Physiological Measure. Front Physiol. 2017;8:922.</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/26503587/" target="_blank" rel="noopener">Nicolò A, Marcora SM, Sacchetti M. Respiratory frequency is strongly associated with perceived exertion during time trials of different duration. J Sports Sci. 2016;34:1199–1206.</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6215760/" target="_blank" rel="noopener">Nicolò A, Massaroni C, Passfield L. Respiratory frequency and tidal volume during exercise: differential control and unbalanced interdependence. Physiol Rep. 2018;6:e13908.</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/28560751/" target="_blank" rel="noopener">Nicolò A, Marcora SM, Bazzucchi I, Sacchetti M. Differential control of respiratory frequency and tidal volume during high-intensity interval training. Exp Physiol. 2017;102:934–949.</a></li>
+        <li><a href="https://www.irozhlas.cz/sport/ostatni-sporty/czech-climber-adam-ondra-climbing-data-sensors_1809140930_jab" target="_blank" rel="noopener">Boček J, Cibulka J, Danelová M, Machaj D, Candra R. Adam Ondra hung with sensors: What makes him the world’s best climber? iROZHLAS. 2018.</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9412409/" target="_blank" rel="noopener">Breen M, Reed T, Breen HM, Osborne CT, Breen MS. Integrating Wearable Sensors and Video to Determine Microlocation-Specific Physiologic and Motion Biometrics—Method Development for Competitive Climbing. Sensors. 2022;22:6271.</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/19131473/" target="_blank" rel="noopener">Marcora SM, Staiano W, Manning V. Mental fatigue impairs physical performance in humans. J Appl Physiol. 2009;106:857–864.</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/18096752/" target="_blank" rel="noopener">Romer LM, Polkey MI. Exercise-induced respiratory muscle fatigue: implications for performance. J Appl Physiol. 2008;104:879–888.</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/24237859/" target="_blank" rel="noopener">Peçanha T, Silva-Júnior ND, Forjaz CLM. Heart rate recovery: autonomic determinants, methods of assessment and association with mortality and cardiovascular diseases. Clin Physiol Funct Imaging. 2014;34:327–339.</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/17101527/" target="_blank" rel="noopener">LaForgia J, Withers RT, Gore CJ. Effects of exercise intensity and duration on excess post-exercise oxygen consumption. J Sports Sci. 2006;24:1247–1264.</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/14985990/" target="_blank" rel="noopener">Watts PB. Physiology of difficult rock climbing. Eur J Appl Physiol. 2004;91:361–372.</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8819085/" target="_blank" rel="noopener">Maciejczyk M, Michailov ML, Wiecek M, Szymura J, Rokowski R, Szygula Z, Beneke R. Climbing-Specific Exercise Tests: Energy System Contributions and Relationships With Sport Performance. Front Physiol. 2022;12:787902.</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7560916/" target="_blank" rel="noopener">Chorley A, Bott RP, Marwood S, Lamb KL. Physiological and anthropometric determinants of critical power, W′ and the reconstitution of W′ in trained and untrained male cyclists. Eur J Appl Physiol. 2020;120:2349–2359.</a></li>
+      </ol>
+    </section>
+
+    <section class="cta">
+      <h2>Turn Your Breathing Into Performance Insight</h2>
+      <p>The Pranaclimb Remote Breathing Assessment combines Raw BR, Effective BR, RPE and HRR₆₀ to reveal effort, respiratory behaviour and recovery on real climbing—while EPOC provides the physiological context for the work that continues after the climb.</p>
+      <a href="rba.html">Explore the RBA →</a>
+      <a href="methodology.html">Read the Methodology →</a>
+    </section>
+  </main>
+
+  <footer>© 2026 Pranaclimb Ltd · Breathwork and physiology for climbers · By Annie Anderson</footer>
+</body>
+</html>
