@@ -127,13 +127,54 @@
   body.climber-mode .coach-only { display:none; }
 
   @media(max-width:600px){ nav{padding:0.8rem 1rem;} .main{padding:2rem 1.2rem 1rem;} .zone-pills{top:54px;} .score-table{font-size:0.7rem;} }
+
+/* ─── PRANACLIMB MASTER BRAND LOCK-UP ─── */
+a.pc-brand{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  gap:0!important;
+  line-height:1!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+  color:#111!important;
+}
+a.pc-brand .pc-wordmark{
+  display:block!important;
+  font-family:'Bebas Neue',sans-serif!important;
+  font-size:2rem!important;
+  line-height:.9!important;
+  letter-spacing:.18em!important;
+  color:#111!important;
+  font-style:normal!important;
+  font-weight:400!important;
+}
+a.pc-brand .pc-wordmark .pc-plain{color:#111!important;}
+a.pc-brand .pc-wordmark .pc-accent{color:#ff00ff!important;}
+a.pc-brand .pc-tagline{
+  display:block!important;
+  margin-top:.34rem!important;
+  font-family:'Outfit',sans-serif!important;
+  font-size:.52rem!important;
+  line-height:1.1!important;
+  font-weight:600!important;
+  letter-spacing:.25em!important;
+  color:#111!important;
+  text-transform:uppercase!important;
+}
+@media(max-width:900px){
+  a.pc-brand .pc-wordmark{font-size:1.65rem!important;}
+  a.pc-brand .pc-tagline{font-size:.45rem!important;letter-spacing:.2em!important;}
+}
+
 </style>
 </head>
 <body class="coach-mode">
 
 <nav>
   <div>
-    <a href="breathing.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+    <a href="breathing.html" class="nav-logo pc-brand"><span class="pc-wordmark"><span class="pc-plain">PR</span><span class="pc-accent">▲</span><span class="pc-plain">NA</span><span class="pc-accent">CLIMB</span></span><small class="pc-tagline">BREATH IS OUR SUPERPOWER</small></a>
     <p class="nav-tagline">Love · Breathe · Climb</p>
   </div>
   <ul class="nav-links">
