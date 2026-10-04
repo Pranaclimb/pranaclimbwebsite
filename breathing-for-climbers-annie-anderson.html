@@ -21,7 +21,7 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --pink: #f000c8;
+      --pink: #ff00ff;
       --pink-soft: #fff1fc;
       --lime: #aaff00;
       --lime-soft: #f3ffdd;
@@ -569,10 +569,22 @@
 #photo-viewer::backdrop{background:#000d}#photo-viewer img{width:100%;height:100%;object-fit:contain;display:block;touch-action:pan-y;}
 #photo-viewer button{position:absolute;border:0;background:#ffffff22;color:white;font-size:28px;width:44px;height:44px;cursor:pointer;border-radius:50%;}#photo-close{right:10px;top:6px}#photo-prev{left:2px;top:48%}#photo-next{right:2px;top:48%}
 @media(max-width:600px){.annie-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}#photo-viewer{padding:52px 30px;}#photo-viewer button{width:32px;height:40px;}}
-</style></head>
+</style>
+<style id="pranaclimb-brand-sync">
+/* Site-wide Pranaclimb identity synced to the homepage master */
+:root{--pink:#ff00ff !important;}
+a.pc-brand{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:0!important;line-height:1!important;text-decoration:none!important;white-space:nowrap!important;color:#111!important;}
+a.pc-brand .pc-wordmark{display:block!important;font-family:'Bebas Neue',sans-serif!important;font-size:2rem!important;line-height:.9!important;letter-spacing:.18em!important;color:#111!important;font-style:normal!important;font-weight:400!important;}
+a.pc-brand .pc-wordmark .pc-plain{color:#111!important;}
+a.pc-brand .pc-wordmark .pc-accent{color:#ff00ff!important;}
+a.pc-brand .pc-tagline{display:block!important;margin-top:.34rem!important;font-family:'Outfit',sans-serif!important;font-size:.52rem!important;line-height:1.1!important;font-weight:600!important;letter-spacing:.25em!important;color:#111!important;text-transform:uppercase!important;}
+.nav-tagline{display:none!important;}
+@media(max-width:900px){a.pc-brand .pc-wordmark{font-size:1.65rem!important;}a.pc-brand .pc-tagline{font-size:.45rem!important;letter-spacing:.2em!important;}}
+</style>
+</head>
 <body>
   <nav aria-label="Main navigation">
-    <a href="index.html" class="nav-logo">PRANA<span>CLIMB</span></a>
+    <a href="index.html" class="nav-logo pc-brand"><span class="pc-wordmark"><span class="pc-plain">PR</span><span class="pc-accent">▲</span><span class="pc-plain">NA</span><span class="pc-accent">CLIMB</span></span><small class="pc-tagline">BREATH IS OUR SUPERPOWER</small></a>
     <ul class="nav-links" id="nav-links">
       <li><a href="methodology.html">Method</a></li>
       <li><a href="services.html">Services</a></li>
