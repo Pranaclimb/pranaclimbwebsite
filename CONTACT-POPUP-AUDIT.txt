@@ -1,0 +1,52 @@
+Pranaclimb contact/email audit and popup update
+Recipient: annie@pranaclimb.com
+Behaviour: all existing mailto links now open the Pranaclimb contact popup.
+Existing enquiry subjects are preserved. Submit prepares the email in the visitor's email app.
+
+app.html: converted 5 mailto link(s) | subjects: Pranaclimb App Waitlist, Pranaclimb Enquiry, Support the Pranaclimb App
+balloon-breathing.html: converted 0 mailto link(s)
+blog.html: converted 3 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-breath-holding-climbing.html: converted 0 mailto link(s)
+blog-capillarization.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-co2-hidden-superpower.html: converted 0 mailto link(s)
+blog-co2-tolerance.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-diaphragm-thoracic-stability.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-effective-breathing-rate.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-fear-to-commitment.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-grey-zone.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-heart-rate-fails-climbers.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-metaboreflex.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-micro-breath-holds.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-muscle-fibre-types.html: converted 0 mailto link(s)
+blog-power-screaming-climbing.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-pranayama-angiogenesis.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-recovery-protocol.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-respiratory-motor-coupling.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-rp-sync.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-rpe-breathing-rate.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-science-of-screaming.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-spleen-breath-holding.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+blog-tim-emmett-era-vella.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+book.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+box-breathing.html: converted 0 mailto link(s)
+breathing.html: converted 0 mailto link(s)
+breathing-for-climbers-annie-anderson.html: converted 4 mailto link(s) | subjects: One-Day Coaching Enquiry, Pranaclimb Enquiry
+breathwork-practices.html: converted 0 mailto link(s)
+coaching.html: converted 6 mailto link(s) | subjects: Coaching Enquiry, Pranaclimb Enquiry
+cyclic-sighing.html: converted 0 mailto link(s)
+elite-analysis.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+gallery.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+how-fast-we-are-breathing-indicates-how-hard-we-perceive-the-climbing-it-is-a-strong-marker-of-physical-effort.html: converted 0 mailto link(s)
+methodology.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+power-exhale.html: converted 0 mailto link(s)
+pranaclimb-chapter-I.html: converted 0 mailto link(s)
+privacy.html: converted 11 mailto link(s) | subjects: Pranaclimb Enquiry
+rba.html: converted 6 mailto link(s) | subjects: Pranaclimb Enquiry
+research.html: converted 4 mailto link(s) | subjects: Pranaclimb Enquiry
+services.html: converted 8 mailto link(s) | subjects: Coaching Protocol Enquiry, Coaching Session Booking, Full Day Coaching Enquiry, Pranaclimb Enquiry, RBA Booking, Service Enquiry, Services Enquiry
+sitemap.html: converted 2 mailto link(s) | subjects: Pranaclimb Enquiry
+terms.html: converted 5 mailto link(s) | subjects: Pranaclimb Enquiry
+tongue-jaw-reset.html: converted 0 mailto link(s)
+wim-hof.html: converted 0 mailto link(s)
+zone-coaching.html: converted 0 mailto link(s)
+index.html: converted 5 mailto link(s) | subjects: Full Day Coaching Enquiry, Pranaclimb Enquiry, Services Enquiry

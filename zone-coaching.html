@@ -169,6 +169,95 @@ a.pc-brand .pc-tagline{
 }
 
 </style>
+
+<style id="pc-contact-form-styles">
+/* Pranaclimb site-wide contact popup */
+.pc-contact-modal[hidden]{display:none!important}
+.pc-contact-modal{
+  position:fixed;inset:0;z-index:100000;
+  display:grid;place-items:center;
+  padding:1rem;
+  font-family:'Outfit',sans-serif;
+}
+.pc-contact-backdrop{
+  position:absolute;inset:0;background:rgba(20,20,24,.72);
+  backdrop-filter:blur(5px);
+}
+.pc-contact-panel{
+  position:relative;z-index:1;
+  width:min(100%,620px);
+  max-height:min(90vh,760px);
+  overflow:auto;
+  background:#fff;color:#4a4a4a;
+  border:1px solid #e0e0d8;
+  border-radius:18px;
+  box-shadow:0 30px 90px rgba(0,0,0,.28);
+  padding:2rem;
+}
+.pc-contact-close{
+  position:absolute;top:.8rem;right:.8rem;
+  width:42px;height:42px;border:0;border-radius:50%;
+  background:#f5f5f2;color:#4a4a4a;
+  font-size:1.5rem;line-height:1;cursor:pointer;
+}
+.pc-contact-eyebrow{
+  margin:0 3rem .45rem 0;
+  color:#ff00ff;font-size:.7rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+}
+.pc-contact-title{
+  margin:0 3rem .65rem 0;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(2.2rem,7vw,3.5rem);
+  line-height:.95;color:#35353b;
+}
+.pc-contact-intro{
+  margin:0 0 1.35rem;color:#65656d;
+  font-size:.92rem;line-height:1.65;
+}
+.pc-contact-form{display:grid;gap:1rem}
+.pc-contact-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.pc-contact-field{display:grid;gap:.35rem}
+.pc-contact-field label{
+  color:#4a4a4a;font-size:.7rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+}
+.pc-contact-field input,
+.pc-contact-field textarea{
+  width:100%;border:1.5px solid #deded7;border-radius:10px;
+  background:#fff;color:#35353b;
+  padding:.85rem .95rem;
+  font:inherit;font-size:.95rem;outline:none;
+}
+.pc-contact-field input:focus,
+.pc-contact-field textarea:focus{
+  border-color:#ff00ff;
+  box-shadow:0 0 0 3px rgba(255,0,255,.08);
+}
+.pc-contact-field textarea{min-height:150px;resize:vertical}
+.pc-contact-actions{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-top:.2rem}
+.pc-contact-send{
+  border:0;border-radius:999px;
+  background:#ff00ff;color:#fff;
+  padding:.9rem 1.5rem;
+  font:inherit;font-size:.78rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  cursor:pointer;
+}
+.pc-contact-direct{
+  color:#4a4a4a;font-size:.78rem;font-weight:600;
+  text-decoration:none;border-bottom:1px solid #ff00ff;
+}
+.pc-contact-note{
+  margin:.25rem 0 0;color:#777;font-size:.72rem;line-height:1.5;
+}
+body.pc-contact-open{overflow:hidden!important}
+@media(max-width:600px){
+  .pc-contact-panel{padding:1.5rem 1.1rem;border-radius:14px}
+  .pc-contact-row{grid-template-columns:1fr}
+}
+</style>
+
 </head>
 <body class="coach-mode">
 
@@ -571,5 +660,103 @@ window.addEventListener('scroll', () => {
   if (activePill) activePill.classList.add('active');
 });
 </script>
+
+<div class="pc-contact-modal" id="pc-contact-modal" hidden aria-hidden="true">
+  <div class="pc-contact-backdrop" data-pc-close></div>
+  <section class="pc-contact-panel" role="dialog" aria-modal="true" aria-labelledby="pc-contact-title">
+    <button class="pc-contact-close" type="button" aria-label="Close contact form" data-pc-close>×</button>
+    <p class="pc-contact-eyebrow">Pranaclimb · Contact Annie</p>
+    <h2 class="pc-contact-title" id="pc-contact-title">Send Annie a Message</h2>
+    <p class="pc-contact-intro">Tell me a little about what you’re looking for. Your message will be prepared for <strong>annie@pranaclimb.com</strong>.</p>
+    <form class="pc-contact-form" id="pc-contact-form">
+      <div class="pc-contact-row">
+        <div class="pc-contact-field">
+          <label for="pc-contact-name">Name</label>
+          <input id="pc-contact-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="pc-contact-field">
+          <label for="pc-contact-email">Your email</label>
+          <input id="pc-contact-email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+      <div class="pc-contact-field">
+        <label for="pc-contact-subject">Subject</label>
+        <input id="pc-contact-subject" name="subject" required>
+      </div>
+      <div class="pc-contact-field">
+        <label for="pc-contact-message">Message</label>
+        <textarea id="pc-contact-message" name="message" required></textarea>
+      </div>
+      <div class="pc-contact-actions">
+        <button class="pc-contact-send" type="submit">Prepare Email →</button>
+        <a class="pc-contact-direct" href="mailto:annie@pranaclimb.com">Email Annie directly</a>
+      </div>
+      <p class="pc-contact-note">The site is static, so “Prepare Email” opens your email app with the message filled in. Nothing is submitted to a third-party form service.</p>
+    </form>
+  </section>
+</div>
+<script id="pc-contact-form-script">
+(function(){
+  const modal = document.getElementById('pc-contact-modal');
+  const form = document.getElementById('pc-contact-form');
+  if(!modal || !form) return;
+
+  const subjectInput = document.getElementById('pc-contact-subject');
+  const messageInput = document.getElementById('pc-contact-message');
+  const nameInput = document.getElementById('pc-contact-name');
+  const emailInput = document.getElementById('pc-contact-email');
+  let lastFocus = null;
+
+  function openModal(subject){
+    lastFocus = document.activeElement;
+    subjectInput.value = subject || 'Pranaclimb Enquiry';
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('pc-contact-open');
+    setTimeout(()=>nameInput.focus(),30);
+  }
+  function closeModal(){
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('pc-contact-open');
+    if(lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+
+  document.addEventListener('click', function(e){
+    const trigger = e.target.closest('[data-pc-contact]');
+    if(trigger){
+      e.preventDefault();
+      openModal(trigger.getAttribute('data-pc-subject') || '');
+      return;
+    }
+    if(e.target.closest('[data-pc-close]')){
+      e.preventDefault();
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    const subject = subjectInput.value.trim() || 'Pranaclimb Enquiry';
+    const body = [
+      messageInput.value.trim(),
+      '',
+      '—',
+      'Name: ' + nameInput.value.trim(),
+      'Reply email: ' + emailInput.value.trim(),
+      'Sent from: ' + window.location.href
+    ].join('\n');
+    window.location.href =
+      'mailto:annie@pranaclimb.com?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+
 </body>
 </html>
