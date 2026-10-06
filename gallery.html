@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="description" content="Photos and videos of Annie Anderson climbing, cold water swimming, and breathwork practice in Cornwall. The story behind Pranaclimb: Love, Breathe, Climb." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pranaclimb Gallery â€” Annie Anderson Climbing, Cornwall & Cold Water</title>
+  <title>Pranaclimb Gallery — Annie Anderson Climbing, Cornwall & Cold Water</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -23,9 +23,9 @@
     .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,8vw,7rem);line-height:0.95;color:var(--ink);}
     .hero h1 span{color:var(--pink);}
     .hero p{font-size:1rem;color:rgba(0,0,0,0.6);line-height:1.7;}
-    .filter-bar{padding:2rem 4rem;display:flex;gap:0.8rem;flex-wrap:wrap;border-bottom:1px solid var(--border);}
-    .filter-btn{font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.5rem 1.2rem;border:1.5px solid var(--border);background:#fff;color:var(--mid);border-radius:2px;cursor:pointer;transition:all 0.2s;}
-    .filter-btn:hover,.filter-btn.active{background:var(--pink);border-color:var(--pink);color:#fff;}
+    
+    
+    
     .gallery-wrap{padding:3rem 4rem 5rem;}
     .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);}
     .gallery-item.hidden{display:none;}
@@ -58,7 +58,7 @@
     .footer-bottom a{color:rgba(0,0,0,0.5);text-decoration:none;}
     @media(max-width:900px){
       nav{padding:1rem 1.5rem;}.nav-links{display:none;}
-      .hero,.filter-bar,.gallery-wrap{padding:4rem 1.5rem;}
+      .hero,.gallery-wrap{padding:4rem 1.5rem;}
       .hero{grid-template-columns:1fr;padding-top:8rem;}
       .gallery-grid{grid-template-columns:repeat(2,1fr);}
       footer{grid-template-columns:1fr;padding:3rem 1.5rem;}
@@ -109,8 +109,8 @@
 
     /* â”€â”€â”€ REAL PHOTO ARCHIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .hero{background:var(--lime);}
-    .filter-bar{position:sticky;top:74px;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);justify-content:center;}
-    .gallery-wrap{max-width:1400px;margin:0 auto;padding:1.5rem 2rem 5rem;}
+    
+    .gallery-wrap{max-width:1400px;margin:0 auto;padding:2rem 2rem 5rem;}
     .gallery-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;background:transparent;border:0;}
     .gallery-item{appearance:none;border:0;padding:0;margin:0;background:var(--off);position:relative;overflow:hidden;aspect-ratio:1;cursor:zoom-in;}
     .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .28s ease,opacity .2s ease;}
@@ -123,7 +123,7 @@
     .lightbox-close{z-index:2;}
     body.gallery-lightbox-open{overflow:hidden;}
     @media(max-width:1100px){.gallery-grid{grid-template-columns:repeat(4,1fr)}}
-    @media(max-width:760px){.filter-bar{top:64px;padding:1rem .8rem}.filter-btn{font-size:.65rem;padding:.42rem .7rem}.gallery-wrap{padding:1rem .6rem 3rem}.gallery-grid{grid-template-columns:repeat(3,1fr);gap:4px}.lightbox{padding:4.5rem 1rem 3rem}.lightbox-nav{font-size:1.55rem;padding:.5rem}}
+    @media(max-width:760px){.gallery-wrap{padding:1rem .6rem 3rem}.gallery-grid{grid-template-columns:repeat(3,1fr);gap:4px}.lightbox{padding:4.5rem 1rem 3rem}.lightbox-nav{font-size:1.55rem;padding:.5rem}}
     @media(max-width:460px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
 
 </style>
@@ -231,11 +231,75 @@ body.pc-contact-open{overflow:hidden!important}
 
 <style id="pc-contact-formspree-status-styles">.pc-contact-status{margin:.35rem 0 0;font-size:.82rem;line-height:1.5;font-weight:600}.pc-contact-status:empty{display:none}.pc-contact-success{color:#287a3d}.pc-contact-error{color:#b3261e}.pc-contact-send:disabled{opacity:.65;cursor:wait}</style>
 <meta name="pranaclimb-gallery-mode" content="linked 133-photo archive" />
+
+<style id="pc-gallery-footer-fix">
+footer{background:#fff!important;color:var(--ink)!important;padding:4rem!important;display:grid!important;grid-template-columns:1.5fr 1fr 1fr 1fr!important;gap:3rem!important;border-top:1px solid var(--border)!important;}
+footer .footer-brand .nav-logo,footer a.pc-brand{color:#111!important;}
+footer .footer-brand p{color:var(--mid)!important;}
+footer .footer-col h4{color:#888!important;}
+footer .footer-col a{color:var(--mid)!important;background:none!important;padding:0!important;font-size:.85rem!important;}
+footer .footer-col a:hover{color:var(--pink)!important;}
+.footer-bottom{background:#fff!important;border-top:1px solid var(--border)!important;color:var(--mid)!important;}
+.footer-bottom p,.footer-bottom a{color:var(--mid)!important;}
+.footer-bottom a:hover{color:var(--pink)!important;}
+@media(max-width:900px){footer{grid-template-columns:1fr!important;padding:3rem 1.5rem!important;}}
+</style>
+
+
+<style id="pc-index-footer-match">
+.pc-site-footer{
+  background:#fff!important;
+  color:var(--ink)!important;
+  padding:4rem!important;
+  display:grid!important;
+  grid-template-columns:1.25fr .85fr 1.4fr 1fr!important;
+  gap:3rem!important;
+  border-top:1px solid var(--border)!important;
+}
+.pc-site-footer .footer-brand .pc-brand{display:inline-flex!important;align-items:flex-start!important;margin-bottom:1rem!important;}
+.pc-site-footer .footer-owner{margin:.7rem 0 1rem;color:var(--mid)!important;font-size:.92rem!important;}
+.footer-socials{display:flex;gap:.7rem;flex-wrap:wrap;margin:1rem 0 1.1rem;}
+.footer-socials a{display:flex!important;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--border);background:var(--off)!important;color:var(--mid)!important;text-decoration:none!important;border-radius:2px;padding:0!important;}
+.footer-socials a:hover{color:var(--pink)!important;border-color:var(--pink)!important;}
+.footer-contact-line{margin:.35rem 0!important;}
+.footer-contact-line a{color:var(--mid)!important;text-decoration:none!important;font-size:.88rem!important;}
+.footer-contact-line a:hover{color:var(--pink)!important;}
+.pc-site-footer .footer-col h4{font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#888!important;margin-bottom:1.2rem;}
+.pc-site-footer .footer-col ul{list-style:none!important;display:flex!important;flex-direction:column!important;gap:.65rem!important;padding:0!important;margin:0!important;}
+.pc-site-footer .footer-col a{font-size:.86rem;color:var(--mid)!important;text-decoration:none!important;background:none!important;padding:0!important;}
+.pc-site-footer .footer-col a:hover{color:var(--pink)!important;}
+.pc-site-footer .footer-col p{font-size:.86rem!important;line-height:1.72!important;color:var(--mid)!important;margin:0 0 1rem!important;}
+.pc-site-footer .footer-col strong{color:var(--ink)!important;}
+.pc-site-footer .trading ul{margin-bottom:1.4rem!important;}
+.pc-site-footer .footer-company{margin-top:1.2rem!important;}
+.footer-bottom{
+  background:#fff!important;
+  border-top:1px solid var(--border)!important;
+  padding:1.2rem 4rem!important;
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:flex-start!important;
+  gap:2rem!important;
+}
+.footer-bottom p{font-size:.72rem!important;line-height:1.55!important;color:var(--mid)!important;margin:.1rem 0!important;}
+.footer-legal-links{display:flex;gap:1rem;white-space:nowrap;}
+.footer-legal-links a{font-size:.74rem!important;color:var(--mid)!important;text-decoration:none!important;}
+.footer-legal-links a:hover{color:var(--pink)!important;}
+@media(max-width:1000px){
+  .pc-site-footer{grid-template-columns:1fr 1fr!important;}
+}
+@media(max-width:700px){
+  .pc-site-footer{grid-template-columns:1fr!important;padding:3rem 1.5rem!important;}
+  .footer-bottom{padding:1rem 1.5rem!important;flex-direction:column!important;gap:.8rem!important;}
+  .footer-legal-links{white-space:normal;flex-wrap:wrap;}
+}
+</style>
+
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo pc-brand"><span class="pc-wordmark"><span class="pc-plain">PR</span><span class="pc-accent">â–²</span><span class="pc-plain">NA</span><span class="pc-accent">CLIMB</span></span><small class="pc-tagline">BREATH IS OUR SUPERPOWER</small></a>
+  <a href="index.html" class="nav-logo pc-brand"><span class="pc-wordmark"><span class="pc-plain">PR</span><span class="pc-accent">▲</span><span class="pc-plain">NA</span><span class="pc-accent">CLIMB</span></span><small class="pc-tagline">BREATH IS OUR SUPERPOWER</small></a>
   <ul class="nav-links">
     <li><a href="methodology.html">Method</a></li>
     <li><a href="rba.html">RBA</a></li>
@@ -249,20 +313,8 @@ body.pc-contact-open{overflow:hidden!important}
 
 <div class="hero">
   <h1>PHOTO<br><span>ARCHIVE</span></h1>
-  <div><p>Climbing, yoga, cold water, coaching and life around Pranaclimb â€” Cornwall and beyond. <strong>133 photographs from Annieâ€™s archive.</strong></p></div>
+  <div><p>30+ years worldwide — climbing, breath, movement, cold water and life around Pranaclimb.</p></div>
 </div>
-
-<div class="filter-bar" aria-label="Filter gallery">
-  <button class="filter-btn active" type="button" data-filter="all">All (133)</button>
-  <button class="filter-btn" type="button" data-filter="Climbing">Climbing (117)</button>
-  <button class="filter-btn" type="button" data-filter="Cornwall">Cornwall (75)</button>
-  <button class="filter-btn" type="button" data-filter="Coaching">Coaching (12)</button>
-  <button class="filter-btn" type="button" data-filter="Yoga">Yoga (5)</button>
-  <button class="filter-btn" type="button" data-filter="Cold Water">Cold Water (11)</button>
-  <button class="filter-btn" type="button" data-filter="Worldwide">Worldwide (18)</button>
-  <button class="filter-btn" type="button" data-filter="Archive">Archive (3)</button>
-</div>
-
 <div class="gallery-wrap">
   <div class="gallery-grid" id="gallery">
     <button class="gallery-item" type="button" data-cat="Climbing Worldwide" data-full="images/gallery-archive/gallery-archive-001-391446e5582fb2f6.jpg" data-title="Annie Bouldering Wadi Bih With Local" aria-label="Open Annie Bouldering Wadi Bih With Local">
@@ -668,7 +720,7 @@ body.pc-contact-open{overflow:hidden!important}
 </div>
 
 <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Expanded photograph">
-  <button class="lightbox-close" type="button" data-gallery-close>âœ• CLOSE</button>
+  <button class="lightbox-close" type="button" data-gallery-close>✕ CLOSE</button>
   <button class="lightbox-nav lightbox-prev" type="button" data-gallery-prev aria-label="Previous photograph">&#8592;</button>
   <img id="lightbox-img" src="" alt=""/>
   <div class="lightbox-caption" id="lightbox-caption"></div>
@@ -676,72 +728,99 @@ body.pc-contact-open{overflow:hidden!important}
   <button class="lightbox-nav lightbox-next" type="button" data-gallery-next aria-label="Next photograph">&#8594;</button>
 </div>
 
-<footer>
+
+<footer class="pc-site-footer">
   <div class="footer-brand">
-    <a href="index.html" class="nav-logo" style="color:var(--ink)">PRANA<span style="color:var(--pink)">CLIMB</span></a>
-    <p style="margin-top:0.8rem; font-size:0.88rem; line-height:1.7; color:var(--mid);">With love and the ocean ðŸŒŠ<br>Annie Anderson â€” Pranaclimb | OceanDips</p>
-    <div style="display:flex; gap:0.8rem; margin-top:1.2rem;">
-      <a href="https://www.instagram.com/pranaclimb/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--mid)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="var(--mid)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mid)"/></svg>
+    <a class="nav-logo pc-brand" href="index.html#hero">
+      <span class="pc-wordmark">
+        <span class="pc-plain">PR</span><span class="pc-accent">▲</span><span class="pc-plain">NA</span><span class="pc-accent">CLIMB</span>
+      </span>
+      <small class="pc-tagline">BREATH IS OUR SUPERPOWER</small>
+    </a>
+
+    <p class="footer-owner">Annie Anderson — Pranaclimb</p>
+
+    <div class="footer-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
       </a>
-      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 15v7H9V8z" fill="var(--mid)"/></svg>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 14.9V22H9V8z" fill="currentColor"/>
+        </svg>
       </a>
-      <a href="https://www.facebook.com/pranaclimb" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M13.5 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.5z"/>
+        </svg>
       </a>
-      <a  title="Email" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;"href="#pc-contact" data-pc-contact data-pc-subject="Pranaclimb Enquiry">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="https://wa.me/447875170847" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.6-8.4zM12.2 21.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.7 9.7 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c.2 5.4-4.2 9.9-9.6 9.9zm5.4-7.4c-.3-.1-1.7-.9-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5 4.4 1.9.8 2.6.9 3.6.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.3-.3-.4-.6-.6z"/>
+        </svg>
+      </a>
+      <a href="#pc-contact" data-pc-contact data-pc-subject="Pranaclimb Enquiry" title="Email" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </a>
     </div>
-    <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--mid);">annie@pranaclimb.com</p>
-    <p style="font-size:0.75rem; margin-top:0.3rem; color:var(--mid);">07875 170 847</p>
+
+    <p class="footer-contact-line"><a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a></p>
+    <p class="footer-contact-line"><a href="https://wa.me/447875170847">07875 170 847</a></p>
   </div>
 
   <div class="footer-col">
-    <h4 style="color:var(--mid);">Pages</h4>
-    <ul style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem;">
-      <li><a href="index.html">Home</a></li>
+    <h4>Pages</h4>
+    <ul>
+      <li><a href="index.html#hero">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="rba.html">Assessment</a></li>
       <li><a href="coaching.html">Coaching</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="methodology.html">Methodology</a></li>
       <li><a href="book.html">The Book</a></li>
-      <li><a href="pranaclimb-chapter-I.html">Chapter I â€” Free</a></li>
+      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="app.html">The App</a></li>
-      <li><a href="breathing-for-climbers-annie-anderson.html">About Annie</a></li>
+      <li><a href="breathing-for-climbers-annie-anderson.html">About</a></li>
       <li><a href="gallery.html">Photos</a></li>
       <li><a href="#pc-contact" data-pc-contact data-pc-subject="Pranaclimb Enquiry">Contact</a></li>
     </ul>
   </div>
 
   <div class="footer-col">
-    <h4 style="color:var(--mid);">Pranaclimb Ltd</h4>
-    <p style="font-size:0.78rem; line-height:1.8; color:var(--mid);">
-      Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.<br><br>
-      Annie is a qualified <strong style="color:var(--ink);">SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong style="color:var(--ink);">Registered Yoga Teacher RYT 200</strong> (2012).<br><br>
-      Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong style="color:var(--ink);">Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).<br><br>
-      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" style="color:var(--pink); font-weight:600; text-decoration:none;">Connect on LinkedIn &rarr;</a>
-    </p>
+    <h4>Pranaclimb Ltd</h4>
+    <p>Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.</p>
+    <p>Annie is a qualified <strong>SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong>Registered Yoga Teacher RYT 200</strong> (2012).</p>
+    <p>Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong>Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).</p>
+    <p><a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" rel="noopener"><strong>Connect on LinkedIn →</strong></a></p>
   </div>
 
-  <div class="footer-col">
-    <h4 style="color:var(--mid);">Trading As</h4>
+  <div class="footer-col trading">
+    <h4>Trading As</h4>
     <ul>
-      <li><a href="https://www.pranaclimb.com">ðŸ§— Pranaclimb</a></li>
-      <li><a href="https://oceandips.com" target="_blank">ðŸŒŠ OceanDips</a></li>
+      <li><a href="https://www.pranaclimb.com/">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com/">🌊 OceanDips</a></li>
     </ul>
-    <p style="font-size:0.78rem; color:var(--mid); margin-top:0.8rem; line-height:1.8;"><strong style="color:var(--ink);">Pranaclimb Ltd</strong><br>Company No. 16626114<br>13 Upton Towans, Hayle<br>Cornwall TR27 5BJ</p>
+    <p class="footer-company"><strong>Pranaclimb Ltd</strong><br>
+    Company No. 16626114<br>
+    13 Upton Towans, Hayle<br>
+    Cornwall TR27 5BJ</p>
   </div>
 </footer>
+
 <div class="footer-bottom">
-  <div style="display:flex; flex-direction:column; gap:0.3rem;">
-    <p>&copy; 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
-    <p style="font-size:0.7rem; color:var(--mid);">pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  <div>
+    <p>© 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p>pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
   </div>
-  <div style="display:flex; gap:1.5rem; flex-shrink:0; margin-left:2rem;">
+  <div class="footer-legal-links">
     <a href="terms.html">Terms &amp; Conditions</a>
     <a href="privacy.html">Privacy Policy</a>
   </div>
@@ -818,7 +897,7 @@ var sc_security="14a77c6b";
     <button class="pc-contact-close" type="button" aria-label="Close contact form" data-pc-close>Ã—</button>
     <p class="pc-contact-eyebrow">Pranaclimb Â· Contact Annie</p>
     <h2 class="pc-contact-title" id="pc-contact-title">Send Annie a Message</h2>
-    <p class="pc-contact-intro">Tell me a little about what youâ€™re looking for. Your message will be sent directly to <strong>annie@pranaclimb.com</strong>.</p>
+    <p class="pc-contact-intro">Tell me a little about what you’re looking for. Your message will be sent directly to <strong>annie@pranaclimb.com</strong>.</p>
     <form class="pc-contact-form" id="pc-contact-form" action="https://formspree.io/f/xvznzvdk" method="POST">
       <div class="pc-contact-row">
         <div class="pc-contact-field"><label for="pc-contact-name">Name</label><input id="pc-contact-name" name="name" autocomplete="name" required></div>
@@ -828,9 +907,9 @@ var sc_security="14a77c6b";
       <div class="pc-contact-field"><label for="pc-contact-message">Message</label><textarea id="pc-contact-message" name="message" required></textarea></div>
       <input type="hidden" id="pc-contact-page" name="page" value="">
       <input type="hidden" name="_replyto" id="pc-contact-replyto" value="">
-      <div class="pc-contact-actions"><button class="pc-contact-send" id="pc-contact-send" type="submit">Send Message â†’</button><a class="pc-contact-direct" href="mailto:annie@pranaclimb.com">Email Annie directly</a></div>
+      <div class="pc-contact-actions"><button class="pc-contact-send" id="pc-contact-send" type="submit">Send Message →</button><a class="pc-contact-direct" href="mailto:annie@pranaclimb.com">Email Annie directly</a></div>
       <p class="pc-contact-status" id="pc-contact-status" aria-live="polite"></p>
-      <p class="pc-contact-note">Your message is sent securely through Pranaclimbâ€™s Formspree contact form.</p>
+      <p class="pc-contact-note">Your message is sent securely through Pranaclimb’s Formspree contact form.</p>
     </form>
   </section>
 </div>
@@ -842,7 +921,7 @@ var sc_security="14a77c6b";
   function closeModal(){modal.hidden=true;modal.setAttribute('aria-hidden','true');document.body.classList.remove('pc-contact-open');if(lastFocus&&typeof lastFocus.focus==='function')lastFocus.focus()}
   document.addEventListener('click',function(e){const trigger=e.target.closest('[data-pc-contact]');if(trigger){e.preventDefault();openModal(trigger.getAttribute('data-pc-subject')||'');return}if(e.target.closest('[data-pc-close]')){e.preventDefault();closeModal()}});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)closeModal()});
-  form.addEventListener('submit',async function(e){e.preventDefault();if(!form.reportValidity())return;replyInput.value=emailInput.value.trim();pageInput.value=window.location.href;const originalText=sendBtn.textContent;sendBtn.disabled=true;sendBtn.textContent='Sendingâ€¦';status.textContent='';status.className='pc-contact-status';try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});if(response.ok){status.textContent='Message sent â€” thank you. Annie will get back to you soon.';status.className='pc-contact-status pc-contact-success';form.reset();subjectInput.value='Pranaclimb Enquiry';pageInput.value=window.location.href}else{let message='Sorry, the message could not be sent. Please try again or email Annie directly.';try{const data=await response.json();if(data&&data.errors&&data.errors.length)message=data.errors.map(x=>x.message).join(' ')}catch(_){}status.textContent=message;status.className='pc-contact-status pc-contact-error'}}catch(err){status.textContent='Sorry, there was a connection problem. Please try again or email Annie directly.';status.className='pc-contact-status pc-contact-error'}finally{sendBtn.disabled=false;sendBtn.textContent=originalText}});
+  form.addEventListener('submit',async function(e){e.preventDefault();if(!form.reportValidity())return;replyInput.value=emailInput.value.trim();pageInput.value=window.location.href;const originalText=sendBtn.textContent;sendBtn.disabled=true;sendBtn.textContent='Sending…';status.textContent='';status.className='pc-contact-status';try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});if(response.ok){status.textContent='Message sent — thank you. Annie will get back to you soon.';status.className='pc-contact-status pc-contact-success';form.reset();subjectInput.value='Pranaclimb Enquiry';pageInput.value=window.location.href}else{let message='Sorry, the message could not be sent. Please try again or email Annie directly.';try{const data=await response.json();if(data&&data.errors&&data.errors.length)message=data.errors.map(x=>x.message).join(' ')}catch(_){}status.textContent=message;status.className='pc-contact-status pc-contact-error'}}catch(err){status.textContent='Sorry, there was a connection problem. Please try again or email Annie directly.';status.className='pc-contact-status pc-contact-error'}finally{sendBtn.disabled=false;sendBtn.textContent=originalText}});
 })();
 </script>
 
