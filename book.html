@@ -280,6 +280,8 @@ body.pc-contact-open{overflow:hidden!important}
 }
 </style>
 
+
+
 <style id="pc-master-navigation-v2">
 :root{--pc-nav-pink:#ff00ff;--pc-nav-ink:#24242a;--pc-nav-mid:#5f6068;--pc-nav-border:#e6e6e2;--pc-nav-off:#f8f8f6}
 .pc-master-header{position:sticky;top:0;z-index:99990;background:rgba(255,255,255,.98);border-bottom:1px solid var(--pc-nav-border);font-family:'Outfit',Arial,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.025)}
@@ -334,36 +336,106 @@ body.pc-contact-open{overflow:hidden!important}
  .pc-master-dropdown a{font-size:.8rem}
 }
 </style>
-
+<style id="pc-index-footer-match">
+.pc-site-footer{
+  background:#fff!important;
+  color:var(--ink)!important;
+  padding:4rem!important;
+  display:grid!important;
+  grid-template-columns:1.25fr .85fr 1.4fr 1fr!important;
+  gap:3rem!important;
+  border-top:1px solid var(--border)!important;
+}
+.pc-site-footer .footer-brand .pc-brand{display:inline-flex!important;align-items:flex-start!important;margin-bottom:1rem!important;}
+.pc-site-footer .footer-owner{margin:.7rem 0 1rem;color:var(--mid)!important;font-size:.92rem!important;}
+.footer-socials{display:flex;gap:.7rem;flex-wrap:wrap;margin:1rem 0 1.1rem;}
+.footer-socials a{display:flex!important;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--border);background:var(--off)!important;color:var(--mid)!important;text-decoration:none!important;border-radius:2px;padding:0!important;}
+.footer-socials a:hover{color:var(--pink)!important;border-color:var(--pink)!important;}
+.footer-contact-line{margin:.35rem 0!important;}
+.footer-contact-line a{color:var(--mid)!important;text-decoration:none!important;font-size:.88rem!important;}
+.footer-contact-line a:hover{color:var(--pink)!important;}
+.pc-site-footer .footer-col h4{font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#888!important;margin-bottom:1.2rem;}
+.pc-site-footer .footer-col ul{list-style:none!important;display:flex!important;flex-direction:column!important;gap:.65rem!important;padding:0!important;margin:0!important;}
+.pc-site-footer .footer-col a{font-size:.86rem;color:var(--mid)!important;text-decoration:none!important;background:none!important;padding:0!important;}
+.pc-site-footer .footer-col a:hover{color:var(--pink)!important;}
+.pc-site-footer .footer-col p{font-size:.86rem!important;line-height:1.72!important;color:var(--mid)!important;margin:0 0 1rem!important;}
+.pc-site-footer .footer-col strong{color:var(--ink)!important;}
+.pc-site-footer .trading ul{margin-bottom:1.4rem!important;}
+.pc-site-footer .footer-company{margin-top:1.2rem!important;}
+.footer-bottom{
+  background:#fff!important;
+  border-top:1px solid var(--border)!important;
+  padding:1.2rem 4rem!important;
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:flex-start!important;
+  gap:2rem!important;
+}
+.footer-bottom p{font-size:.72rem!important;line-height:1.55!important;color:var(--mid)!important;margin:.1rem 0!important;}
+.footer-legal-links{display:flex;gap:1rem;white-space:nowrap;}
+.footer-legal-links a{font-size:.74rem!important;color:var(--mid)!important;text-decoration:none!important;}
+.footer-legal-links a:hover{color:var(--pink)!important;}
+@media(max-width:1000px){
+  .pc-site-footer{grid-template-columns:1fr 1fr!important;}
+}
+@media(max-width:700px){
+  .pc-site-footer{grid-template-columns:1fr!important;padding:3rem 1.5rem!important;}
+  .footer-bottom{padding:1rem 1.5rem!important;flex-direction:column!important;gap:.8rem!important;}
+  .footer-legal-links{white-space:normal;flex-wrap:wrap;}
+}
+</style>
+<style id="pc-waiver-footer-strip-styles">
+.pc-waiver-strip{max-width:1300px;margin:0 auto;padding:2rem 4rem;background:#fff7ff;border-top:4px solid #ff00ff;border-bottom:1px solid #e0e0d8;text-align:center}
+.pc-waiver-strip h3{margin:0 0 .55rem;font-family:'Bebas Neue',sans-serif;font-size:1.75rem;letter-spacing:.06em;color:#4a4a4a}
+.pc-waiver-strip p{margin:.4rem auto;max-width:850px;color:#555;font-size:.9rem;line-height:1.65}
+.pc-waiver-strip .pc-waiver-btn{display:inline-block;margin:.8rem 0 .65rem;padding:.8rem 1.35rem;background:#ff00ff;color:#fff;text-decoration:none;font-size:.78rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;border-radius:2px}
+.pc-waiver-strip .pc-waiver-btn:hover{background:#cc00cc}.pc-waiver-strip .pc-minor-rule{font-size:.82rem}
+@media(max-width:700px){.pc-waiver-strip{padding:1.7rem 1.5rem}}
+</style><style id="pc-unified-chrome">
+.pc-master-header,.pc-site-footer,.footer-bottom,.pc-waiver-strip{--pink:#ff00ff;--ink:#4a4a4a;--mid:#555;--border:#e0e0d8;--off:#f5f5f2;box-sizing:border-box;font-family:'Outfit',Arial,sans-serif;text-align:left;}
+.pc-master-header *,.pc-site-footer *,.footer-bottom *{box-sizing:border-box;}
+.pc-master-header .pc-master-menu{position:static;inset:auto;box-shadow:none;backdrop-filter:none;background:transparent;border:0;padding:0;}
+.pc-master-brand,.pc-footer-home{display:inline-flex!important;flex-direction:column!important;align-items:flex-start!important;text-decoration:none!important;background:none!important;padding:0!important;}
+.pc-unified-wordmark{display:block!important;font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif!important;font-size:2rem!important;font-style:normal!important;font-weight:400!important;line-height:1.05!important;letter-spacing:.16em!important;color:#111!important;white-space:nowrap!important;}
+.pc-unified-wordmark span{color:#ff00ff!important;}
+.pc-unified-tagline{display:block!important;font-family:'Outfit',Arial,sans-serif!important;font-size:.54rem!important;font-weight:700!important;font-style:normal!important;letter-spacing:.25em!important;line-height:1.5!important;color:#111!important;white-space:nowrap!important;margin-top:.6rem!important;}
+.pc-site-footer,.footer-bottom{width:100%;max-width:1300px;margin:0 auto;}
+.pc-site-footer .footer-brand{min-width:0;}.pc-site-footer .footer-col{min-width:0;}.pc-site-footer .footer-col a{overflow-wrap:anywhere;}
+.pc-site-footer .footer-brand .pc-footer-home{margin-bottom:1rem;}
+.pc-waiver-strip{text-align:center;}
+.pc-master-dropdown::before{content:'';position:absolute;left:0;right:0;top:-.6rem;height:.65rem;}
+.pc-master-header a:focus-visible,.pc-master-header button:focus-visible,.pc-footer-home:focus-visible{outline:2px solid #ff00ff;outline-offset:3px;}
+@media(max-width:920px){.pc-master-header .pc-master-menu{padding:.6rem 0 1rem;max-height:75vh;overflow-y:auto;}.pc-unified-wordmark{font-size:1.7rem!important;}.pc-master-dropdown::before{display:none;}}
+</style>
+<!-- Pranaclimb emblem favicon -->
+<link rel="icon" href="favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2">
 </head>
 <body>
-
 <header class="pc-master-header" id="pc-master-header">
   <div class="pc-master-bar">
-    <a class="pc-master-brand" href="index.html#hero" aria-label="Pranaclimb home">
-      <span class="pc-master-wordmark">PR<span class="tri">▲</span>NA<span class="climb">CLIMB</span></span>
-      <span class="pc-master-tagline">BREATH IS OUR SUPERPOWER</span>
-    </a>
+    <a class="pc-master-brand" href="https://www.pranaclimb.com/index.html" aria-label="Pranaclimb home"><span class="pc-unified-wordmark">PR<span>▲</span>NA<span>CLIMB</span></span><span class="pc-unified-tagline">BREATH IS OUR SUPERPOWER</span></a>
     <button class="pc-menu-toggle" type="button" aria-expanded="false" aria-controls="pc-master-menu">MENU</button>
     <nav class="pc-master-menu" id="pc-master-menu" aria-label="Main navigation">
-      <a class="pc-master-link" href="breathing-for-climbers-annie-anderson.html">ABOUT</a>
+      <a class="pc-master-link" href="https://www.pranaclimb.com/breathing-for-climbers-annie-anderson.html">ABOUT</a>
 
       <div class="pc-master-item">
         <button class="pc-master-dropbtn" type="button" aria-expanded="false">THE METHOD <span class="pc-master-caret">▼</span></button>
         <div class="pc-master-dropdown">
           <span class="pc-nav-note">Research &amp; framework</span>
           <a href="https://www.researchgate.net/publication/393491795" target="_blank" rel="noopener">The Pranaclimb Methodology — ResearchGate ↗</a>
-          <a href="methodology.html">The Pranaclimb Methodology — Q &amp; A</a>
+          <a href="https://www.pranaclimb.com/methodology.html">The Pranaclimb Methodology — Q &amp; A</a>
         </div>
       </div>
 
       <div class="pc-master-item">
         <button class="pc-master-dropbtn" type="button" aria-expanded="false">COACHING <span class="pc-master-caret">▼</span></button>
         <div class="pc-master-dropdown">
-          <a href="coaching.html">Pranaclimb Coaching Protocol</a>
-          <a href="services.html#outdoor-climbing-coaching">Outdoor Climbing Coaching &amp; Instruction</a>
-          <a href="services.html#indoor-climbing-coaching">Indoor Climbing Coaching &amp; Instruction</a>
-          <a href="waiver.html">Participant Waiver &amp; Informed Consent</a>
+          <a href="https://www.pranaclimb.com/coaching.html">Pranaclimb Coaching Protocol</a>
+          <a href="https://www.pranaclimb.com/services.html#outdoor-climbing-coaching">Outdoor Climbing Coaching &amp; Instruction</a>
+          <a href="https://www.pranaclimb.com/services.html#indoor-climbing-coaching">Indoor Climbing Coaching &amp; Instruction</a>
         </div>
       </div>
 
@@ -371,16 +443,16 @@ body.pc-contact-open{overflow:hidden!important}
         <button class="pc-master-dropbtn" type="button" aria-expanded="false">SHOP <span class="pc-master-caret">▼</span></button>
         <div class="pc-master-dropdown pc-master-dropdown--shop">
           <span class="pc-nav-note">Book &amp; buy</span>
-          <a href="services.html">Shop All</a>
-          <a href="services.html#coaching-bundle">The Pranaclimb Coaching Bundle</a>
-          <a href="services.html#coaching-session">Coaching Session with Annie</a>
-          <a href="services.html#full-day-coaching">Full Day Coaching with Annie</a>
-          <a href="services.html#outdoor-climbing-coaching">Outdoor Climbing Coaching &amp; Instruction</a>
-          <a href="services.html#indoor-climbing-coaching">Indoor Climbing Coaching &amp; Instruction</a>
-          <a href="services.html#coaching-workbook">Coaching &amp; Breathing Protocols for Climbers Workbook</a>
-          <a href="services.html#remote-breathing-assessment">Remote Breathing Assessment (RBA)</a>
-          <a href="gift-vouchers.html">Gift Vouchers</a>
-          <a href="book.html">The Book — <em>Pranaclimb: Love, Breathe, Climb</em></a>
+          <a href="https://www.pranaclimb.com/services.html">Shop All</a>
+          <a href="https://www.pranaclimb.com/services.html#coaching-bundle">The Pranaclimb Coaching Bundle</a>
+          <a href="https://www.pranaclimb.com/services.html#coaching-session">Coaching Session with Annie</a>
+          <a href="https://www.pranaclimb.com/services.html#full-day-coaching">Full Day Coaching with Annie</a>
+          <a href="https://www.pranaclimb.com/services.html#outdoor-climbing-coaching">Outdoor Climbing Coaching &amp; Instruction</a>
+          <a href="https://www.pranaclimb.com/services.html#indoor-climbing-coaching">Indoor Climbing Coaching &amp; Instruction</a>
+          <a href="https://www.pranaclimb.com/services.html#coaching-workbook">Coaching &amp; Breathing Protocols for Climbers Workbook</a>
+          <a href="https://www.pranaclimb.com/services.html#remote-breathing-assessment">Remote Breathing Assessment (RBA)</a>
+          <a href="https://www.pranaclimb.com/gift-vouchers.html">Gift Vouchers</a>
+          <a href="https://www.pranaclimb.com/book.html">The Book — <em>Pranaclimb: Love, Breathe, Climb</em></a>
         </div>
       </div>
 
@@ -389,53 +461,53 @@ body.pc-contact-open{overflow:hidden!important}
         <div class="pc-master-dropdown pc-master-mega">
           <div class="pc-mega-top">
             <strong>Pranaclimb Research Blog</strong>
-            <a href="blog.html">VIEW ALL ARTICLES →</a>
+            <a href="https://www.pranaclimb.com/blog.html">VIEW ALL ARTICLES →</a>
           </div>
           <div class="pc-mega-grid">
             <div class="pc-mega-group">
               <h4>Breath-Holding</h4>
-              <a href="blog-breath-holding-climbing.html">Breath-Holding Benefits for Climbers</a>
-              <a href="blog-spleen-breath-holding.html">Spleen Contraction, Apnea &amp; Performance</a>
-              <a href="blog-micro-breath-holds.html">Micro Breath-Holds in Climbing</a>
-              <a href="blog-tim-emmett-era-vella.html">Hyperventilation, Retention &amp; Tim Emmett</a>
+              <a href="https://www.pranaclimb.com/blog-breath-holding-climbing.html">Breath-Holding Benefits for Climbers</a>
+              <a href="https://www.pranaclimb.com/blog-spleen-breath-holding.html">Spleen Contraction, Apnea &amp; Performance</a>
+              <a href="https://www.pranaclimb.com/blog-micro-breath-holds.html">Micro Breath-Holds in Climbing</a>
+              <a href="https://www.pranaclimb.com/blog-tim-emmett-era-vella.html">Hyperventilation, Retention &amp; Tim Emmett</a>
             </div>
             <div class="pc-mega-group">
               <h4>Breathing Rate &amp; Effort</h4>
-              <a href="blog-rpe-breathing-rate.html">Breathing Rate, RPE &amp; Effort</a>
-              <a href="blog-effective-breathing-rate.html">Effective Breathing Rate</a>
-              <a href="blog-heart-rate-fails-climbers.html">Why Heart Rate Can Fail Climbers</a>
-              <a href="blog-grey-zone.html">The Grey Zone</a>
+              <a href="https://www.pranaclimb.com/blog-rpe-breathing-rate.html">Breathing Rate, RPE &amp; Effort</a>
+              <a href="https://www.pranaclimb.com/blog-effective-breathing-rate.html">Effective Breathing Rate</a>
+              <a href="https://www.pranaclimb.com/blog-heart-rate-fails-climbers.html">Why Heart Rate Can Fail Climbers</a>
+              <a href="https://www.pranaclimb.com/blog-grey-zone.html">The Grey Zone</a>
             </div>
             <div class="pc-mega-group">
               <h4>Respiratory Physiology</h4>
-              <a href="blog-diaphragm-thoracic-stability.html">Diaphragm &amp; Thoracic Stability</a>
-              <a href="blog-metaboreflex.html">Respiratory Muscle Metaboreflex</a>
-              <a href="blog-respiratory-motor-coupling.html">Respiratory–Motor Coupling</a>
-              <a href="blog-capillarization.html">Capillarization &amp; Climbing</a>
-              <a href="blog-muscle-fibre-types.html">Muscle Fibre Types</a>
+              <a href="https://www.pranaclimb.com/blog-diaphragm-thoracic-stability.html">Diaphragm &amp; Thoracic Stability</a>
+              <a href="https://www.pranaclimb.com/blog-metaboreflex.html">Respiratory Muscle Metaboreflex</a>
+              <a href="https://www.pranaclimb.com/blog-respiratory-motor-coupling.html">Respiratory–Motor Coupling</a>
+              <a href="https://www.pranaclimb.com/blog-capillarization.html">Capillarization &amp; Climbing</a>
+              <a href="https://www.pranaclimb.com/blog-muscle-fibre-types.html">Muscle Fibre Types</a>
             </div>
             <div class="pc-mega-group">
               <h4>CO₂ &amp; Breathing Control</h4>
-              <a href="blog-co2-tolerance.html">CO₂ Tolerance</a>
-              <a href="box-breathing.html">Box Breathing</a>
-              <a href="cyclic-sighing.html">Cyclic Sighing</a>
-              <a href="power-exhale.html">Power Exhale</a>
-              <a href="tongue-jaw-reset.html">Tongue &amp; Jaw Reset</a>
+              <a href="https://www.pranaclimb.com/blog-co2-tolerance.html">CO₂ Tolerance</a>
+              <a href="https://www.pranaclimb.com/box-breathing.html">Box Breathing</a>
+              <a href="https://www.pranaclimb.com/cyclic-sighing.html">Cyclic Sighing</a>
+              <a href="https://www.pranaclimb.com/power-exhale.html">Power Exhale</a>
+              <a href="https://www.pranaclimb.com/tongue-jaw-reset.html">Tongue &amp; Jaw Reset</a>
             </div>
             <div class="pc-mega-group">
               <h4>Performance &amp; Recovery</h4>
-              <a href="blog-recovery-protocol.html">Recovery Protocol</a>
-              <a href="blog-rp-sync.html">Respiratory–Postural Sync</a>
-              <a href="blog-science-of-screaming.html">The Science of Screaming</a>
-              <a href="blog-power-screaming-climbing.html">Power Screaming in Climbing</a>
-              <a href="elite-analysis.html">Elite Climber Analysis</a>
+              <a href="https://www.pranaclimb.com/blog-recovery-protocol.html">Recovery Protocol</a>
+              <a href="https://www.pranaclimb.com/blog-rp-sync.html">Respiratory–Postural Sync</a>
+              <a href="https://www.pranaclimb.com/blog-science-of-screaming.html">The Science of Screaming</a>
+              <a href="https://www.pranaclimb.com/blog-power-screaming-climbing.html">Power Screaming in Climbing</a>
+              <a href="https://www.pranaclimb.com/elite-analysis.html">Elite Climber Analysis</a>
             </div>
             <div class="pc-mega-group">
               <h4>Mind, Regulation &amp; Adaptation</h4>
-              <a href="blog-fear-to-commitment.html">From Fear to Commitment</a>
-              <a href="wim-hof.html">Wim Hof &amp; Voluntary Regulation</a>
-              <a href="blog-pranayama-angiogenesis.html">Pranayama &amp; Angiogenesis</a>
-              <a href="breathwork-practices.html">Breathwork Practices</a>
+              <a href="https://www.pranaclimb.com/blog-fear-to-commitment.html">From Fear to Commitment</a>
+              <a href="https://www.pranaclimb.com/wim-hof.html">Wim Hof &amp; Voluntary Regulation</a>
+              <a href="https://www.pranaclimb.com/blog-pranayama-angiogenesis.html">Pranayama &amp; Angiogenesis</a>
+              <a href="https://www.pranaclimb.com/breathwork-practices.html">Breathwork Practices</a>
             </div>
           </div>
         </div>
@@ -444,16 +516,18 @@ body.pc-contact-open{overflow:hidden!important}
       <div class="pc-master-item">
         <button class="pc-master-dropbtn" type="button" aria-expanded="false">THE BOOK <span class="pc-master-caret">▼</span></button>
         <div class="pc-master-dropdown pc-master-dropdown--right pc-master-dropdown--book">
-          <a href="book.html"><em>Pranaclimb: Love, Breathe, Climb</em></a>
-          <a href="pranaclimb-chapter-I.html">Chapter I — Free</a>
+          <a href="https://www.pranaclimb.com/book.html"><em>Pranaclimb: Love, Breathe, Climb</em></a>
+          <a href="https://www.pranaclimb.com/pranaclimb-chapter-I.html">Chapter I — Free</a>
         </div>
       </div>
 
-      <a class="pc-master-link" href="gallery.html">PHOTO BLOG</a>
+      <a class="pc-master-link" href="https://www.pranaclimb.com/gallery.html">PHOTO BLOG</a>
       <a class="pc-master-link" href="#pc-contact" data-pc-contact data-pc-subject="Pranaclimb Enquiry">CONTACT</a>
     </nav>
   </div>
 </header>
+
+
 
 
 
@@ -725,76 +799,103 @@ body.pc-contact-open{overflow:hidden!important}
 </section>
 
 <!-- FOOTER -->
-<footer>
+<section class="pc-waiver-strip" aria-labelledby="pc-waiver-title">
+<h3 id="pc-waiver-title">Participant Waiver &amp; Informed Consent</h3>
+<p>Complete the required participant form before your Pranaclimb climbing session.</p>
+<a class="pc-waiver-btn" href="https://www.pranaclimb.com/waiver.html">Complete Waiver →</a>
+<p class="pc-minor-rule"><strong>Outdoor climbing:</strong> Anyone under 18 must be accompanied by their parent or legally appointed guardian for the entire session.</p>
+</section>
+<footer class="pc-site-footer">
   <div class="footer-brand">
-    <a href="index.html" class="nav-logo" style="color:var(--ink)">PRANA<span style="color:var(--pink)">CLIMB</span></a>
-    <p style="margin-top:0.8rem; font-size:0.88rem; line-height:1.7; color:var(--mid);">With love and the ocean 🌊<br>Annie Anderson — Pranaclimb | OceanDips</p>
-    <div style="display:flex; gap:0.8rem; margin-top:1.2rem;">
-      <a href="https://www.instagram.com/pranaclimb/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="var(--mid)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="var(--mid)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="var(--mid)"/></svg>
+    <a class="pc-footer-home" href="https://www.pranaclimb.com/index.html" aria-label="Pranaclimb home"><span class="pc-unified-wordmark">PR<span>▲</span>NA<span>CLIMB</span></span><span class="pc-unified-tagline">BREATH IS OUR SUPERPOWER</span></a>
+
+    <p class="footer-owner">Annie Anderson — Pranaclimb</p>
+
+    <div class="footer-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
       </a>
-      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" title="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 15v7H9V8z" fill="var(--mid)"/></svg>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 14.9V22H9V8z" fill="currentColor"/>
+        </svg>
       </a>
-      <a href="https://www.facebook.com/pranaclimb" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M13.5 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.5z"/>
+        </svg>
       </a>
-      <a  title="Email" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--off);border-radius:2px;text-decoration:none;"href="#pc-contact" data-pc-contact data-pc-subject="Pranaclimb Enquiry">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="var(--mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="https://wa.me/447875170847" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.6-8.4zM12.2 21.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.7 9.7 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c.2 5.4-4.2 9.9-9.6 9.9zm5.4-7.4c-.3-.1-1.7-.9-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5 4.4 1.9.8 2.6.9 3.6.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.3-.3-.4-.6-.6z"/>
+        </svg>
+      </a>
+      <a href="#pc-contact" data-pc-contact data-pc-subject="Pranaclimb Enquiry" title="Email" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </a>
     </div>
-    <p style="font-size:0.75rem; margin-top:0.8rem; color:var(--mid);">annie@pranaclimb.com</p>
-    <p style="font-size:0.75rem; margin-top:0.3rem; color:var(--mid);">07875 170 847</p>
+
+    <p class="footer-contact-line"><a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a></p>
+    <p class="footer-contact-line"><a href="https://wa.me/447875170847">07875 170 847</a></p>
   </div>
 
   <div class="footer-col">
-    <h4 style="color:var(--mid);">Pages</h4>
-    <ul style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem;">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="rba.html">Assessment</a></li>
-      <li><a href="coaching.html">Coaching</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="methodology.html">Methodology</a></li>
-      <li><a href="book.html">The Book</a></li>
-      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="app.html">The App</a></li>
-      <li><a href="annie.html">About Annie</a></li>
-      <li><a href="gallery.html">Photos</a></li>
+    <h4>Pages</h4>
+    <ul>
+      <li><a href="https://www.pranaclimb.com/index.html">Home</a></li>
+      <li><a href="https://www.pranaclimb.com/services.html">Shop</a></li>
+      <li><a href="https://www.pranaclimb.com/rba.html">Assessment</a></li>
+      <li><a href="https://www.pranaclimb.com/coaching.html">Coaching</a></li>
+      <li><a href="https://www.pranaclimb.com/research.html">Research</a></li>
+      <li><a href="https://www.pranaclimb.com/methodology.html">Methodology</a></li>
+      <li><a href="https://www.pranaclimb.com/book.html">The Book</a></li>
+      <li><a href="https://www.pranaclimb.com/pranaclimb-chapter-I.html">Chapter I — Free</a></li>
+      <li><a href="https://www.pranaclimb.com/blog.html">Blog</a></li>
+      <li><a href="https://www.pranaclimb.com/app.html">The App</a></li>
+      <li><a href="https://www.pranaclimb.com/breathing-for-climbers-annie-anderson.html">About</a></li>
+      <li><a href="https://www.pranaclimb.com/gallery.html">Photos</a></li>
       <li><a href="#pc-contact" data-pc-contact data-pc-subject="Pranaclimb Enquiry">Contact</a></li>
     </ul>
   </div>
 
   <div class="footer-col">
-    <h4 style="color:var(--mid);">Pranaclimb Ltd</h4>
-    <p style="font-size:0.78rem; line-height:1.8; color:var(--mid);">
-      Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.<br><br>
-      Annie is a qualified <strong style="color:var(--ink);">SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong style="color:var(--ink);">Registered Yoga Teacher RYT 200</strong> (2012).<br><br>
-      Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong style="color:var(--ink);">Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).<br><br>
-      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" style="color:var(--pink); font-weight:600; text-decoration:none;">Connect on LinkedIn &rarr;</a>
-    </p>
+    <h4>Pranaclimb Ltd</h4>
+    <p>Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together more than 30 years of worldwide climbing experience, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.</p>
+    <p>Annie is a qualified <strong>SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong>Registered Yoga Teacher RYT 200</strong> (2012).</p>
+    <p>Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong>Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).</p>
+    <p><a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" rel="noopener"><strong>Connect on LinkedIn →</strong></a></p>
   </div>
 
-  <div class="footer-col">
-    <h4 style="color:var(--mid);">Trading As</h4>
+  <div class="footer-col trading">
+    <h4>Trading As</h4>
     <ul>
-      <li><a href="https://www.pranaclimb.com">🧗 Pranaclimb</a></li>
-      <li><a href="https://oceandips.com" target="_blank">🌊 OceanDips</a></li>
+      <li><a href="https://www.pranaclimb.com/">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com/">🌊 OceanDips</a></li>
     </ul>
-    <p style="font-size:0.78rem; color:var(--mid); margin-top:0.8rem; line-height:1.8;"><strong style="color:var(--ink);">Pranaclimb Ltd</strong><br>Company No. 16626114<br>13 Upton Towans, Hayle<br>Cornwall TR27 5BJ</p>
+    <p class="footer-company"><strong>Pranaclimb Ltd</strong><br>
+    Company No. 16626114<br>
+    13 Upton Towans, Hayle<br>
+    Cornwall TR27 5BJ</p>
   </div>
 </footer>
 <div class="footer-bottom">
-  <div style="display:flex; flex-direction:column; gap:0.3rem;">
-    <p>&copy; 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
-    <p style="font-size:0.7rem; color:var(--mid);">pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  <div>
+    <p>© 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p>pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
   </div>
-  <div style="display:flex; gap:1.5rem; flex-shrink:0; margin-left:2rem;">
-    <a href="terms.html">Terms &amp; Conditions</a>
-    <a href="privacy.html">Privacy Policy</a>
+  <div class="footer-legal-links">
+    <a href="https://www.pranaclimb.com/terms.html">Terms &amp; Conditions</a>
+    <a href="https://www.pranaclimb.com/privacy.html">Privacy Policy</a>
   </div>
 </div>
+
 
 <!-- WHATSAPP FLOATING BUTTON -->
 <a href="https://wa.me/447875170847" target="_blank" rel="noopener" title="Chat on WhatsApp" style="position:fixed; bottom:24px; right:24px; width:56px; height:56px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(0,0,0,0.25); z-index:999; text-decoration:none;">
@@ -909,6 +1010,8 @@ var sc_security="14a77c6b";
 </script>
 
 
+
+
 <script id="pc-master-navigation-v2-js">
 (function(){
   function init(){
@@ -927,7 +1030,7 @@ var sc_security="14a77c6b";
             var item=btn.closest('.pc-master-item');
             var willOpen=!item.classList.contains('pc-open');
             header.querySelectorAll('.pc-master-item.pc-open').forEach(function(other){
-              if(other!==item) other.classList.remove('pc-open');
+              if(other!==item){other.classList.remove('pc-open');other.querySelector('.pc-master-dropbtn').setAttribute('aria-expanded','false');}
             });
             item.classList.toggle('pc-open',willOpen);
             btn.setAttribute('aria-expanded',willOpen?'true':'false');
@@ -939,6 +1042,5 @@ var sc_security="14a77c6b";
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
 })();
 </script>
-
 </body>
 </html>
