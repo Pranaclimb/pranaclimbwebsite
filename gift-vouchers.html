@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pranaclimb Gift Vouchers | Climbing, Breath & Adventure</title>
+<meta name="description" content="Give the gift of Pranaclimb — climbing, breathwork, coaching and adventure in Cornwall and beyond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#ff00ff;
+  --ink:#151922;
+  --mid:#666b75;
+  --off:#fafafa;
+  --border:#e9e9ec;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Outfit,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit}
+header{
+  position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--border)
+}
+.nav{
+  max-width:1380px;margin:auto;padding:1rem 2rem;display:flex;align-items:center;
+  justify-content:space-between;gap:2rem
+}
+.pc-brand{text-decoration:none;display:flex;flex-direction:column;line-height:.9}
+.pc-wordmark{font-family:"Bebas Neue",sans-serif;font-size:2rem;letter-spacing:.03em}
+.pc-plain{color:#111}
+.pc-accent{color:var(--pink)}
+.pc-tagline{font-size:.62rem;letter-spacing:.16em;margin-top:.25rem;color:#555}
+nav{display:flex;flex-wrap:wrap;gap:1.15rem;align-items:center}
+nav a{text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.08em}
+nav a:hover,nav a.active{color:var(--pink)}
+
+.hero{max-width:1180px;margin:auto;padding:6.5rem 2rem 3rem;text-align:center}
+.eyebrow{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);font-weight:700}
+h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(4rem,9vw,8.2rem);line-height:.86;margin:.65rem 0 .9rem;letter-spacing:.02em}
+.hero h1 span{color:var(--pink)}
+.lede{font-size:clamp(1.05rem,2vw,1.35rem);max-width:720px;margin:0 auto;color:var(--mid);line-height:1.65}
+.hero-actions{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:.8rem 1.25rem;border:1px solid var(--ink);text-decoration:none;font-weight:700;letter-spacing:.04em;background:#fff}
+.btn.primary{background:var(--pink);border-color:var(--pink);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+
+.thumb-strip{max-width:1180px;margin:1rem auto 0;padding:0 2rem;display:grid;grid-template-columns:repeat(7,1fr);gap:.55rem}
+.thumb-strip img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:2px}
+
+.section{max-width:1180px;margin:auto;padding:5rem 2rem}
+.section-title{font-family:"Bebas Neue",sans-serif;font-size:3.1rem;letter-spacing:.03em;margin:0 0 .7rem}
+.section-intro{max-width:720px;color:var(--mid);line-height:1.7;margin:0 0 2rem}
+.options{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.card{border:1px solid var(--border);padding:1.5rem;background:#fff;min-height:220px;display:flex;flex-direction:column}
+.card .kicker{font-size:.7rem;letter-spacing:.17em;text-transform:uppercase;color:var(--pink);font-weight:700}
+.card h3{font-size:1.3rem;margin:.5rem 0 .6rem}
+.card p{color:var(--mid);line-height:1.6;margin:0 0 1.2rem}
+.card .btn{margin-top:auto;width:100%}
+
+.experiences{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.experiences img{width:100%;display:block;border:1px solid var(--border)}
+.checks{display:grid;gap:.85rem;margin-top:1.5rem}
+.check{display:flex;gap:.75rem;align-items:flex-start}
+.check b{color:var(--pink)}
+
+.order{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.order-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.order form{background:#fff;border:1px solid var(--border);padding:1.5rem}
+.field{display:grid;gap:.45rem;margin-bottom:1rem}
+label{font-size:.8rem;font-weight:700;letter-spacing:.04em}
+input,select,textarea{width:100%;font:inherit;padding:.85rem;border:1px solid #d9d9de;background:#fff}
+textarea{min-height:130px;resize:vertical}
+.status{font-size:.85rem;color:var(--mid);margin-top:.8rem;min-height:1.2em}
+
+.fineprint{font-size:.83rem;color:var(--mid);line-height:1.6}
+.fineprint strong{color:var(--ink)}
+
+@media(max-width:980px){
+  nav{display:none}
+  .thumb-strip{grid-template-columns:repeat(4,1fr)}
+  .options{grid-template-columns:repeat(2,1fr)}
+  .experiences,.order-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .nav{padding:.9rem 1rem}
+  .hero{padding:4.2rem 1.2rem 2.4rem}
+  .thumb-strip{padding:0 1rem;grid-template-columns:repeat(3,1fr)}
+  .section{padding:3.5rem 1.2rem}
+  .options{grid-template-columns:1fr}
+}
+</style>
+<style id="pc-index-footer-match">
+.pc-site-footer{
+  background:#fff!important;
+  color:var(--ink)!important;
+  padding:4rem!important;
+  display:grid!important;
+  grid-template-columns:1.25fr .85fr 1.4fr 1fr!important;
+  gap:3rem!important;
+  border-top:1px solid var(--border)!important;
+}
+.pc-site-footer .footer-brand .pc-brand{display:inline-flex!important;align-items:flex-start!important;margin-bottom:1rem!important;}
+.pc-site-footer .footer-owner{margin:.7rem 0 1rem;color:var(--mid)!important;font-size:.92rem!important;}
+.footer-socials{display:flex;gap:.7rem;flex-wrap:wrap;margin:1rem 0 1.1rem;}
+.footer-socials a{display:flex!important;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--border);background:var(--off)!important;color:var(--mid)!important;text-decoration:none!important;border-radius:2px;padding:0!important;}
+.footer-socials a:hover{color:var(--pink)!important;border-color:var(--pink)!important;}
+.footer-contact-line{margin:.35rem 0!important;}
+.footer-contact-line a{color:var(--mid)!important;text-decoration:none!important;font-size:.88rem!important;}
+.footer-contact-line a:hover{color:var(--pink)!important;}
+.pc-site-footer .footer-col h4{font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#888!important;margin-bottom:1.2rem;}
+.pc-site-footer .footer-col ul{list-style:none!important;display:flex!important;flex-direction:column!important;gap:.65rem!important;padding:0!important;margin:0!important;}
+.pc-site-footer .footer-col a{font-size:.86rem;color:var(--mid)!important;text-decoration:none!important;background:none!important;padding:0!important;}
+.pc-site-footer .footer-col a:hover{color:var(--pink)!important;}
+.pc-site-footer .footer-col p{font-size:.86rem!important;line-height:1.72!important;color:var(--mid)!important;margin:0 0 1rem!important;}
+.pc-site-footer .footer-col strong{color:var(--ink)!important;}
+.pc-site-footer .trading ul{margin-bottom:1.4rem!important;}
+.pc-site-footer .footer-company{margin-top:1.2rem!important;}
+.footer-bottom{
+  background:#fff!important;
+  border-top:1px solid var(--border)!important;
+  padding:1.2rem 4rem!important;
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:flex-start!important;
+  gap:2rem!important;
+}
+.footer-bottom p{font-size:.72rem!important;line-height:1.55!important;color:var(--mid)!important;margin:.1rem 0!important;}
+.footer-legal-links{display:flex;gap:1rem;white-space:nowrap;}
+.footer-legal-links a{font-size:.74rem!important;color:var(--mid)!important;text-decoration:none!important;}
+.footer-legal-links a:hover{color:var(--pink)!important;}
+@media(max-width:1000px){
+  .pc-site-footer{grid-template-columns:1fr 1fr!important;}
+}
+@media(max-width:700px){
+  .pc-site-footer{grid-template-columns:1fr!important;padding:3rem 1.5rem!important;}
+  .footer-bottom{padding:1rem 1.5rem!important;flex-direction:column!important;gap:.8rem!important;}
+  .footer-legal-links{white-space:normal;flex-wrap:wrap;}
+}
+</style>
+
+<style id="pc-master-navigation-v2">
+:root{--pc-nav-pink:#ff00ff;--pc-nav-ink:#24242a;--pc-nav-mid:#5f6068;--pc-nav-border:#e6e6e2;--pc-nav-off:#f8f8f6}
+.pc-master-header{position:sticky;top:0;z-index:99990;background:rgba(255,255,255,.98);border-bottom:1px solid var(--pc-nav-border);font-family:'Outfit',Arial,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.025)}
+.pc-master-bar{max-width:1300px;margin:0 auto;padding:1rem 1.5rem;display:flex;align-items:center;gap:1.7rem}
+.pc-master-brand{flex:0 0 auto;text-decoration:none;line-height:.88;white-space:nowrap}
+.pc-master-wordmark{font-family:'Bebas Neue',Impact,sans-serif;font-size:2rem;letter-spacing:.16em;color:#111}
+.pc-master-wordmark .tri,.pc-master-wordmark .climb{color:var(--pc-nav-pink)}
+.pc-master-tagline{display:block;margin-top:.35rem;font-size:.54rem;font-weight:600;letter-spacing:.25em;color:#333}
+.pc-master-menu{display:flex;align-items:center;justify-content:flex-end;gap:.15rem;margin-left:auto}
+.pc-master-link,.pc-master-dropbtn{appearance:none;border:0;background:none;text-decoration:none;color:var(--pc-nav-ink);font:600 .69rem/1.2 'Outfit',Arial,sans-serif;letter-spacing:.065em;text-transform:uppercase;padding:.72rem .62rem;cursor:pointer;white-space:nowrap}
+.pc-master-link:hover,.pc-master-link:focus,.pc-master-dropbtn:hover,.pc-master-dropbtn:focus{color:var(--pc-nav-pink);outline:none}
+.pc-master-caret{display:inline-block;margin-left:.22rem;font-size:.72em;transition:transform .18s}
+.pc-master-item{position:relative}
+.pc-master-dropdown{position:absolute;top:calc(100% + .55rem);left:0;min-width:300px;padding:.7rem;background:#fff;border:1px solid var(--pc-nav-border);box-shadow:0 18px 45px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(7px);transition:.16s ease;z-index:100000}
+.pc-master-item:hover>.pc-master-dropdown,.pc-master-item:focus-within>.pc-master-dropdown,.pc-master-item.pc-open>.pc-master-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.pc-master-item:hover>.pc-master-dropbtn .pc-master-caret,.pc-master-item.pc-open>.pc-master-dropbtn .pc-master-caret{transform:rotate(180deg)}
+.pc-master-dropdown a{display:block;text-decoration:none;color:var(--pc-nav-mid);font-size:.79rem;line-height:1.35;padding:.7rem .75rem;border-radius:2px}
+.pc-master-dropdown a:hover,.pc-master-dropdown a:focus{background:#fff4ff;color:var(--pc-nav-pink);outline:none}
+.pc-master-dropdown .pc-nav-note{display:block;color:#97979d;font-size:.64rem;letter-spacing:.05em;text-transform:uppercase;margin:.4rem .75rem .2rem}
+.pc-master-dropdown--right{left:auto;right:0}
+.pc-master-dropdown--shop{width:410px}
+.pc-master-dropdown--book{width:310px}
+.pc-master-mega{position:fixed;left:50%;transform:translate(-50%,7px);top:auto;width:min(1120px,calc(100vw - 2rem));padding:1.2rem 1.3rem}
+.pc-master-item:hover>.pc-master-mega,.pc-master-item:focus-within>.pc-master-mega,.pc-master-item.pc-open>.pc-master-mega{transform:translate(-50%,0)}
+.pc-mega-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.25rem .45rem .8rem;border-bottom:1px solid var(--pc-nav-border);margin-bottom:.9rem}
+.pc-mega-top a{font-weight:700;color:var(--pc-nav-pink);padding:.4rem}
+.pc-mega-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem 1.4rem}
+.pc-mega-group h4{margin:.1rem .6rem .35rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pc-nav-ink)}
+.pc-mega-group a{padding:.45rem .6rem;font-size:.74rem}
+.pc-menu-toggle{display:none;margin-left:auto;border:1px solid var(--pc-nav-border);background:#fff;color:var(--pc-nav-ink);padding:.65rem .85rem;font:700 .72rem 'Outfit',Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.pc-master-header a[data-pc-contact]{cursor:pointer}
+@media(max-width:1120px){
+ .pc-master-bar{gap:1rem;padding:.85rem 1rem}
+ .pc-master-wordmark{font-size:1.7rem}
+ .pc-master-link,.pc-master-dropbtn{padding:.66rem .42rem;font-size:.63rem}
+}
+@media(max-width:920px){
+ .pc-master-header{position:sticky}
+ .pc-master-bar{flex-wrap:wrap}
+ .pc-menu-toggle{display:block}
+ .pc-master-menu{display:none;flex:1 0 100%;margin:0;padding:.6rem 0 1rem;align-items:stretch;flex-direction:column;gap:0;border-top:1px solid var(--pc-nav-border)}
+ .pc-master-header.pc-mobile-open .pc-master-menu{display:flex}
+ .pc-master-link,.pc-master-dropbtn{display:flex;width:100%;align-items:center;justify-content:space-between;text-align:left;padding:.85rem .45rem;font-size:.76rem}
+ .pc-master-item{width:100%}
+ .pc-master-dropdown,.pc-master-mega{position:static!important;left:auto!important;right:auto!important;top:auto!important;width:100%!important;min-width:0!important;box-shadow:none;border:0;border-left:2px solid #ffd4ff;margin:.1rem 0 .5rem;padding:.2rem .55rem;opacity:1;visibility:visible;transform:none!important;display:none}
+ .pc-master-item.pc-open>.pc-master-dropdown{display:block}
+ .pc-master-item:hover>.pc-master-dropdown,.pc-master-item:focus-within>.pc-master-dropdown{display:none}
+ .pc-master-item.pc-open:hover>.pc-master-dropdown,.pc-master-item.pc-open:focus-within>.pc-master-dropdown{display:block}
+ .pc-mega-top{display:block}
+ .pc-mega-grid{grid-template-columns:1fr}
+ .pc-mega-group{border-top:1px solid var(--pc-nav-border);padding:.55rem 0}
+ .pc-master-dropdown a{font-size:.8rem}
+}
+</style>
+
+</head>
+<body id="top">
+
+<header class="pc-master-header" id="pc-master-header">
+  <div class="pc-master-bar">
+    <a class="pc-master-brand" href="index.html#hero" aria-label="Pranaclimb home">
+      <span class="pc-master-wordmark">PR<span class="tri">▲</span>NA<span class="climb">CLIMB</span></span>
+      <span class="pc-master-tagline">BREATH IS OUR SUPERPOWER</span>
+    </a>
+    <button class="pc-menu-toggle" type="button" aria-expanded="false" aria-controls="pc-master-menu">MENU</button>
+    <nav class="pc-master-menu" id="pc-master-menu" aria-label="Main navigation">
+      <a class="pc-master-link" href="breathing-for-climbers-annie-anderson.html">ABOUT</a>
+
+      <div class="pc-master-item">
+        <button class="pc-master-dropbtn" type="button" aria-expanded="false">THE METHOD <span class="pc-master-caret">▼</span></button>
+        <div class="pc-master-dropdown">
+          <span class="pc-nav-note">Research &amp; framework</span>
+          <a href="https://www.researchgate.net/publication/393491795" target="_blank" rel="noopener">The Pranaclimb Methodology — ResearchGate ↗</a>
+          <a href="methodology.html">The Pranaclimb Methodology — Q &amp; A</a>
+        </div>
+      </div>
+
+      <div class="pc-master-item">
+        <button class="pc-master-dropbtn" type="button" aria-expanded="false">COACHING <span class="pc-master-caret">▼</span></button>
+        <div class="pc-master-dropdown">
+          <a href="coaching.html">Pranaclimb Coaching Protocol</a>
+          <a href="services.html#outdoor-climbing-coaching">Outdoor Climbing Coaching &amp; Instruction</a>
+          <a href="services.html#indoor-climbing-coaching">Indoor Climbing Coaching &amp; Instruction</a>
+          <a href="waiver.html">Participant Waiver &amp; Informed Consent</a>
+        </div>
+      </div>
+
+      <div class="pc-master-item">
+        <button class="pc-master-dropbtn" type="button" aria-expanded="false">SHOP <span class="pc-master-caret">▼</span></button>
+        <div class="pc-master-dropdown pc-master-dropdown--shop">
+          <span class="pc-nav-note">Book &amp; buy</span>
+          <a href="services.html">Shop All</a>
+          <a href="services.html#coaching-bundle">The Pranaclimb Coaching Bundle</a>
+          <a href="services.html#coaching-session">Coaching Session with Annie</a>
+          <a href="services.html#full-day-coaching">Full Day Coaching with Annie</a>
+          <a href="services.html#outdoor-climbing-coaching">Outdoor Climbing Coaching &amp; Instruction</a>
+          <a href="services.html#indoor-climbing-coaching">Indoor Climbing Coaching &amp; Instruction</a>
+          <a href="services.html#coaching-workbook">Coaching &amp; Breathing Protocols for Climbers Workbook</a>
+          <a href="services.html#remote-breathing-assessment">Remote Breathing Assessment (RBA)</a>
+          <a href="gift-vouchers.html">Gift Vouchers</a>
+          <a href="book.html">The Book — <em>Pranaclimb: Love, Breathe, Climb</em></a>
+        </div>
+      </div>
+
+      <div class="pc-master-item">
+        <button class="pc-master-dropbtn" type="button" aria-expanded="false">RESEARCH BLOG <span class="pc-master-caret">▼</span></button>
+        <div class="pc-master-dropdown pc-master-mega">
+          <div class="pc-mega-top">
+            <strong>Pranaclimb Research Blog</strong>
+            <a href="blog.html">VIEW ALL ARTICLES →</a>
+          </div>
+          <div class="pc-mega-grid">
+            <div class="pc-mega-group">
+              <h4>Breath-Holding</h4>
+              <a href="blog-breath-holding-climbing.html">Breath-Holding Benefits for Climbers</a>
+              <a href="blog-spleen-breath-holding.html">Spleen Contraction, Apnea &amp; Performance</a>
+              <a href="blog-micro-breath-holds.html">Micro Breath-Holds in Climbing</a>
+              <a href="blog-tim-emmett-era-vella.html">Hyperventilation, Retention &amp; Tim Emmett</a>
+            </div>
+            <div class="pc-mega-group">
+              <h4>Breathing Rate &amp; Effort</h4>
+              <a href="blog-rpe-breathing-rate.html">Breathing Rate, RPE &amp; Effort</a>
+              <a href="blog-effective-breathing-rate.html">Effective Breathing Rate</a>
+              <a href="blog-heart-rate-fails-climbers.html">Why Heart Rate Can Fail Climbers</a>
+              <a href="blog-grey-zone.html">The Grey Zone</a>
+            </div>
+            <div class="pc-mega-group">
+              <h4>Respiratory Physiology</h4>
+              <a href="blog-diaphragm-thoracic-stability.html">Diaphragm &amp; Thoracic Stability</a>
+              <a href="blog-metaboreflex.html">Respiratory Muscle Metaboreflex</a>
+              <a href="blog-respiratory-motor-coupling.html">Respiratory–Motor Coupling</a>
+              <a href="blog-capillarization.html">Capillarization &amp; Climbing</a>
+              <a href="blog-muscle-fibre-types.html">Muscle Fibre Types</a>
+            </div>
+            <div class="pc-mega-group">
+              <h4>CO₂ &amp; Breathing Control</h4>
+              <a href="blog-co2-tolerance.html">CO₂ Tolerance</a>
+              <a href="box-breathing.html">Box Breathing</a>
+              <a href="cyclic-sighing.html">Cyclic Sighing</a>
+              <a href="power-exhale.html">Power Exhale</a>
+              <a href="tongue-jaw-reset.html">Tongue &amp; Jaw Reset</a>
+            </div>
+            <div class="pc-mega-group">
+              <h4>Performance &amp; Recovery</h4>
+              <a href="blog-recovery-protocol.html">Recovery Protocol</a>
+              <a href="blog-rp-sync.html">Respiratory–Postural Sync</a>
+              <a href="blog-science-of-screaming.html">The Science of Screaming</a>
+              <a href="blog-power-screaming-climbing.html">Power Screaming in Climbing</a>
+              <a href="elite-analysis.html">Elite Climber Analysis</a>
+            </div>
+            <div class="pc-mega-group">
+              <h4>Mind, Regulation &amp; Adaptation</h4>
+              <a href="blog-fear-to-commitment.html">From Fear to Commitment</a>
+              <a href="wim-hof.html">Wim Hof &amp; Voluntary Regulation</a>
+              <a href="blog-pranayama-angiogenesis.html">Pranayama &amp; Angiogenesis</a>
+              <a href="breathwork-practices.html">Breathwork Practices</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pc-master-item">
+        <button class="pc-master-dropbtn" type="button" aria-expanded="false">THE BOOK <span class="pc-master-caret">▼</span></button>
+        <div class="pc-master-dropdown pc-master-dropdown--right pc-master-dropdown--book">
+          <a href="book.html"><em>Pranaclimb: Love, Breathe, Climb</em></a>
+          <a href="pranaclimb-chapter-I.html">Chapter I — Free</a>
+        </div>
+      </div>
+
+      <a class="pc-master-link" href="gallery.html">PHOTO BLOG</a>
+      <a class="pc-master-link" href="#order">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">Pranaclimb Gift Vouchers</div>
+    <h1>GIVE THE GIFT OF <span>ADVENTURE</span></h1>
+    <p class="lede">A Pranaclimb voucher is a personal gift of climbing, breath, confidence and time outside — from a remote breathing assessment to bespoke coaching and full-day outdoor climbing.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#order">ORDER A VOUCHER</a>
+      <a class="btn" href="#experiences">SEE EXPERIENCES</a>
+    </div>
+  </section>
+
+  <div class="thumb-strip" aria-label="Pranaclimb gallery preview">
+    <img src="images/gift/climbing-coaching-sennen.webp" alt="Pranaclimb sea-cliff climbing coaching">
+    <img src="images/gift/sennen-annalisa.webp" alt="Climbing at Sennen, Cornwall">
+    <img src="images/gift/sennen-seconding.webp" alt="Seconding a sea-cliff climb at Sennen">
+    <img src="images/gift/annie-pranaclimb.webp" alt="Annie Anderson climbing in Cornwall">
+    <img src="images/gift/anvil-chorus.webp" alt="Archive climbing photograph of Annie Anderson on Anvil Chorus">
+    <img src="images/gift/bosigran-ridge.webp" alt="Bosigran Ridge on the Cornish coast">
+    <img src="images/gift/ocean-dips.webp" alt="Cold-water swimming in Cornwall">
+  </div>
+
+  <section class="section" id="experiences">
+    <h2 class="section-title">CHOOSE A GIFT</h2>
+    <p class="section-intro">Choose a simple voucher value or make the gift about a particular Pranaclimb experience. If you are unsure, a flexible value voucher keeps the choice with the recipient.</p>
+    <div class="options">
+      <article class="card">
+        <div class="kicker">Flexible value</div><h3>£25 Gift Voucher</h3>
+        <p>A contribution towards a Pranaclimb assessment, coaching session or experience.</p>
+        <a class="btn" href="#order" data-value="£25 Gift Voucher">CHOOSE £25</a>
+      </article>
+      <article class="card">
+        <div class="kicker">Flexible value</div><h3>£50 Gift Voucher</h3>
+        <p>A flexible gift that can be put towards coaching, breathwork or an outdoor climbing experience.</p>
+        <a class="btn" href="#order" data-value="£50 Gift Voucher">CHOOSE £50</a>
+      </article>
+      <article class="card">
+        <div class="kicker">Flexible value</div><h3>£100 Gift Voucher</h3>
+        <p>A larger contribution towards a bespoke Pranaclimb experience or package.</p>
+        <a class="btn" href="#order" data-value="£100 Gift Voucher">CHOOSE £100</a>
+      </article>
+      <article class="card">
+        <div class="kicker">Personalised</div><h3>Bespoke Experience</h3>
+        <p>Choose a specific experience or ask Annie to help you create the right gift for the recipient.</p>
+        <a class="btn" href="#order" data-value="Bespoke Pranaclimb Experience">BUILD A GIFT</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section experiences">
+    <div>
+      <img src="images/gift/gift-voucher-preview.webp" alt="Pranaclimb gift voucher design preview">
+    </div>
+    <div>
+      <div class="eyebrow">A personal gift</div>
+      <h2 class="section-title">CLIMBING. BREATH. CONFIDENCE. ADVENTURE.</h2>
+      <p class="section-intro">Each voucher can be personalised with the recipient’s name, your name and a short message. You can choose a value or a specific Pranaclimb experience.</p>
+      <div class="checks">
+        <div class="check"><b>▲</b><span>Remote Breathing Assessment</span></div>
+        <div class="check"><b>▲</b><span>1:1 climbing and breathing coaching</span></div>
+        <div class="check"><b>▲</b><span>Full-day outdoor climbing experience</span></div>
+        <div class="check"><b>▲</b><span>Bespoke breathwork session</span></div>
+      </div>
+      <p class="fineprint" style="margin-top:1.5rem">Not sure what to choose? Select <strong>Bespoke Experience</strong> and describe the person you are buying for.</p>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="section order-grid">
+      <div>
+        <div class="eyebrow">Order a voucher</div>
+        <h2 class="section-title">MAKE IT PERSONAL</h2>
+        <p class="section-intro">Tell Annie who the voucher is for and what you would like to give. You’ll receive confirmation before anything is finalised.</p>
+        <p class="fineprint"><strong>Christmas gifting:</strong> choose whether you would like the voucher sent to you so you can print or forward it, or prepared for the recipient.</p>
+      </div>
+
+      <form id="gift-form" action="https://formspree.io/f/xvznzvdk" method="POST">
+        <input type="hidden" name="_subject" value="Pranaclimb Gift Voucher Enquiry">
+        <input type="hidden" name="page" value="gift-vouchers.html">
+        <div class="field"><label for="buyer">Your name</label><input id="buyer" name="name" required></div>
+        <div class="field"><label for="email">Your email</label><input id="email" type="email" name="email" required></div>
+        <div class="field"><label for="recipient">Recipient name</label><input id="recipient" name="recipient"></div>
+        <div class="field">
+          <label for="voucher">Voucher / experience</label>
+          <select id="voucher" name="voucher">
+            <option>£25 Gift Voucher</option>
+            <option>£50 Gift Voucher</option>
+            <option>£100 Gift Voucher</option>
+            <option>Bespoke Pranaclimb Experience</option>
+            <option>Remote Breathing Assessment</option>
+            <option>1:1 Coaching</option>
+            <option>Full-Day Outdoor Climbing</option>
+            <option>Breathwork Session</option>
+          </select>
+        </div>
+        <div class="field"><label for="message">Personal message / anything Annie should know</label><textarea id="message" name="message"></textarea></div>
+        <button class="btn primary" id="send-btn" type="submit">SEND GIFT VOUCHER ENQUIRY</button>
+        <div class="status" id="form-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pc-site-footer">
+  <div class="footer-brand">
+    <a class="nav-logo pc-brand" href="index.html#hero">
+      <span class="pc-wordmark">
+        <span class="pc-plain">PR</span><span class="pc-accent">▲</span><span class="pc-plain">NA</span><span class="pc-accent">CLIMB</span>
+      </span>
+      <small class="pc-tagline">BREATH IS OUR SUPERPOWER</small>
+    </a>
+
+    <p class="footer-owner">Annie Anderson — Pranaclimb</p>
+
+    <div class="footer-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/pranaclimb/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 8h4v14H2V8zm7 0h4v2h.1C14 8.9 15.5 8 17 8c3.9 0 4.6 2.6 4.6 6V22h-4v-7c0-1.7 0-3.8-2.3-3.8S13 13 13 14.9V22H9V8z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/pranaclimb" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M13.5 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.5z"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/447875170847" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.6-8.4zM12.2 21.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.7 9.7 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c.2 5.4-4.2 9.9-9.6 9.9zm5.4-7.4c-.3-.1-1.7-.9-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5 4.4 1.9.8 2.6.9 3.6.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.3-.3-.4-.6-.6z"/>
+        </svg>
+      </a>
+      <a href="#pc-contact" data-pc-contact data-pc-subject="Pranaclimb Enquiry" title="Email" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <p class="footer-contact-line"><a href="mailto:annie@pranaclimb.com">annie@pranaclimb.com</a></p>
+    <p class="footer-contact-line"><a href="https://wa.me/447875170847">07875 170 847</a></p>
+  </div>
+
+  <div class="footer-col">
+    <h4>Pages</h4>
+    <ul>
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="rba.html">Assessment</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="pranaclimb-chapter-I.html">Chapter I — Free</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="app.html">The App</a></li>
+      <li><a href="breathing-for-climbers-annie-anderson.html">About</a></li>
+      <li><a href="gallery.html">Photos</a></li>
+      <li><a href="#pc-contact" data-pc-contact data-pc-subject="Pranaclimb Enquiry">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Pranaclimb Ltd</h4>
+    <p>Annie Anderson is a breathwork specialist, independent researcher, and lifelong climber. Pranaclimb weaves together over 35 years of climbing, 25+ years of yoga, meditation, and breathwork, and a decade of independent research into breathing, anatomy &amp; physiology, psychology, neurobiology, and performance science.</p>
+    <p>Annie is a qualified <strong>SPA/RCI Rock Climbing Instructor</strong> (1998) and <strong>Registered Yoga Teacher RYT 200</strong> (2012).</p>
+    <p>Pranaclimb Ltd holds full professional indemnity and public liability insurance with <strong>Insure4Sport</strong> (Underwritten by Aviva Insurance Limited).</p>
+    <p><a href="https://www.linkedin.com/in/annieandersonfounderpranaclimb/" target="_blank" rel="noopener"><strong>Connect on LinkedIn →</strong></a></p>
+  </div>
+
+  <div class="footer-col trading">
+    <h4>Trading As</h4>
+    <ul>
+      <li><a href="https://www.pranaclimb.com/">🧗 Pranaclimb</a></li>
+      <li><a href="https://oceandips.com/">🌊 OceanDips</a></li>
+    </ul>
+    <p class="footer-company"><strong>Pranaclimb Ltd</strong><br>
+    Company No. 16626114<br>
+    13 Upton Towans, Hayle<br>
+    Cornwall TR27 5BJ</p>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <div>
+    <p>© 2026 Pranaclimb Ltd. All rights reserved. Registered in England &amp; Wales, Company No. 16626114.</p>
+    <p>pranaclimb.com and oceandips.com are trading names of Pranaclimb Ltd. Registered Office: 13 Upton Towans, Hayle, Cornwall. TR27 5BJ.</p>
+  </div>
+  <div class="footer-legal-links">
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('[data-value]').forEach(function(el){
+  el.addEventListener('click',function(){
+    var select=document.getElementById('voucher');
+    if(select){
+      var value=this.getAttribute('data-value');
+      for(var i=0;i<select.options.length;i++){if(select.options[i].text===value){select.selectedIndex=i;break;}}
+    }
+  });
+});
+
+var form=document.getElementById('gift-form');
+var status=document.getElementById('form-status');
+var sendBtn=document.getElementById('send-btn');
+form.addEventListener('submit',async function(e){
+  e.preventDefault();
+  if(!form.reportValidity())return;
+  sendBtn.disabled=true;sendBtn.textContent='SENDING…';status.textContent='';
+  try{
+    var response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    if(response.ok){
+      status.textContent='Thank you — your gift voucher enquiry has been sent.';
+      form.reset();
+    }else{
+      status.textContent='There was a problem sending the form. Please email annie@pranaclimb.com.';
+    }
+  }catch(err){
+    status.textContent='There was a problem sending the form. Please email annie@pranaclimb.com.';
+  }finally{
+    sendBtn.disabled=false;sendBtn.textContent='SEND GIFT VOUCHER ENQUIRY';
+  }
+});
+</script>
+
+<script id="pc-master-navigation-v2-js">
+(function(){
+  function init(){
+    document.querySelectorAll('.pc-master-header').forEach(function(header){
+      var menuBtn=header.querySelector('.pc-menu-toggle');
+      if(menuBtn){
+        menuBtn.addEventListener('click',function(){
+          var open=header.classList.toggle('pc-mobile-open');
+          menuBtn.setAttribute('aria-expanded',open?'true':'false');
+        });
+      }
+      header.querySelectorAll('.pc-master-dropbtn').forEach(function(btn){
+        btn.addEventListener('click',function(e){
+          if(window.matchMedia('(max-width:920px)').matches){
+            e.preventDefault();
+            var item=btn.closest('.pc-master-item');
+            var willOpen=!item.classList.contains('pc-open');
+            header.querySelectorAll('.pc-master-item.pc-open').forEach(function(other){
+              if(other!==item) other.classList.remove('pc-open');
+            });
+            item.classList.toggle('pc-open',willOpen);
+            btn.setAttribute('aria-expanded',willOpen?'true':'false');
+          }
+        });
+      });
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+
+</body>
+</html>
