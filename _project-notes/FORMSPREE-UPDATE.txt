@@ -1,0 +1,5 @@
+Pranaclimb contact popup — Formspree integration
+Endpoint: https://formspree.io/f/xvznzvdk
+All contact popups submit directly via Formspree using AJAX/fetch.
+Existing enquiry subjects are preserved.
+A direct email link remains as fallback.

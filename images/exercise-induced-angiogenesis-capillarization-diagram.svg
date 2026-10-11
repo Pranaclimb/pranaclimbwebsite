@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Exercise-induced angiogenesis and capillarisation</title>
+  <desc id="desc">A three-part diagram showing lower capillary density before training, exercise signalling through shear stress, HIF-1 alpha and VEGF, and increased capillary density after training.</desc>
+  <rect width="1600" height="900" fill="#f8faf7"/>
+  <text x="800" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#14251f">Exercise-Induced Angiogenesis</text>
+  <text x="800" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#50635b">How sustained training supports greater capillary density in working muscle</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="90" y="205" width="410" height="520" rx="34" fill="#ffffff" stroke="#d9e4de" stroke-width="4"/>
+    <text x="295" y="265" text-anchor="middle" font-size="30" font-weight="700" fill="#263b33">Before Training</text>
+    <text x="295" y="304" text-anchor="middle" font-size="21" fill="#607169">Lower capillary density</text>
+    <g stroke="#9aa8a1" stroke-width="14" stroke-linecap="round">
+      <line x1="155" y1="390" x2="435" y2="390"/><line x1="155" y1="500" x2="435" y2="500"/><line x1="155" y1="610" x2="435" y2="610"/>
+    </g>
+    <g fill="none" stroke="#4b9fa0" stroke-width="10" stroke-linecap="round">
+      <path d="M170 350 C230 300 255 455 320 400 S395 330 430 370"/>
+      <path d="M175 565 C245 520 285 675 355 605 S405 550 435 580"/>
+    </g>
+    <rect x="595" y="205" width="410" height="520" rx="34" fill="#eff8f1" stroke="#b8d7c1" stroke-width="4"/>
+    <text x="800" y="265" text-anchor="middle" font-size="30" font-weight="700" fill="#1f5138">Repeated Exercise</text>
+    <circle cx="800" cy="410" r="104" fill="#d9efdf" stroke="#62a879" stroke-width="8"/>
+    <text x="800" y="390" text-anchor="middle" font-size="25" font-weight="700" fill="#245b3d">Shear stress</text>
+    <text x="800" y="426" text-anchor="middle" font-size="25" font-weight="700" fill="#245b3d">+ local hypoxia</text>
+    <path d="M800 526 L800 610" stroke="#62a879" stroke-width="8"/>
+    <path d="M782 592 L800 620 L818 592" fill="#62a879"/>
+    <text x="800" y="660" text-anchor="middle" font-size="27" font-weight="700" fill="#245b3d">HIF-1α → VEGF signalling</text>
+    <rect x="1100" y="205" width="410" height="520" rx="34" fill="#ffffff" stroke="#d9e4de" stroke-width="4"/>
+    <text x="1305" y="265" text-anchor="middle" font-size="30" font-weight="700" fill="#263b33">After Training</text>
+    <text x="1305" y="304" text-anchor="middle" font-size="21" fill="#607169">Greater capillary density</text>
+    <g stroke="#9aa8a1" stroke-width="14" stroke-linecap="round">
+      <line x1="1165" y1="390" x2="1445" y2="390"/><line x1="1165" y1="500" x2="1445" y2="500"/><line x1="1165" y1="610" x2="1445" y2="610"/>
+    </g>
+    <g fill="none" stroke="#4b9fa0" stroke-width="8" stroke-linecap="round">
+      <path d="M1170 350 C1220 305 1250 435 1300 390 S1390 310 1440 355"/>
+      <path d="M1170 455 C1225 410 1260 545 1310 485 S1395 420 1440 460"/>
+      <path d="M1170 565 C1225 520 1260 655 1315 595 S1390 525 1440 570"/>
+      <path d="M1170 665 C1225 625 1265 710 1320 655 S1395 605 1440 640"/>
+    </g>
+    <path d="M515 465 H570" stroke="#87b69a" stroke-width="9"/><path d="M552 447 L580 465 L552 483" fill="#87b69a"/>
+    <path d="M1020 465 H1075" stroke="#87b69a" stroke-width="9"/><path d="M1057 447 L1085 465 L1057 483" fill="#87b69a"/>
+    <text x="800" y="806" text-anchor="middle" font-size="23" fill="#50635b">Adaptation develops through training exposure over weeks and months.</text>
+    <text x="800" y="844" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="3" fill="#73a12f">PRANACLIMB · LOVE · BREATHE · CLIMB</text>
+  </g>
+</svg>

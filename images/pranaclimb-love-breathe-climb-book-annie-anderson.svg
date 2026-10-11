@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Pranaclimb: Love, Breathe, Climb by Annie Anderson</title>
+  <desc id="desc">A clean Pranaclimb book-cover graphic in ocean blue, sea green and warm cream.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9f0ee"/><stop offset="1" stop-color="#f9f6ec"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#248ca0"/><stop offset="1" stop-color="#0f5d70"/></linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#sky)"/>
+  <circle cx="880" cy="260" r="155" fill="#f8bd55" opacity=".9"/>
+  <path d="M0 980 C210 830 370 930 540 800 C715 665 870 735 1200 545 L1200 1500 L0 1500Z" fill="#355d4b"/>
+  <path d="M0 1160 C240 1000 430 1140 650 1000 C860 865 1010 950 1200 850 L1200 1500 L0 1500Z" fill="url(#sea)"/>
+  <path d="M0 1200 C220 1080 390 1210 620 1095 C820 995 1010 1045 1200 980" fill="none" stroke="#dff7f3" stroke-width="18" opacity=".85"/>
+  <g fill="#18382f" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="175" font-size="34" font-weight="700" letter-spacing="9">PRANACLIMB</text>
+    <text x="600" y="430" font-size="102" font-weight="800">LOVE</text>
+    <text x="600" y="545" font-size="102" font-weight="800">BREATHE</text>
+    <text x="600" y="660" font-size="102" font-weight="800">CLIMB</text>
+    <text x="600" y="730" font-size="28" letter-spacing="4">BREATH · MOVEMENT · RECOVERY</text>
+  </g>
+  <g stroke="#f9f6ec" stroke-width="18" stroke-linecap="round" fill="none">
+    <path d="M760 965 C735 865 780 770 850 705"/>
+    <path d="M850 705 L910 770 L870 850 L930 925"/>
+    <path d="M851 765 L785 815"/>
+  </g>
+  <text x="600" y="1375" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="4" fill="#ffffff">ANNIE ANDERSON</text>
+</svg>
