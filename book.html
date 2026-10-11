@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Love, Breathe, Climb — The Breathwork Guide for Climbers | Pranaclimb</title>
-  <meta name="description" content="Love, Breathe, Climb by Annie Anderson — the science-based breathwork guide for rock climbers. Pre-register and get a free first chapter. CP, W'bal, CO2 tolerance and breathwork protocols." />
+  <title>Pranaclimb Book — Breathing Science for Climbers | Annie Anderson</title>
+  <meta name="description" content="Pranaclimb: Love, Breathe, Climb by Annie Anderson — a forthcoming field guide to breathing science, climbing performance, recovery and the Pranaclimb Methodology." />
+  <meta property="og:title" content="Pranaclimb: Love, Breathe, Climb — Annie Anderson" />
+  <meta property="og:description" content="A forthcoming field guide to breathing science, climbing performance, recovery and the Pranaclimb Methodology." />
+  <meta property="og:image" content="https://www.pranaclimb.com/images/pranaclimb-original-book-cover.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.pranaclimb.com/images/pranaclimb-original-book-cover.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
@@ -29,86 +34,69 @@
 
     /* HERO */
     .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:72px;}
-    .hero-left{background:var(--white);display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem;}
+    .hero-left{background:var(--white);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:5rem 4rem;text-align:center;}
     .hero-label{font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem;}
     .hero-left h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,6vw,5.5rem);line-height:0.9;letter-spacing:0.02em;color:var(--ink);margin-bottom:0.5rem;}
     .hero-left h1 .sub{font-size:clamp(1.8rem,3vw,2.5rem);color:var(--mid);display:block;}
     .hero-left h1 .pink{color:var(--pink);}
     .hero-author{font-size:0.85rem;font-weight:600;letter-spacing:0.12em;color:var(--mid);margin-bottom:2rem;text-transform:uppercase;}
-    .hero-desc{font-size:1rem;line-height:1.8;color:var(--mid);max-width:440px;margin-bottom:2rem;}
-    .hero-themes{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+    .hero-desc{font-size:1rem;line-height:1.8;color:var(--mid);max-width:540px;margin:0 auto 2rem;}
+    .hero-themes{display:flex;gap:0.6rem;flex-wrap:wrap;justify-content:center;margin-bottom:2.5rem;}
     .theme-tag{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 0.8rem;border-radius:2px;}
     .theme-tag.pink{background:var(--pink);color:var(--white);}
     .theme-tag.lime{background:var(--lime);color:var(--ink);}
     .theme-tag.blue{background:var(--white);color:var(--ink);}
     .theme-tag.off{background:var(--off);color:var(--ink);border:1.5px solid var(--border);}
     .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+    .book-hero-kit{width:min(100%,520px);margin:0 auto;}
+    .book-hero-kit .formkit-fields{justify-content:center;}
+    .book-hero-kit .formkit-powered-by-convertkit-container{justify-content:center!important;}
     .btn-primary{display:inline-block;background:var(--pink);color:var(--white);padding:0.85rem 2rem;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background 0.2s;}
     .btn-primary:hover{background:#cc00cc;}
     .btn-secondary{display:inline-block;border:2px solid var(--ink);color:var(--ink);padding:0.85rem 2rem;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all 0.2s;}
     .btn-secondary:hover{background:var(--ink);color:var(--white);}
     .hero-right{background:var(--white);display:flex;align-items:center;justify-content:center;padding:4rem;position:relative;}
-    .hero-right img{max-width:320px;width:100%;box-shadow:20px 30px 60px rgba(0,0,0,0.2);transform:rotate(-2deg);border-radius:2px;}
+    .hero-right img{max-width:420px;width:100%;height:auto;display:block;margin:auto;box-shadow:none;transform:none;border-radius:0;}
     .coming-badge{position:absolute;bottom:3rem;right:3rem;background:var(--lime);padding:0.7rem 1.2rem;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink);border-radius:2px;}
 
-    /* CHAPTER 1 TEASER */
-    .chapter-hero{background:var(--white);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+    /* BOOK OVERVIEW */
+    .chapter-hero{background:linear-gradient(135deg,#f6fbfa 0%,#eaf7fb 55%,#fff6ff 100%);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
     .chapter-label{font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem;}
     .chapter-hero h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,5vw,4.5rem);line-height:0.95;color:var(--ink);margin-bottom:1rem;}
     .chapter-hero h2 span{color:var(--pink);}
-    .chapter-insight{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1rem;padding:1rem;background:rgba(255,255,255,0.05);border-left:3px solid var(--lime);}
+    .chapter-insight{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1rem;padding:1.15rem;background:rgba(255,255,255,0.88);border-left:3px solid var(--lime);box-shadow:0 10px 30px rgba(22,63,70,0.06);text-align:left;}
     .chapter-insight-icon{font-size:1.2rem;flex-shrink:0;}
-    .chapter-insight p{font-size:0.88rem;color:rgba(255,255,255,0.8);line-height:1.6;margin:0;}
+    .chapter-insight p{font-size:0.88rem;color:var(--mid);line-height:1.6;margin:0;}
     .chapter-insight strong{color:var(--pink);}
 
     /* QUOTES STRIP */
-    .quotes-strip{background:var(--pink);padding:5rem 4rem;overflow:hidden;}
-    .quotes-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.5rem);color:var(--white);margin-bottom:3rem;text-align:center;}
-    .quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(255,255,255,0.2);border:1.5px solid rgba(255,255,255,0.2);}
-    .quote-card{background:rgba(255,255,255,0.1);padding:2.5rem 2rem;}
-    .quote-card blockquote{font-family:'Lora',serif;font-size:0.95rem;font-style:italic;line-height:1.8;color:var(--white);margin-bottom:1rem;}
-    .quote-attr{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--pink);}
+    .quotes-strip{background:#f7f4f7;padding:5rem 4rem;overflow:hidden;}
+    .quotes-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.5rem);color:var(--ink);margin-bottom:3rem;text-align:center;}
+    .quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);max-width:1180px;margin:0 auto;}
+    .quote-card{background:var(--white);padding:2.5rem 2rem;}
+    .quote-card blockquote{font-family:'Lora',serif;font-size:0.95rem;font-style:italic;line-height:1.8;color:var(--ink);margin-bottom:1rem;}
+    .quote-attr{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#b000b0;}
 
     /* KEY TAKEAWAYS */
-    .takeaways{background:var(--white);padding:7rem 4rem;}
+    .takeaways{background:var(--white);padding:7rem 4rem;text-align:center;}
     .section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--pink);margin-bottom:0.5rem;}
     .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--ink);line-height:1;margin-bottom:0.5rem;}
-    .divider{width:48px;height:3px;background:var(--lime);margin:0.8rem 0 2.5rem;}
-    .takeaways-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);}
+    .divider{width:48px;height:3px;background:var(--lime);margin:0.8rem auto 2.5rem;}
+    .takeaways-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:var(--border);border:1.5px solid var(--border);max-width:1180px;margin:0 auto;}
     .takeaway-card{background:var(--white);padding:2rem;}
     .takeaway-card:hover{background:var(--white);}
     .takeaway-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--lime);line-height:1;margin-bottom:0.5rem;}
     .takeaway-card h3{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink);margin-bottom:0.5rem;}
     .takeaway-card p{font-size:0.87rem;line-height:1.7;color:var(--mid);}
 
-    /* CHAPTER EXCERPT */
-    .excerpt{background:var(--white);padding:7rem 4rem;}
-    .excerpt-wrap{max-width:720px;margin:0 auto;}
-    .excerpt-wrap p{font-family:'Lora',serif;font-size:1rem;line-height:1.95;color:var(--mid);margin-bottom:1.5rem;}
-    .excerpt-wrap p.lead{font-size:1.15rem;color:var(--ink);font-weight:400;}
-    .excerpt-wrap blockquote{border-left:3px solid var(--pink);padding:1rem 1.5rem;margin:2rem 0;font-style:italic;color:var(--ink);font-size:1rem;line-height:1.8;}
-    .excerpt-wrap blockquote cite{font-style:normal;font-size:0.75rem;color:var(--mid);display:block;margin-top:0.4rem;font-family:'Outfit',sans-serif;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;}
-    .excerpt-fade{position:relative;overflow:hidden;max-height:600px;}
-    .excerpt-fade::after{content:'';position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to bottom,transparent,var(--white));}
-
-    /* FREE CHAPTER SIGNUP */
-    .signup-section{background:var(--white);padding:7rem 4rem;}
-    .signup-wrap{max-width:700px;margin:0 auto;text-align:center;}
-    .signup-wrap h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);color:var(--ink);line-height:0.95;margin-bottom:1rem;}
-    .signup-wrap h2 span{color:var(--pink);}
-    .signup-wrap p{font-size:1rem;color:var(--mid);line-height:1.8;margin-bottom:0.8rem;}
-    .kit-wrapper .formkit-input{font-family:'Outfit',sans-serif!important;font-size:0.95rem!important;padding:0.9rem 1.2rem!important;border:2px solid rgba(0,0,0,0.15)!important;border-radius:2px!important;}
-    .kit-wrapper .formkit-submit{background-color:var(--pink)!important;font-family:'Outfit',sans-serif!important;font-weight:700!important;letter-spacing:0.15em!important;text-transform:uppercase!important;border-radius:2px!important;border:1.5px solid rgba(255,255,255,0.8)!important;margin-top:0.8rem!important;}
-    .kit-wrapper .formkit-powered-by-convertkit-container{justify-content:center;}
-
     /* ABOUT ANNIE */
-    .about-section{background:var(--white);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+    .about-section{background:var(--white);padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;text-align:center;}
     .about-img{position:relative;}
-    .about-img img{width:100%;display:block;filter:grayscale(10%);}
+    .about-img img{width:min(100%,520px);display:block;margin:0 auto;filter:grayscale(10%);}
     .about-content .section-label{margin-bottom:0.5rem;}
     .about-content p{font-size:0.92rem;line-height:1.85;color:var(--mid);margin-bottom:1rem;}
     .about-content strong{color:var(--ink);}
-    .credentials{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.5rem;}
+    .credentials{display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem;margin-top:1.5rem;}
     .credential{font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;border:1.5px solid var(--border);color:var(--mid);padding:0.35rem 0.8rem;border-radius:2px;}
 
     /* FOOTER */
@@ -130,7 +118,7 @@
       .hero,.chapter-hero,.about-section{grid-template-columns:1fr;}
       .hero{min-height:auto;padding-top:72px;}
       .hero-left,.hero-right{padding:3rem 1.5rem;}
-      .takeaways,.excerpt,.signup-section,.quotes-strip{padding:4rem 1.5rem;}
+      .takeaways,.quotes-strip{padding:4rem 1.5rem;}
       .quotes-grid{grid-template-columns:1fr;}
       .takeaways-grid{grid-template-columns:1fr;}
       footer{grid-template-columns:1fr;padding:3rem 1.5rem;}
@@ -168,6 +156,12 @@
     }
 
     /* ─── CENTERING (matches homepage treatment) ───────── */
+    .hero, .chapter-hero, .quotes-strip, .takeaways, .about-section {
+      width: 100%;
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .section-label, .section-title, .section-intro { text-align: center; }
     .hero-left, .hero-inner, .hero > div:first-child { text-align: center; }
     .annie-hero-left { text-align: center; }
@@ -516,7 +510,6 @@ body.pc-contact-open{overflow:hidden!important}
         <button class="pc-master-dropbtn" type="button" aria-expanded="false">THE BOOK <span class="pc-master-caret">▼</span></button>
         <div class="pc-master-dropdown pc-master-dropdown--right pc-master-dropdown--book">
           <a href="https://www.pranaclimb.com/book.html"><em>Pranaclimb: Love, Breathe, Climb</em></a>
-          <a href="https://www.pranaclimb.com/pranaclimb-chapter-I.html">Chapter I — Free</a>
         </div>
       </div>
 
@@ -542,7 +535,7 @@ body.pc-contact-open{overflow:hidden!important}
       <span class="sub pink">CLIMB</span>
     </h1>
     <div class="hero-author">By Annie Anderson</div>
-    <p class="hero-desc">A science-based guide to breathwork, endurance, and mindful performance. Learn how breathing transforms climbing — from the science of W′bal to the flow states of elite climbers.</p>
+    <p class="hero-desc">A field guide to breathing science, climbing performance and recovery—bringing more than three decades of climbing experience together with the evolving Pranaclimb Methodology.</p>
     <div class="hero-themes">
       <span class="theme-tag pink">Love</span>
       <span class="theme-tag lime">Breathe</span>
@@ -552,12 +545,12 @@ body.pc-contact-open{overflow:hidden!important}
       <span class="theme-tag off">Flow States</span>
     </div>
     <div class="hero-btns">
-      <a href="book.html" class="btn-primary">Read More &rarr;</a>
-      <a href="pranaclimb-chapter-I.html?view=full" target="_blank" class="btn-secondary">Chapter I &mdash; Free &rarr;</a>
+      <a href="#inside-book" class="btn-primary">Explore the Book &rarr;</a>
+      <a href="blog.html" class="btn-secondary">Read the Research Blog &rarr;</a>
     </div>
 
     <div style="margin-top:2rem; padding-top:2rem; border-top:1px solid rgba(0,0,0,0.1);">
-      <p style="font-size:0.82rem; font-weight:600; color:var(--mid); margin-bottom:0.8rem; letter-spacing:0.05em;">Get a free PDF copy — subscribe below:</p>
+      <p style="font-size:0.82rem; font-weight:600; color:var(--mid); margin-bottom:0.8rem; letter-spacing:0.05em;">Follow the book as it develops:</p>
       <style>
         .book-hero-kit .formkit-input{font-family:'Outfit',sans-serif !important;font-size:0.88rem !important;padding:0.75rem 1rem !important;border:1.5px solid var(--border) !important;border-radius:2px !important;}
         .book-hero-kit .formkit-submit{background-color:#ff00ff !important;font-family:'Outfit',sans-serif !important;font-weight:600 !important;letter-spacing:0.12em !important;text-transform:uppercase !important;border-radius:2px !important;border:none !important;margin-top:0.6rem !important;}
@@ -575,7 +568,7 @@ body.pc-contact-open{overflow:hidden!important}
               </div>
               <button data-element="submit" class="formkit-submit" style="color:#fff;background-color:#ff00ff;border-radius:2px;font-weight:600;">
                 <div class="formkit-spinner"><div></div><div></div><div></div></div>
-                <span>Send me the PDF</span>
+                <span>Keep me updated</span>
               </button>
             </div>
             <div class="formkit-powered-by-convertkit-container">
@@ -584,41 +577,41 @@ body.pc-contact-open{overflow:hidden!important}
           </div>
         </form>
       </div>
-      <p style="font-size:0.75rem; color:var(--mid); margin-top:0.6rem; line-height:1.6;">📧 Please remember to confirm your subscription in the email you receive.</p>
+      <p style="font-size:0.75rem; color:var(--mid); margin-top:0.6rem; line-height:1.6;">Book news, new research and practical breathing insights. Please confirm your subscription in the email you receive.</p>
     </div>
   </div>
   <div class="hero-right">
-    <img src="images/pranaclimb-love-breathe-climb-book-annie-anderson.svg" alt="Pranaclimb: Love, Breathe, Climb by Annie Anderson" />
-    <div class="coming-badge">Coming 2026</div>
+    <img src="data:image/webp;base64,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" alt="Original Pranaclimb: Love, Breathe, Climb book cover by Annie Anderson" />
+    <div class="coming-badge">Forthcoming</div>
   </div>
 </div>
 
-<!-- CHAPTER 1 TEASER -->
+<!-- BOOK OVERVIEW -->
 <div class="chapter-hero">
   <div>
-    <div class="chapter-label">Chapter I</div>
-    <h2>LOVE,<br>BREATHE,<br><span>CLIMB</span></h2>
-    <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:2rem;">The opening chapter explores love as the foundation of climbing performance — not just a feeling, but a drive. A force that regulates breath, sustains effort, and powers flow.</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="#signup" style="display:inline-block;border:1.5px solid rgba(255,255,255,0.4);color:var(--white);padding:0.8rem 1.8rem;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;">Get Free Chapter</a>
+    <div class="chapter-label">The Book</div>
+    <h2>SCIENCE,<br>PRACTICE,<br><span>THE CLIMB</span></h2>
+    <p style="font-size:0.95rem;color:var(--mid);line-height:1.8;margin-bottom:2rem;">Pranaclimb translates respiratory physiology into a practical language for climbers. It connects breath, movement, effort, recovery, emotion and attention—on real routes, in real conditions.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+      <a href="methodology.html" style="display:inline-block;border:1.5px solid var(--ink);color:var(--ink);padding:0.8rem 1.8rem;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;background:rgba(255,255,255,0.65);">Explore the Methodology</a>
     </div>
   </div>
   <div>
     <div class="chapter-insight">
       <div class="chapter-insight-icon">🔬</div>
-      <p><strong>Love as a motivation system</strong> — psychobiology reveals love is not an emotion but a drive that sustains effort and commitment over years.</p>
+      <p><strong>Breathing science</strong> — respiratory frequency, ventilation, CO₂, oxygen delivery, respiratory muscles and climbing-specific physiology.</p>
     </div>
     <div class="chapter-insight">
       <div class="chapter-insight-icon">🧠</div>
-      <p><strong>Love is a conscious choice</strong> — directed intentionally toward a goal, a project, a line. What you focus on shapes your performance.</p>
+      <p><strong>Mind, emotion and attention</strong> — how fear, focus, motivation and flow alter breathing and perceived effort.</p>
     </div>
     <div class="chapter-insight">
       <div class="chapter-insight-icon">⚡</div>
-      <p><strong>Love is the addiction</strong> — dopamine, reward, resilience, and the willingness to return again and again despite failure.</p>
+      <p><strong>Performance and recovery</strong> — CP, RCP, W′bal, HRR₆₀ and field-based tools for pacing, crux effort and recovery.</p>
     </div>
     <div class="chapter-insight">
       <div class="chapter-insight-icon">🫁</div>
-      <p><strong>Elite Insights</strong> — Ondra, Garnbret, Caldwell, Hazelnutt, Woods, Emmett — what drives the world's best climbers.</p>
+      <p><strong>Practice for climbers</strong> — breathwork interventions, coaching cues, assessments and elite case-study insights.</p>
     </div>
   </div>
 </div>
@@ -655,118 +648,41 @@ body.pc-contact-open{overflow:hidden!important}
 </div>
 
 <!-- KEY TAKEAWAYS -->
-<section class="takeaways">
-  <div class="section-label">Inside Chapter I</div>
-  <div class="section-title">Key Takeaways</div>
+<section class="takeaways" id="inside-book">
+  <div class="section-label">Inside the Book</div>
+  <div class="section-title">What Pranaclimb Brings Together</div>
   <div class="divider"></div>
   <div class="takeaways-grid">
     <div class="takeaway-card">
       <div class="takeaway-num">01</div>
-      <h3>Love is the Foundation</h3>
-      <p>Love is not just a feeling — it is a drive. It fuels motivation, sustains effort, and gives meaning to the climb. Psychobiology confirms: love is a motivation system.</p>
+      <h3>Breathing Makes Effort Visible</h3>
+      <p>Breathing rate and breathing behaviour reveal changing effort, stress and recovery in ways climbers can hear, observe and apply in the field.</p>
     </div>
     <div class="takeaway-card">
       <div class="takeaway-num">02</div>
-      <h3>Intention Directs Performance</h3>
-      <p>Your mental state is powerful when directed outward — toward a goal, a movement, a line. What you focus on shapes your experience and your outcome.</p>
+      <h3>Movement Changes Breathing</h3>
+      <p>Wall angle, posture, bracing, grip intensity and movement timing continually reshape ventilation and respiratory mechanics.</p>
     </div>
     <div class="takeaway-card">
       <div class="takeaway-num">03</div>
-      <h3>Dopamine Drives Persistence</h3>
-      <p>Enjoyment, reward, and belief fuel motivation. This is why climbers return again and again — despite failure, effort, and years. Love is the addiction.</p>
+      <h3>Breath and Perception Interact</h3>
+      <p>Breathing frequency tracks perceived exertion, while attention, emotion and expectation influence how hard a climb feels.</p>
     </div>
     <div class="takeaway-card">
       <div class="takeaway-num">04</div>
-      <h3>Breath is the Bridge</h3>
-      <p>Breathing connects mind and body. It regulates emotion, sharpens attention, and supports efficient movement under pressure. Train it, and everything changes.</p>
+      <h3>Intensity Has a Respiratory Signature</h3>
+      <p>CP, RCP and W′bal provide a practical framework for recognising sustainable effort, redline intensity and the recovery between hard sequences.</p>
     </div>
     <div class="takeaway-card">
       <div class="takeaway-num">05</div>
-      <h3>Flow is the Optimal State</h3>
-      <p>Flow emerges when love, focus, and breathing align. Effortless. Immersive. Intrinsically rewarding. Breathing becomes quiet, efficient, and perfectly matched to effort.</p>
+      <h3>Recovery Can Be Coached</h3>
+      <p>HRR₆₀, breathing-rate recovery and clearly selected breathwork practices help climbers use rests more deliberately.</p>
     </div>
     <div class="takeaway-card">
       <div class="takeaway-num">06</div>
-      <h3>You Can Train This</h3>
-      <p>Love, breathing, attention, and emotional regulation are trainable skills. This is the foundation of the Pranaclimb Methodology.</p>
+      <h3>Breathing Is Trainable</h3>
+      <p>Assessment, observation and practice turn breathing from background physiology into a skill climbers can understand and refine.</p>
     </div>
-  </div>
-</section>
-
-<!-- EXCERPT -->
-<section class="excerpt" id="excerpt">
-  <div style="text-align:center;margin-bottom:3rem;">
-    <div class="section-label" style="text-align:center;">Chapter I · Opening</div>
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--ink);">Read the Opening</h2>
-    <div style="width:48px;height:3px;background:var(--lime);margin:0.8rem auto 0;"></div>
-  </div>
-  <div class="excerpt-wrap">
-    <div class="excerpt-fade">
-      <p class="lead">Climbing is physically, mentally, and emotionally demanding — and that's exactly why climbers love, live, and breathe it.</p>
-      <p>Breath is not just a background process in climbing — it reflects effort, emotion, and intention in every moment on the rock.</p>
-      <p>Wolfgang Güllich embodied the spirit of progression and creativity, blending vision, strength, and innovation to elevate climbing into a new dimension of movement and possibility. He highlighted how climbing is more than just a sport — it's a way of life:</p>
-      <blockquote>"You don't go for coffee after climbing; rather, going out for coffee is part climbing."<cite>— Wolfgang Güllich</cite></blockquote>
-      <p>An inner fire burns bright in a climber who loves climbing: passion, power, intensity, flowing energy, and high motivation — come and go. These shifts in energy are not just emotional — they are physiological, often mirrored in changes in breathing rhythm and depth.</p>
-      <blockquote>"Climbing, I believe, is simply about love, and this kind of love grows."<cite>— Steph Davis</cite></blockquote>
-      <p>A love of climbing involves freedom, adventure, and exploration; curiosity, courage, high energy, efficient movement, and peak flow states of consciousness. It also involves discomfort — pushing through with grit, hardiness, and resilience — and tolerating pain. In these moments, breathing often becomes strained or irregular — yet learning to stay with the breath can stabilise both body and mind.</p>
-      <p>Climbing outdoors lifts one's spirit — we are deeply connected to nature through our breath. Each breath becomes an exchange between body and environment, linking internal state with the external world. Breathwork helps regulate energy flow through the body, expanding resilience and enabling faster adaptation.</p>
-      <blockquote>"On the wall it's like I come alive; this place changes me. It always has. I take a deep breath and turn to the sheer face rising above."<cite>— Tommy Caldwell</cite></blockquote>
-    </div>
-    <div style="text-align:center;margin-top:3rem;">
-      <p style="font-size:0.9rem;color:var(--mid);margin-bottom:1.5rem;font-style:italic;">Want to read the full chapter? Sign up below and get it free.</p>
-    </div>
-
-    <!-- EMBEDDED FLIPBOOK -->
-    <div style="margin-top:3rem; border:1.5px solid var(--border); border-radius:4px; overflow:hidden; background:var(--white);">
-      <div style="padding:1rem 1.5rem; background:var(--white); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between;">
-        <p style="font-size:0.75rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--pink);">Chapter I — Interactive Flipbook</p>
-        <a href="pranaclimb-chapter-I.html?view=full" target="_blank" style="font-size:0.72rem; font-weight:600; color:var(--mid); text-decoration:none; letter-spacing:0.08em; text-transform:uppercase;">Open Full Screen ↗</a>
-      </div>
-      <iframe src="pranaclimb-chapter-I.html?view=full" 
-        style="width:100%; height:600px; border:none; display:block;"
-        title="Pranaclimb Chapter I Flipbook"
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
-</section>
-
-<!-- FREE CHAPTER SIGNUP -->
-<section class="signup-section" id="signup">
-  <div class="signup-wrap">
-    <div class="section-label" style="text-align:center;margin-bottom:0.5rem;">Free Download</div>
-    <h2>GET THE <span>FIRST CHAPTER</span><br>FREE</h2>
-    <div style="width:48px;height:3px;background:var(--pink);margin:1rem auto 1.5rem;"></div>
-    <p>Subscribe to the Pranaclimb blog and receive <strong>Chapter I: Love, Breathe, Climb</strong> — the opening chapter of Annie's upcoming book — straight to your inbox.</p>
-    <p style="font-size:0.88rem;margin-bottom:2rem;">Breathing science, elite insights, love as a motivation system, and the foundation of everything Pranaclimb stands for.</p>
-
-    <style>
-      .kit-wrapper .formkit-input{font-family:'Outfit',sans-serif!important;font-size:0.95rem!important;padding:0.9rem 1.2rem!important;border:2px solid rgba(0,0,0,0.15)!important;border-radius:2px!important;}
-      .kit-wrapper .formkit-submit{background-color:#89CFF0!important;font-family:'Outfit',sans-serif!important;font-weight:600!important;letter-spacing:0.15em!important;text-transform:uppercase!important;border-radius:2px!important;border:1.5px solid rgba(255,255,255,0.8)!important;margin-top:0.8rem!important;}
-      .kit-wrapper .formkit-powered-by-convertkit-container{justify-content:center;}
-    </style>
-
-    <div class="kit-wrapper">
-      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-      <form action="https://app.kit.com/forms/9354489/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9354489" data-uid="3d6cc9da4e" data-format="inline" data-version="5" min-width="400 500 600 700 800">
-        <div data-style="clean">
-          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-          <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
-            <div class="formkit-field">
-              <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Your email address" required="" type="email" style="color:#3a3a3a;border-color:#e3e3e3;border-radius:2px;font-weight:400;">
-            </div>
-            <button data-element="submit" class="formkit-submit" style="color:#3a3a3a;background-color:#89CFF0;border-radius:2px;font-weight:600;border:1.5px solid rgba(255,255,255,0.8);">
-              <div class="formkit-spinner"><div></div><div></div><div></div></div>
-              <span>🫁 Send Me the Free Chapter</span>
-            </button>
-          </div>
-          <div class="formkit-powered-by-convertkit-container">
-            <a href="https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a>
-          </div>
-        </div>
-      </form>
-    </div>
-    <p style="font-size:0.75rem;color:var(--mid);margin-top:1rem;">No spam. Just breathwork science, climbing insights, and early access to the book.</p>
   </div>
 </section>
 
@@ -778,7 +694,7 @@ body.pc-contact-open{overflow:hidden!important}
   <div class="about-content">
     <div class="section-label">The Author</div>
     <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--ink);line-height:1;margin-bottom:0.5rem;">Annie Anderson</h2>
-    <div style="width:48px;height:3px;background:var(--lime);margin:0.8rem 0 1.5rem;"></div>
+    <div style="width:48px;height:3px;background:var(--lime);margin:0.8rem auto 1.5rem;"></div>
     <p>Annie Anderson is a climber, yoga teacher, and breathwork coach with over <strong>30 years of experience</strong> in climbing and yoga, and more than a decade of independent respiratory research.</p>
     <p>She is the creator of the <strong>Pranaclimb Methodology</strong> — a breath-led performance system integrating breathing rate, critical power (CP), W′bal modelling, and nervous system regulation for climbers.</p>
     <p>Her book <strong>Pranaclimb: Love, Breathe, Climb</strong> combines science, breathwork, and elite insights, offering unique practices for climbers. Published research on <a href="https://www.researchgate.net/publication/393491795" target="_blank" style="color:var(--pink);font-weight:700;text-decoration:none;">ResearchGate</a> and <a href="https://sportrxiv.org/index.php/server/preprint/view/578" target="_blank" style="color:var(--pink);font-weight:700;text-decoration:none;">SportRxiv</a>.</p>
@@ -790,7 +706,7 @@ body.pc-contact-open{overflow:hidden!important}
       <span class="credential">Stage 4 Cancer Survivor</span>
       <span class="credential">Cold Water Coach</span>
     </div>
-    <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+    <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
       <a href="index.html#annie" style="display:inline-block;background:var(--pink);color:var(--white);padding:0.8rem 1.8rem;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;">About Annie</a>
       <a href="rba.html" style="display:inline-block;border:2px solid var(--ink);color:var(--ink);padding:0.8rem 1.8rem;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;">Book Your RBA</a>
     </div>
@@ -855,7 +771,6 @@ body.pc-contact-open{overflow:hidden!important}
       <li><a href="https://www.pranaclimb.com/research.html">Research</a></li>
       <li><a href="https://www.pranaclimb.com/methodology.html">Methodology</a></li>
       <li><a href="https://www.pranaclimb.com/book.html">The Book</a></li>
-      <li><a href="https://www.pranaclimb.com/pranaclimb-chapter-I.html">Chapter I — Free</a></li>
       <li><a href="https://www.pranaclimb.com/blog.html">Blog</a></li>
       <li><a href="https://www.pranaclimb.com/app.html">The App</a></li>
       <li><a href="https://www.pranaclimb.com/breathing-for-climbers-annie-anderson.html">About</a></li>
